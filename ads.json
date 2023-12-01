@@ -4,7 +4,7 @@
         "description": "agama-pw is basic password authentication project. You can deploy it in your Janssen server for user authentication",
         "type": "community",
         "author": "mmrraju",
-        "version": "0.0.1",
+        "version": "1.0.1",
         "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
         "githubUri": "https://github.com/mmrraju/agama-lab-projects",
         "license": "apache-2.0",
@@ -16,7 +16,7 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "agama.pw": {}
+            "mmrraju.gigantic.agama.pw": {}
         },
         "name": "agama-pw"
     }
