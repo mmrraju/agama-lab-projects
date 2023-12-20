@@ -36,6 +36,9 @@
             "authentication"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "agama.pw.test": {}
+        },
+        "name": "password-reset"
     }
 }
