@@ -19,5 +19,23 @@
             "mmrraju.gigantic.agama.pw": {}
         },
         "name": "agama-pw"
+    },
+    "password-reset": {
+        "projectName": "password-reset",
+        "description": "Password reset ",
+        "type": "community",
+        "author": "mmrraju",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
+        "githubUri": "https://github.com/mmrraju/agama-lab-projects",
+        "license": "apache-2.0",
+        "lastUpdated": "1703106766756",
+        "tags": [
+            "jans",
+            "authorization",
+            "authentication"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
     }
 }
