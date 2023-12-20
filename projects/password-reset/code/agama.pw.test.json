@@ -67,9 +67,10 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": true
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1533,
@@ -141,7 +142,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1438,8 +1440,8 @@
 		}
 	],
 	"viewport": {
-		"x": 11.523038602799488,
-		"y": 169.22632604903657,
-		"zoom": 0.5
+		"x": -970.2730500509224,
+		"y": -3.8881740749191636,
+		"zoom": 0.972654947412286
 	}
 }
