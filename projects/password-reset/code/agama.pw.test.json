@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-703e312a-035f-43c9-9644-a7b022e0a6cf",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-703e312a-035f-43c9-9644-a7b022e0a6cf",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-703e312a-035f-43c9-9644-a7b022e0a6cf",
+        "type": "Agama-start-Flow",
+        "displayName": "Reset Password",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "agama.pw.test"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
