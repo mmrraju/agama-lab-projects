@@ -3,4 +3,4 @@ Flow agama.pw.reset
 Log "@info Necessary library import"
 authService = Call io.jans.as.server.service.AuthenticationService#class 
 userService = Call io.jans.as.server.service.UserService#class 
-identityService = Call io.jans.as.server.security.Identity#class 
+identity = Call io.jans.as.server.security.Identity#class 
