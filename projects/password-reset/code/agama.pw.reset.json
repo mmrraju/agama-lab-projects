@@ -3,6 +3,51 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-call-Node-efbfe2a1-0883-4a02-ba88-f3fd94983953",
+			"position": {
+				"x": 430,
+				"y": 30
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-efbfe2a1-0883-4a02-ba88-f3fd94983953",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-log-Node-5a1a73b3-dd6c-4220-9f6b-ac3a850fb4f0",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"position": {
+					"x": 430,
+					"y": 30
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-efbfe2a1-0883-4a02-ba88-f3fd94983953",
+					"parentId": "Agama-log-Node-5a1a73b3-dd6c-4220-9f6b-ac3a850fb4f0",
+					"type": "Agama-call-Node",
+					"displayName": "Auth Service",
+					"hasComment": true,
+					"comment": "",
+					"javaClassName": "io.jans.as.server.service.AuthenticationService",
+					"javaMethodName": "class",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "authService"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 430,
+				"y": 30
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-log-Node-5a1a73b3-dd6c-4220-9f6b-ac3a850fb4f0",
 			"position": {
 				"x": 230,
@@ -31,9 +76,10 @@
 					"logMessage": "\"Necessary library import\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 230,
@@ -69,7 +115,7 @@
 					"configs": "",
 					"flowname": "agama.pw.reset"
 				},
-				"skake": true
+				"skake": false
 			},
 			"position": {
 				"x": 30,
@@ -100,11 +146,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-log-Node-5a1a73b3-dd6c-4220-9f6b-ac3a850fb4f0-Agama-call-Node-efbfe2a1-0883-4a02-ba88-f3fd94983953-b38c8f00-eab9-4f1f-a470-2fdd04a45f5f",
+			"type": "straight",
+			"source": "Agama-log-Node-5a1a73b3-dd6c-4220-9f6b-ac3a850fb4f0",
+			"target": "Agama-call-Node-efbfe2a1-0883-4a02-ba88-f3fd94983953",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": 64.74847461199755,
-		"y": 141.87825190647365,
+		"x": -8.251525388002449,
+		"y": 89.87825190647365,
 		"zoom": 0.8467453123625275
 	}
 }
