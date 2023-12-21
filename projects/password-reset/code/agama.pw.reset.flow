@@ -1,3 +1,4 @@
 Flow agama.pw.reset
      Basepath ""
 Log "@info Necessary library import"
+authService = Call io.jans.as.server.service.AuthenticationService#class 
