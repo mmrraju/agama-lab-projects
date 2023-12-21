@@ -4,3 +4,4 @@ Log "@info Necessary library import"
 authService = Call io.jans.as.server.service.AuthenticationService#class 
 userService = Call io.jans.as.server.service.UserService#class 
 identity = Call io.jans.as.server.security.Identity#class 
+cdiUtil = Call io.jans.service.cdi.util.CdiUtil#bean 
