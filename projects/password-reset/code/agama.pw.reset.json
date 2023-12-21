@@ -35,8 +35,9 @@
 					"inRepeatBlock": false,
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "identityService"
-				}
+					"asssignedVariableName": "identity"
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
