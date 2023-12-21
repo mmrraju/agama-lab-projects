@@ -3,6 +3,51 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-call-Node-8600d432-1797-451e-824b-16e1b6e23d37",
+			"position": {
+				"x": 830,
+				"y": 30
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-8600d432-1797-451e-824b-16e1b6e23d37",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-call-Node-f643ca0b-c51d-4447-9cfc-7f01d4510d81",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"position": {
+					"x": 830,
+					"y": 30
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-8600d432-1797-451e-824b-16e1b6e23d37",
+					"parentId": "Agama-call-Node-f643ca0b-c51d-4447-9cfc-7f01d4510d81",
+					"type": "Agama-call-Node",
+					"displayName": "Identity Service",
+					"hasComment": true,
+					"comment": "",
+					"javaClassName": "io.jans.as.server.security.Identity",
+					"javaMethodName": "class",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "identityService"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 830,
+				"y": 30
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-call-Node-f643ca0b-c51d-4447-9cfc-7f01d4510d81",
 			"position": {
 				"x": 630,
@@ -36,9 +81,10 @@
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "userService"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 630,
@@ -215,6 +261,23 @@
 			"type": "straight",
 			"source": "Agama-call-Node-efbfe2a1-0883-4a02-ba88-f3fd94983953",
 			"target": "Agama-call-Node-f643ca0b-c51d-4447-9cfc-7f01d4510d81",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-call-Node-f643ca0b-c51d-4447-9cfc-7f01d4510d81-Agama-call-Node-8600d432-1797-451e-824b-16e1b6e23d37-3c09ed1a-4366-4fc4-846a-18ab644551e1",
+			"type": "straight",
+			"source": "Agama-call-Node-f643ca0b-c51d-4447-9cfc-7f01d4510d81",
+			"target": "Agama-call-Node-8600d432-1797-451e-824b-16e1b6e23d37",
 			"label": "",
 			"labelBgPadding": [
 				8,
