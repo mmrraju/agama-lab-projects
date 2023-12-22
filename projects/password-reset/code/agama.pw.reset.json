@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-rrf-Node-26edb9ca-364a-4ba0-983a-6bf78eb870b5",
+			"position": {
+				"x": 563.6839797344921,
+				"y": 436.52501407326935
+			},
+			"type": "rrf",
+			"data": {
+				"id": "Agama-rrf-Node-26edb9ca-364a-4ba0-983a-6bf78eb870b5",
+				"type": "Agama-rrf-Node",
+				"parentId": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 563.6839797344921,
+					"y": 436.52501407326935
+				},
+				"agamaData": {
+					"id": "Agama-rrf-Node-26edb9ca-364a-4ba0-983a-6bf78eb870b5",
+					"parentId": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
+					"type": "Agama-rrf-Node",
+					"displayName": "Login page",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "login.ftlh",
+					"asssignedVariableName": "creds",
+					"arguments": "authResult"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 563.6839797344921,
+				"y": 436.52501407326935
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
 			"position": {
 				"x": 468.6839797344922,
@@ -33,9 +75,9 @@
 					"maxIteration": "3",
 					"maxIterationVariableName": ""
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 468.6839797344922,
@@ -477,6 +519,24 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f-Agama-rrf-Node-26edb9ca-364a-4ba0-983a-6bf78eb870b5-5006c228-efc9-468c-96cd-646ad4891319",
+			"type": "straight",
+			"source": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
+			"target": "Agama-rrf-Node-26edb9ca-364a-4ba0-983a-6bf78eb870b5",
+			"label": "In Block",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f.InRepeatBlock"
 		}
 	],
 	"viewport": {
