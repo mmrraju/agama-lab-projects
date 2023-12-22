@@ -41,11 +41,10 @@
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Submit
 			  </button>
-			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
+			  <button type="submit" class=" rounded text-white btn bg-green-500 hover:bg-green-600">
 				Forget Password
 			  </button>
 			</div>
-
 		  </div>
 		</form>
 	  </div>
