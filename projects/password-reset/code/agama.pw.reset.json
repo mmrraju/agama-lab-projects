@@ -3,6 +3,47 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
+			"position": {
+				"x": 468.6839797344922,
+				"y": 206.52501407326935
+			},
+			"type": "repeat",
+			"data": {
+				"id": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
+				"type": "Agama-repeat-Node",
+				"parentId": "Agama-assignment-Node-cfc36e09-9ced-4717-9c18-54dcc7c35507",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"handles": [],
+				"position": {
+					"x": 468.6839797344922,
+					"y": 206.52501407326935
+				},
+				"agamaData": {
+					"id": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
+					"parentId": "Agama-assignment-Node-cfc36e09-9ced-4717-9c18-54dcc7c35507",
+					"type": "Agama-repeat-Node",
+					"displayName": "Max re-try",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
+					"maxIteration": "3",
+					"maxIterationVariableName": ""
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 468.6839797344922,
+				"y": 206.52501407326935
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-assignment-Node-cfc36e09-9ced-4717-9c18-54dcc7c35507",
 			"position": {
 				"x": 268.6839797344922,
@@ -36,7 +77,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -406,6 +448,23 @@
 			"type": "straight",
 			"source": "Agama-call-Node-3c658c27-1a91-497a-9fc2-823b73d63d96",
 			"target": "Agama-assignment-Node-cfc36e09-9ced-4717-9c18-54dcc7c35507",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-assignment-Node-cfc36e09-9ced-4717-9c18-54dcc7c35507-Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f-919442a6-d857-451e-8930-2cbcdc983034",
+			"type": "straight",
+			"source": "Agama-assignment-Node-cfc36e09-9ced-4717-9c18-54dcc7c35507",
+			"target": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f",
 			"label": "",
 			"labelBgPadding": [
 				8,
