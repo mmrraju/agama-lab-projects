@@ -33,7 +33,7 @@
 					"maxIteration": "3",
 					"maxIterationVariableName": ""
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
