@@ -9,3 +9,4 @@ authResult = {}
 Repeat 3 times max
      creds = RRF "login.ftlh" authResult
      authResult.success = Call authServiceCdiUtil authenticate creds.username creads.password
+     authResult.uid = creds.username
