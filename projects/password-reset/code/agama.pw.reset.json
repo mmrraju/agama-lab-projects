@@ -32,7 +32,8 @@
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
 					"maxIteration": "3",
 					"maxIterationVariableName": ""
-				}
+				},
+				"skake": true
 			},
 			"selected": true,
 			"dragging": false,
