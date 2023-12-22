@@ -32,7 +32,7 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{userid: authResult.uid}",
+					"returnVariable": "{success: true, data:{userId: authResult.uid}}",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "success"
@@ -74,8 +74,7 @@
 					"conditionInputField": "is",
 					"valueField": "true",
 					"hasComment": true,
-					"inRepeatBlock": true,
-					"hasSuccess": true
+					"inRepeatBlock": true
 				},
 				"handles": [
 					"Agama-when-Node-38aeadae-d581-4e26-b97f-8a402247fbc5.FAILURE",
@@ -795,8 +794,8 @@
 		}
 	],
 	"viewport": {
-		"x": -500,
-		"y": -31,
+		"x": -654,
+		"y": -290,
 		"zoom": 1
 	}
 }
