@@ -5,3 +5,4 @@ authService = Call io.jans.as.server.service.AuthenticationService#class
 userService = Call io.jans.as.server.service.UserService#class 
 identity = Call io.jans.as.server.security.Identity#class 
 authServiceCdiUtil = Call io.jans.service.cdi.util.CdiUtil#bean authService
+authResult = {}
