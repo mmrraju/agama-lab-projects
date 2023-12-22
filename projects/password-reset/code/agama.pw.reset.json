@@ -5,8 +5,8 @@
 			"height": 122,
 			"id": "Agama-call-Node-3c658c27-1a91-497a-9fc2-823b73d63d96",
 			"position": {
-				"x": 1030,
-				"y": 30
+				"x": 30.981000562930774,
+				"y": 199.3920180137847
 			},
 			"type": "call",
 			"data": {
@@ -16,14 +16,14 @@
 				"whenCondition": "",
 				"inRepeatBlock": false,
 				"position": {
-					"x": 1030,
-					"y": 30
+					"x": 30.981000562930774,
+					"y": 199.3920180137847
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-3c658c27-1a91-497a-9fc2-823b73d63d96",
 					"parentId": "Agama-call-Node-8600d432-1797-451e-824b-16e1b6e23d37",
 					"type": "Agama-call-Node",
-					"displayName": "CdiUtil",
+					"displayName": "CdiUtil(Auth service)",
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "io.jans.service.cdi.util.CdiUtil",
@@ -33,16 +33,19 @@
 					"callType": "Call static method",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"arguments": [],
+					"arguments": [
+						"authService"
+					],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "cdiUtil"
-				}
+					"asssignedVariableName": "authServiceCdiUtil"
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1030,
-				"y": 30
+				"x": 30.981000562930774,
+				"y": 199.3920180137847
 			}
 		},
 		{
@@ -355,8 +358,8 @@
 		}
 	],
 	"viewport": {
-		"x": -10.12641745340784,
-		"y": 128.7542017104989,
-		"zoom": 0.8340914086315915
+		"x": 18.7672505127332,
+		"y": -36.43641665388196,
+		"zoom": 0.9813548110253391
 	}
 }
