@@ -6,3 +6,4 @@ userService = Call io.jans.as.server.service.UserService#class
 identity = Call io.jans.as.server.security.Identity#class 
 authServiceCdiUtil = Call io.jans.service.cdi.util.CdiUtil#bean authService
 authResult = {}
+Repeat 3 times max
