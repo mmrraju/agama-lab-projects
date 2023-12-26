@@ -45,7 +45,9 @@
 						}
 					],
 					"callType": "Call static method",
-					"arguments": "",
+					"arguments": [
+						""
+					],
 					"logMessage": "",
 					"templatePath": "",
 					"maxIteration": "",
@@ -63,7 +65,7 @@
 					"displayName": "Failed Authn",
 					"nodeColor": "",
 					"exceptionVariableField": "",
-					"finishMode": "withFailure",
+					"finishMode": "withVariable",
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
@@ -1440,8 +1442,8 @@
 		}
 	],
 	"viewport": {
-		"x": -631,
-		"y": 77,
+		"x": -936,
+		"y": 85,
 		"zoom": 1
 	}
 }
