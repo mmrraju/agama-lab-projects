@@ -80,7 +80,7 @@
 					"Agama-when-Node-d9362e8e-bdcb-47cc-a17b-f0ff959d3af3.FAILURE",
 					"Agama-when-Node-d9362e8e-bdcb-47cc-a17b-f0ff959d3af3.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -813,8 +813,8 @@
 		}
 	],
 	"viewport": {
-		"x": -302,
-		"y": -212,
+		"x": -229,
+		"y": -106,
 		"zoom": 1
 	}
 }
