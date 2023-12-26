@@ -988,16 +988,17 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "pw.password",
-							"assignedVariableName": "userPassword.password"
+							"assignedVariableName": "password"
 						},
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "pw.confirm-password",
-							"assignedVariableName": "userPassword.confirmPassword"
+							"assignedVariableName": "confirmPassword"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": true
 			},
 			"selected": false,
 			"dragging": false,
@@ -1030,9 +1031,9 @@
 					"id": "Agama-when-Node-bb23906d-55a2-43ab-ba0d-f43a47fcad0d",
 					"parentId": "Agama-rrf-Node-45a5b9d3-f669-49a1-abd2-086ce1253eb7",
 					"type": "Agama-when-Node",
-					"variableField": "userPassword.password",
+					"variableField": "password",
 					"conditionInputField": "is",
-					"valueField": "userPassword.password",
+					"valueField": "confirmPassword",
 					"hasComment": true,
 					"inRepeatBlock": ""
 				},
@@ -1040,7 +1041,7 @@
 					"Agama-when-Node-bb23906d-55a2-43ab-ba0d-f43a47fcad0d.FAILURE",
 					"Agama-when-Node-bb23906d-55a2-43ab-ba0d-f43a47fcad0d.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
@@ -1522,7 +1523,7 @@
 	],
 	"viewport": {
 		"x": -1589,
-		"y": -295,
+		"y": -299,
 		"zoom": 1
 	}
 }
