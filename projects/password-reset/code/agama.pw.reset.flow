@@ -8,6 +8,7 @@ identity = Call io.jans.as.server.security.Identity#class
 authServiceCdiUtil = Call io.jans.service.cdi.util.CdiUtil#bean authService
 authResult = {}
 userMail = {}
+userPassword = {}
 Repeat 3 times max
      creds = RRF "login.ftlh" authResult
      authResult.success = Call authServiceCdiUtil authenticate creds.username creds.password
@@ -16,5 +17,5 @@ creds = RRF "pwreset.ftlh" userMail
 userMail.success  = Call userServiceCdiUtil getUserByAttribute "mail" creds.email
 When authResult.success  is true
      Log "@trace User found with user mail: " creds.email
-     token = 12345
+     pw = RRF "resetpw.ftlh" userPassword
 Log "@trace User not found for uid : '" creds.username
