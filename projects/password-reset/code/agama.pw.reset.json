@@ -194,9 +194,9 @@
 					"id": "Agama-when-Node-8eacd0ab-933b-480f-8716-2b904e785f4b",
 					"parentId": "Agama-call-Node-5a729cfa-410e-4a16-8501-cfbb39f713f6",
 					"type": "Agama-when-Node",
-					"variableField": "authResult.success ",
-					"conditionInputField": "is",
-					"valueField": "true",
+					"variableField": "foundUser",
+					"conditionInputField": "is not",
+					"valueField": "null",
 					"hasComment": true,
 					"inRepeatBlock": false,
 					"hasSuccess": true,
@@ -208,7 +208,7 @@
 				],
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1568.6839797344921,
@@ -253,7 +253,7 @@
 						"creds.email"
 					],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "userMail.success "
+					"asssignedVariableName": "foundUser"
 				},
 				"skake": false
 			},
@@ -993,9 +993,9 @@
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2131.683979734492,
@@ -1517,8 +1517,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1589,
-		"y": -299,
+		"x": -1151,
+		"y": -112,
 		"zoom": 1
 	}
 }
