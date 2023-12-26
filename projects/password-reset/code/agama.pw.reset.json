@@ -1,6 +1,48 @@
 {
 	"nodes": [
 		{
+			"width": 210,
+			"height": 140,
+			"id": "Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432",
+			"position": {
+				"x": 1163.6839797344921,
+				"y": 436.52501407326935
+			},
+			"parentId": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f",
+			"type": "when",
+			"data": {
+				"id": "Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432",
+				"type": "Agama-when-Node",
+				"parentId": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 1163.6839797344921,
+					"y": 436.52501407326935
+				},
+				"agamaData": {
+					"id": "Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432",
+					"parentId": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f",
+					"type": "Agama-when-Node",
+					"variableField": "authResult.success",
+					"conditionInputField": "is",
+					"valueField": "true",
+					"hasComment": true,
+					"inRepeatBlock": true
+				},
+				"handles": [
+					"Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432.FAILURE",
+					"Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432.SUCCESS"
+				]
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 1163.6839797344921,
+				"y": 436.52501407326935
+			}
+		},
+		{
 			"width": 170,
 			"height": 122,
 			"id": "Agama-rrf-Node-b8a493f4-dc03-4fba-9cd4-bf824b6f8cc2",
@@ -782,11 +824,28 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-repeat-Node-fafdc9a3-ed1b-48a2-a763-509c13a4735f.InFlow"
+		},
+		{
+			"id": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f-Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432-eff11863-1706-4f17-9fda-c8ac37eb2c1f",
+			"type": "straight",
+			"source": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f",
+			"target": "Agama-when-Node-0116faa6-f85b-43a8-96ff-49d85eb6b432",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": 12.253326784486262,
-		"y": 53.65451879454122,
-		"zoom": 0.8467453123625271
+		"x": -461,
+		"y": 3,
+		"zoom": 1
 	}
 }
