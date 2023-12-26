@@ -11,4 +11,4 @@ Repeat 3 times max
      authResult.success = Call authServiceCdiUtil authenticate creds.username creds.password
      authResult.uid = creds.username
 creds = RRF "username.ftlh" authResult
-authResult.success  = Call cdiUtilAuthService authenticate creds.username
+authResult.success  = Call authServiceCdiUtil authenticate creds.username
