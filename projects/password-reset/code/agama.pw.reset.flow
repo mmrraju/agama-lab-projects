@@ -18,4 +18,4 @@ userMail.success  = Call userServiceCdiUtil getUserByAttribute "mail" creds.emai
 When authResult.success  is true
      Log "@trace User found with user mail: " creds.email
      pw = RRF "resetpw.ftlh" userPassword
-Log "@trace User not found for uid : '" creds.username
+Log "@trace User not found for mail : '" creds.email
