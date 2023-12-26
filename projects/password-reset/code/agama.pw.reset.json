@@ -5,8 +5,8 @@
 			"height": 122,
 			"id": "finish-49748e66-828f-447f-b625-358dea1116ed",
 			"position": {
-				"x": 1341.6839797344921,
-				"y": 651.5250140732694
+				"x": 1313.6839797344921,
+				"y": 679.5250140732694
 			},
 			"type": "finish",
 			"data": {
@@ -20,8 +20,8 @@
 					"Agama-when-Node-d9362e8e-bdcb-47cc-a17b-f0ff959d3af3.SUCCESS"
 				],
 				"position": {
-					"x": 1341.6839797344921,
-					"y": 651.5250140732694
+					"x": 1313.6839797344921,
+					"y": 679.5250140732694
 				},
 				"agamaData": {
 					"id": "finish-49748e66-828f-447f-b625-358dea1116ed",
@@ -39,11 +39,11 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 1341.6839797344921,
-				"y": 651.5250140732694
+				"x": 1313.6839797344921,
+				"y": 679.5250140732694
 			}
 		},
 		{
@@ -70,7 +70,7 @@
 					"id": "Agama-when-Node-d9362e8e-bdcb-47cc-a17b-f0ff959d3af3",
 					"parentId": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f",
 					"type": "Agama-when-Node",
-					"variableField": "true",
+					"variableField": "authResult.success",
 					"conditionInputField": "is",
 					"valueField": "true",
 					"hasComment": true,
@@ -82,7 +82,7 @@
 				],
 				"skake": true
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1163.6839797344921,
