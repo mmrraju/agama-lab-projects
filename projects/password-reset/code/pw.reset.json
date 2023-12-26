@@ -1,52 +1,6 @@
 {
 	"nodes": [
 		{
-			"width": 170,
-			"height": 122,
-			"id": "finish-3422e046-f37c-4658-9a50-cae3f855c311",
-			"position": {
-				"x": 1746,
-				"y": 489
-			},
-			"type": "finish",
-			"data": {
-				"id": "finish-3422e046-f37c-4658-9a50-cae3f855c311",
-				"type": "Agama-finish-Flow",
-				"parentId": "Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f",
-				"whenCondition": "WhenTrue",
-				"inRepeatBlock": true,
-				"handles": [
-					"Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f.FAILURE",
-					"Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f.SUCCESS"
-				],
-				"position": {
-					"x": 1746,
-					"y": 489
-				},
-				"agamaData": {
-					"id": "finish-3422e046-f37c-4658-9a50-cae3f855c311",
-					"parentId": "Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f",
-					"type": "Agama-finish-Flow",
-					"hasSuccess": false,
-					"hasFailure": false,
-					"hasComment": true,
-					"comment": "",
-					"flowfilename": "",
-					"returnVariable": "{ userId: authResult.uid, property1: \"value1\"}",
-					"finishMode": "withSuccess",
-					"nodeIcon": "material-symbols:line-end-square-rounded",
-					"displayName": "success"
-				},
-				"skake": false
-			},
-			"selected": true,
-			"dragging": false,
-			"positionAbsolute": {
-				"x": 1746,
-				"y": 489
-			}
-		},
-		{
 			"width": 210,
 			"height": 140,
 			"id": "Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f",
@@ -75,7 +29,10 @@
 					"valueField": "true",
 					"hasComment": true,
 					"inRepeatBlock": true,
-					"hasSuccess": true
+					"hasSuccess": "",
+					"hasFailure": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
 				},
 				"handles": [
 					"Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f.FAILURE",
@@ -607,24 +564,6 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
-		},
-		{
-			"id": "Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f-finish-3422e046-f37c-4658-9a50-cae3f855c311-d02e7af3-9918-4040-9476-1b40265b9af9",
-			"type": "straight",
-			"source": "Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f",
-			"target": "finish-3422e046-f37c-4658-9a50-cae3f855c311",
-			"label": "Condition met",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"labelBgStyle": {
-				"fill": "#FFCC00",
-				"color": "#fff",
-				"fillOpacity": 0.7
-			},
-			"sourceHandle": "Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f.SUCCESS"
 		}
 	],
 	"viewport": {
