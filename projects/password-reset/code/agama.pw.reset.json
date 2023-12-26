@@ -28,7 +28,7 @@
 					"comment": "",
 					"javaClassName": "",
 					"javaMethodName": "authenticate",
-					"javaVariableName": "cdiUtilAuthService",
+					"javaVariableName": "authServiceCdiUtil",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"whenCondition": "",
@@ -41,7 +41,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 918.6839797344921,
