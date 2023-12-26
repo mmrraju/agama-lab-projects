@@ -39,7 +39,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1276.6839797344921,
@@ -72,7 +72,7 @@
 					"type": "Agama-when-Node",
 					"variableField": "authResult.success",
 					"conditionInputField": "is",
-					"valueField": "true",
+					"valueField": "True",
 					"hasComment": true,
 					"inRepeatBlock": true
 				},
@@ -80,9 +80,9 @@
 					"Agama-when-Node-38aeadae-d581-4e26-b97f-8a402247fbc5.FAILURE",
 					"Agama-when-Node-38aeadae-d581-4e26-b97f-8a402247fbc5.SUCCESS"
 				],
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1163.6839797344921,
