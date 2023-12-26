@@ -257,7 +257,7 @@
 					"inRepeatBlock": false,
 					"assignments": [
 						{
-							"variableTypeCheck": true,
+							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "authResult"
 						}
@@ -266,7 +266,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 701,
@@ -567,8 +567,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1330.7770816376851,
-		"y": -33.0124056950159,
+		"x": -576.7770816376851,
+		"y": 55.9875943049841,
 		"zoom": 1
 	}
 }
