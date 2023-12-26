@@ -33,9 +33,10 @@
 					"templatePath": "resetpw.ftlh",
 					"asssignedVariableName": "pw",
 					"arguments": "userPassword"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 2215.683979734492,
 				"y": 492.52501407326935
@@ -70,13 +71,13 @@
 					"comment": "",
 					"whenCondition": "WhenFalse",
 					"inRepeatBlock": false,
-					"logMessage": "\"User not found for uid : '\" creds.username",
+					"logMessage": "\"User not found for mail : '\" creds.email",
 					"logLevel": "trace",
 					"nodeIcon": "octicon:log-16"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1818.6839797344921,
@@ -856,7 +857,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1331,8 +1333,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1719.85,
-		"y": -160,
+		"x": -1111.85,
+		"y": -77,
 		"zoom": 1
 	}
 }
