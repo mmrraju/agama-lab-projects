@@ -10,4 +10,3 @@ Repeat 3 times max
      creds = RRF "login.ftlh" authResult
      authResult.success = Call authServiceCdiUtil authenticate creds.username creds.password
      authResult.uid = creds.username
-     When authResult.success is True
