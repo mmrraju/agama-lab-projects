@@ -36,7 +36,8 @@
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "success"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
@@ -79,7 +80,8 @@
 				"handles": [
 					"Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f.FAILURE",
 					"Agama-when-Node-0f9778a0-7c91-4cef-b9af-f3d0ce13f11f.SUCCESS"
-				]
+				],
+				"skake": true
 			},
 			"selected": false,
 			"dragging": false,
@@ -124,7 +126,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -625,8 +628,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1385,
-		"y": 90,
+		"x": -1330.7770816376851,
+		"y": -33.0124056950159,
 		"zoom": 1
 	}
 }
