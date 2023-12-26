@@ -13,7 +13,8 @@ Repeat 3 times max
      authResult.success = Call authServiceCdiUtil authenticate creds.username creds.password
      authResult.uid = creds.username
 creds = RRF "pwreset.ftlh" userMail
-userMail.success  = Call userServiceCdiUtil getUserByAttribute "mail" creds.usermail
+userMail.success  = Call userServiceCdiUtil getUserByAttribute "mail" creds.email
 When authResult.success  is true
-     Log "@trace User found with user id: " creds.username
+     Log "@trace User found with user mail: " creds.email
+     token = 12345
 Log "@trace User not found for uid : '" creds.username
