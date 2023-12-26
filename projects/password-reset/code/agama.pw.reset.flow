@@ -14,8 +14,8 @@ Repeat 3 times max
      authResult.success = Call authServiceCdiUtil authenticate creds.username creds.password
      authResult.uid = creds.username
 creds = RRF "pwreset.ftlh" userMail
-userMail.success  = Call userServiceCdiUtil getUserByAttribute "mail" creds.email
-When authResult.success  is true
+foundUser = Call userServiceCdiUtil getUserByAttribute "mail" creds.email
+When foundUser is not null
      Log "@trace User found with user mail: " creds.email
      pw = RRF "resetpw.ftlh" userPassword
      password = pw.password
