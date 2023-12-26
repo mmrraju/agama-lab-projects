@@ -18,6 +18,8 @@ userMail.success  = Call userServiceCdiUtil getUserByAttribute "mail" creds.emai
 When authResult.success  is true
      Log "@trace User found with user mail: " creds.email
      pw = RRF "resetpw.ftlh" userPassword
-     When pw.password is pw.confirm-password 
+     userPassword.password = pw.password
+     userPassword.confirmPassword = pw.confirm-password
+     When userPassword.password is userPassword.password
           Log "@trace Password and Confirm-Password didn't match"
 Log "@trace User not found for mail : '" creds.email
