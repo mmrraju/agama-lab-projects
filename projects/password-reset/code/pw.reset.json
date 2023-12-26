@@ -67,7 +67,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": true
 			},
 			"selected": true,
 			"dragging": false,
@@ -141,7 +142,8 @@
 					"hasExtraData": false,
 					"configParams": "{}",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1438,8 +1440,8 @@
 		}
 	],
 	"viewport": {
-		"x": -638.1124430064579,
-		"y": 53.91300378738595,
-		"zoom": 1.2141948843950467
+		"x": -631,
+		"y": 77,
+		"zoom": 1
 	}
 }
