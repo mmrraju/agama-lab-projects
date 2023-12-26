@@ -39,7 +39,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1276.6839797344921,
@@ -80,7 +80,7 @@
 					"Agama-when-Node-38aeadae-d581-4e26-b97f-8a402247fbc5.FAILURE",
 					"Agama-when-Node-38aeadae-d581-4e26-b97f-8a402247fbc5.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -177,7 +177,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 763.6839797344921,
@@ -794,8 +794,8 @@
 		}
 	],
 	"viewport": {
-		"x": -420,
-		"y": -186,
+		"x": -643,
+		"y": -286,
 		"zoom": 1
 	}
 }
