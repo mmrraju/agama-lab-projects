@@ -40,11 +40,8 @@
 			<div class="text-sm flex justify-center items-center">
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Submit
-			  </button><space>
-			  <button type="submit" class="rounded text-white btn bg-green-500 hover:bg-green-600">
-				Forget Password
 			  </button>
-			</space></div>
+			</div>
 		  </div>
 		</form>
 	  </div>
