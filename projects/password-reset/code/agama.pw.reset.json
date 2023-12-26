@@ -150,25 +150,26 @@
 					"id": "Agama-call-Node-5a729cfa-410e-4a16-8501-cfbb39f713f6",
 					"parentId": "Agama-rrf-Node-b8a493f4-dc03-4fba-9cd4-bf824b6f8cc2",
 					"type": "Agama-call-Node",
-					"displayName": "validateUser",
+					"displayName": "validateUserMail",
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "",
-					"javaMethodName": "authenticate",
-					"javaVariableName": "authServiceCdiUtil",
+					"javaMethodName": "getUserByAttribute",
+					"javaVariableName": "userServiceCdiUtil",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"whenCondition": "",
 					"inRepeatBlock": false,
 					"arguments": [
-						"creds.username"
+						"\"mail\"",
+						"creds.usermail"
 					],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "authResult.success "
+					"asssignedVariableName": "userMail.success "
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1218.6839797344921,
@@ -663,7 +664,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -758,9 +760,10 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "userServiceCdiUtil"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 830,
@@ -1203,8 +1206,8 @@
 		}
 	],
 	"viewport": {
-		"x": -62,
-		"y": 114,
+		"x": -673,
+		"y": -69,
 		"zoom": 1
 	}
 }
