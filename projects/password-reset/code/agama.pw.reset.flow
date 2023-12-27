@@ -18,7 +18,9 @@ creds = RRF "pwreset.ftlh" userMail
 foundUser = Call userServiceCdiUtil getUserByAttribute "mail" creds.email
 When foundUser is not null
      Log "@trace User found with user mail: " creds.email
-     tokenStore = 12345
+     dbToken = 12345
      Repeat 2 times max
           userInputToken = RRF "otp.ftlh" tokenVariable
+          tokenVariable.value = userInputToken.first
+          When tokenVariable.value is dbToken
 Log "@trace User not found for mail : " creds.email
