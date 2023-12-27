@@ -19,7 +19,6 @@ foundUser = Call userServiceCdiUtil getUserByAttribute "mail" creds.email
 When foundUser is not null
      Log "@trace User found with user mail: " creds.email
      tokenStore = 12345
-     input token = RRF "otp.ftlh" tokenVariable
      pw = RRF "resetpw.ftlh" userPassword
      password = pw.password
      When password is confirmPassword
