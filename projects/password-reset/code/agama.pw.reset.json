@@ -3,6 +3,51 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-assignment-Node-8a2b7dcc-9d73-4fde-ad3d-1f833d9cf806",
+			"position": {
+				"x": 3453.972120679205,
+				"y": 1175.319230751566
+			},
+			"type": "assignment",
+			"data": {
+				"id": "Agama-assignment-Node-8a2b7dcc-9d73-4fde-ad3d-1f833d9cf806",
+				"type": "Agama-assignment-Node",
+				"parentId": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 3453.972120679205,
+					"y": 1175.319230751566
+				},
+				"agamaData": {
+					"id": "Agama-assignment-Node-8a2b7dcc-9d73-4fde-ad3d-1f833d9cf806",
+					"parentId": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+					"type": "Agama-assignment-Node",
+					"displayName": "User password",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"assignments": [
+						{
+							"variableTypeCheck": false,
+							"assignmentExpression": "pw.password",
+							"assignedVariableName": "userPassword.value"
+						}
+					],
+					"nodeIcon": "material-symbols:equal"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 3453.972120679205,
+				"y": 1175.319230751566
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-log-Node-607fd3f1-0f6f-48aa-8b20-7cc19623d44a",
 			"position": {
 				"x": 2600.972120679205,
@@ -31,9 +76,10 @@
 					"logMessage": "\"Otp doesn't matching\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2600.972120679205,
@@ -2006,11 +2052,28 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-repeat-Node-69e9e206-ec8a-43f5-ad9e-05bdc2e866d7.InFlow"
+		},
+		{
+			"id": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669-Agama-assignment-Node-8a2b7dcc-9d73-4fde-ad3d-1f833d9cf806-ddfe8f9f-36b5-47b3-b720-9de5dd43d37d",
+			"type": "straight",
+			"source": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+			"target": "Agama-assignment-Node-8a2b7dcc-9d73-4fde-ad3d-1f833d9cf806",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -2061,
-		"y": -238,
+		"x": -3012,
+		"y": -823,
 		"zoom": 1
 	}
 }
