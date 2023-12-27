@@ -1040,9 +1040,10 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 1886.683979734492,
 				"y": 490.52501407326935
@@ -1585,8 +1586,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1664,
-		"y": -253,
-		"zoom": 1
+		"x": -23.48306415735135,
+		"y": 129.5272617420286,
+		"zoom": 0.7169776240079136
 	}
 }
