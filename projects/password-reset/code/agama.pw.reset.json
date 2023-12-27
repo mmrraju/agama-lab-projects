@@ -1034,11 +1034,11 @@
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "otp.ftlh",
 					"asssignedVariableName": "input token",
-					"arguments": "token"
+					"arguments": "tokenVariable"
 				},
 				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2236.683979734492,
@@ -1126,13 +1126,14 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
-							"assignedVariableName": "token"
+							"assignedVariableName": "tokenVariable"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 762.6839797344921,
@@ -1708,8 +1709,8 @@
 		}
 	],
 	"viewport": {
-		"x": 44.758639830538414,
-		"y": 19.085685346250898,
+		"x": -1163.2413601694616,
+		"y": -91.91431465374927,
 		"zoom": 0.8467453123625271
 	}
 }
