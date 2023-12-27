@@ -3,6 +3,46 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-log-Node-607fd3f1-0f6f-48aa-8b20-7cc19623d44a",
+			"position": {
+				"x": 2600.972120679205,
+				"y": 485.3192307515661
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-607fd3f1-0f6f-48aa-8b20-7cc19623d44a",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-repeat-Node-69e9e206-ec8a-43f5-ad9e-05bdc2e866d7",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"position": {
+					"x": 2600.972120679205,
+					"y": 485.3192307515661
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-607fd3f1-0f6f-48aa-8b20-7cc19623d44a",
+					"parentId": "Agama-repeat-Node-69e9e206-ec8a-43f5-ad9e-05bdc2e866d7",
+					"type": "Agama-log-Node",
+					"displayName": "Otp not matching log",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"logMessage": "\"Otp doesn't matching\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2600.972120679205,
+				"y": 485.3192307515661
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
 			"position": {
 				"x": 3253.972120679205,
@@ -33,9 +73,10 @@
 					"templatePath": "resetpw.ftlh",
 					"asssignedVariableName": "pw",
 					"arguments": "userPassword"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3253.972120679205,
@@ -1947,11 +1988,29 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-repeat-Node-69e9e206-ec8a-43f5-ad9e-05bdc2e866d7-Agama-log-Node-607fd3f1-0f6f-48aa-8b20-7cc19623d44a-9159e980-003f-4d1b-a3a5-a11ce2ea3599",
+			"type": "straight",
+			"source": "Agama-repeat-Node-69e9e206-ec8a-43f5-ad9e-05bdc2e866d7",
+			"target": "Agama-log-Node-607fd3f1-0f6f-48aa-8b20-7cc19623d44a",
+			"label": "Not In Block",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-repeat-Node-69e9e206-ec8a-43f5-ad9e-05bdc2e866d7.InFlow"
 		}
 	],
 	"viewport": {
-		"x": -2734,
-		"y": -708,
+		"x": -2061,
+		"y": -238,
 		"zoom": 1
 	}
 }
