@@ -25,4 +25,5 @@ When foundUser is not null
           When tokenVariable.value is dbToken
                Repeat 2 times max
                     Log "@info Insert new password"
+                    pw = RRF "resetpw.ftlh" userPassword
 Log "@trace User not found for mail : " creds.email
