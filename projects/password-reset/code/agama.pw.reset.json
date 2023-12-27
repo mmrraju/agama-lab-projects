@@ -31,9 +31,10 @@
 					"logMessage": "\"Otp Matches\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3132.0235741587,
@@ -74,7 +75,8 @@
 				"handles": [
 					"Agama-when-Node-a57ca716-c453-492b-801f-88298b0b2acf.FAILURE",
 					"Agama-when-Node-a57ca716-c453-492b-801f-88298b0b2acf.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -116,7 +118,7 @@
 					"maxIteration": "2",
 					"maxIterationVariableName": ""
 				},
-				"skake": true
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1212,15 +1214,15 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "userInputToken.first userInputToken.second userInputToken.third userInputToken.fourth userInputToken.fifth userInputToken.sixth",
+							"assignmentExpression": "userInputToken.first+userInputToken.second+userInputToken.third+userInputToken.fourth+userInputToken.fifth+userInputToken.sixth",
 							"assignedVariableName": "tokenVariable.value"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2722.0235741587,
@@ -1823,8 +1825,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2853,
-		"y": -471,
+		"x": -2451,
+		"y": -411,
 		"zoom": 1
 	}
 }
