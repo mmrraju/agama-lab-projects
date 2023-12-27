@@ -1171,12 +1171,13 @@
 					"comment": "",
 					"whenCondition": "",
 					"inRepeatBlock": false,
-					"logMessage": "Check user input token and db stored token",
+					"logMessage": "\"Check user input token and db stored token\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2491.0235741587,
@@ -1217,7 +1218,8 @@
 				"handles": [
 					"Agama-when-Node-3cfc3e77-d984-4525-8f16-cafcefde7add.FAILURE",
 					"Agama-when-Node-3cfc3e77-d984-4525-8f16-cafcefde7add.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
