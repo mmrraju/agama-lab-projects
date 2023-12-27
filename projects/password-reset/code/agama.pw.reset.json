@@ -979,7 +979,7 @@
 					"id": "Agama-assignment-Node-cf8472af-7b3b-4f9b-9fcd-bfe371d2305d",
 					"parentId": "Agama-log-Node-3ea3c6eb-bf75-44e0-8ea5-26ff708ed51f",
 					"type": "Agama-assignment-Node",
-					"displayName": "Token",
+					"displayName": "Token Db store",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "",
@@ -988,14 +988,14 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "12345",
-							"assignedVariableName": "token"
+							"assignedVariableName": "tokenStore"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 2036.683979734492,
 				"y": 490.52501407326935
@@ -1038,7 +1038,7 @@
 				},
 				"skake": true
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2236.683979734492,
