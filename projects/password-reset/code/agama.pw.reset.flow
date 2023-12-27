@@ -22,5 +22,4 @@ When foundUser is not null
      userInputToken = RRF "otp.ftlh" tokenVariable
      Log "@info Check user input token and db stored token"
      tokenVariable.value = userInputToken.first+userInputToken.second+userInputToken.third+userInputToken.fourth+userInputToken.fifth+userInputToken.sixth
-     When tokenVariable.value is tokenStore
-Log "@trace User not found for mail : '" creds.email
+Log "@trace User not found for mail : " creds.email
