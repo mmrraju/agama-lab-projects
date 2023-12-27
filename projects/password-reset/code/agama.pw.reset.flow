@@ -20,6 +20,6 @@ When foundUser is not null
      Log "@trace User found with user mail: " creds.email
      tokenStore = 12345
      userInputToken = RRF "otp.ftlh" tokenVariable
-     Log "@info " Check user input token and db stored token
+     Log "@info Check user input token and db stored token"
      When userInputToken is 12345
 Log "@trace User not found for mail : '" creds.email
