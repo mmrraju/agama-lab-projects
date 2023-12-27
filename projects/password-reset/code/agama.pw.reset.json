@@ -1175,9 +1175,9 @@
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
 				},
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2491.0235741587,
@@ -1211,7 +1211,7 @@
 					"hasFailure": true,
 					"variableField": "userInputToken",
 					"conditionInputField": "is",
-					"valueField": "12345",
+					"valueField": "\"12345\"",
 					"hasComment": true,
 					"inRepeatBlock": false
 				},
@@ -1219,9 +1219,9 @@
 					"Agama-when-Node-3cfc3e77-d984-4525-8f16-cafcefde7add.FAILURE",
 					"Agama-when-Node-3cfc3e77-d984-4525-8f16-cafcefde7add.SUCCESS"
 				],
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2691.0235741587,
