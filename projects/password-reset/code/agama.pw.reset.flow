@@ -21,7 +21,7 @@ When foundUser is not null
      tokenStore = 12345
      userInputToken = RRF "otp.ftlh" tokenVariable
      Log "@info Check user input token and db stored token"
-     tokenVariable.value = userInputToken.first + userInputToken.second + userInputToken.third + userInputToken.fourth + userInputToken.fifth + userInputToken.sixth
+     tokenVariable.value = userInputToken.first
      Repeat 2 times max
           When tokenVariable.value is tokenStore
                Log "@info Otp Matches"
