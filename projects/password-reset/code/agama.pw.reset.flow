@@ -20,8 +20,6 @@ When foundUser is not null
      Log "@trace User found with user mail: " creds.email
      tokenStore = 12345
      userInputToken = RRF "otp.ftlh" tokenVariable
-     pw = RRF "resetpw.ftlh" userPassword
-     password = pw.password
-     When password is confirmPassword
-          Log "@trace Password and Confirm-Password didn't match"
+     Log "@info " Check user input token and db stored token
+     When userInputToken is 12345
 Log "@trace User not found for mail : '" creds.email
