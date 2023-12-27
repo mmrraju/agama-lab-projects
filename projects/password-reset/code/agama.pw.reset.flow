@@ -26,5 +26,6 @@ When foundUser is not null
                Repeat 2 times max
                     Log "@info Insert new password"
                     pw = RRF "resetpw.ftlh" userPassword
+                    userPassword.value = pw.password
      Log "@info Otp doesn't matching"
 Log "@trace User not found for mail : " creds.email
