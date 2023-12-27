@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+			"position": {
+				"x": 3253.972120679205,
+				"y": 1175.319230751566
+			},
+			"type": "rrf",
+			"data": {
+				"id": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+				"type": "Agama-rrf-Node",
+				"parentId": "Agama-log-Node-9c13b74f-bf7d-45e5-8c61-db5da660eaf6",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 3253.972120679205,
+					"y": 1175.319230751566
+				},
+				"agamaData": {
+					"id": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+					"parentId": "Agama-log-Node-9c13b74f-bf7d-45e5-8c61-db5da660eaf6",
+					"type": "Agama-rrf-Node",
+					"displayName": "Entry new password",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "resetpw.ftlh",
+					"asssignedVariableName": "pw",
+					"arguments": "userPassword"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 3253.972120679205,
+				"y": 1175.319230751566
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-log-Node-9c13b74f-bf7d-45e5-8c61-db5da660eaf6",
 			"position": {
 				"x": 3053.972120679205,
@@ -31,9 +73,10 @@
 					"logMessage": "\"Insert new password\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3053.972120679205,
@@ -75,7 +118,8 @@
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
 					"maxIteration": "2",
 					"maxIterationVariableName": ""
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -119,7 +163,7 @@
 					"Agama-when-Node-6a42e2cd-c75c-42e2-9adc-7ec83e57a142.FAILURE",
 					"Agama-when-Node-6a42e2cd-c75c-42e2-9adc-7ec83e57a142.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -1886,11 +1930,28 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-repeat-Node-82ecee7e-c135-42e4-92db-372a97a61a7b.InRepeatBlock"
+		},
+		{
+			"id": "Agama-log-Node-9c13b74f-bf7d-45e5-8c61-db5da660eaf6-Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669-7687593a-807c-45dd-ba0f-e4acb4f0baa3",
+			"type": "straight",
+			"source": "Agama-log-Node-9c13b74f-bf7d-45e5-8c61-db5da660eaf6",
+			"target": "Agama-rrf-Node-55deffe1-beb2-4e09-965d-bfd92b29f669",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -2855,
-		"y": -855,
+		"x": -2734,
+		"y": -708,
 		"zoom": 1
 	}
 }
