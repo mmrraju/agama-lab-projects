@@ -1093,9 +1093,9 @@
 					],
 					"nodeIcon": "material-symbols:equal"
 				},
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2722.0235741587,
