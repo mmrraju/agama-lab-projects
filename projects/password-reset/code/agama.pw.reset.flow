@@ -23,4 +23,6 @@ When foundUser is not null
           userInputToken = RRF "otp.ftlh" tokenVariable
           tokenVariable.value = userInputToken.first
           When tokenVariable.value is dbToken
+               Repeat 2 times max
+                    Log "@info Insert new password"
 Log "@trace User not found for mail : " creds.email
