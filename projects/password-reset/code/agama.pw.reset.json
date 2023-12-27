@@ -1214,7 +1214,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "userInputToken.first + userInputToken.second + userInputToken.third + userInputToken.fourth + userInputToken.fifth + userInputToken.sixth",
+							"assignmentExpression": "userInputToken.first",
 							"assignedVariableName": "tokenVariable.value"
 						}
 					],
