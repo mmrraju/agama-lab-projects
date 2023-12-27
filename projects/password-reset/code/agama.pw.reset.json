@@ -1211,7 +1211,7 @@
 					"hasFailure": true,
 					"variableField": "userInputToken",
 					"conditionInputField": "is",
-					"valueField": "\"12345\"",
+					"valueField": "tokenStore",
 					"hasComment": true,
 					"inRepeatBlock": false
 				},
@@ -1219,7 +1219,7 @@
 					"Agama-when-Node-3cfc3e77-d984-4525-8f16-cafcefde7add.FAILURE",
 					"Agama-when-Node-3cfc3e77-d984-4525-8f16-cafcefde7add.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
@@ -1851,8 +1851,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2789.176736556124,
-		"y": -553.5457679642104,
-		"zoom": 1.1809926614295305
+		"x": -1603.485245151277,
+		"y": -200.07383586670153,
+		"zoom": 0.8467453123625271
 	}
 }
