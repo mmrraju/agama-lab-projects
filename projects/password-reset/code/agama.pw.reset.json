@@ -36,9 +36,10 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 3453.972120679205,
@@ -1009,11 +1010,11 @@
 					"comment": "",
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": "{\n  \"host\": \"mail.google.com\",\n  \"port\": 587,\n  \"requiresSsl\": null,\n  \"serverTrust\": null,\n  \"fromName\": \"Md Mostafejur Rahman\",\n  \"fromEmailAddress\": \"mrraju.ice.iu@gmail.com\",\n  \"requiresAuthentication\": null,\n  \"userName\": \"mrraju.ice.iu@gmail.com\",\n  \"password\": \"fHze8OEMs1MzkGhWw/29eg==\"\n}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
-					"configs": "",
+					"configs": "smtp",
 					"flowname": "agama.pw.reset"
 				},
 				"skake": false
@@ -1022,7 +1023,7 @@
 				"x": 30,
 				"y": 30
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 30,
@@ -2072,8 +2073,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3012,
-		"y": -823,
+		"x": 10,
+		"y": 15,
 		"zoom": 1
 	}
 }
