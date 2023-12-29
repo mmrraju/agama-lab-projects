@@ -37,7 +37,17 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "agama.pw.reset": {},
+            "agama.pw.reset": {
+                "host": "mail.google.com",
+                "port": 587,
+                "requiresSsl": null,
+                "serverTrust": null,
+                "fromName": "Md Mostafejur Rahman",
+                "fromEmailAddress": "mrraju.ice.iu@gmail.com",
+                "requiresAuthentication": null,
+                "userName": "mrraju.ice.iu@gmail.com",
+                "password": "fHze8OEMs1MzkGhWw/29eg=="
+            },
             "": {}
         },
         "name": "password-reset"
