@@ -71,8 +71,8 @@
 					"parentId": "Agama-assignment-Node-aba991ea-29db-4eec-9f10-e9e3bc0e253f",
 					"type": "Agama-when-Node",
 					"variableField": "authResult.success",
-					"conditionInputField": "is",
-					"valueField": "true",
+					"conditionInputField": "is not",
+					"valueField": "false",
 					"hasComment": true,
 					"inRepeatBlock": true
 				},
@@ -80,9 +80,9 @@
 					"Agama-when-Node-532b6c2b-0c86-4160-a8c2-b430b786bd60.FAILURE",
 					"Agama-when-Node-532b6c2b-0c86-4160-a8c2-b430b786bd60.SUCCESS"
 				],
-				"skake": false
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1253.0732072301766,
@@ -749,7 +749,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1008.1954860958544,
