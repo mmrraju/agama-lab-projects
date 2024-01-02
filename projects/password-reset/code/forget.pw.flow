@@ -9,3 +9,4 @@ Repeat 3 times max
      authResult.success = Call authServiceInstance authenticate creds.username creds.password
      authResult.uid = creds.username
      When creds.forgetpassword is true
+          Log "@info test"
