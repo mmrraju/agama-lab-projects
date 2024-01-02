@@ -7,6 +7,7 @@ userService = Call io.jans.as.server.service.UserService#class
 userServiceInstance = Call io.jans.service.cdi.util.CdiUtil#bean userService
 authResult = {}
 userMail = {}
+otp = {}
 Repeat 3 times max
      creds = RRF "login.ftlh" authResult
      authResult.success = Call authServiceInstance authenticate creds.username creds.password
@@ -20,6 +21,7 @@ Repeat 3 times max
           When user is not null
                Log "@info User found for user mail : " userMail.mail
                token = "123456"
+               Repeat 2 times max
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
      When authResult.success is true
