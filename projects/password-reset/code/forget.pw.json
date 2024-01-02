@@ -1,6 +1,46 @@
 {
 	"nodes": [
 		{
+			"width": 170,
+			"height": 122,
+			"id": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+			"position": {
+				"x": 1633,
+				"y": 489
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
+				"whenCondition": "WhenTrue",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 1633,
+					"y": 489
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+					"parentId": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
+					"type": "Agama-log-Node",
+					"displayName": "Test log",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "WhenTrue",
+					"inRepeatBlock": true,
+					"logMessage": "\"test\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 1633,
+				"y": 489
+			}
+		},
+		{
 			"width": 209,
 			"height": 140,
 			"id": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
@@ -28,15 +68,16 @@
 					"conditionInputField": "is",
 					"valueField": "true",
 					"hasComment": true,
-					"inRepeatBlock": true
+					"inRepeatBlock": true,
+					"hasSuccess": true
 				},
 				"handles": [
 					"Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.FAILURE",
 					"Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1520,
@@ -578,10 +619,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae-Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c-bbeeb31f-b934-47f9-ad1e-b9832ad4ce1d",
+			"type": "straight",
+			"source": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
+			"target": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+			"label": "Condition met",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.SUCCESS"
 		}
 	],
 	"viewport": {
-		"x": -1102,
+		"x": -1033,
 		"y": -41,
 		"zoom": 1
 	}
