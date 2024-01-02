@@ -3,6 +3,8 @@ Flow forget.pw
      Configs smtp
 authService = Call io.jans.as.server.service.AuthenticationService#class 
 authServiceInstance = Call io.jans.service.cdi.util.CdiUtil#bean authService
+userService = Call io.jans.as.server.service.UserService#class 
+userServiceInstance = Call io.jans.service.cdi.util.CdiUtil#bean userService
 authResult = {}
 userMail = {}
 Repeat 3 times max
