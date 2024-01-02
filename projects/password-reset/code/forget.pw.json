@@ -3,6 +3,137 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-call-Node-6518d284-4148-4c09-bdfc-1d2e55bdf716",
+			"position": {
+				"x": 1121,
+				"y": 259
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-6518d284-4148-4c09-bdfc-1d2e55bdf716",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 1121,
+					"y": 259
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-6518d284-4148-4c09-bdfc-1d2e55bdf716",
+					"parentId": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+					"type": "Agama-call-Node",
+					"displayName": "Validate",
+					"hasComment": true,
+					"comment": "",
+					"javaClassName": "",
+					"javaMethodName": "authenticate",
+					"javaVariableName": "authServiceInstance",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"arguments": [
+						"creds.username",
+						"creds.password"
+					],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "authResult.success"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 1121,
+				"y": 259
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
+			"id": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+			"position": {
+				"x": 921,
+				"y": 259
+			},
+			"type": "rrf",
+			"data": {
+				"id": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+				"type": "Agama-rrf-Node",
+				"parentId": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 921,
+					"y": 259
+				},
+				"agamaData": {
+					"id": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+					"parentId": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+					"type": "Agama-rrf-Node",
+					"displayName": "Login page",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "login.ftlh",
+					"asssignedVariableName": "creds",
+					"arguments": "authResult"
+				}
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 921,
+				"y": 259
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
+			"id": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+			"position": {
+				"x": 826,
+				"y": 29
+			},
+			"type": "repeat",
+			"data": {
+				"id": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+				"type": "Agama-repeat-Node",
+				"parentId": "Agama-assignment-Node-7c7d11b0-4b85-4113-9ed3-de69df6ce1c3",
+				"whenCondition": "",
+				"inRepeatBlock": false,
+				"handles": [],
+				"position": {
+					"x": 826,
+					"y": 29
+				},
+				"agamaData": {
+					"id": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+					"parentId": "Agama-assignment-Node-7c7d11b0-4b85-4113-9ed3-de69df6ce1c3",
+					"type": "Agama-repeat-Node",
+					"displayName": "Max Try",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": false,
+					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
+					"maxIteration": "3",
+					"maxIterationVariableName": ""
+				}
+			},
+			"selected": false,
+			"positionAbsolute": {
+				"x": 826,
+				"y": 29
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-assignment-Node-7c7d11b0-4b85-4113-9ed3-de69df6ce1c3",
 			"position": {
 				"x": 627,
@@ -36,9 +167,10 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 627,
@@ -83,7 +215,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "authServiceInstance"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -128,7 +261,8 @@
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "authService"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -231,11 +365,63 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-assignment-Node-7c7d11b0-4b85-4113-9ed3-de69df6ce1c3-Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1-5b3a2045-fd8e-4472-a5ea-7da5cca8500b",
+			"type": "straight",
+			"source": "Agama-assignment-Node-7c7d11b0-4b85-4113-9ed3-de69df6ce1c3",
+			"target": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1-Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072-04b66b53-9871-4d83-95c6-ef86d863d56d",
+			"type": "straight",
+			"source": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+			"target": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+			"label": "In Block",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1.InRepeatBlock"
+		},
+		{
+			"id": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072-Agama-call-Node-6518d284-4148-4c09-bdfc-1d2e55bdf716-cc605867-16f4-41f7-97bc-0fb8ed634968",
+			"type": "straight",
+			"source": "Agama-rrf-Node-8ed9fc34-134c-40d2-ab52-8641dfa8c072",
+			"target": "Agama-call-Node-6518d284-4148-4c09-bdfc-1d2e55bdf716",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -74,
-		"y": 16,
-		"zoom": 1
+		"x": -870.7204515952869,
+		"y": -17.54326112241523,
+		"zoom": 1.0000000000000002
 	}
 }
