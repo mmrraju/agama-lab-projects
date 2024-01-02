@@ -32,11 +32,12 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "userPw.password",
-							"assignedVariableName": "password.value"
+							"assignedVariableName": "newPassword.value"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
@@ -77,7 +78,7 @@
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "pwreset.ftlh",
 					"asssignedVariableName": "userPw",
-					"arguments": "password"
+					"arguments": "newPassword"
 				},
 				"skake": false
 			},
@@ -1409,7 +1410,7 @@
 					"id": "Agama-assignment-Node-735293ff-9923-4186-af8b-16ca58371dc1",
 					"parentId": "Agama-assignment-Node-62639acf-f5f3-4c29-872a-005c36069ff4",
 					"type": "Agama-assignment-Node",
-					"displayName": "Password",
+					"displayName": "New Password",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "",
@@ -1418,7 +1419,7 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "{}",
-							"assignedVariableName": "password"
+							"assignedVariableName": "newPassword"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
@@ -2072,8 +2073,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5131.473556752162,
-		"y": -1022.9149496112752,
+		"x": -5035.473556752162,
+		"y": -1009.9149496112755,
 		"zoom": 1.148698354997036
 	}
 }
