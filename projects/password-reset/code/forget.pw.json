@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-rrf-Node-2ce5951d-636f-465e-b67a-e933516dce7b",
+			"position": {
+				"x": 2004,
+				"y": 488
+			},
+			"type": "rrf",
+			"data": {
+				"id": "Agama-rrf-Node-2ce5951d-636f-465e-b67a-e933516dce7b",
+				"type": "Agama-rrf-Node",
+				"parentId": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 2004,
+					"y": 488
+				},
+				"agamaData": {
+					"id": "Agama-rrf-Node-2ce5951d-636f-465e-b67a-e933516dce7b",
+					"parentId": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+					"type": "Agama-rrf-Node",
+					"displayName": "Mail entry page",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "mail.ftlh",
+					"asssignedVariableName": "loadMail",
+					"arguments": "userMail"
+				}
+			},
+			"selected": true,
+			"positionAbsolute": {
+				"x": 2004,
+				"y": 488
+			},
+			"dragging": false
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-log-Node-bcd33462-865e-418e-88ed-708398c4014c",
 			"position": {
 				"x": 2233,
@@ -42,7 +84,7 @@
 			}
 		},
 		{
-			"width": 209,
+			"width": 210,
 			"height": 140,
 			"id": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
 			"position": {
@@ -152,7 +194,7 @@
 					"id": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
 					"parentId": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
 					"type": "Agama-log-Node",
-					"displayName": "Test log",
+					"displayName": "Test log (pw reset)",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "WhenTrue",
@@ -171,7 +213,7 @@
 			}
 		},
 		{
-			"width": 209,
+			"width": 210,
 			"height": 140,
 			"id": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
 			"position": {
@@ -570,9 +612,10 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 222,
@@ -888,11 +931,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c-Agama-rrf-Node-2ce5951d-636f-465e-b67a-e933516dce7b-7d1646a4-20dc-4852-a4a1-18d7f511e20c",
+			"type": "straight",
+			"source": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
+			"target": "Agama-rrf-Node-2ce5951d-636f-465e-b67a-e933516dce7b",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": 43,
-		"y": 13,
-		"zoom": 1
+		"x": -3620.6083772439843,
+		"y": -806.8819781857667,
+		"zoom": 2
 	}
 }
