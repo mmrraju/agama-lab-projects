@@ -8,6 +8,7 @@ Repeat 3 times max
      creds = RRF "login.ftlh" authResult
      authResult.success = Call authServiceInstance authenticate creds.username creds.password
      authResult.uid = creds.username
+     // If try to reset password
      When creds.forgetpassword is true
           Log "@info test"
      Log "@info Chose to validate user"
