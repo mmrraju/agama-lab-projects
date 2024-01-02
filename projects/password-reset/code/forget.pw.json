@@ -3,6 +3,51 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-assignment-Node-c687e3d2-400e-43d6-ae75-e60a00317c77",
+			"position": {
+				"x": 3294.9709328045305,
+				"y": 724.964404506369
+			},
+			"type": "assignment",
+			"data": {
+				"id": "Agama-assignment-Node-c687e3d2-400e-43d6-ae75-e60a00317c77",
+				"type": "Agama-assignment-Node",
+				"parentId": "Agama-log-Node-f8471a90-4876-4d84-a461-8b536f46e1fb",
+				"whenCondition": "",
+				"inRepeatBlock": "",
+				"position": {
+					"x": 3294.9709328045305,
+					"y": 724.964404506369
+				},
+				"agamaData": {
+					"id": "Agama-assignment-Node-c687e3d2-400e-43d6-ae75-e60a00317c77",
+					"parentId": "Agama-log-Node-f8471a90-4876-4d84-a461-8b536f46e1fb",
+					"type": "Agama-assignment-Node",
+					"displayName": "Token",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": "",
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "123456",
+							"assignedVariableName": "token"
+						}
+					],
+					"nodeIcon": "material-symbols:equal"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 3294.9709328045305,
+				"y": 724.964404506369
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-log-Node-7c5840da-fba1-4024-a101-b0d3a156d14c",
 			"position": {
 				"x": 3231.9709328045305,
@@ -23,7 +68,7 @@
 					"id": "Agama-log-Node-7c5840da-fba1-4024-a101-b0d3a156d14c",
 					"parentId": "Agama-when-Node-ad462e96-2be8-453a-ad0a-dfcff596f5fc",
 					"type": "Agama-log-Node",
-					"displayName": "Log",
+					"displayName": "Log(Not Found mail)",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "WhenFalse",
@@ -31,7 +76,8 @@
 					"logMessage": "\"User not found for mail : \" userMail.mail",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -63,7 +109,7 @@
 					"id": "Agama-log-Node-f8471a90-4876-4d84-a461-8b536f46e1fb",
 					"parentId": "Agama-when-Node-ad462e96-2be8-453a-ad0a-dfcff596f5fc",
 					"type": "Agama-log-Node",
-					"displayName": "Log",
+					"displayName": "Log(Found mail)",
 					"hasComment": true,
 					"comment": "",
 					"whenCondition": "WhenTrue",
@@ -71,7 +117,8 @@
 					"logMessage": "\"User found for user mail : \" userMail.mail",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -104,18 +151,17 @@
 					"id": "Agama-when-Node-ad462e96-2be8-453a-ad0a-dfcff596f5fc",
 					"parentId": "Agama-assignment-Node-1453016a-41f4-4520-8e45-2c9289cd552f",
 					"type": "Agama-when-Node",
-					"variableField": "user ",
+					"variableField": "user",
 					"conditionInputField": "is not",
 					"valueField": "null",
 					"hasComment": true,
-					"inRepeatBlock": "",
-					"hasSuccess": true,
-					"hasFailure": true
+					"inRepeatBlock": ""
 				},
 				"handles": [
 					"Agama-when-Node-ad462e96-2be8-453a-ad0a-dfcff596f5fc.FAILURE",
 					"Agama-when-Node-ad462e96-2be8-453a-ad0a-dfcff596f5fc.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -933,7 +979,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "user "
-				}
+				},
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1393,11 +1440,28 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-when-Node-ad462e96-2be8-453a-ad0a-dfcff596f5fc.FAILURE"
+		},
+		{
+			"id": "Agama-log-Node-f8471a90-4876-4d84-a461-8b536f46e1fb-Agama-assignment-Node-c687e3d2-400e-43d6-ae75-e60a00317c77-b6ffdeae-da06-44b3-8ec2-d50e77f697c3",
+			"type": "straight",
+			"source": "Agama-log-Node-f8471a90-4876-4d84-a461-8b536f46e1fb",
+			"target": "Agama-assignment-Node-c687e3d2-400e-43d6-ae75-e60a00317c77",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -3241.473556752163,
-		"y": -353.91494961127546,
+		"x": -3262.473556752163,
+		"y": -443.91494961127546,
 		"zoom": 1.148698354997036
 	}
 }
