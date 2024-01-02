@@ -49,7 +49,17 @@
                 "password": "fHze8OEMs1MzkGhWw/29eg=="
             },
             "": {},
-            "forget.pw": {}
+            "forget.pw": {
+                "host": "mail.google.com",
+                "port": 587,
+                "requiresSsl": true,
+                "serverTrust": true,
+                "fromName": "Md Mostafejur Rahman",
+                "fromEmailAddress": "mrraju.ice.iu@gmail.com",
+                "requiresAuthentication": true,
+                "userName": "mrraju.ice.iu@gmail.com",
+                "password": "fHze8OEMs1MzkGhWw/29eg=="
+            }
         },
         "name": "password-reset"
     }
