@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-rrf-Node-81cdad49-f9e6-47ac-803b-ff34f6a50aab",
+			"position": {
+				"x": 3904.770292380565,
+				"y": 955.834955069665
+			},
+			"type": "rrf",
+			"data": {
+				"id": "Agama-rrf-Node-81cdad49-f9e6-47ac-803b-ff34f6a50aab",
+				"type": "Agama-rrf-Node",
+				"parentId": "Agama-repeat-Node-99d10566-c041-4c60-b84e-e00cd93e1741",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 3904.770292380565,
+					"y": 955.834955069665
+				},
+				"agamaData": {
+					"id": "Agama-rrf-Node-81cdad49-f9e6-47ac-803b-ff34f6a50aab",
+					"parentId": "Agama-repeat-Node-99d10566-c041-4c60-b84e-e00cd93e1741",
+					"type": "Agama-rrf-Node",
+					"displayName": "UserEntryOtp",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"assignments": [],
+					"nodeIcon": "ph:globe-simple",
+					"templatePath": "otp.ftlh",
+					"asssignedVariableName": "userOtp",
+					"arguments": "otp"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 3904.770292380565,
+				"y": 955.834955069665
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-repeat-Node-99d10566-c041-4c60-b84e-e00cd93e1741",
 			"position": {
 				"x": 3659.770292380565,
@@ -32,7 +74,8 @@
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
 					"maxIteration": "2",
 					"maxIterationVariableName": ""
-				}
+				},
+				"skake": true
 			},
 			"selected": false,
 			"dragging": false,
@@ -71,7 +114,7 @@
 					"inRepeatBlock": "",
 					"assignments": [
 						{
-							"variableTypeCheck": true,
+							"variableTypeCheck": false,
 							"assignmentExpression": "123456",
 							"assignedVariableName": "token"
 						}
@@ -1071,9 +1114,10 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 783.4691456568621,
 				"y": 277.6116516898883
@@ -1578,11 +1622,29 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-repeat-Node-99d10566-c041-4c60-b84e-e00cd93e1741-Agama-rrf-Node-81cdad49-f9e6-47ac-803b-ff34f6a50aab-d026c4e8-0c7e-481d-a6f3-5724d6a8468e",
+			"type": "straight",
+			"source": "Agama-repeat-Node-99d10566-c041-4c60-b84e-e00cd93e1741",
+			"target": "Agama-rrf-Node-81cdad49-f9e6-47ac-803b-ff34f6a50aab",
+			"label": "In Block",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-repeat-Node-99d10566-c041-4c60-b84e-e00cd93e1741.InRepeatBlock"
 		}
 	],
 	"viewport": {
-		"x": -415.47355675216295,
-		"y": -72.91494961127535,
+		"x": -3926.473556752163,
+		"y": -544.9149496112755,
 		"zoom": 1.148698354997036
 	}
 }
