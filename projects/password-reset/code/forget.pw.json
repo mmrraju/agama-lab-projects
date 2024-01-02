@@ -31,9 +31,10 @@
 					"logMessage": "\"Successfully login\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2083,
@@ -78,7 +79,7 @@
 					"Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.FAILURE",
 					"Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": false,
 			"dragging": false,
@@ -198,8 +199,7 @@
 					"valueField": "true",
 					"hasComment": true,
 					"inRepeatBlock": true,
-					"hasSuccess": true,
-					"hasFailure": true
+					"comment": "If try to reset password"
 				},
 				"handles": [
 					"Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.FAILURE",
@@ -823,8 +823,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1418,
-		"y": -57,
+		"x": -1185,
+		"y": -100,
 		"zoom": 1
 	}
 }
