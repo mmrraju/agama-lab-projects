@@ -20,8 +20,9 @@ Repeat 3 times max
           userMail.mail = loadMail.mail
           When user is not null
                Log "@info User found for user mail : " userMail.mail
-               token = "123456"
+               token = 123456
                Repeat 2 times max
+                    userOtp = RRF "otp.ftlh" otp
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
      When authResult.success is true
