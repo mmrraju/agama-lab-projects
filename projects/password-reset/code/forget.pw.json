@@ -38,9 +38,10 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "updateUser"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 5429.95800026671,
@@ -78,14 +79,15 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "user.setAttribute(\"userPassword\", newPassword.value))",
+							"assignmentExpression": "user.setAttribute(\"userPassword\", newPassword.value)",
 							"assignedVariableName": "user"
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 5229.95800026671,
