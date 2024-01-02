@@ -31,7 +31,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "user.setAttribute(\"userPassword\", newPassword.value)",
+							"assignmentExpression": "user.setAttribute(\"userPassword\"  newPassword.value)",
 							"assignedVariableName": "user"
 						}
 					],
@@ -43,7 +43,7 @@
 				},
 				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 5229.95800026671,
