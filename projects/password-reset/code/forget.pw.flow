@@ -1,2 +1,6 @@
 Flow forget.pw
      Basepath ""
+     Configs smtp
+authService = Call io.jans.as.server.service.AuthenticationService#class 
+authServiceInstance = Call io.jans.service.cdi.util.CdiUtil#bean authService
+authResult = {}
