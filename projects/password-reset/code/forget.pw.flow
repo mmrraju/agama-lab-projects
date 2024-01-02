@@ -28,6 +28,7 @@ Repeat 3 times max
                     When otp.value is token
                          Log "@info Otp match"
                          userPw = RRF "pwreset.ftlh" password
+                         password.value = userPw.password
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
