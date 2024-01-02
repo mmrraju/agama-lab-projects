@@ -13,6 +13,7 @@ Repeat 3 times max
      When creds.forgetpassword is true
           Log "@info test"
           loadMail = RRF "mail.ftlh" userMail
+          userMail.mail = loadMail.mail
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
