@@ -29,7 +29,8 @@ Repeat 3 times max
                          Log "@info Otp match"
                          userPw = RRF "pwreset.ftlh" newPassword
                          newPassword.value = userPw.password
-                         savedUser = Call userServiceInstance setAttribute "userPassword" newPassword.value
+                         user = user.setAttribute("userPassword", newPassword.value))
+                         updateUser = Call userServiceInstance updateUser user
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
