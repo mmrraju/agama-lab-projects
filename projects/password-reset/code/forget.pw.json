@@ -3,6 +3,134 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "finish-c41a8774-c339-41b9-9d48-5a361e8954a7",
+			"position": {
+				"x": 2083,
+				"y": 435
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-c41a8774-c339-41b9-9d48-5a361e8954a7",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+				"whenCondition": "WhenTrue",
+				"inRepeatBlock": true,
+				"handles": [
+					"Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.FAILURE",
+					"Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.SUCCESS"
+				],
+				"position": {
+					"x": 2083,
+					"y": 435
+				},
+				"agamaData": {
+					"id": "finish-c41a8774-c339-41b9-9d48-5a361e8954a7",
+					"parentId": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "{success: true, data:{userId: authResult.uid}}",
+					"finishMode": "withVariable",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Success"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2083,
+				"y": 435
+			}
+		},
+		{
+			"width": 209,
+			"height": 140,
+			"id": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+			"position": {
+				"x": 1970,
+				"y": 205
+			},
+			"parentId": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+			"type": "when",
+			"data": {
+				"id": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+				"type": "Agama-when-Node",
+				"parentId": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 1970,
+					"y": 205
+				},
+				"agamaData": {
+					"id": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+					"parentId": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+					"type": "Agama-when-Node",
+					"variableField": "authResult.success",
+					"conditionInputField": "is",
+					"valueField": "true",
+					"hasComment": true,
+					"inRepeatBlock": true,
+					"hasSuccess": true
+				},
+				"handles": [
+					"Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.FAILURE",
+					"Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.SUCCESS"
+				]
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 1970,
+				"y": 205
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
+			"id": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+			"position": {
+				"x": 1770,
+				"y": 205
+			},
+			"type": "log",
+			"data": {
+				"id": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+				"type": "Agama-log-Node",
+				"parentId": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
+				"whenCondition": "WhenFalse",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 1770,
+					"y": 205
+				},
+				"agamaData": {
+					"id": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+					"parentId": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
+					"type": "Agama-log-Node",
+					"displayName": "Log",
+					"hasComment": true,
+					"comment": "",
+					"whenCondition": "WhenFalse",
+					"inRepeatBlock": true,
+					"logMessage": "\"Chose to validate user\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16"
+				}
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 1770,
+				"y": 205
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-log-Node-bb13ccd5-cf16-4cd1-89b3-4a6c6a1f955c",
 			"position": {
 				"x": 1633,
@@ -31,9 +159,10 @@
 					"logMessage": "\"test\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 1633,
@@ -69,7 +198,8 @@
 					"valueField": "true",
 					"hasComment": true,
 					"inRepeatBlock": true,
-					"hasSuccess": true
+					"hasSuccess": true,
+					"hasFailure": true
 				},
 				"handles": [
 					"Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.FAILURE",
@@ -637,11 +767,64 @@
 				"fillOpacity": 0.7
 			},
 			"sourceHandle": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.SUCCESS"
+		},
+		{
+			"id": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae-Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef-b157e85c-7436-4cab-8b24-eed61b07e900",
+			"type": "straight",
+			"source": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
+			"target": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae.FAILURE"
+		},
+		{
+			"id": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef-Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2-dd2a5402-8bd1-42a6-ab7f-073927d03f8d",
+			"type": "straight",
+			"source": "Agama-log-Node-ad88e561-c4db-4240-8945-69a020b625ef",
+			"target": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2-finish-c41a8774-c339-41b9-9d48-5a361e8954a7-71af6ea4-f391-4a74-b38f-0704d7c4c1aa",
+			"type": "straight",
+			"source": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2",
+			"target": "finish-c41a8774-c339-41b9-9d48-5a361e8954a7",
+			"label": "Condition met",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-40937f01-e51c-4e71-a16a-ab9be5abc2b2.SUCCESS"
 		}
 	],
 	"viewport": {
-		"x": -1033,
-		"y": -41,
+		"x": -1665,
+		"y": -93,
 		"zoom": 1
 	}
 }
