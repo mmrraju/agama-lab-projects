@@ -1,0 +1,35 @@
+[
+  {
+    "id": "Agama-start-Flow-da62c9d7-1b97-4bba-b60f-2879d39b815b",
+    "type": "start",
+    "sourcePosition": "right",
+    "data": {
+      "id": "Agama-start-Flow-da62c9d7-1b97-4bba-b60f-2879d39b815b",
+      "type": "Agama-start-Flow",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "inRepeatBlock": false,
+      "agamaData": {
+        "id": "Agama-start-Flow-da62c9d7-1b97-4bba-b60f-2879d39b815b",
+        "type": "Agama-start-Flow",
+        "displayName": "Forget password",
+        "hasComment": true,
+        "comment": "",
+        "isTopLevelFlow": true,
+        "basepath": "",
+        "configParams": "{}",
+        "nodeIcon": "material-symbols:line-start-square",
+        "timeout": "",
+        "inputs": "",
+        "configs": "",
+        "flowname": "forget.pw"
+      }
+    },
+    "position": {
+      "x": 30,
+      "y": 30
+    }
+  }
+]
