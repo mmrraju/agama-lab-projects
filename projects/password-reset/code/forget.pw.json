@@ -5,7 +5,7 @@
 			"height": 122,
 			"id": "Agama-assignment-Node-3adf4b2f-96a7-4bf5-8bb1-4856e32ad07d",
 			"position": {
-				"x": 5229.95800026671,
+				"x": 5227.95800026671,
 				"y": 1182.3527528164805
 			},
 			"type": "assignment",
@@ -16,7 +16,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 5229.95800026671,
+					"x": 5227.95800026671,
 					"y": 1182.3527528164805
 				},
 				"agamaData": {
@@ -32,7 +32,7 @@
 						{
 							"variableTypeCheck": false,
 							"assignmentExpression": "user.setAttribute(\"userPassword\"  newPassword.value)",
-							"assignedVariableName": "user"
+							"assignedVariableName": "updateUser"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -46,7 +46,7 @@
 			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 5229.95800026671,
+				"x": 5227.95800026671,
 				"y": 1182.3527528164805
 			}
 		},
