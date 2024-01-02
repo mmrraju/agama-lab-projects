@@ -3,6 +3,54 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "Agama-call-Node-20b882b9-aa58-458d-90e3-abbbfe824ac4",
+			"position": {
+				"x": 5188.058258449441,
+				"y": 1182.3527528164805
+			},
+			"type": "call",
+			"data": {
+				"id": "Agama-call-Node-20b882b9-aa58-458d-90e3-abbbfe824ac4",
+				"type": "Agama-call-Node",
+				"parentId": "Agama-assignment-Node-3da95a3d-fcb2-4423-9849-1b482e48417f",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 5188.058258449441,
+					"y": 1182.3527528164805
+				},
+				"agamaData": {
+					"id": "Agama-call-Node-20b882b9-aa58-458d-90e3-abbbfe824ac4",
+					"parentId": "Agama-assignment-Node-3da95a3d-fcb2-4423-9849-1b482e48417f",
+					"type": "Agama-call-Node",
+					"displayName": "SavedUser",
+					"hasComment": true,
+					"comment": "",
+					"javaClassName": "",
+					"javaMethodName": "setAttribute",
+					"javaVariableName": "userServiceInstance",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"whenCondition": "",
+					"inRepeatBlock": true,
+					"arguments": [
+						"\"userPassword\"",
+						"newPassword.value"
+					],
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "savedUser"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 5188.058258449441,
+				"y": 1182.3527528164805
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "Agama-assignment-Node-3da95a3d-fcb2-4423-9849-1b482e48417f",
 			"position": {
 				"x": 4988.058258449441,
@@ -35,7 +83,11 @@
 							"assignedVariableName": "newPassword.value"
 						}
 					],
-					"nodeIcon": "material-symbols:equal"
+					"nodeIcon": "material-symbols:equal",
+					"hasSuccess": "",
+					"hasFailure": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
 				},
 				"skake": false
 			},
@@ -1283,7 +1335,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 2851.540336644124,
 				"y": 489.7411011265923
@@ -2071,11 +2123,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-assignment-Node-3da95a3d-fcb2-4423-9849-1b482e48417f-Agama-call-Node-20b882b9-aa58-458d-90e3-abbbfe824ac4-24aa4d5b-1a69-46c5-abbf-f36d9a9ecd55",
+			"type": "straight",
+			"source": "Agama-assignment-Node-3da95a3d-fcb2-4423-9849-1b482e48417f",
+			"target": "Agama-call-Node-20b882b9-aa58-458d-90e3-abbbfe824ac4",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -2816.473556752162,
-		"y": -207.91494961127557,
+		"x": -5467.473556752162,
+		"y": -1075.9149496112755,
 		"zoom": 1.148698354997036
 	}
 }
