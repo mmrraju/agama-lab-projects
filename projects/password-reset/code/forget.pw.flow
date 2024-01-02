@@ -17,8 +17,9 @@ Repeat 3 times max
           loadMail = RRF "mail.ftlh" userMail
           user  = Call userServiceInstance getUserByAttribute loadMail.mail
           userMail.mail = loadMail.mail
-          When user  is not null
+          When user is not null
                Log "@info User found for user mail : " userMail.mail
+               token = "123456"
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
      When authResult.success is true
