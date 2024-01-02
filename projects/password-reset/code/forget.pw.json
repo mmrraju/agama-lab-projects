@@ -39,7 +39,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 4988.058258449441,
 				"y": 1182.3527528164805
@@ -1275,6 +1275,7 @@
 					"whenCondition": "",
 					"inRepeatBlock": true,
 					"arguments": [
+						"\"mail\"",
 						"loadMail.mail"
 					],
 					"nodeIcon": "material-symbols:code",
@@ -1282,7 +1283,7 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"positionAbsolute": {
 				"x": 2851.540336644124,
 				"y": 489.7411011265923
@@ -2073,8 +2074,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5035.473556752162,
-		"y": -1009.9149496112755,
+		"x": -2816.473556752162,
+		"y": -207.91494961127557,
 		"zoom": 1.148698354997036
 	}
 }
