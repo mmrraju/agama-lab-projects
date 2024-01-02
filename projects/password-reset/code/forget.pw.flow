@@ -30,7 +30,6 @@ Repeat 3 times max
                          userPw = RRF "pwreset.ftlh" newPassword
                          newPassword.value = userPw.password
                          user = user.setAttribute("userPassword", newPassword.value)
-                         updateUser = Call userServiceInstance updateUser user
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
