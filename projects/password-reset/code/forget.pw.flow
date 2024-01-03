@@ -35,6 +35,7 @@ Repeat 3 times max
                          updateUser = user.setAttribute("userPassword"  newPassword.value)
                          savedUpdatedUser = Call userServiceInstance updateUser updateUser
                          reAuthenticate = Call authServiceInstance authenticate creds.username newPassword.value
+                         When reAuthenticate is true
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
