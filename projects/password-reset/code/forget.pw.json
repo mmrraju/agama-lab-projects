@@ -3,6 +3,51 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
+			"position": {
+				"x": 2126,
+				"y": 29
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+				"whenCondition": "",
+				"inRepeatBlock": "",
+				"handles": [
+					"Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1.InFlow",
+					"Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1.InRepeatBlock"
+				],
+				"position": {
+					"x": 2126,
+					"y": 29
+				},
+				"agamaData": {
+					"id": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
+					"parentId": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "\"Failed to Authentication\"",
+					"finishMode": "withFailure",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Failed "
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 2126,
+				"y": 29
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "finish-d4cff1b5-80b6-477c-9e4e-f7fed984f222",
 			"position": {
 				"x": 3158,
@@ -125,7 +170,7 @@
 				],
 				"skake": true
 			},
-			"selected": true,
+			"selected": false,
 			"positionAbsolute": {
 				"x": 6381.198328547965,
 				"y": 1217.773451935091
@@ -2712,11 +2757,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1-finish-c85f43be-9966-4a86-bb3a-90ee629a6d59-9e1c5a61-62c6-42f2-99b3-46c5d7597c2d",
+			"type": "straight",
+			"source": "Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1",
+			"target": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -5892,
-		"y": -961,
+		"x": -1538,
+		"y": 107,
 		"zoom": 1
 	}
 }
