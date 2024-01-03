@@ -1610,19 +1610,21 @@
 					"id": "Agama-call-Node-ec65efbc-88df-4c7d-ac3e-e3a5531b6ef4",
 					"parentId": "Agama-log-Node-f8471a90-4876-4d84-a461-8b536f46e1fb",
 					"type": "Agama-call-Node",
-					"displayName": "",
+					"displayName": "RandomOtp",
 					"hasComment": true,
 					"comment": "",
-					"javaClassName": "",
-					"javaMethodName": "",
+					"javaClassName": "co.AgamaEmail",
+					"javaMethodName": "generateOtp",
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
 					"whenCondition": "",
 					"inRepeatBlock": "",
 					"arguments": [],
-					"nodeIcon": "material-symbols:code"
-				}
+					"nodeIcon": "material-symbols:code",
+					"asssignedVariableName": "randomOtp"
+				},
+				"skake": true
 			},
 			"selected": true,
 			"positionAbsolute": {
