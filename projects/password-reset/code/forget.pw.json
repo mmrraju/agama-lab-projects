@@ -5,8 +5,8 @@
 			"height": 122,
 			"id": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
 			"position": {
-				"x": 2126,
-				"y": 29
+				"x": 2125,
+				"y": 27
 			},
 			"type": "finish",
 			"data": {
@@ -20,8 +20,8 @@
 					"Agama-repeat-Node-ae0bd779-c40e-452b-bc40-9c3a54b210d1.InRepeatBlock"
 				],
 				"position": {
-					"x": 2126,
-					"y": 29
+					"x": 2125,
+					"y": 27
 				},
 				"agamaData": {
 					"id": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
@@ -32,17 +32,18 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "\"Failed to Authentication\"",
+					"returnVariable": "Failed to Authentication",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Failed "
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 2126,
-				"y": 29
+				"x": 2125,
+				"y": 27
 			}
 		},
 		{
