@@ -22,11 +22,10 @@ Repeat 3 times max
           When user is not null
                Log "@info User found for user mail : " userMail.mail
                randomOtp = Call co.AgamaEmail#generateOtp 
-               token = 123456
                Repeat 2 times max
                     userOtp = RRF "otp.ftlh" otp
                     otp.value = userOtp.value
-                    When otp.value is token
+                    When otp.value is randomOtp
                          Log "@info Otp match"
                          userPw = RRF "pwreset.ftlh" newPassword
                          newPassword.value = userPw.password
