@@ -44,4 +44,10 @@ class AgamaEmail {
        return i
     }
 
+    static object updateUser(Object user, String password){
+
+          user.userPassword = password
+          return user
+    }
+
 }
