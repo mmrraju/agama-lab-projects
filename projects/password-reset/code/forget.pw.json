@@ -80,7 +80,7 @@
 					"Agama-when-Node-55f06a2d-02d6-4ffe-a6ce-4894d7ff17c5.FAILURE",
 					"Agama-when-Node-55f06a2d-02d6-4ffe-a6ce-4894d7ff17c5.SUCCESS"
 				],
-				"skake": false
+				"skake": true
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -1841,7 +1841,7 @@
 					"id": "Agama-call-Node-ae7e1511-006d-43c6-8484-3fcaf30e6804",
 					"parentId": "Agama-assignment-Node-3da95a3d-fcb2-4423-9849-1b482e48417f",
 					"type": "Agama-call-Node",
-					"displayName": "UpdateUser",
+					"displayName": "UpdatedUser",
 					"hasComment": true,
 					"comment": "",
 					"javaClassName": "co.AgamaEmail",
@@ -1856,8 +1856,9 @@
 						"newPassword.value"
 					],
 					"nodeIcon": "material-symbols:code",
-					"asssignedVariableName": "updateUser"
-				}
+					"asssignedVariableName": "updatedUser"
+				},
+				"skake": false
 			},
 			"selected": true,
 			"positionAbsolute": {
@@ -2654,8 +2655,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5158,
-		"y": -865,
+		"x": -5372,
+		"y": -949,
 		"zoom": 1
 	}
 }
