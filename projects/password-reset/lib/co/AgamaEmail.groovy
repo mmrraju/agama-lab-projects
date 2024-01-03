@@ -37,7 +37,7 @@ class AgamaEmail {
 
     }
 
-    public static int generateOtp(){
+    static int generateOtp(){
        
        int i = new Random().nextInt(900000) + 100000;
 
