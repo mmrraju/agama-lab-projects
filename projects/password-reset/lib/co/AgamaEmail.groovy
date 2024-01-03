@@ -29,7 +29,6 @@ class AgamaEmail {
        message.setContent(content)
 
        try {
-        // Send mail.
            Transport.send(message, email, password)
        } catch (MessagingException e) {
            e.printStackTrace()
@@ -42,7 +41,7 @@ class AgamaEmail {
        
        int i = new Random().nextInt(900000) + 100000;
 
-
+       return i
     }
 
 }
