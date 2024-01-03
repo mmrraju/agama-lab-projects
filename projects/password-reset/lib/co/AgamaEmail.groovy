@@ -1,3 +1,4 @@
+package co
 class AgamaEmail {
 
     static boolean send(Obj message) {
