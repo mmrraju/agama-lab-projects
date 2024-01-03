@@ -3,6 +3,48 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "finish-4ea6f253-4a57-45a1-bb48-a95eeb179e6c",
+			"position": {
+				"x": 4031.9709328045305,
+				"y": 440.96440450636896
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-4ea6f253-4a57-45a1-bb48-a95eeb179e6c",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-log-Node-7c5840da-fba1-4024-a101-b0d3a156d14c",
+				"whenCondition": "",
+				"inRepeatBlock": "",
+				"handles": [],
+				"position": {
+					"x": 4031.9709328045305,
+					"y": 440.96440450636896
+				},
+				"agamaData": {
+					"id": "finish-4ea6f253-4a57-45a1-bb48-a95eeb179e6c",
+					"parentId": "Agama-log-Node-7c5840da-fba1-4024-a101-b0d3a156d14c",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "No user found associate mail",
+					"finishMode": "withFailure",
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Finish (Not found)"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 4031.9709328045305,
+				"y": 440.96440450636896
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "finish-c85f43be-9966-4a86-bb3a-90ee629a6d59",
 			"position": {
 				"x": 2125,
@@ -39,7 +81,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2125,
@@ -169,7 +211,7 @@
 					"Agama-when-Node-55f06a2d-02d6-4ffe-a6ce-4894d7ff17c5.FAILURE",
 					"Agama-when-Node-55f06a2d-02d6-4ffe-a6ce-4894d7ff17c5.SUCCESS"
 				],
-				"skake": true
+				"skake": false
 			},
 			"selected": false,
 			"positionAbsolute": {
@@ -2775,11 +2817,28 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-log-Node-7c5840da-fba1-4024-a101-b0d3a156d14c-finish-4ea6f253-4a57-45a1-bb48-a95eeb179e6c-361bccff-f6b3-49dc-ac66-9c0e167465a3",
+			"type": "straight",
+			"source": "Agama-log-Node-7c5840da-fba1-4024-a101-b0d3a156d14c",
+			"target": "finish-4ea6f253-4a57-45a1-bb48-a95eeb179e6c",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
 		}
 	],
 	"viewport": {
-		"x": -1538,
-		"y": 107,
+		"x": -3404,
+		"y": -270,
 		"zoom": 1
 	}
 }
