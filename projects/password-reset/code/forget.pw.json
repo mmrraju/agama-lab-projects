@@ -39,7 +39,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "reAuthenticate"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
