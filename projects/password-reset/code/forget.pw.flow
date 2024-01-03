@@ -41,7 +41,7 @@ Repeat 3 times max
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_abqlj = {success:true, data: { userId: creds.username}}
-          Finish it_abqlj
-it_slfkr = {success:false, error: ""Failed to Authentication""}
-Finish it_slfkr
+          it_cljby = {success:true, data: { userId: creds.username}}
+          Finish it_cljby
+it_gofoq = {success:false, error: "Failed to Authentication"}
+Finish it_gofoq
