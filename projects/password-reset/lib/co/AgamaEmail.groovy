@@ -5,7 +5,7 @@ import javax.mail.internet.*
 
 class AgamaEmail {
 
-    static boolean send(String to) {
+    static boolean send(String to, String subject, String content ) {
     
         String email = "mrraju.ice.iu@gmail.com"
         String password = "orysnttzwbujqzus"
@@ -25,6 +25,22 @@ class AgamaEmail {
        message.setFrom(new InternetAddress(addresser))
        message.addRecipients(Message.RecipientType.TO, new InternetAddress(to))
 
+       message.setSubject(subject)
+       message.setContent(content)
+
+       try {
+        // Send mail.
+           Transport.send(message, email, password)
+       } catch (MessagingException e) {
+           e.printStackTrace()
+       }
+
+
+    }
+
+    public int generateToken(){
+       
+       int i = new Random().nextInt(900000) + 100000;
 
 
     }
