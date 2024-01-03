@@ -38,10 +38,12 @@ Repeat 3 times max
                          When newPassword.success is true
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
+          it_uqvls = {success:false, error: "No user found associate mail"}
+          Finish it_uqvls
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_cljby = {success:true, data: { userId: creds.username}}
-          Finish it_cljby
-it_gofoq = {success:false, error: "Failed to Authentication"}
-Finish it_gofoq
+          it_wxtrk = {success:true, data: { userId: creds.username}}
+          Finish it_wxtrk
+it_jpjge = {success:false, error: "Failed to Authentication"}
+Finish it_jpjge
