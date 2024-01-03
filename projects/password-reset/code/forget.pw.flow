@@ -22,7 +22,9 @@ Repeat 3 times max
           When user is not null
                Log "@info User found for user mail : " userMail.mail
                randomOtp = Call co.AgamaEmail#generateOtp 
-               sendMail = Call co.AgamaEmail#send userMail.mail "Otp" randomOtp
+               userMail.success = Call co.AgamaEmail#send userMail.mail "Otp" randomOtp
+               When userMail.success is true
+                    Log "@info Otp Send successfully"
                Repeat 2 times max
                     userOtp = RRF "otp.ftlh" otp
                     otp.value = userOtp.value
