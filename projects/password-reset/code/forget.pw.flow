@@ -34,12 +34,12 @@ Repeat 3 times max
                          newPassword.value = userPw.password
                          updatedUser = Call co.AgamaEmail#updateUser user  newPassword.value
                          savedUpdatedUser = Call userServiceInstance updateUser updateUser
-                         reAuthenticate = Call authServiceInstance authenticate creds.username newPassword.value
+                         authResult.success = Call authServiceInstance authenticate creds.username newPassword.value
                          When authResult.success is true
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_vewvs = {success:true, data: { userId: creds.username}}
-          Finish it_vewvs
+          it_qtqup = {success:true, data: { userId: creds.username}}
+          Finish it_qtqup
