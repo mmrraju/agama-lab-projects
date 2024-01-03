@@ -9,7 +9,7 @@ class AgamaEmail {
         smtp_server = "mail.google.com"
 
         String email = "mrraju.ice.iu@gmail.com"
-        String password = ""
+        String password = "orysnttzwbujqzus"
         String host = "smtp.google.com"
         String port ="587"
     }
