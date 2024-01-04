@@ -35,9 +35,10 @@
 					"returnVariable": "Your error message here",
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 6388.601395939262,
@@ -68,17 +69,19 @@
 					"id": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
 					"parentId": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
 					"type": "Agama-when-Node",
-					"hasSuccess": true,
-					"hasFailure": "",
-					"hasNoRepeat": false,
-					"hasRepeat": false
+					"variableField": "newPassword.success",
+					"conditionInputField": "is",
+					"valueField": "true",
+					"hasComment": true,
+					"inRepeatBlock": true
 				},
 				"handles": [
 					"Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.FAILURE",
 					"Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.SUCCESS"
-				]
+				],
+				"skake": true
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 6275.601395939262,
@@ -2873,8 +2876,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4155.62802969124,
-		"y": -654.0593864171826,
-		"zoom": 0.7371346086455508
+		"x": -6012.2152153167735,
+		"y": -1117.5523118530618,
+		"zoom": 1.0281138266560672
 	}
 }
