@@ -44,6 +44,7 @@
 			</div>
 		  </div>
 		</form>
+		 <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
 	  </div>
 	</div>
   
