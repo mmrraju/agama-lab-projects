@@ -29,11 +29,12 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: user.getUid}",
+					"returnVariable": "{ userId: user.getUserId}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Success"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
