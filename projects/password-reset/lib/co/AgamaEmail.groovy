@@ -5,12 +5,12 @@ import javax.mail.internet.*
 
 class AgamaEmail {
 
-    static boolean send(String to, String subject, String content ) {
+    static boolean send(String host, String port, String email, String password, String to, String subject, String content ) {
     
-        String email = "mrraju.ice.iu@gmail.com"
-        String password = "orysnttzwbujqzus"
-        String host = "smtp.google.com"
-        String port ="587"
+        //String email = "mrraju.ice.iu@gmail.com"
+        //String password = "orysnttzwbujqzus"
+        //String host = "smtp.google.com"
+        //String port ="587"
         
         Properties props = System.getProperties()
         props.put("mail.smtp.user", email)
