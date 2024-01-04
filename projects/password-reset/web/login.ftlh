@@ -50,6 +50,8 @@
 		  <a href="#" id="forgotPasswordLink-2">Forgot Password?</a>
 		</p>
 		<input type="submit" value="Forgot Password" id="invwt">
+		<button id="trueButton">Send True</button>
+  		<p id="status"></p>
 	  </div>
 	</div>
   
