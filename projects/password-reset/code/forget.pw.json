@@ -3,6 +3,91 @@
 		{
 			"width": 170,
 			"height": 122,
+			"id": "finish-aa07ca11-1c55-4ca5-b675-46957a6dcb6d",
+			"position": {
+				"x": 6388.601395939262,
+				"y": 1410.3527528164805
+			},
+			"type": "finish",
+			"data": {
+				"id": "finish-aa07ca11-1c55-4ca5-b675-46957a6dcb6d",
+				"type": "Agama-finish-Flow",
+				"parentId": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+				"whenCondition": "WhenTrue",
+				"inRepeatBlock": true,
+				"handles": [
+					"Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.FAILURE",
+					"Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.SUCCESS"
+				],
+				"position": {
+					"x": 6388.601395939262,
+					"y": 1410.3527528164805
+				},
+				"agamaData": {
+					"id": "finish-aa07ca11-1c55-4ca5-b675-46957a6dcb6d",
+					"parentId": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+					"type": "Agama-finish-Flow",
+					"hasSuccess": false,
+					"hasFailure": false,
+					"hasComment": true,
+					"comment": "",
+					"flowfilename": "",
+					"returnVariable": "Your error message here",
+					"finishMode": "withFailure",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"selected": true,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 6388.601395939262,
+				"y": 1410.3527528164805
+			}
+		},
+		{
+			"width": 210,
+			"height": 140,
+			"id": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+			"position": {
+				"x": 6275.601395939262,
+				"y": 1180.3527528164805
+			},
+			"parentId": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
+			"type": "when",
+			"data": {
+				"id": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+				"type": "Agama-when-Node",
+				"parentId": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
+				"whenCondition": "",
+				"inRepeatBlock": true,
+				"position": {
+					"x": 6275.601395939262,
+					"y": 1180.3527528164805
+				},
+				"agamaData": {
+					"id": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+					"parentId": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
+					"type": "Agama-when-Node",
+					"hasSuccess": true,
+					"hasFailure": "",
+					"hasNoRepeat": false,
+					"hasRepeat": false
+				},
+				"handles": [
+					"Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.FAILURE",
+					"Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.SUCCESS"
+				]
+			},
+			"selected": false,
+			"dragging": false,
+			"positionAbsolute": {
+				"x": 6275.601395939262,
+				"y": 1180.3527528164805
+			}
+		},
+		{
+			"width": 170,
+			"height": 122,
 			"id": "finish-4ea6f253-4a57-45a1-bb48-a95eeb179e6c",
 			"position": {
 				"x": 4029.9709328045305,
@@ -2750,11 +2835,46 @@
 				"color": "#fff",
 				"fillOpacity": 0.7
 			}
+		},
+		{
+			"id": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9-Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c-333d5742-fe1f-4731-b383-e8c891bf3e97",
+			"type": "straight",
+			"source": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
+			"target": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			}
+		},
+		{
+			"id": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c-finish-aa07ca11-1c55-4ca5-b675-46957a6dcb6d-153689ff-fd56-41cb-a6c6-7a175af9efce",
+			"type": "straight",
+			"source": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c",
+			"target": "finish-aa07ca11-1c55-4ca5-b675-46957a6dcb6d",
+			"label": "Condition met",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#FFCC00",
+				"color": "#fff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "Agama-when-Node-26d18ec8-145d-4860-b214-76c5f5469b4c.SUCCESS"
 		}
 	],
 	"viewport": {
-		"x": -5846.265301568833,
-		"y": -1104.6850079651947,
-		"zoom": 1.0281138266560663
+		"x": -4155.62802969124,
+		"y": -654.0593864171826,
+		"zoom": 0.7371346086455508
 	}
 }
