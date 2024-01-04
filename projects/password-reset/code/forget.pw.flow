@@ -14,7 +14,7 @@ Repeat 3 times max
      authResult.success = Call authServiceInstance authenticate creds.username creds.password
      authResult.uid = creds.username
      // If try to reset password
-     When creds.forgetpassword is true
+     When creds.forgotpassword is true
           Log "@info test"
           loadMail = RRF "mail.ftlh" userMail
           user  = Call userServiceInstance getUserByAttribute "mail" loadMail.mail
@@ -38,12 +38,12 @@ Repeat 3 times max
                          When newPassword.success is not false
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
-          it_htosb = {success:false, error: "No user found associate with mail"}
-          Finish it_htosb
+          it_rwxcc = {success:false, error: "No user found associate with mail"}
+          Finish it_rwxcc
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_uwaqn = {success:true, data: { userId: creds.username}}
-          Finish it_uwaqn
-it_bdyia = {success:false, error: "Failed to Authentication"}
-Finish it_bdyia
+          it_jvcqo = {success:true, data: { userId: creds.username}}
+          Finish it_jvcqo
+it_meuye = {success:false, error: "Failed to Authentication"}
+Finish it_meuye
