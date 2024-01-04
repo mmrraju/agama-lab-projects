@@ -46,9 +46,8 @@
 			</div>
 		  </div>
 		</form>
-
 		<button type="button" id="trueButton">Forgot Password</button>
-		<p id="status">
+		<p name="status" id="status">
 		</p>
 	  </div>
 	</div>
@@ -74,5 +73,10 @@
 	  }
 	  return true
 	}
+	
+	function sendTrue() {
+      document.getElementById('status').innerText = true;
+    }
+    document.getElementById('trueButton').addEventListener('click', sendTrue);
   </script>
 </html>
