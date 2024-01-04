@@ -49,6 +49,7 @@
 		<p>
 		  <a href="#" id="forgotPasswordLink-2">Forgot Password?</a>
 		</p>
+		<input type="submit" value="Reset Password">
 	  </div>
 	</div>
   
