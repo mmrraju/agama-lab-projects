@@ -22,7 +22,7 @@ Repeat 3 times max
           When user is not null
                Log "@info User found for user mail : " userMail.mail
                randomOtp = Call co.AgamaEmail#generateOtp 
-               userMail.success = Call co.AgamaEmail#send userMail.mail "Otp" randomOtp
+               userMail.success = Call co.AgamaEmail#send host port
                When userMail.success is true
                     Log "@info Otp Send successfully"
                Repeat 2 times max
@@ -38,12 +38,12 @@ Repeat 3 times max
                          When newPassword.success is not false
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
-          it_bzdne = {success:false, error: "No user found associate with mail"}
-          Finish it_bzdne
+          it_cnmsr = {success:false, error: "No user found associate with mail"}
+          Finish it_cnmsr
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_zpxfe = {success:true, data: { userId: creds.username}}
-          Finish it_zpxfe
-it_cazvu = {success:false, error: "Failed to Authentication"}
-Finish it_cazvu
+          it_tfjwl = {success:true, data: { userId: creds.username}}
+          Finish it_tfjwl
+it_cvvmv = {success:false, error: "Failed to Authentication"}
+Finish it_cvvmv
