@@ -5,7 +5,7 @@ import javax.mail.internet.*
 
 class AgamaEmail {
 
-    static boolean send(String host, String port, String email, String password, String to, String subject, String content ) {
+    static boolean sendMail(String host, String port, String email, String password, String to, String subject, String content ) {
     
         //String email = "mrraju.ice.iu@gmail.com"
         //String password = "orysnttzwbujqzus"
