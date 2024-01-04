@@ -46,12 +46,10 @@
 			</div>
 		  </div>
 		</form>
-		<p>
-		  <a href="#" id="forgotPasswordLink-2">Forgot Password?</a>
+
+		<button type="button" id="trueButton">Forgot Password</button>
+		<p id="status">
 		</p>
-		<input type="submit" value="Forgot Password" id="invwt">
-		<button id="trueButton">Send True</button>
-  		<p id="status"></p>
 	  </div>
 	</div>
   
