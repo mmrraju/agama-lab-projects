@@ -41,12 +41,13 @@
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Submit
 			  </button>
-			   <p><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+			  <p>
+			  </p>
 			</div>
 		  </div>
 		</form>
 		<p>
-		  <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+		  <a href="#" id="forgotPasswordLink-2">Forgot Password?</a>
 		</p>
 	  </div>
 	</div>
