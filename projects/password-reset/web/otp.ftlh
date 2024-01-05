@@ -25,12 +25,7 @@
 		</div>
 		<form method="post" class="mt-8">
 		  <div id="otp" class="flex flex-row justify-center text-center px-2 mt-5">
-			<input type="text" id="first" name="first" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
-			<input type="text" id="second" name="second" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
-			<input type="text" id="third" name="third" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
-			<input type="text" id="fourth" name="fourth" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
-			<input type="text" id="fifth" name="fifth" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
-			<input type="text" id="sixth" name="sixth" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
+			<input type="text" id="first" name="userOtp" maxlength="1" class="m-2 border h-10 w-10 text-center form-control rounded">
 		  </div>
 		  <div class="space-y-9 mt-4">
 			<div class="text-sm flex justify-center items-center">
@@ -57,31 +52,7 @@
 		alert('Code is required')
 		return false
 	  }
-	  var second = document.getElementById('second').value
-	  if (second === '') {
-		alert('Code is required')
-		return false
-	  }
-	  var third = document.getElementById('third').value
-	  if (third === '') {
-		alert('Code is required')
-		return false
-	  }
-	  var fourth = document.getElementById('fourth').value
-	  if (fourth === '') {
-		alert('Code is required')
-		return false
-	  }
-	  var fifth = document.getElementById('fifth').value
-	  if (fifth === '') {
-		alert('Code is required')
-		return false
-	  }
-	  var sixth = document.getElementById('sixth').value
-	  if (sixth === '') {
-		alert('Code is required')
-		return false
-	  }
+	  
 	  return true
 	}
   </script>
