@@ -38,7 +38,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 6689.95800026671,
@@ -584,7 +584,7 @@
 			"height": 122,
 			"id": "Agama-assignment-Node-a3f15444-506e-41e2-ac59-7adf204df379",
 			"position": {
-				"x": 4704.770292380565,
+				"x": 4703.770292380565,
 				"y": 955.834955069665
 			},
 			"type": "assignment",
@@ -595,7 +595,7 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 5454.770292380565,
+					"x": 4703.770292380565,
 					"y": 955.834955069665
 				},
 				"agamaData": {
@@ -618,10 +618,10 @@
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 4704.770292380565,
+				"x": 4703.770292380565,
 				"y": 955.834955069665
 			}
 		},
@@ -2978,8 +2978,8 @@
 		}
 	],
 	"viewport": {
-		"x": -4882.197936919019,
-		"y": -723.4424850917419,
-		"zoom": 0.8235910172675737
+		"x": -4012,
+		"y": -572,
+		"zoom": 1
 	}
 }
