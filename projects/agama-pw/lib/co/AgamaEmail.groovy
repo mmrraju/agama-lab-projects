@@ -33,7 +33,7 @@ class AgamaEmail {
     }
 
     static int generateOtp(){
-       
+       // 6 digit random number
        int i = new Random().nextInt(900000) + 100000;
 
        return i
