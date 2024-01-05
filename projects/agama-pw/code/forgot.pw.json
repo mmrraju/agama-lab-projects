@@ -32,13 +32,14 @@
 					"hasComment": true,
 					"comment": "",
 					"flowfilename": "",
-					"returnVariable": "{ userId: \"as9233Qz\", property1: \"value1\"}",
+					"returnVariable": "{ userId: user.getUserId}",
 					"finishMode": "withSuccess",
-					"nodeIcon": "material-symbols:line-end-square-rounded"
+					"nodeIcon": "material-symbols:line-end-square-rounded",
+					"displayName": "Success"
 				},
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 6689.95800026671,
@@ -267,8 +268,8 @@
 			"height": 122,
 			"id": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
 			"position": {
-				"x": 6226.95800026671,
-				"y": 1180.3527528164805
+				"x": 6270.95800026671,
+				"y": 1171.3527528164805
 			},
 			"type": "call",
 			"data": {
@@ -278,8 +279,8 @@
 				"whenCondition": "",
 				"inRepeatBlock": true,
 				"position": {
-					"x": 6376.95800026671,
-					"y": 1180.3527528164805
+					"x": 6270.95800026671,
+					"y": 1171.3527528164805
 				},
 				"agamaData": {
 					"id": "Agama-call-Node-85f005a1-01ae-46f1-badc-ccce1d8670d9",
@@ -307,8 +308,8 @@
 			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
-				"x": 6226.95800026671,
-				"y": 1180.3527528164805
+				"x": 6270.95800026671,
+				"y": 1171.3527528164805
 			}
 		},
 		{
@@ -618,7 +619,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 4703.770292380565,
@@ -2978,8 +2979,8 @@
 		}
 	],
 	"viewport": {
-		"x": -86.12696217519817,
-		"y": 21.42136951981007,
-		"zoom": 0.7169776240079146
+		"x": -5879.463508994892,
+		"y": -986.419769097912,
+		"zoom": 1.0000000000000016
 	}
 }
