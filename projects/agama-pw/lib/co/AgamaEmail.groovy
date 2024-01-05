@@ -41,7 +41,7 @@ class AgamaEmail {
 
     static Object updateUser(Object user, String password){
 
-          user.userPassword = password
+          user.setAttribute("userPassword",password)
           return user
     }
 
