@@ -11,6 +11,7 @@
 	
 	
 	
+	
   
   
 	<div class="md:h-screen bg-white relative flex flex-col justify-center items-center">
@@ -52,7 +53,11 @@
   
   
 </body>
-
+<style>
+    #trueButton {
+      padding-left: 20px; 
+    }
+  </style>
 <script>
 	window.onload = function () {
 	  var form = document.querySelector("form");
