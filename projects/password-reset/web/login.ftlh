@@ -41,14 +41,14 @@
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Submit
 			  </button>
-			  <p>
-			  </p>
+			</div>
+			<div> 
+			  <button type="button" id="trueButton">Forgot Password</button>
+			  <p name="forgotpassword" id="status"></p>
 			</div>
 		  </div>
 		</form>
-		<button type="button" id="trueButton">Forgot Password</button>
-		<p name="forgotpassword" id="status">
-		</p>
+		
 	  </div>
 	</div>
   
