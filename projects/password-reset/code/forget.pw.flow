@@ -5,6 +5,7 @@ authService = Call io.jans.as.server.service.AuthenticationService#class
 authServiceInstance = Call io.jans.service.cdi.util.CdiUtil#bean authService
 userService = Call io.jans.as.server.service.UserService#class 
 userServiceInstance = Call io.jans.service.cdi.util.CdiUtil#bean userService
+authServiceInstance2 = Call io.jans.service.cdi.util.CdiUtil#bean authService
 authResult = {}
 userMail = {}
 otp = {}
@@ -38,12 +39,12 @@ Repeat 3 times max
                          When newPassword.success is true
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
-          it_nvwkx = {success:false, error: "No user found associate with mail"}
-          Finish it_nvwkx
+          it_hugge = {success:false, error: "No user found associate with mail"}
+          Finish it_hugge
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_srlui = {success:true, data: { userId: authResult.uid}}
-          Finish it_srlui
-it_bqmuh = {success:false, error: "Failed to Authentication"}
-Finish it_bqmuh
+          it_blxum = {success:true, data: { userId: authResult.uid}}
+          Finish it_blxum
+it_ypqrp = {success:false, error: "Failed to Authentication"}
+Finish it_ypqrp
