@@ -41,7 +41,7 @@
 			  <button type="submit" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 				Submit
 			  </button>
-			  <button type="button" id="trueButton" padding="left" 20px="">Forgot Password</button>
+			  <button type="button" id="trueButton" padding="left 20px">Forgot Password</button>
 			  <p name="forgotpassword" id="status">
 			  </p>
 			</div>
