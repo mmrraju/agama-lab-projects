@@ -35,7 +35,8 @@
 					"returnVariable": "{ userId: \"as9233Qz\", property1: \"value1\"}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
-				}
+				},
+				"skake": false
 			},
 			"selected": true,
 			"dragging": false,
@@ -78,7 +79,8 @@
 				"handles": [
 					"Agama-when-Node-83a5e31f-8374-4bef-9202-461d61c6cf8e.FAILURE",
 					"Agama-when-Node-83a5e31f-8374-4bef-9202-461d61c6cf8e.SUCCESS"
-				]
+				],
+				"skake": true
 			},
 			"selected": false,
 			"dragging": false,
@@ -2976,8 +2978,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5723,
-		"y": -897,
-		"zoom": 1
+		"x": -4882.197936919019,
+		"y": -723.4424850917419,
+		"zoom": 0.8235910172675737
 	}
 }
