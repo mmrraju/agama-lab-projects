@@ -25,7 +25,7 @@
 		</div>
 		<form method="post" class="mt-8">
 		  <div id="otp" class="flex flex-row justify-center text-center px-2 mt-5">
-			<input type="text" id="first" name="userOtp" maxlength="1" class="m-2 text-center form-control rounded">
+			<input type="text" id="first" name="value" maxlength="1" class="m-2 text-center form-control rounded">
 		  </div>
 		  <div class="space-y-9 mt-4">
 			<div class="text-sm flex justify-center items-center">
