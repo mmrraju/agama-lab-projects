@@ -55,7 +55,7 @@
 					"variableField": "",
 					"conditionInputField": "",
 					"valueField": "",
-					"returnVariable": "{success: false, error: \"Authentication failed\"}",
+					"returnVariable": "Authentication failed",
 					"javaClassName": "",
 					"javaMethodName": "",
 					"javaVariableName": "",
