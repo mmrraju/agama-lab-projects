@@ -28,7 +28,8 @@
                 "requiresAuthentication": true,
                 "userName": "mrraju.ice.iu@gmail.com",
                 "password": "orysnttzwbujqzus"
-            }
+            },
+            "forget.pw": {}
         },
         "name": "agama-pw"
     },
