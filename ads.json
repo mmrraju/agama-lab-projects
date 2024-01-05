@@ -18,17 +18,6 @@
         "configs": {
             "mmrraju.gigantic.agama.pw": {},
             "agama.pw": {},
-            "forgot.pw": {
-                "host": "mail.google.com",
-                "port": 587,
-                "requiresSsl": true,
-                "serverTrust": true,
-                "fromName": "Md Mostafejur Rahman",
-                "fromEmailAddress": "mrraju.ice.iu@gmail.com",
-                "requiresAuthentication": true,
-                "userName": "mrraju.ice.iu@gmail.com",
-                "password": "orysnttzwbujqzus"
-            },
             "forget.pw": {
                 "host": "mail.google.com",
                 "port": 587,
