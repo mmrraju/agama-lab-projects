@@ -16,7 +16,8 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "mmrraju.gigantic.agama.pw": {}
+            "mmrraju.gigantic.agama.pw": {},
+            "agama.pw": {}
         },
         "name": "agama-pw"
     },
