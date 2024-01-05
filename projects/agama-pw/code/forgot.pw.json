@@ -39,7 +39,7 @@
 				},
 				"skake": false
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 6689.95800026671,
@@ -1031,7 +1031,7 @@
 					"id": "Agama-when-Node-e2389112-e446-484c-9034-c33e07c22bae",
 					"parentId": "Agama-assignment-Node-49e77283-024d-46fc-be4a-bd6e8e216894",
 					"type": "Agama-when-Node",
-					"variableField": "creds.forgotpassword",
+					"variableField": "creds.isForgotPw",
 					"conditionInputField": "is",
 					"valueField": "true",
 					"hasComment": true,
@@ -1044,7 +1044,7 @@
 				],
 				"skake": false
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false,
 			"positionAbsolute": {
 				"x": 2420,
@@ -2979,8 +2979,8 @@
 		}
 	],
 	"viewport": {
-		"x": -5891,
-		"y": -937,
+		"x": -1973,
+		"y": -36,
 		"zoom": 1
 	}
 }
