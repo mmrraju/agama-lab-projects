@@ -35,16 +35,16 @@ Repeat 3 times max
                          newPassword.value = userPw.password
                          updatedUser = Call co.AgamaEmail#updateUser user  newPassword.value
                          savedUpdatedUser = Call userServiceInstance updateUser updateUser
-                         newPassword.success = Call authServiceInstance authenticate user.getUserId newPassword.value
+                         newPassword.success = Call authServiceInstance2 authenticate user.getUserId newPassword.value
                          When newPassword.success is true
                     Log "@info otp not match"
           Log "@info User not found for mail : " userMail.mail
-          it_hugge = {success:false, error: "No user found associate with mail"}
-          Finish it_hugge
+          it_prgfm = {success:false, error: "No user found associate with mail"}
+          Finish it_prgfm
      Log "@info Chose to validate user"
      When authResult.success is true
           Log "@info Successfully login"
-          it_blxum = {success:true, data: { userId: authResult.uid}}
-          Finish it_blxum
-it_ypqrp = {success:false, error: "Failed to Authentication"}
-Finish it_ypqrp
+          it_bnfwt = {success:true, data: { userId: authResult.uid}}
+          Finish it_bnfwt
+it_juzwq = {success:false, error: "Failed to Authentication"}
+Finish it_juzwq
