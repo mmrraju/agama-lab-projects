@@ -1,2 +1,14 @@
 Flow org.gluu.test
      Basepath ""
+authService = Call io.jans.as.server.service.AuthenticationService#class 
+cdiUtil = Call io.jans.service.cdi.util.CdiUtil#bean 
+authResult = {}
+Repeat 3 times max
+     creds = RRF "login.ftlh" authResult
+     authResult.success = Call cdiUtil authenticate creds.username creds.password
+     authResult.uid = creds.username
+     When authResult.success is true
+          it_owzac = {success:true, data: {userId: authResult.uid}}
+          Finish it_owzac
+it_dfkzg = {success:false, error: "Authentication failed"}
+Finish it_dfkzg
