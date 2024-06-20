@@ -35,7 +35,8 @@
 					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "Failed Authn"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -82,7 +83,8 @@
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded",
 					"displayName": "success"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -130,7 +132,8 @@
 				"handles": [
 					"Agama-when-Node-86a920cf-232b-465e-b151-0d12df2d3e9b.FAILURE",
 					"Agama-when-Node-86a920cf-232b-465e-b151-0d12df2d3e9b.SUCCESS"
-				]
+				],
+				"skake": false
 			},
 			"width": 110,
 			"height": 60,
@@ -177,7 +180,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -227,7 +231,8 @@
 					],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "authResult.success"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -271,7 +276,8 @@
 					"templatePath": "login.ftlh",
 					"asssignedVariableName": "creds",
 					"arguments": "authResult"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -312,7 +318,8 @@
 					"maxIteration": "3",
 					"displayName": "Retry authentication",
 					"hasComment": true
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -359,7 +366,8 @@
 						}
 					],
 					"nodeIcon": "material-symbols:equal"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -406,7 +414,8 @@
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "cdiUtil"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -453,7 +462,8 @@
 					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"asssignedVariableName": "authService"
-				}
+				},
+				"skake": false
 			},
 			"width": 170,
 			"height": 124,
@@ -682,8 +692,8 @@
 		}
 	],
 	"viewport": {
-		"x": -658.7715782240377,
-		"y": 230.24128106766955,
-		"zoom": 1.23538652590136
+		"x": 10,
+		"y": 270,
+		"zoom": 0.75
 	}
 }
