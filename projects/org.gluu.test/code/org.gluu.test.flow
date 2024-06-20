@@ -8,7 +8,7 @@ Repeat 3 times max
      authResult.success = Call cdiUtil authenticate creds.username creds.password
      authResult.uid = creds.username
      When authResult.success is true
-          it_owzac = {success:true, data: {userId: authResult.uid}}
-          Finish it_owzac
-it_dfkzg = {success:false, error: "Authentication failed"}
-Finish it_dfkzg
+          it_bmped = {success:true, data: {userId: authResult.uid}}
+          Finish it_bmped
+it_udfyx = {success:false, error: "Authentication failed"}
+Finish it_udfyx
