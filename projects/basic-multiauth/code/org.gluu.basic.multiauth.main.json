@@ -1,0 +1,35 @@
+{
+  "nodes": [
+    {
+      "id": "Agama-start-Flow-bc477b8c-8c8f-4a13-b046-4d642a5f73cd",
+      "type": "start",
+      "sourcePosition": "right",
+      "data": {
+        "id": "Agama-start-Flow-bc477b8c-8c8f-4a13-b046-4d642a5f73cd",
+        "type": "Agama-start-Flow",
+        "position": {
+          "x": 30,
+          "y": 30
+        },
+        "inRepeatBlock": false,
+        "agamaData": {
+          "id": "Agama-start-Flow-bc477b8c-8c8f-4a13-b046-4d642a5f73cd",
+          "type": "Agama-start-Flow",
+          "flowname": "org.gluu.basic.multiauth.main",
+          "displayName": "This is about basic Multi Auth ",
+          "isTopLevelFlow": true,
+          "basepath": "",
+          "configParams": "{}",
+          "nodeIcon": "material-symbols:line-start-square",
+          "timeout": "",
+          "inputs": "",
+          "configs": ""
+        }
+      },
+      "position": {
+        "x": 30,
+        "y": 30
+      }
+    }
+  ]
+}
