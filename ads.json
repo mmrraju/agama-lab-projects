@@ -90,6 +90,9 @@
             "authorization"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "org.gluu.basic.multiauth.main": {}
+        },
+        "name": "basic-multiauth"
     }
 }
