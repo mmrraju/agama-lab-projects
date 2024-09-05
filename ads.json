@@ -73,5 +73,23 @@
             }
         },
         "name": "password-reset"
+    },
+    "basic-multiauth": {
+        "projectName": "basic-multiauth",
+        "description": "Basic multi auth configuration",
+        "type": "community",
+        "author": "mmrraju",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
+        "githubUri": "https://github.com/mmrraju/agama-lab-projects",
+        "license": "apache-2.0",
+        "lastUpdated": "1725553575102",
+        "tags": [
+            "jans",
+            "authentication",
+            "authorization"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
     }
 }
