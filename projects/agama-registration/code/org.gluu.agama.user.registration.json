@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "profile",
+					"inputs": "",
 					"configs": "",
 					"flowname": "org.gluu.agama.user.registration",
 					"displayName": "User registration",
@@ -73,7 +73,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "rrfNode-8c13588f-5152-45ed-a2ce-8905b97b49f5",
@@ -94,21 +94,21 @@
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "profile.ftlh",
-					"asssignedVariableName": "data",
+					"asssignedVariableName": "profile",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Open registration page on UI",
-					"arguments": "profile"
+					"arguments": "uiFeedback"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [
@@ -152,8 +152,8 @@
 		}
 	],
 	"viewport": {
-		"x": 30,
-		"y": 125.20776518907502,
+		"x": -8,
+		"y": 153.20776518907502,
 		"zoom": 1
 	}
 }
