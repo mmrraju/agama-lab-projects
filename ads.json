@@ -111,7 +111,9 @@
             "authorization"
         ],
         "noDirectLaunch": [],
-        "configs": {},
+        "configs": {
+            "org.gluu.agama.user.registration": {}
+        },
         "name": "agama-registration"
     },
     "agama-smtp": {
