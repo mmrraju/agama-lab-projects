@@ -1,7 +1,6 @@
 Flow org.gluu.agama.user.registration
      Basepath ""
-     Inputs profile
 // Create json variable for UI feedback.
 uiFeedback = {}
 // Open registration page on UI
-data = RRF "profile.ftlh" profile
+profile = RRF "profile.ftlh" uiFeedback
