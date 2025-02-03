@@ -7,8 +7,8 @@ max = Repeat 3 times max
      // Retrieve user profile  from UI
      uiInput = RRF "profile.ftlh" uiFeedback
      // Assign userName and email  to a variable
-     email = uiInput.email
-     userName = uiInput.userName
+     email = uiInput.mail
+     userName = uiInput.uid
      // Create an instance of User Registration Class
      userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
      // Check user already exist or not
@@ -28,8 +28,8 @@ max = Repeat 3 times max
                // Show user creation log
                Log "@info User % has been created" inum
                // Successful user registration
-               it_dimqd = {success:true, data: {userId: uiFeedback.userName, inum: inum, mail: uiFeedback.email}}
-               Finish it_dimqd
+               it_kjzcm = {success:true, data: {userId: uiInput.uid, inum: inum, mail: uiInput.mail}}
+               Finish it_kjzcm
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
