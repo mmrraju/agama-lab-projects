@@ -1,4 +1,4 @@
-package org.gluu.agama.smtp.jans.user;
+package org.gluu.agama.user;
 
 import java.util.Map;
 import java.util.Set;
