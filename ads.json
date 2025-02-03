@@ -113,5 +113,23 @@
         "noDirectLaunch": [],
         "configs": {},
         "name": "agama-registration"
+    },
+    "agama-smtp": {
+        "projectName": "agama-smtp",
+        "description": "This is demo smtp",
+        "type": "community",
+        "author": "mmrraju",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
+        "githubUri": "https://github.com/mmrraju/agama-lab-projects",
+        "license": "apache-2.0",
+        "lastUpdated": "1738605406566",
+        "tags": [
+            "jans",
+            "authentication",
+            "authorization"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
     }
 }
