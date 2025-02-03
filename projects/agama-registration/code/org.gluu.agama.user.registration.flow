@@ -20,5 +20,6 @@ max = Repeat 3 times max
           // Unique mail found
           Log "@info Unique mail found"
      // User already exists
-     Log "@info User alreay exists with mail: %" email
-     uiFeedback.errorMessage = "{}"
+     Log "@trace User alreay exists with mail: %" email
+     // User with  already exists
+     uiFeedback.errorMessage = "sdfsdf"
