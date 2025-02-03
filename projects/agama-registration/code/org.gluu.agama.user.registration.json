@@ -73,7 +73,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320",
@@ -450,7 +450,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -666,8 +666,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1624,
-		"y": -34,
+		"x": 65,
+		"y": 132,
 		"zoom": 1
 	}
 }
