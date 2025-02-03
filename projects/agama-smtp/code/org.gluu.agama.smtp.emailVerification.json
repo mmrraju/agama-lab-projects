@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "startNode-67211c64-a988-4f2e-b358-0339ba1d85de",
+      "type": "startNode",
+      "sourcePosition": "right",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "deletable": false,
+      "data": {
+        "id": "startNode-67211c64-a988-4f2e-b358-0339ba1d85de",
+        "type": "startNode",
+        "position": {
+          "x": 30,
+          "y": 40
+        },
+        "agamaData": {
+          "isTopLevelFlow": true,
+          "basepath": "",
+          "configParams": "{}",
+          "nodeIcon": "material-symbols:line-start-square",
+          "timeout": "",
+          "inputs": "",
+          "configs": "",
+          "flowname": "org.gluu.agama.smtp.emailVerification",
+          "displayName": "Verification ",
+          "creationDate": "03/02/2025",
+          "hasComment": true,
+          "comment": ""
+        }
+      }
+    }
+  ]
+}
