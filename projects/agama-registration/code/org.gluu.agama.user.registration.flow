@@ -2,5 +2,7 @@ Flow org.gluu.agama.user.registration
      Basepath ""
 // Create json variable for UI feedback.
 uiFeedback = {}
+// Iterate x times max
+max = Repeat 3 times max
 // Open registration page on UI
 profile = RRF "profile.ftlh" uiFeedback
