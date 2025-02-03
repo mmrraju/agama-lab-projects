@@ -15,3 +15,5 @@ max = Repeat 3 times max
      userData = Call userRegistrationService getUserEntityByMail email
      // User with same email not exists
      emailUnknown = userData.empty
+     // User with same email not exists
+     When emailUnknown is true
