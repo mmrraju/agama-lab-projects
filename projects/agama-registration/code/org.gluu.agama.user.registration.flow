@@ -18,4 +18,4 @@ max = Repeat 3 times max
      // User with same email not exists
      When userData.empty is true
      // New user will be created with this mail.
-     Log "@info New user will be created with this mail." email
+     Log "@info New user will be created with this mail. "
