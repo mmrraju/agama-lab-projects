@@ -13,3 +13,5 @@ max = Repeat 3 times max
      userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
      // Check user already exist or not
      userData = Call userRegistrationService getUserEntityByMail email
+     // User with same email not exists
+     emailUnknown = userData.empty
