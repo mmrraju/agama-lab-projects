@@ -132,7 +132,8 @@
         "noDirectLaunch": [],
         "configs": {
             "org.gluu.agama.smtp.main": {},
-            "org.gluu.agama.smtp.registration": {}
+            "org.gluu.agama.smtp.registration": {},
+            "org.gluu.agama.smtp.emailVerification": {}
         },
         "name": "agama-smtp"
     }
