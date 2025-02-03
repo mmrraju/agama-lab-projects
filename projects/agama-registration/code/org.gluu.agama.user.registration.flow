@@ -6,3 +6,6 @@ uiFeedback = {}
 max = Repeat 3 times max
      // Retrieve user profile  from UI
      uiInput = RRF "profile.ftlh" uiFeedback
+     // Assign userName and email  to a variable
+     email = uiInput.email
+     userName = uiInput.userName
