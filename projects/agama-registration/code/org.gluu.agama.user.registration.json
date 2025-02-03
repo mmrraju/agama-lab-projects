@@ -363,7 +363,7 @@
 				"previousNodeId": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "\"Unique mail found\"",
+					"logMessage": "\"User not found with mail %\" email",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -483,6 +483,46 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Assign physical DB attributes to a variable"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8",
+			"type": "callNode",
+			"position": {
+				"x": 2780,
+				"y": 480
+			},
+			"data": {
+				"id": "callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8",
+				"type": "callNode",
+				"position": {
+					"x": 2780,
+					"y": 480
+				},
+				"previousNodeId": "assignmentNode-4bf92d28-3553-4563-bfd1-656542cee2ae",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "addNewUser",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "E",
+					"callType": "Call method on instance",
+					"arguments": [
+						"uiFeedback"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Call user registration service method to register a new user",
+					"asssignedVariableName": "inum"
 				}
 			},
 			"measured": {
@@ -720,11 +760,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-73325fec-fff7-499d-80fb-cd1597a396f2"
+		},
+		{
+			"id": "assignmentNode-4bf92d28-3553-4563-bfd1-656542cee2ae-callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8",
+			"type": "default",
+			"source": "assignmentNode-4bf92d28-3553-4563-bfd1-656542cee2ae",
+			"target": "callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-4bf92d28-3553-4563-bfd1-656542cee2ae"
 		}
 	],
 	"viewport": {
-		"x": -1941,
-		"y": -105,
+		"x": -2243,
+		"y": -212,
 		"zoom": 1
 	}
 }
