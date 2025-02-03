@@ -1,0 +1,36 @@
+{
+  "nodes": [
+    {
+      "id": "startNode-761b0ccf-761a-495e-af80-c1c4f6a07a05",
+      "type": "startNode",
+      "sourcePosition": "right",
+      "position": {
+        "x": 30,
+        "y": 30
+      },
+      "deletable": false,
+      "data": {
+        "id": "startNode-761b0ccf-761a-495e-af80-c1c4f6a07a05",
+        "type": "startNode",
+        "position": {
+          "x": 30,
+          "y": 40
+        },
+        "agamaData": {
+          "isTopLevelFlow": true,
+          "basepath": "",
+          "configParams": "{}",
+          "nodeIcon": "material-symbols:line-start-square",
+          "timeout": "",
+          "inputs": "",
+          "configs": "",
+          "flowname": "org.gluu.agama.smtp.registration",
+          "displayName": "Registration",
+          "creationDate": "03/02/2025",
+          "hasComment": true,
+          "comment": ""
+        }
+      }
+    }
+  ]
+}
