@@ -301,6 +301,48 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
+			"type": "whenNode",
+			"position": {
+				"x": 2030,
+				"y": 280
+			},
+			"data": {
+				"id": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
+				"type": "whenNode",
+				"position": {
+					"x": 2030,
+					"y": 280
+				},
+				"previousNodeId": "assignmentNode-e97a0823-1af5-4c50-954d-831df7dc50c7",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "emailUnknown",
+							"operator": "is",
+							"dataValue": "true",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "User with same email not exists"
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
 			"selected": true
 		}
 	],
@@ -437,11 +479,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_callNode-a65c363b-4e0a-4de3-b6d9-40b7364329b8"
+		},
+		{
+			"id": "assignmentNode-e97a0823-1af5-4c50-954d-831df7dc50c7-whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
+			"type": "default",
+			"source": "assignmentNode-e97a0823-1af5-4c50-954d-831df7dc50c7",
+			"target": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-e97a0823-1af5-4c50-954d-831df7dc50c7"
 		}
 	],
 	"viewport": {
-		"x": -1220,
-		"y": -22,
+		"x": -1600,
+		"y": 45,
 		"zoom": 1
 	}
 }
