@@ -398,7 +398,7 @@
 				"branching": "continue",
 				"agamaData": {
 					"logMessage": "\"User alreay exists with mail: %\" email",
-					"logLevel": "info",
+					"logLevel": "trace",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
 					"titleColor": "",
@@ -412,14 +412,14 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-5ee0c24d-75cf-459a-9468-2c7c2bb52b0f",
 			"type": "assignmentNode",
 			"position": {
-				"x": 2592.63710566983,
-				"y": 250.7721707476275
+				"x": 2501.63710566983,
+				"y": 265.7721707476275
 			},
 			"data": {
 				"id": "assignmentNode-5ee0c24d-75cf-459a-9468-2c7c2bb52b0f",
@@ -433,7 +433,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "{}",
+							"assignmentExpression": "sdfsdf",
 							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
@@ -443,14 +443,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": ""
+					"comment": "User with  already exists"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
