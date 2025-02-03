@@ -111,6 +111,9 @@
             "authorization"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "org.gluu.user.registration.main": {}
+        },
+        "name": "agama-registration"
     }
 }
