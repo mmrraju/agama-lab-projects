@@ -223,6 +223,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-a65c363b-4e0a-4de3-b6d9-40b7364329b8",
+			"type": "callNode",
+			"position": {
+				"x": 1530,
+				"y": 280
+			},
+			"data": {
+				"id": "callNode-a65c363b-4e0a-4de3-b6d9-40b7364329b8",
+				"type": "callNode",
+				"position": {
+					"x": 1530,
+					"y": 280
+				},
+				"previousNodeId": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "getUserEntityByMail",
+					"javaVariableName": "userRegistrationService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"email"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Check user already exist or not",
+					"asssignedVariableName": "userData"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -321,11 +361,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-f7ee1227-2142-435b-975e-d14acf545f2a"
+		},
+		{
+			"id": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506-callNode-a65c363b-4e0a-4de3-b6d9-40b7364329b8",
+			"type": "default",
+			"source": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
+			"target": "callNode-a65c363b-4e0a-4de3-b6d9-40b7364329b8",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-169d8242-94c1-4962-9f7a-77a0e407b506"
 		}
 	],
 	"viewport": {
-		"x": -413,
-		"y": 13,
+		"x": -847,
+		"y": -19,
 		"zoom": 1
 	}
 }
