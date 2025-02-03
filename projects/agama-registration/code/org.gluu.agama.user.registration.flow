@@ -23,6 +23,11 @@ max = Repeat 3 times max
           Keys = uiInput.userName
           // Call user registration service method to register a new user
           inum | E = Call userRegistrationService addNewUser uiFeedback
+          When 
+               // Show user creation log
+               Log "@info User % has been created" inum
+          // User registration failed 
+          Log "@info User registration failed. Error : %" E
      // User already exists
      Log "@trace User alreay exists with mail: %" email
      // User with  already exists
