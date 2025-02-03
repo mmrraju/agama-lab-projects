@@ -17,5 +17,5 @@ max = Repeat 3 times max
      emailUnknown = userData.empty
      // User with same email not exists
      When userData.empty is true
-     // New user will be created with this mail
-     Log "@info New user will be created with this mail"
+          // Unique mail found
+          Log "@info Unique mail found"
