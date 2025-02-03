@@ -9,3 +9,5 @@ max = Repeat 3 times max
      // Assign userName and email  to a variable
      email = uiInput.email
      userName = uiInput.userName
+     // Create an instance of User Registration Class
+     userRegistrationService = Call org.gluu.agama.user.UserRegistration#getInstance 
