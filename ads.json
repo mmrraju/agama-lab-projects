@@ -94,5 +94,23 @@
             "org.gluu.basic.multiauth.main": {}
         },
         "name": "basic-multiauth"
+    },
+    "agama-registration": {
+        "projectName": "agama-registration",
+        "description": "This is demo user registration project.",
+        "type": "community",
+        "author": "mmrraju",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
+        "githubUri": "https://github.com/mmrraju/agama-lab-projects",
+        "license": "apache-2.0",
+        "lastUpdated": "1738603128005",
+        "tags": [
+            "jans",
+            "authentication",
+            "authorization"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
     }
 }
