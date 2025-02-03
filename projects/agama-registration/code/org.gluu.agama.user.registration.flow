@@ -20,7 +20,7 @@ max = Repeat 3 times max
           // Unique mail found
           Log "@info User not found with mail %" email
           // Assign physical DB attributes to a variable
-          Keys = uiInput.userName
+          Keys = uiInput.uid
           // Call user registration service method to register a new user
           inum | E = Call userRegistrationService addNewUser uiFeedback
           // If no error
@@ -28,8 +28,8 @@ max = Repeat 3 times max
                // Show user creation log
                Log "@info User % has been created" inum
                // Successful user registration
-               it_kjzcm = {success:true, data: {userId: uiInput.uid, inum: inum, mail: uiInput.mail}}
-               Finish it_kjzcm
+               it_nzkqx = {success:true, data: {userId: uiInput.uid, inum: inum, mail: uiInput.mail}}
+               Finish it_nzkqx
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
