@@ -397,7 +397,13 @@
 				"previousNodeId": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
 				"branching": "continue",
 				"agamaData": {
-					"assignments": [],
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						}
+					],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
@@ -608,8 +614,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1075.4621484215786,
-		"y": 81.56667327720544,
+		"x": -1114.4621484215786,
+		"y": 34.56667327720544,
 		"zoom": 0.7922348109249692
 	}
 }
