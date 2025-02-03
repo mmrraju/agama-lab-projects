@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "profile extUid",
+					"inputs": "profile",
 					"configs": "",
 					"flowname": "org.gluu.agama.user.registration",
 					"displayName": "User registration",
