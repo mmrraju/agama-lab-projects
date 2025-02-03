@@ -1,2 +1,6 @@
 Flow org.gluu.agama.user.registration
      Basepath ""
+// Assign the profile value obtain from UI to a variable
+registrationResult = {}
+// Open registration page on UI
+data = RRF "profile.ftlh" profile
