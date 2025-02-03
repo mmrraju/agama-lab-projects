@@ -433,7 +433,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "sdfsdf",
+							"assignmentExpression": "UserAlreadyExists",
 							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
