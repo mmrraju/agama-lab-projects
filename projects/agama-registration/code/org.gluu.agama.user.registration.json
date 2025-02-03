@@ -665,7 +665,7 @@
 					"hasComment": true,
 					"comment": "Successful user registration",
 					"flowfilename": "",
-					"returnVariable": "{userId: uiFeedback.userName, inum: inum, mail: uiFeedback.email,}",
+					"returnVariable": "{userId: uiFeedback.userName, inum: inum, mail: uiFeedback.email}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
