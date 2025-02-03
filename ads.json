@@ -112,7 +112,10 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "org.gluu.user.registration.main": {}
+            "org.gluu.user.registration.main": {
+                "minCredsRequired": 2,
+                "captureLocation": true
+            }
         },
         "name": "agama-registration"
     }
