@@ -529,6 +529,108 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+			"type": "whenNode",
+			"position": {
+				"x": 3030,
+				"y": 480
+			},
+			"data": {
+				"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+				"type": "whenNode",
+				"position": {
+					"x": 3030,
+					"y": 480
+				},
+				"previousNodeId": "callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			}
+		},
+		{
+			"id": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+			"type": "logNode",
+			"position": {
+				"x": 3280,
+				"y": 480
+			},
+			"data": {
+				"id": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+				"type": "logNode",
+				"position": {
+					"x": 3280,
+					"y": 480
+				},
+				"previousNodeId": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"User registration failed. Error : %\" E",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "User registration failed "
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+			"type": "logNode",
+			"position": {
+				"x": 3280,
+				"y": 680
+			},
+			"data": {
+				"id": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+				"type": "logNode",
+				"position": {
+					"x": 3280,
+					"y": 680
+				},
+				"previousNodeId": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"User % has been created\" inum",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Show user creation log"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -779,11 +881,68 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-4bf92d28-3553-4563-bfd1-656542cee2ae"
+		},
+		{
+			"id": "callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8-whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+			"type": "default",
+			"source": "callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8",
+			"target": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8"
+		},
+		{
+			"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669-logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+			"type": "default",
+			"source": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+			"target": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669_continue"
+		},
+		{
+			"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669-logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+			"type": "default",
+			"source": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+			"target": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "Condition met",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669_success"
 		}
 	],
 	"viewport": {
-		"x": -2243,
-		"y": -212,
+		"x": -2719,
+		"y": -273,
 		"zoom": 1
 	}
 }
