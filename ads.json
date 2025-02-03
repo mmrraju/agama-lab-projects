@@ -129,7 +129,9 @@
             "authentication",
             "authorization"
         ],
-        "noDirectLaunch": [],
+        "noDirectLaunch": [
+            "org.gluu.agama.smtp.registration"
+        ],
         "configs": {
             "org.gluu.agama.smtp.main": {
                 "minCredsRequired": 2,
