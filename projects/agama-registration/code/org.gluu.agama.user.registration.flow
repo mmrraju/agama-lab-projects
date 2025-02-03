@@ -19,6 +19,8 @@ max = Repeat 3 times max
      When userData.empty is true
           // Unique mail found
           Log "@info Unique mail found"
+          // Assign physical DB attributes to a variable
+          Keys = uiInput.userName
      // User already exists
      Log "@trace User alreay exists with mail: %" email
      // User with  already exists
