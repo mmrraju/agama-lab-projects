@@ -163,12 +163,12 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "uiInput.email",
+							"assignmentExpression": "uiInput.mail",
 							"assignedVariableName": "email"
 						},
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "uiInput.userName",
+							"assignmentExpression": "uiInput.uid",
 							"assignedVariableName": "userName"
 						}
 					],
@@ -665,7 +665,7 @@
 					"hasComment": true,
 					"comment": "Successful user registration",
 					"flowfilename": "",
-					"returnVariable": "{userId: uiFeedback.userName, inum: inum, mail: uiFeedback.email}",
+					"returnVariable": "{userId: uiInput.uid, inum: inum, mail: uiInput.mail}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -1003,8 +1003,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3085,
-		"y": -351,
+		"x": -3015,
+		"y": -310,
 		"zoom": 1
 	}
 }
