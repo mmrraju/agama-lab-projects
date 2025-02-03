@@ -89,7 +89,7 @@ public class JansUserRegistration extends UserRegistration {
 
     }   
 
-    public User addNewUser(Map<String, String> profile, Set<String> attributes)
+    public String addNewUser(Map<String, String> profile, Set<String> attributes)
     throws Exception {
 
         User user = new User();
@@ -105,8 +105,8 @@ public class JansUserRegistration extends UserRegistration {
         user = userService.addUser(user, true);
         if (user == null) throw new EntryNotFoundException("Added user not found");
 
-        // return getSingleValuedAttr(user, INUM_ATTR);
-        return user;
+        return getSingleValuedAttr(user, INUM_ATTR);
+        // return user;
 
     }   
 
