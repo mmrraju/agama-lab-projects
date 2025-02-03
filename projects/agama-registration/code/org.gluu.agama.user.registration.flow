@@ -1,6 +1,6 @@
 Flow org.gluu.agama.user.registration
      Basepath ""
-     Inputs profile extUid
+     Inputs profile
 // Assign the profile value obtain from UI to a variable
 registrationResult = {}
 // Open registration page on UI
