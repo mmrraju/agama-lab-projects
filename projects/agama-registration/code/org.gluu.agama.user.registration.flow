@@ -19,3 +19,4 @@ max = Repeat 3 times max
      When userData.empty is true
           // Unique mail found
           Log "@info Unique mail found"
+     uiFeedback.errorMessage = "{}"
