@@ -66,7 +66,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Assign the profile value obtain from UI to a variable"
+					"comment": "Create json variable for UI feedback."
 				}
 			},
 			"measured": {
