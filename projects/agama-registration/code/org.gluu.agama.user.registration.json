@@ -324,7 +324,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "emailUnknown",
+							"variable": "userData.empty",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -342,6 +342,40 @@
 			"measured": {
 				"width": 110,
 				"height": 60
+			},
+			"selected": false
+		},
+		{
+			"id": "logNode-387d25c7-eab0-4c77-a38a-61c1791122d3",
+			"type": "logNode",
+			"position": {
+				"x": 2280,
+				"y": 280
+			},
+			"data": {
+				"id": "logNode-387d25c7-eab0-4c77-a38a-61c1791122d3",
+				"type": "logNode",
+				"position": {
+					"x": 2280,
+					"y": 280
+				},
+				"previousNodeId": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
+				"branching": "continue",
+				"agamaData": {
+					"logMessage": "\"New user will be created with this mail.\" email",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "New user will be created with this mail."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
 			},
 			"selected": true
 		}
@@ -498,6 +532,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_assignmentNode-e97a0823-1af5-4c50-954d-831df7dc50c7"
+		},
+		{
+			"id": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa-logNode-387d25c7-eab0-4c77-a38a-61c1791122d3",
+			"type": "default",
+			"source": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
+			"target": "logNode-387d25c7-eab0-4c77-a38a-61c1791122d3",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa_continue"
 		}
 	],
 	"viewport": {
