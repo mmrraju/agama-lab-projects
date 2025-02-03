@@ -106,7 +106,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "rrfNode-8c13588f-5152-45ed-a2ce-8905b97b49f5",
@@ -142,7 +142,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		}
 	],
