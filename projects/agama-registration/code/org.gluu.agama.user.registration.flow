@@ -18,9 +18,11 @@ max = Repeat 3 times max
      // User with same email not exists
      When userData.empty is true
           // Unique mail found
-          Log "@info Unique mail found"
+          Log "@info User not found with mail %" email
           // Assign physical DB attributes to a variable
           Keys = uiInput.userName
+          // Call user registration service method to register a new user
+          inum | E = Call userRegistrationService addNewUser uiFeedback
      // User already exists
      Log "@trace User alreay exists with mail: %" email
      // User with  already exists
