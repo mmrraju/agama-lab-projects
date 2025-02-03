@@ -185,6 +185,44 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
+			"type": "callNode",
+			"position": {
+				"x": 1280,
+				"y": 280
+			},
+			"data": {
+				"id": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
+				"type": "callNode",
+				"position": {
+					"x": 1280,
+					"y": 280
+				},
+				"previousNodeId": "assignmentNode-f7ee1227-2142-435b-975e-d14acf545f2a",
+				"agamaData": {
+					"javaClassName": "org.gluu.agama.user.UserRegistration",
+					"javaMethodName": "getInstance",
+					"javaVariableName": "",
+					"exceptionVariableField": "",
+					"callType": "Call static method",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Create an instance of User Registration Class",
+					"asssignedVariableName": "userRegistrationService"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -264,11 +302,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_rrfNode-eb128c64-1548-44c2-9531-3808de054178"
+		},
+		{
+			"id": "assignmentNode-f7ee1227-2142-435b-975e-d14acf545f2a-callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
+			"type": "default",
+			"source": "assignmentNode-f7ee1227-2142-435b-975e-d14acf545f2a",
+			"target": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-f7ee1227-2142-435b-975e-d14acf545f2a"
 		}
 	],
 	"viewport": {
-		"x": -215,
-		"y": 12.207765189075019,
+		"x": -413,
+		"y": 13,
 		"zoom": 1
 	}
 }
