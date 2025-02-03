@@ -128,13 +128,13 @@
 					"assignments": [],
 					"nodeIcon": "ph:globe-simple",
 					"templatePath": "profile.ftlh",
-					"asssignedVariableName": "profile",
+					"asssignedVariableName": "uiInput",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Retrieve user profile data from UI",
+					"comment": "Retrieve user profile  from UI",
 					"arguments": "uiFeedback"
 				}
 			},
