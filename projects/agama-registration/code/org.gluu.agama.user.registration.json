@@ -362,7 +362,7 @@
 				"previousNodeId": "whenNode-51bc1380-9c2d-4158-99dd-3aaeda1458aa",
 				"branching": "continue",
 				"agamaData": {
-					"logMessage": "\"New user will be created with this mail. \"",
+					"logMessage": "New user will be created with this mail",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
