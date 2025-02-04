@@ -114,13 +114,9 @@ public class JansUserRegistration extends UserRegistration {
     
         attributes.forEach(attr -> {
             String val = profile.get(attr);
+            System.out.println("Fetching attribute: " + attr + ", Value: " + val);
             if (StringHelper.isNotEmpty(val)) {
-                if(attr==UID){
-                    user.setAttribute(EXT_ATTR, val, true);
-                }else{
-                    user.setAttribute(attr, val, true);
-                }
-               
+                user.setAttribute(attr, val);      
             }
         });
     
@@ -132,9 +128,12 @@ public class JansUserRegistration extends UserRegistration {
         }
     
         return getSingleValuedAttr(user, INUM_ATTR);
-    }  
+    } 
 
     private String getSingleValuedAttr(User user, String attribute) {
+
+        System.out.println("User object: " + user); // Print the entire user object
+        System.out.println("Fetching attribute: " + attribute);
 
         Object value = null;
         if (attribute.equals(UID)) {
