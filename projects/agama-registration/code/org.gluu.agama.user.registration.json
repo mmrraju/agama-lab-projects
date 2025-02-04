@@ -674,7 +674,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -740,14 +740,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "// Assign User Id (userName) to a variable"
+					"comment": "Assign User Id (userName) to a variable"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
