@@ -731,9 +731,10 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "",
+					"comment": "Registration enrollment  flow failed",
 					"flowfilename": "",
-					"returnVariable": "",
+					"returnVariable": "Registration enrollment  flow failed",
+					"finishMode": "withFailure",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
@@ -741,7 +742,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
