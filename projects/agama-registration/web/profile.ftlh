@@ -47,7 +47,7 @@
 		</div>
 		<div class="mb-3">
 		  <label class="form-label">Email: <span class="required">*</span></label>
-		  <input type="email" id="email" name="email" required="" class="form-control">
+		  <input type="email" id="mail" name="mail" required="" class="form-control">
 		</div>
 		<div class="buttons">
 		  <button type="submit" class="btn btn-primary">Register</button>
