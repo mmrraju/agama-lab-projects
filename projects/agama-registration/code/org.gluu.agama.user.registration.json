@@ -92,7 +92,7 @@
 				"previousNodeId": "assignmentNode-322d9051-9a6a-408d-ac63-8a53742e5a38",
 				"agamaData": {
 					"nodeIcon": "material-symbols:event-repeat-outline-rounded",
-					"maxIteration": "3",
+					"maxIteration": "10",
 					"maxIterationVariableName": "max",
 					"nodeColor": "",
 					"titleColor": "",
@@ -106,7 +106,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "rrfNode-eb128c64-1548-44c2-9531-3808de054178",
@@ -742,7 +742,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -1110,8 +1110,8 @@
 		}
 	],
 	"viewport": {
-		"x": -362,
-		"y": 176,
+		"x": 188,
+		"y": 189,
 		"zoom": 1
 	}
 }
