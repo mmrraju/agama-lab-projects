@@ -28,8 +28,8 @@ max = Repeat 10 times max
                // Show user creation log
                Log "@info User % has been created" inum
                // Successful user registration
-               it_eusyj = {success:true, data: {userId: uiInput.uid, inum: inum, mail: uiInput.mail}}
-               Finish it_eusyj
+               it_mtwai = {success:true, data: { userId: uiInput.uid}}
+               Finish it_mtwai
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -39,5 +39,5 @@ max = Repeat 10 times max
 // Maximum attempt has been reached
 Log "@info  The maximum registration attempt has been reached!"
 // Registration enrollment  flow failed
-it_jcdnk = {success:false, error: "Registration enrollment  flow failed"}
-Finish it_jcdnk
+it_hfjst = {success:false, error: "Registration enrollment  flow failed"}
+Finish it_hfjst
