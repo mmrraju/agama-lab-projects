@@ -106,7 +106,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "rrfNode-eb128c64-1548-44c2-9531-3808de054178",
@@ -163,7 +163,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "uiInput.mail",
+							"assignmentExpression": "uiInput.email",
 							"assignedVariableName": "email"
 						},
 						{
@@ -185,7 +185,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
@@ -1110,8 +1110,8 @@
 		}
 	],
 	"viewport": {
-		"x": 188,
-		"y": 189,
+		"x": -522,
+		"y": 0,
 		"zoom": 1
 	}
 }
