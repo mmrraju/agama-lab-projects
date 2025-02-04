@@ -646,8 +646,8 @@
 			"id": "finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
 			"type": "finishNode",
 			"position": {
-				"x": 3530,
-				"y": 680
+				"x": 3793,
+				"y": 677
 			},
 			"data": {
 				"id": "finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
@@ -656,7 +656,7 @@
 					"x": 3530,
 					"y": 680
 				},
-				"previousNodeId": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+				"previousNodeId": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
 				"agamaData": {
 					"nodeColor": "",
 					"titleColor": "",
@@ -665,7 +665,7 @@
 					"hasComment": true,
 					"comment": "Successful user registration",
 					"flowfilename": "",
-					"returnVariable": "{ userId: uiInput.uid}",
+					"returnVariable": "{ userId: uid}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -710,6 +710,45 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3530,
+				"y": 677
+			},
+			"data": {
+				"id": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3530,
+					"y": 680
+				},
+				"previousNodeId": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": false,
+							"assignmentExpression": "uiInput.uid",
+							"assignedVariableName": "uid"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "// Assign User Id (userName) to a variable"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
@@ -1053,25 +1092,6 @@
 			"sourceHandle": "source_whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669_success"
 		},
 		{
-			"id": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2-finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
-			"type": "default",
-			"source": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
-			"target": "finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2"
-		},
-		{
 			"id": "repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320-logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
 			"type": "default",
 			"source": "repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320",
@@ -1108,11 +1128,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15"
+		},
+		{
+			"id": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2-assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
+			"type": "default",
+			"source": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
+			"target": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2"
+		},
+		{
+			"id": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae-finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
+			"type": "default",
+			"source": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
+			"target": "finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
+			"targetHandle": "target_finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186"
 		}
 	],
 	"viewport": {
-		"x": -2938,
-		"y": -300,
+		"x": -2964,
+		"y": -271,
 		"zoom": 1
 	}
 }
