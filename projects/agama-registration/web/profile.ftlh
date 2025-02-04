@@ -32,25 +32,35 @@
 		  <div id="iyplr">
             <div class="relative mb-2">
                 <label for="userName" data-i18n="profile.user_name" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
+                    Username
                 </label>
                 <input type="text" id="uid" name="displayName" autofocus="" placeholder="raju" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
               </div>
             <div class="relative mb-2">
                 <label for="displayName" data-i18n="profile.display_name" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
+                    Display Name
                 </label>
                 <input type="text" id="displayName" name="displayName" autofocus="" placeholder="MMR Raju" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
             </div>
 			<div class="relative mb-2">
 			  <label for="givenName" data-i18n="profile.first_name" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
+                First Name
 			  </label>
-			  <input type="text" id="givenName" name="givenName" autofocus="" placeholder="Md Mostafejur" value="${name!}" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
+			  <input type="text" id="givenName" name="givenName" autofocus="" placeholder="Md Mostafejur" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
 			</div>
 			<div class="relative mb-2">
 			  <label for="lastname" data-i18n="profile.last_name" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
+                Last Name
 			  </label>
 			  <input type="text" id="sn" name="sn" autofocus="" placeholder="Rahman" required="" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2">
 			</div>
-			<div class="text-sm flex justify-center items-center">
+            <div class="relative mb-2">
+                <label for="password" data-i18n="profile.password" class="label mt-2 ml-1 leading-tighter text-gray-600 text-base cursor-text">
+                    Password
+                </label>
+                <input type="password" id="password" name="password" autofocus="" required="" placeholder="Password" class="w-full rounded px-3 border border-gray-300 pt-2 pb-2>
+            </div>
+			<div class=" text-sm="" flex="" justify-center="" items-center"="">
 			  <button type="submit" data-callback="onSubmit" data-i18n="profile.submit" class="py-3 px-8 rounded text-white btn bg-green-500 hover:bg-green-600">
 			  </button>
 			</div>
