@@ -3,10 +3,63 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration
 	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></head>
-<body><div class="registration-container shadow"><div class="header"><i class="fas fa-user-plus">
+<body>
+
+  
+	
+	
+	
+	
+  
+  
+	<div class="registration-container shadow">
+	  <div class="header">
+		<i class="fas fa-user-plus">
 		</i> User Registration
-	  </div><p class="text-center mt-2">
-	  </p><form method="post"><div class="mb-3"><label class="form-label">Username: <span class="required">*</span></label><input type="text" id="uid" name="username" required="" class="form-control"></div><div class="mb-3"><label class="form-label">Display Name: <span class="required">*</span></label><input type="text" id="displayName" name="displayName" required="" class="form-control"></div><div class="mb-3"><label class="form-label">First Name: <span class="required">*</span></label><input type="text" id="givenName" name="givenName" required="" class="form-control"></div><div class="mb-3"><label class="form-label">Last Name: <span class="required">*</span></label><input type="text" id="sn" name="sn" required="" class="form-control"></div><div class="mb-3"><label class="form-label">Password: <span class="required">*</span></label><input type="password" id="password" name="password" required="" class="form-control"></div><div class="mb-3"><label class="form-label">Repeat password: <span class="required">*</span></label><input type="password" id="re-password" name="re-password" class="form-control"><small id="error-message"></small></div><div class="mb-3"><label class="form-label">Email: <span class="required">*</span></label><input type="email" id="email" name="email" required="" class="form-control"></div><div class="buttons"><button type="submit" class="btn btn-primary">Register</button><button type="reset" class="btn btn-secondary">Cancel</button></div></form></div></body>
+	  </div>
+	  <p class="text-center mt-2">
+	  </p>
+	  <form method="post">
+		<div class="mb-3">
+		  <label class="form-label">Username: <span class="required">*</span></label>
+		  <input type="text" id="uid" name="username" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Display Name: <span class="required">*</span></label>
+		  <input type="text" id="displayName" name="displayName" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">First Name: <span class="required">*</span></label>
+		  <input type="text" id="givenName" name="givenName" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Last Name: <span class="required">*</span></label>
+		  <input type="text" id="sn" name="sn" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Password: <span class="required">*</span></label>
+		  <input type="password" id="userPassword" name="userPassword" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Repeat password: <span class="required">*</span></label>
+		  <input type="password" id="re-password" name="re-password" class="form-control">
+		  <small id="error-message"></small>
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Email: <span class="required">*</span></label>
+		  <input type="email" id="email" name="email" required="" class="form-control">
+		</div>
+		<div class="buttons">
+		  <button type="submit" class="btn btn-primary">Register</button>
+		  <button type="reset" class="btn btn-secondary">Cancel</button>
+		</div>
+	  </form>
+	</div>
+  
+  
+  
+  
+</body>
 <style>
 	.registration-container {
 	  max-width: 600px;
