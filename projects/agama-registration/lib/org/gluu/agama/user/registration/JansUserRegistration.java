@@ -22,6 +22,11 @@ public class JansUserRegistration extends UserRegistration {
     
     private static final Logger logger = LoggerFactory.getLogger(JansUserRegistration.class);
 
+    private static final String MAIL = "mail";
+    private static final String UID = "uid";
+    private static final String DISPLAY_NAME = "displayName";
+    private static final String GIVEN_NAME = "givenName";
+    private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String EXT_ATTR = "jansExtUid";
     private static final String EXT_UID_PREFIX = "github:";
@@ -40,57 +45,71 @@ public class JansUserRegistration extends UserRegistration {
     }
 
     public Map<String, String> getUserEntityByMail(String email) {
-
         User user = getUser(MAIL, email);
         boolean local = user != null;
         logger.debug("There is {} local account for {}", local ? "a" : "no", email);
-
+    
         if (local) {
             String uid = getSingleValuedAttr(user, UID);
             String inum = getSingleValuedAttr(user, INUM_ATTR);
             String name = getSingleValuedAttr(user, GIVEN_NAME);
-
+    
             if (name == null) {
                 name = getSingleValuedAttr(user, DISPLAY_NAME);
-
-                if (name == null) {
+                if (name == null && email != null && email.contains("@")) {
                     name = email.substring(0, email.indexOf("@"));
                 }
             }
-            //I need a modifiable map
-            return new HashMap<>(Map.of(UID, uid, INUM_ATTR, inum, "name", name, "email", email));
+    
+            // Creating a truly modifiable map
+            Map<String, String> userMap = new HashMap<>();
+            userMap.put(UID, uid);
+            userMap.put(INUM_ATTR, inum);
+            userMap.put("name", name);
+            userMap.put("email", email);
+    
+            return userMap;
         }
+    
         return new HashMap<>();
-
     }
+    
 
     public Map<String, String> getUserEntityByUserName(String userName) {
-
         User user = getUser(UID, userName);
         boolean local = user != null;
-        logger.debug("There is {} local account for {}", local ? "a" : "no", email);
-
+    
         if (local) {
             String email = getSingleValuedAttr(user, MAIL);
             String inum = getSingleValuedAttr(user, INUM_ATTR);
             String name = getSingleValuedAttr(user, GIVEN_NAME);
-
+            String uid = getSingleValuedAttr(user, UID); // Define uid properly
+    
             if (name == null) {
                 name = getSingleValuedAttr(user, DISPLAY_NAME);
-
-                if (name == null) {
+                if (name == null && email != null && email.contains("@")) {
                     name = email.substring(0, email.indexOf("@"));
                 }
             }
-            //I need a modifiable map
-            return new HashMap<>(Map.of(UID, uid, INUM_ATTR, inum, "name", name, "email", email));
+    
+            logger.debug("There is {} local account for {}", local ? "a" : "no", email);
+    
+            // Creating a modifiable HashMap directly
+            Map<String, String> userMap = new HashMap<>();
+            userMap.put(UID, uid);
+            userMap.put(INUM_ATTR, inum);
+            userMap.put("name", name);
+            userMap.put("email", email);
+    
+            return userMap;
         }
+    
         return new HashMap<>();
-
-    }   
+    }
+    
 
     public String addNewUser(Map<String, String> profile) throws Exception {
-        Set<String> attributes = Set.of("uid", "email", "displayName","givenName", "sn", "password");
+        Set<String> attributes = Set.of("uid", "email", "displayName","givenName", "sn", "userPassword");
         User user = new User();
     
         attributes.forEach(attr -> {
@@ -128,4 +147,5 @@ public class JansUserRegistration extends UserRegistration {
         return userService.getUserByAttribute(attributeName, value, true);
     }    
 }
+
 
