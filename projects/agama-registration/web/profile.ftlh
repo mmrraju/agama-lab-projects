@@ -18,7 +18,8 @@
 		</i> User Registration
 	  </div>
 	  <p class="text-center mt-2">
-	  </p><form method="post">
+	  </p>
+	  <form method="post">
 		<div class="mb-3">
 		  <label class="form-label">Username: <span class="required">*</span></label>
 		  <input type="text" required="" class="form-control">
