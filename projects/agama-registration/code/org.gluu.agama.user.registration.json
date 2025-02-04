@@ -163,7 +163,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": false,
-							"assignmentExpression": "uiInput.email",
+							"assignmentExpression": "uiInput.mail",
 							"assignedVariableName": "email"
 						},
 						{
@@ -1110,8 +1110,8 @@
 		}
 	],
 	"viewport": {
-		"x": -522,
-		"y": 0,
+		"x": -533,
+		"y": 2,
 		"zoom": 1
 	}
 }
