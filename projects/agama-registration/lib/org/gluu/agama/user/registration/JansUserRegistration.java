@@ -109,13 +109,18 @@ public class JansUserRegistration extends UserRegistration {
     
 
     public String addNewUser(Map<String, String> profile) throws Exception {
-        Set<String> attributes = Set.of("uid", "email", "displayName","givenName", "sn", "userPassword");
+        Set<String> attributes = Set.of("uid", "mail", "displayName","givenName", "sn", "userPassword");
         User user = new User();
     
         attributes.forEach(attr -> {
             String val = profile.get(attr);
             if (StringHelper.isNotEmpty(val)) {
-                user.setAttribute(attr, val);
+                if(attr==UID){
+                    user.setAttribute(EXT_ATTR, val, true);
+                }else{
+                    user.setAttribute(attr, val, true);
+                }
+               
             }
         });
     
@@ -127,7 +132,7 @@ public class JansUserRegistration extends UserRegistration {
         }
     
         return getSingleValuedAttr(user, INUM_ATTR);
-    } 
+    }  
 
     private String getSingleValuedAttr(User user, String attribute) {
 
