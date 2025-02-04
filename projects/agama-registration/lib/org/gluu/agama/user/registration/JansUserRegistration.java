@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 
-import org.gluu.agama.smtp.jans.user.UserRegistration;
+import org.gluu.agama.user.UserRegistration;
 
 public class JansUserRegistration extends UserRegistration {
     
@@ -89,26 +89,26 @@ public class JansUserRegistration extends UserRegistration {
 
     }   
 
-    public String addNewUser(Map<String, String> profile, Set<String> attributes)
-    throws Exception {
-
+    public String addNewUser(Map<String, String> profile) throws Exception {
+        Set<String> attributes = Set.of("uid", "email", "displayName","givenName", "sn", "password");
         User user = new User();
-
+    
         attributes.forEach(attr -> {
             String val = profile.get(attr);
             if (StringHelper.isNotEmpty(val)) {
                 user.setAttribute(attr, val);
             }
         });
+    
         UserService userService = CdiUtil.bean(UserService.class);
-
         user = userService.addUser(user, true);
-        if (user == null) throw new EntryNotFoundException("Added user not found");
-
+    
+        if (user == null) {
+            throw new EntryNotFoundException("Added user not found");
+        }
+    
         return getSingleValuedAttr(user, INUM_ATTR);
-        // return user;
-
-    }   
+    } 
 
     private String getSingleValuedAttr(User user, String attribute) {
 
@@ -128,3 +128,4 @@ public class JansUserRegistration extends UserRegistration {
         return userService.getUserByAttribute(attributeName, value, true);
     }    
 }
+
