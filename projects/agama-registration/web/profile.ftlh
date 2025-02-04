@@ -22,27 +22,27 @@
 	  <form method="post">
 		<div class="mb-3">
 		  <label class="form-label">Username: <span class="required">*</span></label>
-		  <input type="text" required="" class="form-control">
+		  <input type="text" id="uid" name="username" required="" class="form-control">
 		</div>
 		<div class="mb-3">
 		  <label class="form-label">Display Name: <span class="required">*</span></label>
-		  <input type="text" required="" class="form-control">
+		  <input type="text" id="displayName" name="displayName" required="" class="form-control">
 		</div>
 		<div class="mb-3">
 		  <label class="form-label">First Name: <span class="required">*</span></label>
-		  <input type="text" required="" class="form-control">
+		  <input type="text" id="givenName" name="givenName" required="" class="form-control">
 		</div>
 		<div class="mb-3">
 		  <label class="form-label">Last Name: <span class="required">*</span></label>
-		  <input type="text" required="" class="form-control">
+		  <input type="text" id="sn" name="sn" required="" class="form-control">
 		</div>
 		<div class="mb-3">
 		  <label class="form-label">Password: <span class="required">*</span></label>
-		  <input type="password" id="password" required="" class="form-control">
+		  <input type="password" id="password" name="password" required="" class="form-control">
 		</div>
 		<div class="mb-3">
 		  <label class="form-label">Repeat password: <span class="required">*</span></label>
-		  <input type="password" id="re-password" required="" class="form-control">
+		  <input type="password" id="re-password" name="re-password" class="form-control">
 		  <small id="error-message"></small>
 		</div>
 		<div class="mb-3">
