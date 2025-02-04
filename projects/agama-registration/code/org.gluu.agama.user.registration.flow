@@ -28,11 +28,14 @@ max = Repeat 3 times max
                // Show user creation log
                Log "@info User % has been created" inum
                // Successful user registration
-               it_nztpo = {success:true, data: {userId: uiInput.uid, inum: inum, mail: uiInput.mail}}
-               Finish it_nztpo
+               it_xqgbv = {success:true, data: {userId: uiInput.uid, inum: inum, mail: uiInput.mail}}
+               Finish it_xqgbv
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
      Log "@trace User alreay exists with mail: %" email
      // User with  already exists
      uiFeedback.errorMessage = "UserAlreadyExists"
+// Maximum attempt has been reached
+Log "@info  The maximum registration attempt has been reached!"
+Finish __________
