@@ -27,11 +27,11 @@ max = Repeat 10 times max
           When inum is not null
                // Show user creation log
                Log "@info User % has been created" inum
-               // // Assign User Id (userName) to a variable
+               // Assign User Id (userName) to a variable
                uid = uiInput.uid
                // Successful user registration
-               it_fsmct = {success:true, data: { userId: uid}}
-               Finish it_fsmct
+               it_dozgi = {success:true, data: { userId: uid}}
+               Finish it_dozgi
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -41,5 +41,5 @@ max = Repeat 10 times max
 // Maximum attempt has been reached
 Log "@info  The maximum registration attempt has been reached!"
 // Registration enrollment  flow failed
-it_chmhl = {success:false, error: "Registration enrollment  flow failed"}
-Finish it_chmhl
+it_jqjyo = {success:false, error: "Registration enrollment  flow failed"}
+Finish it_jqjyo
