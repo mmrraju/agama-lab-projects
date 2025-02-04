@@ -185,7 +185,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-169d8242-94c1-4962-9f7a-77a0e407b506",
@@ -665,7 +665,7 @@
 					"hasComment": true,
 					"comment": "Successful user registration",
 					"flowfilename": "",
-					"returnVariable": "{userId: uiInput.uid, inum: inum, mail: uiInput.mail}",
+					"returnVariable": "{ userId: uiInput.uid}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -674,7 +674,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
@@ -1110,8 +1111,8 @@
 		}
 	],
 	"viewport": {
-		"x": -533,
-		"y": 2,
+		"x": -2938,
+		"y": -300,
 		"zoom": 1
 	}
 }
