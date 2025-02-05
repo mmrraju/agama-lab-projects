@@ -12,7 +12,7 @@
 	
   
   
-	<div align="left" class="registration-container shadow">
+	<!-- <div align="center" class="registration-container shadow"> -->
 	  <div class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
@@ -64,7 +64,7 @@
 		  <button type="reset" class="btn btn-secondary">Cancel</button>
 		</div>
 	  </form>
-	</div>
+	<!-- </div> -->
   
   
   
