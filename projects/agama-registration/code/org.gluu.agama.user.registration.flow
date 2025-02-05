@@ -30,12 +30,12 @@ max = Repeat 10 times max
                // Show acknowledgement UI page for successful registration
                acknowledgementInput = RRF "acknowledgement.ftlh" 
                // User clicks in continue button
-               When acknowledgementInput.ack is continue
+               When acknowledgementInput.ack is true
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_snmpi = {success:true, data: { userId: uid}}
-                    Finish it_snmpi
+                    it_khbhd = {success:true, data: { userId: uid}}
+                    Finish it_khbhd
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -51,5 +51,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_zrfpx = {success:false, error: "User registration flow failed"}
-Finish it_zrfpx
+it_ufepm = {success:false, error: "User registration flow failed"}
+Finish it_ufepm
