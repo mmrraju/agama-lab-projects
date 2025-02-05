@@ -681,8 +681,8 @@
 			"id": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
 			"type": "logNode",
 			"position": {
-				"x": 780,
-				"y": 30
+				"x": 830,
+				"y": 31
 			},
 			"data": {
 				"id": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
@@ -709,7 +709,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
@@ -816,7 +817,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
