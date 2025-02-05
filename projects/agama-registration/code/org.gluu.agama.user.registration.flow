@@ -15,7 +15,7 @@ max = Repeat 10 times max
      userData = Call userRegistrationService getUserEntityByMail email
      // User with same email not exists
      emailUnknown = userData.empty
-     // If email is not found
+     // If user not found
      When userData.empty is true
           // Unique mail found
           Log "@info User not found with mail %" email
@@ -34,8 +34,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_mdzxd = {success:true, data: { userId: uid}}
-                    Finish it_mdzxd
+                    it_dfmgg = {success:true, data: { userId: uid}}
+                    Finish it_dfmgg
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -45,5 +45,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_lorlg = {success:false, error: "User registration flow failed"}
-Finish it_lorlg
+it_bffhk = {success:false, error: "User registration flow failed"}
+Finish it_bffhk
