@@ -681,8 +681,8 @@
 			"id": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
 			"type": "logNode",
 			"position": {
-				"x": 830,
-				"y": 31
+				"x": 813,
+				"y": 29
 			},
 			"data": {
 				"id": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
@@ -788,8 +788,8 @@
 			"id": "finishNode-4f6addfa-ad1a-42a9-b80a-0274f70ee253",
 			"type": "finishNode",
 			"position": {
-				"x": 1080,
-				"y": 31
+				"x": 1086,
+				"y": 27
 			},
 			"data": {
 				"id": "finishNode-4f6addfa-ad1a-42a9-b80a-0274f70ee253",
@@ -816,7 +816,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
