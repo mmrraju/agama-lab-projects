@@ -23,10 +23,10 @@
 		You've successfully Registered on Jansen!!!
 		<br>
 	  </p>
-	  <form method="post" class="my-8" id="myForm" onsubmit="setBooleanValue(event)">
+	  <form method="post" class="my-8" id="myForm">
 		<div class="space-y-9">
 		  <div class="button">
-            <button type="submit" id="ack" name="ack" value="false" class="btn">Continue</button>
+            <button type="submit" id="ack" name="ack" value="continue" class="btn">Continue</button>
 		  </div>
 		</div>
 	  </form>
@@ -103,24 +103,8 @@
 	}
   </style>
 <script>
-    function setBooleanValue(event) {
-        event.preventDefault(); // Prevent actual form submission for testing
-        let button = document.getElementById("ack");
-
-        // Convert value to boolean
-        let booleanValue = button.value === "true";
-
-        console.log("Button value before submitting:", booleanValue); 
-
-        // Example: Append the value as a hidden field if you need it in the form data
-        let hiddenInput = document.createElement("input");
-        hiddenInput.type = "hidden";
-        hiddenInput.name = "ack";
-        hiddenInput.value = booleanValue; // Will submit as true/false string
-        document.getElementById("myForm").appendChild(hiddenInput);
-
-        // Now submit the form
-        event.target.submit();
-    }
+	window.onload = function () {
+	  var form = document.querySelector("form");
+	};
 </script>
 </html>
