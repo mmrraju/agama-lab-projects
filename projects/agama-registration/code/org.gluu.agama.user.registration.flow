@@ -32,8 +32,8 @@ max = Repeat 10 times max
                // Assign User Id (userName) to a variable
                uid = uiInput.uid
                // Successful user registration
-               it_iwhic = {success:true, data: { userId: uid}}
-               Finish it_iwhic
+               it_ihptb = {success:true, data: { userId: uid}}
+               Finish it_ihptb
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -42,3 +42,6 @@ max = Repeat 10 times max
      uiFeedback.errorMessage = "UserAlreadyExists"
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
+// User Registration flow failed
+it_buotw = {success:false, error: "User registration flow failed"}
+Finish it_buotw
