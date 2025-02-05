@@ -31,9 +31,11 @@ max = Repeat 10 times max
                Log "@trace UI inpurt : %" uiInput
                // Assign User Id (userName) to a variable
                uid = uiInput.uid
+               // Show acknowledgement UI page for successful registration
+               acknowledgementInput = RRF "acknowledgement.ftlh" 
                // Successful user registration
-               it_ihptb = {success:true, data: { userId: uid}}
-               Finish it_ihptb
+               it_mgghh = {success:true, data: { userId: uid}}
+               Finish it_mgghh
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -43,5 +45,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_buotw = {success:false, error: "User registration flow failed"}
-Finish it_buotw
+it_zwjti = {success:false, error: "User registration flow failed"}
+Finish it_zwjti
