@@ -497,41 +497,6 @@
 			"dragging": false
 		},
 		{
-			"id": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
-			"type": "logNode",
-			"position": {
-				"x": 3810,
-				"y": 334
-			},
-			"data": {
-				"id": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
-				"type": "logNode",
-				"position": {
-					"x": 3280,
-					"y": 480
-				},
-				"previousNodeId": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
-				"branching": "continue",
-				"agamaData": {
-					"logMessage": "\"User registration failed. Error : %\" E",
-					"logLevel": "info",
-					"nodeIcon": "octicon:log-16",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "User registration failed "
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 124
-			},
-			"selected": false,
-			"dragging": false
-		},
-		{
 			"id": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
 			"type": "logNode",
 			"position": {
@@ -969,7 +934,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1009,6 +974,41 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
+			"type": "logNode",
+			"position": {
+				"x": 3511,
+				"y": 518
+			},
+			"data": {
+				"id": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
+				"type": "logNode",
+				"position": {
+					"x": 3527,
+					"y": 630
+				},
+				"previousNodeId": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
+				"branching": "success",
+				"agamaData": {
+					"logMessage": "\"User registration failed. Error : %\" E",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Registration failed log"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1488,27 +1488,27 @@
 			"sourceHandle": "source_whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669_continue"
 		},
 		{
-			"id": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba-logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+			"id": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba-logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
 			"type": "default",
 			"source": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
-			"target": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
-			"label": "continue",
+			"target": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
 			"labelBgPadding": [
 				8,
 				4
 			],
 			"labelBgBorderRadius": 4,
+			"label": "Condition met",
 			"labelBgStyle": {
 				"fill": "#009688",
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
-			"sourceHandle": "source_whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba_continue",
-			"targetHandle": "target_logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33"
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba_success"
 		}
 	],
 	"viewport": {
-		"x": -2874,
+		"x": -2875,
 		"y": -207,
 		"zoom": 1
 	}
