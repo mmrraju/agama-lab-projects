@@ -722,7 +722,7 @@
 						{
 							"variable": "acknowledgementInput.ack",
 							"operator": "is",
-							"dataValue": "continue",
+							"dataValue": "true",
 							"combinator": "none"
 						}
 					],
@@ -739,7 +739,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-871b2026-d09e-4bc5-95a6-ca6be51935f0",
@@ -1047,7 +1047,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1566,8 +1566,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3901.2593912337416,
-		"y": -250.30308491377195,
-		"zoom": 1.1809926614295305
+		"x": -3738,
+		"y": -439,
+		"zoom": 1
 	}
 }
