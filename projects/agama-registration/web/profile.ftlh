@@ -1,139 +1,124 @@
 [#ftl output_format="HTML"]
 <!DOCTYPE html>
 <html lang="en">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration
+	</title><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></head>
 <body>
 
-
+  
 	
 	
 	
 	
-
-
+  
+  
 	<div align="center" class="registration-container shadow">
-		<div class="flex">
-			<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
-		</div>
-		<br>
-		<div class="header">
-			<i class="fas fa-user-plus"></i> User Registration
-		</div>
-
+	  <div class="flex">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
+	  </div>
+	  <br>
+	  <div class="header">
+		<i class="fas fa-user-plus">
+		</i> User Registration
+	  </div>
 		<!-- Error Message Block -->
 		[#if errorMessage?has_content]
 		<div class="alert alert-danger mt-3" role="alert">
 			${errorMessage}
 		</div>
 		[/#if]
-
-		<p class="text-center mt-2"></p>
-
-		<form method="post" onsubmit="return validateForm()">
-			<div class="mb-3">
-				<label class="form-label">Username: <span class="required">*</span></label>
-				<input type="text" id="uid" name="uid" required="" class="form-control">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Display Name: <span class="required">*</span></label>
-				<input type="text" id="displayName" name="displayName" required="" class="form-control">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">First Name: <span class="required">*</span></label>
-				<input type="text" id="givenName" name="givenName" required="" class="form-control">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Last Name: <span class="required">*</span></label>
-				<input type="text" id="sn" name="sn" required="" class="form-control">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Email: <span class="required">*</span></label>
-				<input type="email" id="mail" name="mail" required="" class="form-control">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Password: <span class="required">*</span></label>
-				<input type="password" id="userPassword" name="userPassword" required="" class="form-control">
-			</div>
-			<div class="mb-3">
-				<label class="form-label">Repeat password: <span class="required">*</span></label>
-				<input type="password" id="re-password" name="re-password" class="form-control">
-				<small id="error-message" class="text-danger"></small>
-			</div>
-
-			<!-- Buttons Section -->
-			<div class="buttons">
-				<button type="submit" class="btn btn-success">Register</button>
-				<button type="reset" class="btn btn-outline-secondary">Cancel</button>
-			</div>
-		</form>
+	  <p class="text-center mt-2">
+	  </p>
+	  <form method="post" onsubmit="return validateForm()">
+		<div class="mb-3">
+		  <label class="form-label">Username: <span class="required">*</span></label>
+		  <input type="text" id="uid" name="uid" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Display Name: <span class="required">*</span></label>
+		  <input type="text" id="displayName" name="displayName" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">First Name: <span class="required">*</span></label>
+		  <input type="text" id="givenName" name="givenName" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Last Name: <span class="required">*</span></label>
+		  <input type="text" id="sn" name="sn" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Email: <span class="required">*</span></label>
+		  <input type="email" id="mail" name="mail" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Password: <span class="required">*</span></label>
+		  <input type="password" id="userPassword" name="userPassword" required="" class="form-control">
+		</div>
+		<div class="mb-3">
+		  <label class="form-label">Repeat password: <span class="required">*</span></label>
+		  <input type="password" id="re-password" name="re-password" class="form-control">
+		  <small id="error-message"></small>
+		</div>
+		<div class="buttons">
+		  <button type="submit" class="btn btn-primary">Register</button>
+		  <button type="reset" class="btn btn-secondary">Cancel</button>
+		</div>
+	  </form>
 	</div>
-
-	<!-- Styles -->
-	
-
-	<!-- Script -->
-	
-	
-
+  
+  
+  
+  
 </body>
 <style>
-		.error {
-			color: red;
-		}
-		.registration-container {
-			max-width: 500px;
-			margin: auto;
-			border: 1px solid #28a745;
-			padding: 20px;
-			border-radius: 5px;
-			background: #f8f9fa;
-			box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-		}
-		.header {
-			background: #28a745;
-			padding: 10px;
-			color: white;
-			font-size: 18px;
-			font-weight: bold;
-			border-radius: 5px 5px 0 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-		.header i {
-			margin-right: 10px;
-		}
-		.form-label {
-			font-weight: bold;
-		}
-		.required {
-			color: red;
-		}
-		.buttons {
-			display: flex;
-			justify-content: center;
-			gap: 15px;
-		}
-		.buttons .btn {
-			width: 120px;
-			padding: 10px;
-		}
-		.buttons .btn:hover {
-			opacity: 0.9;
-		}
-	</style>
+	.error{
+	  color: red;
+	}
+	.registration-container {
+	  max-width: 600px;
+	  margin: auto;
+	  border: 1px solid #28a745;
+	  padding: 20px;
+	  border-radius: 5px;
+	}
+	.header {
+	  background: #28a745;
+	  padding: 10px;
+	  color: white;
+	  font-size: 18px;
+	  font-weight: bold;
+	  border-radius: 5px 5px 0 0;
+	  display: flex;
+	  align-items: center;
+	}
+	.header i {
+	  margin-right: 10px;
+	}
+	.form-label {
+	  font-weight: bold;
+	}
+	.required {
+	  color: red;
+	}
+	.buttons {
+	  display: flex;
+	  gap: 10px;
+	}
+  </style>
 <script>
-		function validateForm() {
-			let password = document.getElementById("userPassword").value;
-			let rePassword = document.getElementById("re-password").value;
-			let errorMessage = document.getElementById("error-message");
-
-			if (password !== rePassword) {
-				errorMessage.innerText = "Passwords do not match!";
-				return false; // Prevent form submission
-			}
-			errorMessage.innerText = ""; // Clear error message
-			return true;
-		}
-	</script><script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	function validateForm() {
+	  let password = document.getElementById("userPassword").value;
+	  let rePassword = document.getElementById("re-password").value;
+	  let errorMessage = document.getElementById("error-message");
+	  if (password !== rePassword) {
+		errorMessage.innerText = "Passwords do not match!";
+		errorMessage.style.color = "red";
+		return false;
+		// Prevent form submission
+	  }
+	  errorMessage.innerText = "";
+	  // Clear error message
+	  return true;
+	}
+  </script><script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </html>
