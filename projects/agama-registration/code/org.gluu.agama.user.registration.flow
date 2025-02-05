@@ -32,8 +32,8 @@ max = Repeat 10 times max
                // Assign User Id (userName) to a variable
                uid = uiInput.uid
                // Successful user registration
-               it_hdgkg = {success:true, data: { userId: uid}}
-               Finish it_hdgkg
+               it_icwpy = {success:true, data: { userId: uid}}
+               Finish it_icwpy
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
