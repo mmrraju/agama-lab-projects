@@ -34,8 +34,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_dyvvz = {success:true, data: { userId: uid}}
-                    Finish it_dyvvz
+                    it_snmpi = {success:true, data: { userId: uid}}
+                    Finish it_snmpi
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -51,5 +51,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_kasds = {success:false, error: "User registration flow failed"}
-Finish it_kasds
+it_zrfpx = {success:false, error: "User registration flow failed"}
+Finish it_zrfpx
