@@ -11,6 +11,9 @@
 	
   
   
+	<div class="flex">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
+	</div>	
 	<h1>WELCOME
 	</h1>
 	<div class="separator">
