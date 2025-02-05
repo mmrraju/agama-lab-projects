@@ -29,6 +29,7 @@ public class JansUserRegistration extends UserRegistration {
     private static final String PASSWORD = "userPassword";
     private static final String INUM_ATTR = "inum";
     private static final String EXT_ATTR = "jansExtUid";
+    private static final String USER_STATUS = "jansStatus";
     private static final String EXT_UID_PREFIX = "github:";
     private static final SecureRandom RAND = new SecureRandom();
 
@@ -119,6 +120,8 @@ public class JansUserRegistration extends UserRegistration {
                 user.setAttribute(attr, val);      
             }
         });
+
+        user.setAttribute(USER_STATUS, false);
     
         UserService userService = CdiUtil.bean(UserService.class);
         user = userService.addUser(user, true);
@@ -151,5 +154,6 @@ public class JansUserRegistration extends UserRegistration {
         return userService.getUserByAttribute(attributeName, value, true);
     }    
 }
+
 
 
