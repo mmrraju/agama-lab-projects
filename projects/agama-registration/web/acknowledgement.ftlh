@@ -26,7 +26,7 @@
 	  <form method="post" class="my-8">
 		<div class="space-y-9">
 		  <div class="button">
-			<button type="submit" id="ack" name="ack" value="continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
+			<button type="submit" id="ack" name="ack" value="continue" class="btn">
 			</button>
 		  </div>
 		</div>
@@ -36,7 +36,7 @@
   
 </body>
 <style>
-		body {
+	body {
 	  font-family: Arial, sans-serif;
 	  text-align: center;
 	  margin-top: 50px;
@@ -82,9 +82,25 @@
 	  color: red;
 	}
 	.button {
-	  display: flex;
-	  gap: 20px;
-	}
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .btn {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #00c853;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            text-decoration: none;
+        }
+        .btn:hover {
+            background-color: #009624;
+        }
   </style>
 
 </html>
