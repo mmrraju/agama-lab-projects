@@ -11,7 +11,7 @@
 	
   
   
-	<div align="center" class="registration-container shadow">	
+	<div align="center" class="registration-container shadow">
 	  <div class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
@@ -83,7 +83,7 @@
 	}
 	.buttons {
 	  display: flex;
-	  gap: 10px;
+	  gap: 20px;
 	}
   </style>
 
