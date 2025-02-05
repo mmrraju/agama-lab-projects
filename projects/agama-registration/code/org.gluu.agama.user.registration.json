@@ -691,7 +691,7 @@
 					"x": 780,
 					"y": 30
 				},
-				"previousNodeId": "logNode-9d7c4e81-61d6-4cd9-bdc7-9caf1ab58418",
+				"previousNodeId": "repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320",
 				"agamaData": {
 					"logMessage": "\" The maximum registration attempt has been reached!\"",
 					"logLevel": "info",
@@ -1199,11 +1199,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15"
+		},
+		{
+			"source": "repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320",
+			"sourceHandle": "source_repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320_continue",
+			"target": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
+			"targetHandle": "target_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
+			"label": "continue",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320source_repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320_continue-logNode-85571e4f-44be-4dfa-a461-e2b8048ade15target_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15"
 		}
 	],
 	"viewport": {
-		"x": -191,
-		"y": 318,
+		"x": -199,
+		"y": 242,
 		"zoom": 1
 	}
 }
