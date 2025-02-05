@@ -21,12 +21,10 @@
 		<i class="fas fa-user-plus">
 		</i> User Registration
 	  </div>
-		<!-- Error Message Block -->
-		[#if errorMessage?has_content]
-		<div class="alert alert-danger mt-3" role="alert">
-			${errorMessage}
-		</div>
-		[/#if]
+	  [#if errorMessage?has_content]
+	  <div id="ig86l" align="center" class="error">${errorMessage}
+	  </div>
+	  [/#if]
 	  <p class="text-center mt-2">
 	  </p>
 	  <form method="post" onsubmit="return validateForm()">
@@ -107,7 +105,7 @@
   </style>
 <script>
 	function validateForm() {
-	  let password = document.getElementById("userPassword").value;
+	  let password = document.getElementById("password").value;
 	  let rePassword = document.getElementById("re-password").value;
 	  let errorMessage = document.getElementById("error-message");
 	  if (password !== rePassword) {
