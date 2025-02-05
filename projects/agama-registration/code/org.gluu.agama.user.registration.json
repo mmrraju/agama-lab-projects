@@ -493,7 +493,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1010,6 +1010,44 @@
 			},
 			"selected": false,
 			"dragging": false
+		},
+		{
+			"id": "assignmentNode-51debe36-435c-4755-95f9-98d959ccc862",
+			"type": "assignmentNode",
+			"position": {
+				"x": 3761,
+				"y": 518
+			},
+			"data": {
+				"id": "assignmentNode-51debe36-435c-4755-95f9-98d959ccc862",
+				"type": "assignmentNode",
+				"position": {
+					"x": 3761,
+					"y": 518
+				},
+				"previousNodeId": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "UserRegistrationFailed",
+							"assignedVariableName": "uiFeedback.errorMessage"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Error variable assignment."
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -1506,11 +1544,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba_success"
+		},
+		{
+			"id": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67-assignmentNode-51debe36-435c-4755-95f9-98d959ccc862",
+			"type": "default",
+			"source": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
+			"target": "assignmentNode-51debe36-435c-4755-95f9-98d959ccc862",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67"
 		}
 	],
 	"viewport": {
-		"x": -2976.259391233741,
-		"y": -313.3030849137717,
+		"x": -3901.2593912337416,
+		"y": -250.30308491377195,
 		"zoom": 1.1809926614295305
 	}
 }
