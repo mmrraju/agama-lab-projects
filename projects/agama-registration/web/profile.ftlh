@@ -45,6 +45,10 @@
 		  <input type="text" id="sn" name="sn" required="" class="form-control">
 		</div>
 		<div class="mb-3">
+		  <label class="form-label">Email: <span class="required">*</span></label>
+		  <input type="email" id="mail" name="mail" required="" class="form-control">
+		</div>
+		<div class="mb-3">
 		  <label class="form-label">Password: <span class="required">*</span></label>
 		  <input type="password" id="userPassword" name="userPassword" required="" class="form-control">
 		</div>
@@ -52,10 +56,6 @@
 		  <label class="form-label">Repeat password: <span class="required">*</span></label>
 		  <input type="password" id="re-password" name="re-password" class="form-control">
 		  <small id="error-message"></small>
-		</div>
-		<div class="mb-3">
-		  <label class="form-label">Email: <span class="required">*</span></label>
-		  <input type="email" id="mail" name="mail" required="" class="form-control">
 		</div>
 		<div class="buttons">
 		  <button type="submit" class="btn btn-primary">Register</button>
