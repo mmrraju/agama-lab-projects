@@ -77,6 +77,7 @@
 	}
 	.flex{
 	  padding: 10px;
+	  margin-top: auto;
 	}
 	.registration-container {
 	  width: 100%;
