@@ -29,7 +29,7 @@
 	  <div class="content">
 		<p class="text-center">To create an account, please enter your details below.
 		</p>
-		<form method="post">
+		<form method="post" enctype="application/x-www-form-urlencoded" id="registerForm" onsubmit="validateForm(event)">
 		  <div class="form-group">
 			<label class="form-label">Username: <span class="required">*</span></label>
 			<input type="text" id="uid" name="uid" required="" placeholder="Choose a username" class="form-control">
@@ -175,7 +175,7 @@
 	}
   </style>
 <script>
-	function validateForm() {
+	function validateForm(event) {
 	  let password = document.getElementById("userPassword").value;
 	  let confirmPassword = document.getElementById("confirmPassword").value;
 	  let errorMessage = document.getElementById("error-message");
