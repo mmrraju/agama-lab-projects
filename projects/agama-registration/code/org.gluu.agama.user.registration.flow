@@ -34,12 +34,12 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_qvvcc = {success:true, data: { userId: uid}}
-                    Finish it_qvvcc
+                    it_jpsep = {success:true, data: { userId: uid}}
+                    Finish it_jpsep
           // If user registration failed
           When inum is null
-          // User registration failed 
-          Log "@info User registration failed. Error : %" E
+               // Registration failed log
+               Log "@info User registration failed. Error : %" E
      // If user found
      When userData.empty is not true
           // User already exists
@@ -49,5 +49,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_acbcl = {success:false, error: "User registration flow failed"}
-Finish it_acbcl
+it_sypmh = {success:false, error: "User registration flow failed"}
+Finish it_sypmh
