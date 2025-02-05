@@ -13,7 +13,7 @@
   
   
 	<div class="registration-container">
-	  <div class="flex">
+	  <div class="flex" align="center">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
 	  <div class="header">
@@ -77,7 +77,7 @@
 	}
 	.flex{
 	  padding: 10px;
-	  margin-top: auto;
+      margin-top: auto;
 	}
 	.registration-container {
 	  width: 100%;
