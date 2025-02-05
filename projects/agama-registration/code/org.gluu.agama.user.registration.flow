@@ -36,8 +36,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_yomxw = {success:true, data: { userId: uid}}
-                    Finish it_yomxw
+                    it_omrdx = {success:true, data: { userId: uid}}
+                    Finish it_omrdx
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -47,5 +47,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_uccfc = {success:false, error: "User registration flow failed"}
-Finish it_uccfc
+it_oulsg = {success:false, error: "User registration flow failed"}
+Finish it_oulsg
