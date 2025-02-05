@@ -957,7 +957,7 @@
 						{
 							"variableTypeCheck": true,
 							"assignmentExpression": "UserAlreadyRegistered",
-							"assignedVariableName": "errorMessage.errorMessage"
+							"assignedVariableName": "uiFeedback.errorMessage"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -973,7 +973,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "logNode-eee6ff41-8365-4ecb-89d0-4294725c7a67",
@@ -1508,8 +1509,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2875,
-		"y": -207,
-		"zoom": 1
+		"x": -1495.4080843952565,
+		"y": 7.464774700257067,
+		"zoom": 0.8467453123625271
 	}
 }
