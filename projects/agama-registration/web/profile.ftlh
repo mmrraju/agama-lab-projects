@@ -13,6 +13,9 @@
   
   
 	<div class="registration-container">
+	  <div class="flex">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
+	  </div>
 	  <div class="header">
 		<i class="fas fa-user-plus">
 		</i> User Registration
