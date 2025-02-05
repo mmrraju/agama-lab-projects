@@ -62,7 +62,7 @@
 		  </div>
 		  <div class="buttons">
 			<button type="submit" class="btn btn-primary">Register</button>
-			<button type="reset" class="btn btn-secondary">Cancel</button>
+			<button type="submit" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Cancel</button>
 		  </div>
 		</form>
 	  </div>
@@ -87,7 +87,7 @@
 	}
 	.registration-container {
 	  width: 100%;
-	  max-width: 700px;
+	  max-width: 600px;
 	  background: white;
 	  border-radius: 5px;
       border: #080808;
