@@ -13,23 +13,23 @@
   
   
 	<div class="registration-container">
-	  <div class="flex" align="center">
+	  <div align="center" class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
 	  <div class="header">
 		<i class="fas fa-user-plus">
 		</i> User Registration
 	  </div>
-      <!-- Error Message Block -->
+	  <!-- Error Message Block -->
 	  [#if errorMessage?has_content]
-	  <div role="alert" class="alert alert-danger mt-3 error" align="center">
+	  <div role="alert" align="center" class="alert alert-danger mt-3 error">
 		${errorMessage}
 	  </div>
 	  [/#if]
 	  <div class="content">
 		<p class="text-center">To create an account, please enter your details below.
 		</p>
-		<form method="post" onsubmit="return validateForm()">
+		<form method="post">
 		  <div class="form-group">
 			<label class="form-label">Username: <span class="required">*</span></label>
 			<input type="text" id="uid" name="uid" required="" placeholder="Choose a username" class="form-control">
@@ -62,7 +62,7 @@
 		  </div>
 		  <div class="buttons">
 			<button type="submit" class="btn btn-primary">Register</button>
-			<button type="submit" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Cancel</button>
+			<button type="reset" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Cancel</button>
 		  </div>
 		</form>
 	  </div>
@@ -83,14 +83,14 @@
 	}
 	.flex{
 	  padding: 10px;
-      margin-top: auto;
+	  margin-top: auto;
 	}
 	.registration-container {
 	  width: 100%;
 	  max-width: 600px;
 	  background: white;
 	  border-radius: 5px;
-      border: #080808;
+	  border: #080808;
 	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	  overflow: hidden;
 	}
@@ -132,9 +132,9 @@
 	  font-size: 13px;
 	  margin-top: 5px;
 	}
-    .error{
-        font-weight: bold;
-	    color: red;
+	.error{
+	  font-weight: bold;
+	  color: red;
 	}
 	.buttons {
 	  display: flex;
