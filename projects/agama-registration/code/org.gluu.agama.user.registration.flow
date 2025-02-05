@@ -33,11 +33,11 @@ max = Repeat 10 times max
                acknowledgementInput = RRF "acknowledgement.ftlh" 
                // User clicks in continue button
                When acknowledgementInput.ack is continue
-               // Assign User Id to a variable
-               uid = user.uid
-               // Finish the flow successfully
-               it_pgyrg = {success:true, data: { userId: uid}}
-               Finish it_pgyrg
+                    // Assign User Id to a variable
+                    uid = uiInput.uid
+                    // Finish the flow successfully
+                    it_yomxw = {success:true, data: { userId: uid}}
+                    Finish it_yomxw
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -47,5 +47,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_kcgin = {success:false, error: "User registration flow failed"}
-Finish it_kcgin
+it_uccfc = {success:false, error: "User registration flow failed"}
+Finish it_uccfc
