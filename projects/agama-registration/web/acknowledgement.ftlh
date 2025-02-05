@@ -36,6 +36,25 @@
   
 </body>
 <style>
+		body {
+	  font-family: Arial, sans-serif;
+	  text-align: center;
+	  margin-top: 50px;
+	}
+	h1 {
+	  color: #00c853;
+	  font-size: 36px;
+	  font-weight: bold;
+	}
+	.separator {
+	  border-top: 1px solid #d0d0d0;
+	  width: 80%;
+	  margin: 10px auto;
+	}
+	.message {
+	  font-size: 18px;
+	  color: #000;
+	}
 	.registration-container {
 	  max-width: 600px;
 	  margin: auto;
