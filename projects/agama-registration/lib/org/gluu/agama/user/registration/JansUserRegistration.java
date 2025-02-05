@@ -124,7 +124,7 @@ public class JansUserRegistration extends UserRegistration {
         // user.setAttribute(USER_STATUS, false);
     
         UserService userService = CdiUtil.bean(UserService.class);
-        user = userService.addUser(user, false);;
+        user = userService.addUser(user, true);;
     
         if (user == null) {
             throw new EntryNotFoundException("Added user not found");
