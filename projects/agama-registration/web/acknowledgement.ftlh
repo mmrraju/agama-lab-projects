@@ -25,7 +25,7 @@
 	  </p>
 	  <form method="post" class="my-8">
 		<div class="space-y-9">
-		  <div class="buttons">
+		  <div class="button">
 			<button type="submit" id="ack" name="ack" value="continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
 			</button>
 		  </div>
@@ -36,7 +36,6 @@
   
 </body>
 <style>
-
 	.registration-container {
 	  max-width: 600px;
 	  margin: auto;
@@ -63,7 +62,7 @@
 	.required {
 	  color: red;
 	}
-	.buttons {
+	.button {
 	  display: flex;
 	  gap: 20px;
 	}
