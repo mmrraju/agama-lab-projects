@@ -20,6 +20,7 @@
 		<i class="fas fa-user-plus">
 		</i> User Registration
 	  </div>
+	  <br>
 	  <!-- Error Message Block -->
 	  [#if errorMessage?has_content]
 	  <div role="alert" align="center" class="alert alert-danger mt-3 error">
@@ -29,7 +30,7 @@
 	  <div class="content">
 		<p class="text-center">To create an account, please enter your details below.
 		</p>
-		<form method="post" enctype="application/x-www-form-urlencoded" id="registerForm" onsubmit="validateForm(event)">
+		<form method="post" enctype="application/x-www-form-urlencoded" id="registerForm">
 		  <div class="form-group">
 			<label class="form-label">Username: <span class="required">*</span></label>
 			<input type="text" id="uid" name="uid" required="" placeholder="Choose a username" class="form-control">
