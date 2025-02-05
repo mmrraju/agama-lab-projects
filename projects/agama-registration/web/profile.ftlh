@@ -25,7 +25,7 @@
 	  <div id="ig86l" align="center" class="error">${errorMessage}
 	  </div>
 	  [/#if]
-	  <p class="text-center mt-2">
+	  <p class="text-left mt-2">
 	  </p>
 	  <form method="post">
 		<div class="mb-3">
