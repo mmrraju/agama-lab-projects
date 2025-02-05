@@ -693,27 +693,21 @@
 				},
 				"previousNodeId": "logNode-6228f391-4f10-457a-a7d4-0d0d7a3a365f",
 				"agamaData": {
-					"assignments": [
-						{
-							"variableTypeCheck": false,
-							"assignmentExpression": "uiInput.uid",
-							"assignedVariableName": "uid"
-						}
-					],
+					"assignments": [],
 					"nodeIcon": "material-symbols:equal",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Assign User Id (userName) to a variable"
+					"comment": ""
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -747,7 +741,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1274,8 +1268,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3044,
-		"y": -385,
+		"x": -3440,
+		"y": -414,
 		"zoom": 1
 	}
 }
