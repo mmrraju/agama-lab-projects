@@ -20,7 +20,7 @@
 	  <div class="separator">
 	  </div>
 	  <p class="message">
-		You've successfully Registered on Gluu!!!
+		You've successfully Registered on Janssen!!!
 		<br>
 	  </p>
 	  <form method="post" class="my-8">
