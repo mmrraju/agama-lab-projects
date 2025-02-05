@@ -32,8 +32,8 @@ max = Repeat 10 times max
                // Assign User Id (userName) to a variable
                uid = uiInput.uid
                // Successful user registration
-               it_amcwd = {success:true, data: { userId: uid}}
-               Finish it_amcwd
+               it_lwcad = {success:true, data: { userId: uid}}
+               Finish it_lwcad
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -42,8 +42,3 @@ max = Repeat 10 times max
      uiFeedback.errorMessage = "UserAlreadyExists"
 // Maximum attempt has been reached
 Log "@info  The maximum registration attempt has been reached!"
-// Test
-test = 1
-// Registration enrollment  flow failed
-it_odwam = {success:false, error: "Registration enrollment  flow failed"}
-Finish it_odwam
