@@ -34,10 +34,16 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_dfmgg = {success:true, data: { userId: uid}}
-                    Finish it_dfmgg
+                    it_zacsd = {success:true, data: { userId: uid}}
+                    Finish it_zacsd
           // User registration failed 
           Log "@info User registration failed. Error : %" E
+     // If user found
+     When userData.empty is not true
+          // User already exists
+          Log "@trace User alreay exists with mail: %" email
+          // Error variable assignment.
+          errorMessage.errorMessage = "UserAlreadyRegistered"
      // User already exists
      Log "@trace User alreay exists with mail: %" email
      // User with  already exists
@@ -45,5 +51,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bffhk = {success:false, error: "User registration flow failed"}
-Finish it_bffhk
+it_cbtqm = {success:false, error: "User registration flow failed"}
+Finish it_cbtqm
