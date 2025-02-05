@@ -486,14 +486,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "If no error"
+					"comment": "If user registration success"
 				}
 			},
 			"measured": {
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -973,7 +973,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1509,8 +1509,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1495.4080843952565,
-		"y": 7.464774700257067,
-		"zoom": 0.8467453123625271
+		"x": -2976.259391233741,
+		"y": -313.3030849137717,
+		"zoom": 1.1809926614295305
 	}
 }
