@@ -872,7 +872,7 @@
 				"agamaData": {
 					"assignments": [
 						{
-							"variableTypeCheck": true,
+							"variableTypeCheck": false,
 							"assignmentExpression": "user.uid",
 							"assignedVariableName": "uid"
 						}
@@ -891,6 +891,40 @@
 				"height": 124
 			},
 			"selected": true
+		},
+		{
+			"id": "finishNode-8f0efd99-6d14-4e92-96d2-1085d5b2caff",
+			"type": "finishNode",
+			"position": {
+				"x": 4820,
+				"y": 682
+			},
+			"data": {
+				"id": "finishNode-8f0efd99-6d14-4e92-96d2-1085d5b2caff",
+				"type": "finishNode",
+				"position": {
+					"x": 4820,
+					"y": 682
+				},
+				"previousNodeId": "assignmentNode-244e1a3a-1164-4d80-b75e-71c9e44ef5b2",
+				"agamaData": {
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Finish the flow successfully",
+					"flowfilename": "",
+					"returnVariable": "{ userId: uid}",
+					"finishMode": "withSuccess",
+					"nodeIcon": "material-symbols:line-end-square-rounded"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1330,6 +1364,25 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-4f13ced1-75e1-44b0-8814-69bd0756bfc9_continue"
+		},
+		{
+			"id": "assignmentNode-244e1a3a-1164-4d80-b75e-71c9e44ef5b2-finishNode-8f0efd99-6d14-4e92-96d2-1085d5b2caff",
+			"type": "default",
+			"source": "assignmentNode-244e1a3a-1164-4d80-b75e-71c9e44ef5b2",
+			"target": "finishNode-8f0efd99-6d14-4e92-96d2-1085d5b2caff",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_assignmentNode-244e1a3a-1164-4d80-b75e-71c9e44ef5b2"
 		}
 	],
 	"viewport": {
