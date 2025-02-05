@@ -781,15 +781,15 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
 			"id": "finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
 			"type": "finishNode",
 			"position": {
-				"x": 1030,
-				"y": 30
+				"x": 1159.1522764676674,
+				"y": 29.737747967887884
 			},
 			"data": {
 				"id": "finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
@@ -1145,25 +1145,6 @@
 			"sourceHandle": "source_repeatNode-1a55264c-ccb2-4e37-a309-5a5abf613320_continue"
 		},
 		{
-			"id": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15-finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
-			"type": "default",
-			"source": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
-			"target": "finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15"
-		},
-		{
 			"id": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae-finishNode-6f221ca2-7fb0-4b72-ba6b-8e3fdb11a186",
 			"type": "default",
 			"source": "assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae",
@@ -1219,11 +1200,29 @@
 			},
 			"sourceHandle": "source_logNode-6228f391-4f10-457a-a7d4-0d0d7a3a365f",
 			"targetHandle": "target_assignmentNode-c75d6899-2b4e-4fd1-b550-53f37212d3ae"
+		},
+		{
+			"source": "logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
+			"sourceHandle": "source_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15",
+			"target": "finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
+			"targetHandle": "target_finishNode-91ffea49-de88-4358-b79a-11c366c1c197",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__logNode-85571e4f-44be-4dfa-a461-e2b8048ade15source_logNode-85571e4f-44be-4dfa-a461-e2b8048ade15-finishNode-91ffea49-de88-4358-b79a-11c366c1c197target_finishNode-91ffea49-de88-4358-b79a-11c366c1c197"
 		}
 	],
 	"viewport": {
-		"x": -2976,
-		"y": -282,
+		"x": -373.6441115542259,
+		"y": 72.36140902964428,
 		"zoom": 1
 	}
 }
