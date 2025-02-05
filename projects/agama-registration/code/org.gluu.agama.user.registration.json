@@ -732,7 +732,7 @@
 				},
 				"previousNodeId": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
 				"agamaData": {
-					"logMessage": "\"UI inpurt : %\" uiInput",
+					"logMessage": "\"Mail : %\" uiInput.mail",
 					"logLevel": "trace",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -740,14 +740,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "User provided UI Input"
+					"comment": "User provided mail"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -816,7 +816,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-2221d174-51de-45ee-9e8c-7531a3f3d423",
@@ -1274,8 +1274,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3754,
-		"y": -428,
+		"x": -3044,
+		"y": -385,
 		"zoom": 1
 	}
 }
