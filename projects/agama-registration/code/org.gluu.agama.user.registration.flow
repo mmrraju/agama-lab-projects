@@ -19,8 +19,6 @@ max = Repeat 10 times max
      When userData.empty is true
           // Unique mail found
           Log "@info User not found with mail %" email
-          // Assign physical DB attributes to a variable
-          Keys = uiInput.uid
           // Call user registration service method to register a new user
           inum | E = Call userRegistrationService addNewUser uiInput
           // If no error
@@ -36,8 +34,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_omrdx = {success:true, data: { userId: uid}}
-                    Finish it_omrdx
+                    it_lkxnw = {success:true, data: { userId: uid}}
+                    Finish it_lkxnw
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
@@ -47,5 +45,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_oulsg = {success:false, error: "User registration flow failed"}
-Finish it_oulsg
+it_pcpdo = {success:false, error: "User registration flow failed"}
+Finish it_pcpdo
