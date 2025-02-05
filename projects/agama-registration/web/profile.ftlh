@@ -21,12 +21,12 @@
 		<i class="fas fa-user-plus">
 		</i> User Registration
 	  </div>
-		<!-- Error Message Block -->
-	    [#if errorMessage?has_content]
-		<div class="alert alert-danger mt-3" role="alert">
-			${errorMessage}
-		</div>
-		[/#if]
+	  <!-- Error Message Block -->
+	  [#if errorMessage?has_content]
+	  <div role="alert" class="alert alert-danger mt-3">
+		${errorMessage}
+	  </div>
+	  [/#if]
 	  <p class="text-center mt-2">
 	  </p>
 	  <form method="post" onsubmit="return validateForm()">
