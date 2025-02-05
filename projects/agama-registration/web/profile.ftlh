@@ -12,10 +12,11 @@
 	
   
   
-	<div class="registration-container shadow" align="center">
+	<div align="center" class="registration-container shadow">
 	  <div class="flex">
-		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m" align="center">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
+	  <br>
 	  <div class="header">
 		<i class="fas fa-user-plus">
 		</i> User Registration
