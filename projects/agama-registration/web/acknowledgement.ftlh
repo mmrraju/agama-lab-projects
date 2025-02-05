@@ -26,12 +26,12 @@
 	  <form method="post" class="my-8">
 		<div class="space-y-9">
 		  <div class="button">
-			<button type="submit" id="ack" name="ack" value="continue" class="btn"> Continue
-			</button>
+            <button type="submit" id="ack" name="ack" value="false" class="btn" onclick="toggleValue(event)">Continue</button>
 		  </div>
 		</div>
 	  </form>
 	</div>
+  
   
   
 </body>
@@ -102,5 +102,11 @@
 	  background-color: #009624;
 	}
   </style>
-
+<script>
+    function toggleValue(event) {
+        let button = event.target;
+        button.value = button.value === "true" ? "false" : "true";
+        console.log("Button value:", button.value);
+    }
+</script>
 </html>
