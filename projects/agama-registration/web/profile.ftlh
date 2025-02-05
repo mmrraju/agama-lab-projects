@@ -20,13 +20,19 @@
 		<i class="fas fa-user-plus">
 		</i> User Registration
 	  </div>
+      <!-- Error Message Block -->
+	  [#if errorMessage?has_content]
+	  <div role="alert" class="alert alert-danger mt-3 error" align="center">
+		${errorMessage}
+	  </div>
+	  [/#if]
 	  <div class="content">
 		<p class="text-center">To create an account, please enter your details below.
 		</p>
-		<form method="post">
+		<form method="post" onsubmit="return validateForm()">
 		  <div class="form-group">
 			<label class="form-label">Username: <span class="required">*</span></label>
-			<input type="text" id="username" name="username" required="" placeholder="Choose a username" class="form-control">
+			<input type="text" id="uid" name="uid" required="" placeholder="Choose a username" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Display Name: <span class="required">*</span></label>
@@ -34,19 +40,19 @@
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">First Name: <span class="required">*</span></label>
-			<input type="text" id="firstName" name="firstName" required="" placeholder="Enter your first name" class="form-control">
+			<input type="text" id="givenName" name="givenName" required="" placeholder="Enter your first name" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Last Name: <span class="required">*</span></label>
-			<input type="text" id="lastName" name="lastName" required="" placeholder="Enter your last name" class="form-control">
+			<input type="text" id="sn" name="sn" required="" placeholder="Enter your last name" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Email: <span class="required">*</span></label>
-			<input type="email" id="email" name="email" required="" placeholder="Enter your email" class="form-control">
+			<input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Password: <span class="required">*</span></label>
-			<input type="password" id="password" name="password" required="" placeholder="Choose a strong password" class="form-control">
+			<input type="password" id="userPassword" name="userPassword" required="" placeholder="Choose a strong password" class="form-control">
 		  </div>
 		  <div class="form-group">
 			<label class="form-label">Repeat Password: <span class="required">*</span></label>
@@ -81,9 +87,10 @@
 	}
 	.registration-container {
 	  width: 100%;
-	  max-width: 500px;
+	  max-width: 700px;
 	  background: white;
 	  border-radius: 5px;
+      border: #080808;
 	  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 	  overflow: hidden;
 	}
@@ -125,6 +132,10 @@
 	  font-size: 13px;
 	  margin-top: 5px;
 	}
+    .error{
+        font-weight: bold;
+	    color: red;
+	}
 	.buttons {
 	  display: flex;
 	  gap: 10px;
@@ -165,7 +176,7 @@
   </style>
 <script>
 	function validateForm() {
-	  let password = document.getElementById("password").value;
+	  let password = document.getElementById("userPassword").value;
 	  let confirmPassword = document.getElementById("confirmPassword").value;
 	  let errorMessage = document.getElementById("error-message");
 	  if (password !== confirmPassword) {
