@@ -26,7 +26,7 @@
 	  <form method="post" class="my-8">
 		<div class="space-y-9">
 		  <div class="button">
-			<button type="submit" id="ack" name="ack" value="continue" class="btn">
+			<button type="submit" id="ack" name="ack" value="continue" class="btn"> Continue
 			</button>
 		  </div>
 		</div>
@@ -82,25 +82,25 @@
 	  color: red;
 	}
 	.button {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .btn {
-            padding: 10px 20px;
-            font-size: 16px;
-            color: white;
-            background-color: #00c853;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease;
-            text-decoration: none;
-        }
-        .btn:hover {
-            background-color: #009624;
-        }
+	  display: flex;
+	  justify-content: center;
+	  gap: 20px;
+	  margin-top: 20px;
+	}
+	.btn {
+	  padding: 10px 20px;
+	  font-size: 16px;
+	  color: white;
+	  background-color: #00c853;
+	  border: none;
+	  border-radius: 5px;
+	  cursor: pointer;
+	  transition: background 0.3s ease;
+	  text-decoration: none;
+	}
+	.btn:hover {
+	  background-color: #009624;
+	}
   </style>
 
 </html>
