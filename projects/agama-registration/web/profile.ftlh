@@ -75,6 +75,9 @@
 	  height: 100vh;
 	  margin: 0;
 	}
+	.flex{
+	  padding: 10px;
+	}
 	.registration-container {
 	  width: 100%;
 	  max-width: 500px;
