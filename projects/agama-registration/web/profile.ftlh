@@ -12,7 +12,7 @@
 	
   
   
-	<div class="registration-container shadow">
+	<div class="registration-container shadow" align="center">
 	  <div class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m" align="center">
 	  </div>
