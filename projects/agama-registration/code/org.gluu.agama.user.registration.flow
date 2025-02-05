@@ -21,7 +21,7 @@ max = Repeat 10 times max
           Log "@info User not found with mail %" email
           // Call user registration service method to register a new user
           inum | E = Call userRegistrationService addNewUser uiInput
-          // If no error
+          // If user registration success
           When inum is not null
                // Show user creation log
                Log "@info User % has been created" inum
@@ -34,8 +34,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_nkpfb = {success:true, data: { userId: uid}}
-                    Finish it_nkpfb
+                    it_mezhn = {success:true, data: { userId: uid}}
+                    Finish it_mezhn
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -49,5 +49,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bslzv = {success:false, error: "User registration flow failed"}
-Finish it_bslzv
+it_xgkhs = {success:false, error: "User registration flow failed"}
+Finish it_xgkhs
