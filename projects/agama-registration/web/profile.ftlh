@@ -12,7 +12,7 @@
 	
   
   
-	<div align="center" class="registration-container shadow">
+	<div align="left" class="registration-container shadow">
 	  <div class="flex">
 		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
@@ -29,7 +29,7 @@
 	  [/#if]
 	  <p class="text-center mt-2">
 	  </p>
-	  <form method="post" onsubmit="return validateForm()">
+	  <form method="post">
 		<div class="mb-3">
 		  <label class="form-label">Username: <span class="required">*</span></label>
 		  <input type="text" id="uid" name="uid" required="" class="form-control">
