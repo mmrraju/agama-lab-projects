@@ -20,7 +20,7 @@
 	  <div class="separator">
 	  </div>
 	  <p class="message">
-		You've successfully Registered on Janssen!!!
+		You've successfully Registered on Jansen!!!
 		<br>
 	  </p>
 	  <form method="post" class="my-8">
