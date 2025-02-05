@@ -20,20 +20,20 @@
 	  <div class="separator">
 	  </div>
 	  <p class="message">
-		You've successfully Registered on Jansen!!! Please contact with Admin To activate your account.
+		You've successfully Registered on Jansen!!!
 		<br>
 	  </p>
-	  <form method="post" class="my-8" id="myForm">
+	  <form method="post" id="myForm" class="my-8">
 		<div class="space-y-9">
 		  <div class="button">
-            <button type="submit" id="ack" name="ack" value="continue" class="btn">Continue</button>
+			<button type="submit" id="ack" name="ack" value="continue" class="btn">Continue</button>
 		  </div>
 		</div>
 	  </form>
 	</div>
   
   
-
+  
 </body>
 <style>
 	body {
@@ -106,5 +106,5 @@
 	window.onload = function () {
 	  var form = document.querySelector("form");
 	};
-</script>
+  </script>
 </html>
