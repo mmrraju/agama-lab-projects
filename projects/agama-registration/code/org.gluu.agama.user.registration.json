@@ -721,8 +721,8 @@
 					"conditions": [
 						{
 							"variable": "acknowledgementInput.ack",
-							"operator": "is",
-							"dataValue": "true",
+							"operator": "is not",
+							"dataValue": "null",
 							"combinator": "none"
 						}
 					],
@@ -1566,8 +1566,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3853,
-		"y": -413,
+		"x": -4152,
+		"y": -595,
 		"zoom": 1
 	}
 }
