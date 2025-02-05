@@ -21,13 +21,15 @@
 		<i class="fas fa-user-plus">
 		</i> User Registration
 	  </div>
-	  [#if errorMessage?has_content]
-	  <div id="ig86l" align="center" class="error">${errorMessage}
-	  </div>
-	  [/#if]
+		<!-- Error Message Block -->
+	    [#if errorMessage?has_content]
+		<div class="alert alert-danger mt-3" role="alert">
+			${errorMessage}
+		</div>
+		[/#if]
 	  <p class="text-center mt-2">
 	  </p>
-	  <form method="post">
+	  <form method="post" onsubmit="return validateForm()">
 		<div class="mb-3">
 		  <label class="form-label">Username: <span class="required">*</span></label>
 		  <input type="text" id="uid" name="uid" required="" class="form-control">
@@ -100,13 +102,12 @@
 	}
 	.buttons {
 	  display: flex;
-	  display-content: center
 	  gap: 10px;
 	}
   </style>
 <script>
 	function validateForm() {
-	  let password = document.getElementById("password").value;
+	  let password = document.getElementById("userPassword").value;
 	  let rePassword = document.getElementById("re-password").value;
 	  let errorMessage = document.getElementById("error-message");
 	  if (password !== rePassword) {
