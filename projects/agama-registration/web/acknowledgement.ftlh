@@ -20,7 +20,7 @@
 	  <div class="separator">
 	  </div>
 	  <p class="message">
-		You've successfully Registered on Jansen!!!
+		You've successfully Registered on Jansen!!! Please contact with Admin To activate your account.
 		<br>
 	  </p>
 	  <form method="post" class="my-8" id="myForm">
