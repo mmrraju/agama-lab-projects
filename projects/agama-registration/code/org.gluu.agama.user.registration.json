@@ -500,8 +500,8 @@
 			"id": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
 			"type": "logNode",
 			"position": {
-				"x": 3280,
-				"y": 480
+				"x": 3810,
+				"y": 334
 			},
 			"data": {
 				"id": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
@@ -510,7 +510,7 @@
 					"x": 3280,
 					"y": 480
 				},
-				"previousNodeId": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+				"previousNodeId": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
 				"branching": "continue",
 				"agamaData": {
 					"logMessage": "\"User registration failed. Error : %\" E",
@@ -528,7 +528,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
@@ -928,6 +929,50 @@
 			"dragging": false
 		},
 		{
+			"id": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
+			"type": "whenNode",
+			"position": {
+				"x": 3277,
+				"y": 430
+			},
+			"data": {
+				"id": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
+				"type": "whenNode",
+				"position": {
+					"x": 3280,
+					"y": 480
+				},
+				"previousNodeId": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+				"branching": "continue",
+				"agamaData": {
+					"variableField": "",
+					"valueField": "",
+					"conditionInputField": "",
+					"conditions": [
+						{
+							"variable": "inum",
+							"operator": "is",
+							"dataValue": "null",
+							"combinator": "none"
+						}
+					],
+					"nodeIcon": "ph:swap",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "If user registration failed"
+				}
+			},
+			"measured": {
+				"width": 110,
+				"height": 60
+			},
+			"selected": true,
+			"dragging": false
+		},
+		{
 			"id": "assignmentNode-941486d2-116f-46af-80c2-395868bef852",
 			"type": "assignmentNode",
 			"position": {
@@ -1196,25 +1241,6 @@
 			"sourceHandle": "source_callNode-7b394d43-11bf-47e5-afe8-116e53b76ac8"
 		},
 		{
-			"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669-logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
-			"type": "default",
-			"source": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
-			"target": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "continue",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669_continue"
-		},
-		{
 			"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669-logNode-9a7e8f8c-8022-41b2-8fdf-813bd67998c2",
 			"type": "default",
 			"source": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
@@ -1441,11 +1467,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-f2fe98f0-691a-413d-8f5f-f43358d15ddb"
+		},
+		{
+			"id": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669-whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
+			"type": "default",
+			"source": "whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669",
+			"target": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "continue",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_whenNode-b518056c-69f3-4d41-a700-5e79c4e6d669_continue"
+		},
+		{
+			"id": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba-logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+			"type": "default",
+			"source": "whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba",
+			"target": "logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33",
+			"label": "continue",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_whenNode-5bafd8d4-e171-4bba-9bff-37b542978cba_continue",
+			"targetHandle": "target_logNode-89b26720-01e7-480d-ae65-dbd2c7a84e33"
 		}
 	],
 	"viewport": {
-		"x": -1952,
-		"y": 55,
+		"x": -2874,
+		"y": -207,
 		"zoom": 1
 	}
 }
