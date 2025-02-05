@@ -32,8 +32,8 @@ max = Repeat 10 times max
                // Assign User Id (userName) to a variable
                uid = uiInput.uid
                // Successful user registration
-               it_lwcad = {success:true, data: { userId: uid}}
-               Finish it_lwcad
+               it_fylxx = {success:true, data: { userId: uid}}
+               Finish it_fylxx
           // User registration failed 
           Log "@info User registration failed. Error : %" E
      // User already exists
