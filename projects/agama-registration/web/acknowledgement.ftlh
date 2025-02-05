@@ -11,25 +11,27 @@
 	
   
   
-	<div class="flex">
-	  <img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
-	</div>
-	<h1>WELCOME
-	</h1>
-	<div class="separator">
-	</div>
-	<p class="message">
-	  You've successfully Registered on Gluu!!!
-	  <br>
-	</p>
-	<form method="post" class="my-8">
-	  <div class="space-y-9">
-		<div class="buttons">
-		  <button type="submit" id="ack" name="ack" value="continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
-		  </button>
-		</div>
+	<div align="center" class="registration-container shadow">	
+	  <div class="flex">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
 	  </div>
-	</form>
+	  <h1>WELCOME
+	  </h1>
+	  <div class="separator">
+	  </div>
+	  <p class="message">
+		You've successfully Registered on Gluu!!!
+		<br>
+	  </p>
+	  <form method="post" class="my-8">
+		<div class="space-y-9">
+		  <div class="buttons">
+			<button type="submit" id="ack" name="ack" value="continue" class="py-2 px-6 rounded text-white btn bg-green-500 hover:bg-green-600">
+			</button>
+		  </div>
+		</div>
+	  </form>
+	</div>
   
   
 </body>
