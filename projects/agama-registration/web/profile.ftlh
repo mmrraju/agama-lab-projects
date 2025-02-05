@@ -22,7 +22,7 @@
 		</i> User Registration
 	  </div>
 	  [#if errorMessage?has_content]
-	  <div id="ig86l" align="center" class="fs-6 text-red-600 mb-4">${errorMessage}
+	  <div id="ig86l" align="center" class="error">${errorMessage}
 	  </div>
 	  [/#if]
 	  <p class="text-center mt-2">
@@ -69,6 +69,9 @@
   
 </body>
 <style>
+	.error{
+	  color: red;
+	}
 	.registration-container {
 	  max-width: 600px;
 	  margin: auto;
