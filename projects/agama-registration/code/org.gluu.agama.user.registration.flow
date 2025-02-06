@@ -10,6 +10,8 @@ max = Repeat 10 times max
      When uiInput.cancel is true
           // Existing user login process
           Log "@info Existing user login process"
+          // Trigger sub-routine to authenticate existing user
+          authenticateUser = Trigger org.gluu.agama.pw.main 
      // Assign userName and email  to a variable
      email = uiInput.mail
      userName = uiInput.uid
@@ -38,8 +40,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_hsqva = {success:true, data: { userId: uid}}
-                    Finish it_hsqva
+                    it_rrinm = {success:true, data: { userId: uid}}
+                    Finish it_rrinm
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -55,5 +57,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_bttis = {success:false, error: "User registration flow failed"}
-Finish it_bttis
+it_qolqk = {success:false, error: "User registration flow failed"}
+Finish it_qolqk
