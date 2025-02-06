@@ -112,7 +112,8 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "org.gluu.agama.user.registration": {}
+            "org.gluu.agama.user.registration": {},
+            "org.gluu.agama.pw.main": {}
         },
         "name": "agama-registration"
     },
