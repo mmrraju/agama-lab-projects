@@ -3,17 +3,81 @@
 <html lang="en">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>User Registration
 	</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></head>
-<body><div class="registration-container"><div align="center" class="flex"><img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m"></div><div class="header"><i class="fas fa-user-plus">
+<body>
+
+  
+	
+	
+	
+	
+  
+  
+	<div class="registration-container">
+	  <div align="center" class="flex">
+		<img src="https://gluu.org/wp-content/uploads/2020/12/logo.png" id="inh1m">
+	  </div>
+	  <div class="header">
+		<i class="fas fa-user-plus">
 		</i> User Registration
-	  </div><br><!-- Error Message Block -->
+	  </div>
+	  <br>
+	  <!-- Error Message Block -->
 	  [#if errorMessage?has_content]
 	  <div role="alert" align="center" class="alert alert-danger mt-3 error">
 		${errorMessage}
 	  </div>
 	  [/#if]
-	  <div class="content"><p class="text-center">To create an account, please enter your details below.
-		</p><form method="post" enctype="application/x-www-form-urlencoded" id="registerForm"><div class="form-group"><label class="form-label">Username: <span class="required">*</span></label><input type="text" id="uid" name="uid" required="" placeholder="Choose a username" class="form-control"></div><div class="form-group"><label class="form-label">Display Name: <span class="required">*</span></label><input type="text" id="displayName" name="displayName" required="" placeholder="Enter your display name" class="form-control"></div><div class="form-group"><label class="form-label">First Name: <span class="required">*</span></label><input type="text" id="givenName" name="givenName" required="" placeholder="Enter your first name" class="form-control"></div><div class="form-group"><label class="form-label">Last Name: <span class="required">*</span></label><input type="text" id="sn" name="sn" required="" placeholder="Enter your last name" class="form-control"></div><div class="form-group"><label class="form-label">Email: <span class="required">*</span></label><input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control"></div><div class="form-group"><label class="form-label">Password: <span class="required">*</span></label><input type="password" id="userPassword" name="userPassword" required="" placeholder="Choose a strong password" class="form-control"></div><div class="form-group"><label class="form-label">Repeat Password: <span class="required">*</span></label><input type="password" id="confirmPassword" name="confirmPassword" required="" placeholder="Confirm your password" class="form-control"><div id="error-message" class="error-message">
-			</div></div><div class="buttons"><button type="submit" class="btn btn-primary">Register</button><button type="submit" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Already Exist!</button></div></form></div></div></body>
+	  <div class="content">
+		<p class="text-center">To create an account, please enter your details below.
+		</p>
+		<form method="post" enctype="application/x-www-form-urlencoded" id="registerForm">
+		  <div class="form-group">
+			<label class="form-label">Username: <span class="required">*</span></label>
+			<input type="text" id="uid" name="uid" required="" placeholder="Choose a username" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Display Name: <span class="required">*</span></label>
+			<input type="text" id="displayName" name="displayName" required="" placeholder="Enter your display name" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">First Name: <span class="required">*</span></label>
+			<input type="text" id="givenName" name="givenName" required="" placeholder="Enter your first name" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Last Name: <span class="required">*</span></label>
+			<input type="text" id="sn" name="sn" required="" placeholder="Enter your last name" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Email: <span class="required">*</span></label>
+			<input type="email" id="mail" name="mail" required="" placeholder="Enter your email" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Password: <span class="required">*</span></label>
+			<input type="password" id="userPassword" name="userPassword" required="" placeholder="Choose a strong password" class="form-control">
+		  </div>
+		  <div class="form-group">
+			<label class="form-label">Repeat Password: <span class="required">*</span></label>
+			<input type="password" id="confirmPassword" name="confirmPassword" required="" placeholder="Confirm your password" class=" form-control">
+			<div id="error-message" class="error-message">
+			</div>
+		  </div>
+		  <div class="buttons">
+			<button type="submit" class="button2">Register</button>
+			<!-- <button type="submit" id="cancel" name="cancel" value="cancel" class="btn btn-primary">Already Exist!</button> -->
+		  </div>
+		</form>
+		<br>
+		<form method="post">
+			<div class="">
+				<button type="submit" id="cancel" name="cancel" value="cancel" class="button2">Already Exist!</button>
+			</div>	
+		</form>	
+	  </div>
+	</div>
+  
+  
+  
+</body>
 <style>
 	body {
 	  font-family: Arial, sans-serif;
@@ -61,7 +125,7 @@
 	  margin-bottom: 5px;
 	}
 	.form-control {
-	  width: 100%;
+	  width: 95%;
 	  padding: 10px;
 	  font-size: 14px;
 	  border: 1px solid #ced4da;
@@ -78,6 +142,11 @@
 	.error{
 	  font-weight: bold;
 	  color: red;
+	}
+	.button2{
+		/* display: flex;
+		gap: 10px; */
+		width: 95%;
 	}
 	.buttons {
 	  display: flex;
