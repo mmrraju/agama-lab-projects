@@ -1035,8 +1035,8 @@
 					"conditions": [
 						{
 							"variable": "uiInput.cancel",
-							"operator": "is",
-							"dataValue": "true",
+							"operator": "is not",
+							"dataValue": "null",
 							"combinator": "none"
 						}
 					],
@@ -1053,7 +1053,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1243,7 +1243,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "finishNode-f32b2950-ce7c-4b8e-abaf-767b21783ab7",
@@ -1911,8 +1911,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1620,
-		"y": -499,
+		"x": -650,
+		"y": -104,
 		"zoom": 1
 	}
 }
