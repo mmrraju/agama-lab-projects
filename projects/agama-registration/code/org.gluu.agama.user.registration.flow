@@ -6,6 +6,8 @@ uiFeedback = {}
 max = Repeat 10 times max
      // Retrieve user profile  from UI
      uiInput = RRF "profile.ftlh" uiFeedback
+     // If user try to login
+     When uiInput.cancel is true
      // Assign userName and email  to a variable
      email = uiInput.mail
      userName = uiInput.uid
@@ -34,8 +36,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_bwlhs = {success:true, data: { userId: uid}}
-                    Finish it_bwlhs
+                    it_gnelu = {success:true, data: { userId: uid}}
+                    Finish it_gnelu
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -51,5 +53,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_gufdq = {success:false, error: "User registration flow failed"}
-Finish it_gufdq
+it_rbyqi = {success:false, error: "User registration flow failed"}
+Finish it_rbyqi
