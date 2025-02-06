@@ -7,7 +7,7 @@ max = Repeat 10 times max
      // Retrieve user profile  from UI
      uiInput = RRF "profile.ftlh" uiFeedback
      // If user try to login
-     When uiInput.cancel is true
+     When uiInput.cancel is not null
           // Existing user login process
           Log "@info Existing user login process"
           // Trigger sub-routine to authenticate existing user
@@ -46,8 +46,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_gzpzk = {success:true, data: { userId: uid}}
-                    Finish it_gzpzk
+                    it_fgkch = {success:true, data: { userId: uid}}
+                    Finish it_fgkch
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -63,5 +63,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_yzwup = {success:false, error: "User registration flow failed"}
-Finish it_yzwup
+it_usfeg = {success:false, error: "User registration flow failed"}
+Finish it_usfeg
