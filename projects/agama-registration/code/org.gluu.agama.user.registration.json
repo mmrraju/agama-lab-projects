@@ -1127,6 +1127,42 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "triggerNode-41e79397-ac64-4f2a-9fe9-b3ad979b73e1",
+			"type": "triggerNode",
+			"position": {
+				"x": 1434,
+				"y": 724
+			},
+			"data": {
+				"id": "triggerNode-41e79397-ac64-4f2a-9fe9-b3ad979b73e1",
+				"type": "triggerNode",
+				"position": {
+					"x": 1434,
+					"y": 724
+				},
+				"previousNodeId": "logNode-659b94ab-5252-476a-97aa-9ed0a55a699c",
+				"agamaData": {
+					"nodeIcon": "fluent-mdl2:trigger-approval",
+					"flowFileName": "org.gluu.agama.pw.main",
+					"arguments": [],
+					"asssignedVariableName": "authenticateUser",
+					"exceptionVariableField": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Trigger sub-routine to authenticate existing user",
+					"overrides": []
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
 		}
 	],
 	"edges": [
@@ -1680,11 +1716,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-5fe65ad3-5873-454d-8b9e-705071b3ce0f_success"
+		},
+		{
+			"id": "logNode-659b94ab-5252-476a-97aa-9ed0a55a699c-triggerNode-41e79397-ac64-4f2a-9fe9-b3ad979b73e1",
+			"type": "default",
+			"source": "logNode-659b94ab-5252-476a-97aa-9ed0a55a699c",
+			"target": "triggerNode-41e79397-ac64-4f2a-9fe9-b3ad979b73e1",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-659b94ab-5252-476a-97aa-9ed0a55a699c"
 		}
 	],
 	"viewport": {
-		"x": -936,
-		"y": -381,
+		"x": -1196,
+		"y": -445,
 		"zoom": 1
 	}
 }
