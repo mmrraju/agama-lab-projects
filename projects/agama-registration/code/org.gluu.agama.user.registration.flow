@@ -46,13 +46,10 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_yyqnr = {success:true, data: { userId: uid}}
-                    Finish it_yyqnr
+                    it_sqiub = {success:true, data: { userId: uid}}
+                    Finish it_sqiub
                // Maximum attempt reached
                Log "@info Maximum attempt reached"
-               // Your error message hereas
-               it_roeoa = {success:false, error: "Your error message hereas"}
-               Finish it_roeoa
           // If user registration failed
           When inum is null
                // Registration failed log
@@ -68,5 +65,5 @@ max = Repeat 10 times max
 // Maximum attempt reached
 Log "@info Maximum attempt reached"
 // User Registration flow failed
-it_gikyi = {success:false, error: "User registration flow failed"}
-Finish it_gikyi
+it_utdsr = {success:false, error: "User registration flow failed"}
+Finish it_utdsr
