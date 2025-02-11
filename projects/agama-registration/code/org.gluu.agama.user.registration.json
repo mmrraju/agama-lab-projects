@@ -1318,8 +1318,8 @@
 			"id": "finishNode-8e03f8bb-980a-4289-a576-f6ff58f0dba1",
 			"type": "finishNode",
 			"position": {
-				"x": 4820,
-				"y": 682
+				"x": 4914,
+				"y": 693
 			},
 			"data": {
 				"id": "finishNode-8e03f8bb-980a-4289-a576-f6ff58f0dba1",
@@ -1328,7 +1328,7 @@
 					"x": 4820,
 					"y": 682
 				},
-				"previousNodeId": "logNode-f3d81e6e-12d3-4712-ac06-eca9b7bb8706",
+				"previousNodeId": "callNode-00034336-99c7-43d9-a129-57574141e6a7",
 				"agamaData": {
 					"nodeColor": "",
 					"titleColor": "",
@@ -1346,7 +1346,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1995,30 +1996,11 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-4f13ced1-75e1-44b0-8814-69bd0756bfc9_continue"
-		},
-		{
-			"id": "logNode-f3d81e6e-12d3-4712-ac06-eca9b7bb8706-finishNode-8e03f8bb-980a-4289-a576-f6ff58f0dba1",
-			"type": "default",
-			"source": "logNode-f3d81e6e-12d3-4712-ac06-eca9b7bb8706",
-			"target": "finishNode-8e03f8bb-980a-4289-a576-f6ff58f0dba1",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_logNode-f3d81e6e-12d3-4712-ac06-eca9b7bb8706"
 		}
 	],
 	"viewport": {
-		"x": -4153,
-		"y": -437,
+		"x": -4295,
+		"y": -481,
 		"zoom": 1
 	}
 }
