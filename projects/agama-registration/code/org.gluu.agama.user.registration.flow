@@ -46,8 +46,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_ngrwy = {success:true, data: { userId: uid}}
-                    Finish it_ngrwy
+                    it_vhktd = {success:true, data: { userId: uid}}
+                    Finish it_vhktd
                // Maximum attempt reached
                Log "@info Maximum attempt reached"
           // If user registration failed
