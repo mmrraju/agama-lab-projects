@@ -46,8 +46,8 @@ max = Repeat 10 times max
                     // Assign User Id to a variable
                     uid = uiInput.uid
                     // Finish the flow successfully
-                    it_gnmfq = {success:true, data: { userId: uid}}
-                    Finish it_gnmfq
+                    it_xszgn = {success:true, data: { userId: uid}}
+                    Finish it_xszgn
                // Maximum attempt reached
                Log "@info Maximum attempt reached"
           // If user registration failed
@@ -62,10 +62,3 @@ max = Repeat 10 times max
           Log "@trace User alreay exists with mail: %" email
           // Error variable assignment.
           uiFeedback.errorMessage = "UserAlreadyRegistered"
-// this is test 
-test = 5
-// Maximum attempt reached
-Log "@info Maximum attempt reached"
-// User Registration flow failed
-it_midpa = {success:false, error: "User registration flow failed"}
-Finish it_midpa
