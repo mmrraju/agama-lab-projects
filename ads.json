@@ -145,5 +145,23 @@
             "org.gluu.agama.smtp.emailVerification": {}
         },
         "name": "agama-smtp"
+    },
+    "open-banking": {
+        "projectName": "open-banking",
+        "description": "Open banking authorization sample flow",
+        "type": "community",
+        "author": "mmrraju",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
+        "githubUri": "https://github.com/mmrraju/agama-lab-projects",
+        "license": "apache-2.0",
+        "lastUpdated": "1758300130664",
+        "tags": [
+            "authorization",
+            "openid-connect",
+            "jans"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
     }
 }
