@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
@@ -53,7 +53,7 @@
 				},
 				"previousNodeId": "startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5",
 				"agamaData": {
-					"logMessage": "\"Openbanking flow starting\"",
+					"logMessage": "\"Start executing Openbanking flow\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -69,6 +69,44 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "assignmentNode-76e885ba-dd0f-475a-89d2-54989860a059",
+			"type": "assignmentNode",
+			"position": {
+				"x": 530,
+				"y": 30
+			},
+			"data": {
+				"id": "assignmentNode-76e885ba-dd0f-475a-89d2-54989860a059",
+				"type": "assignmentNode",
+				"position": {
+					"x": 530,
+					"y": 30
+				},
+				"previousNodeId": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
+				"agamaData": {
+					"assignments": [
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "feedback"
+						}
+					],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Feedback message"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -90,10 +128,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5"
+		},
+		{
+			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297-assignmentNode-76e885ba-dd0f-475a-89d2-54989860a059",
+			"type": "default",
+			"source": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
+			"target": "assignmentNode-76e885ba-dd0f-475a-89d2-54989860a059",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-876f45c5-2735-4336-9ffb-14582dacd297"
 		}
 	],
 	"viewport": {
-		"x": 0,
+		"x": 3,
 		"y": 0,
 		"zoom": 1
 	}
