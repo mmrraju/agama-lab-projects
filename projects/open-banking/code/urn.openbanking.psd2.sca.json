@@ -513,7 +513,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Callback with success and jws from app ",
+					"comment": "Verify JWS and validate consent  (23, 24)",
 					"asssignedVariableName": "jwsVerify"
 				}
 			},
