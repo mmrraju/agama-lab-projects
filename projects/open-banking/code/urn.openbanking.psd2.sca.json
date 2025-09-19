@@ -349,7 +349,7 @@
 					"assignments": [
 						{
 							"variableTypeCheck": true,
-							"assignmentExpression": "validResult.message",
+							"assignmentExpression": "validationResult.message",
 							"assignedVariableName": "feedback.errorMessage"
 						}
 					],
@@ -543,8 +543,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1383,
-		"y": 51,
+		"x": -1464,
+		"y": 4,
 		"zoom": 1
 	}
 }
