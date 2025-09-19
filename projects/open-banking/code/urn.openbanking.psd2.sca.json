@@ -35,13 +35,66 @@
 				"width": 168,
 				"height": 120
 			},
+			"selected": false
+		},
+		{
+			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
+			"type": "logNode",
+			"position": {
+				"x": 280,
+				"y": 30
+			},
+			"data": {
+				"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
+				"type": "logNode",
+				"position": {
+					"x": 280,
+					"y": 30
+				},
+				"previousNodeId": "startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5",
+				"agamaData": {
+					"logMessage": "\"Openbanking flow starting\"",
+					"logLevel": "info",
+					"nodeIcon": "octicon:log-16",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Flow starting"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
-	"edges": [],
+	"edges": [
+		{
+			"id": "startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5-logNode-876f45c5-2735-4336-9ffb-14582dacd297",
+			"type": "default",
+			"source": "startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5",
+			"target": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5"
+		}
+	],
 	"viewport": {
 		"x": 0,
-		"y": 0,
+		"y": 19.125,
 		"zoom": 1
 	}
 }
