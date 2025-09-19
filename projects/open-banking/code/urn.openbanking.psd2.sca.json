@@ -219,7 +219,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
@@ -397,7 +397,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "RFAC Response in signed JWS",
+					"comment": "Return RFAC Response in signed JWS (11)",
 					"asssignedVariableName": "rfacResponse"
 				}
 			},
@@ -405,7 +405,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
@@ -774,8 +774,8 @@
 		}
 	],
 	"viewport": {
-		"x": -661,
-		"y": -18,
+		"x": -1407,
+		"y": -145,
 		"zoom": 1
 	}
 }
