@@ -7,5 +7,5 @@ Log "@info Start executing Openbanking flow"
 feedback = {}
 // Max repeate
 Repeat 3 times max
-     // Agama Consent Service 
-     Call org.gluu.agama.user.AgamaConsentService#getInstance 
+     // Create and instance of Agama Consent Service 
+     agamaConsentService = Call org.gluu.agama.user.AgamaConsentService#getInstance 
