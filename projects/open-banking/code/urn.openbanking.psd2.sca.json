@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "",
+					"inputs": "consent_id",
 					"configs": "",
 					"flowname": "urn.openbanking.psd2.sca",
 					"displayName": "open-banking",
@@ -35,7 +35,7 @@
 				"width": 168,
 				"height": 120
 			},
-			"selected": false
+			"selected": true
 		}
 	],
 	"edges": [],
