@@ -17,6 +17,10 @@ Repeat 3 times max
           Log "@info Consent Id is valid"
           // RFAC Response in signed JWS
           rfacResponse = Call agamaConsentService RFACResponse 
+          // Check Response status
+          When rfacResponse.success is true
+               // RFAC response messsage
+               Log "@info RFAC Response send successfully"
      Otherwise
           // Not valid message
           Log "@info Consent Id is not valid"
