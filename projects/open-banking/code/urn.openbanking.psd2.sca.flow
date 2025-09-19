@@ -1,3 +1,5 @@
 Flow urn.openbanking.psd2.sca
      Basepath ""
      Inputs consent_id
+// Flow starting
+Log "@info Openbanking flow starting"
