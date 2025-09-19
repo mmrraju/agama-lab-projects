@@ -2,4 +2,6 @@ Flow urn.openbanking.psd2.sca
      Basepath ""
      Inputs consent_id redirect_uri
 // Flow starting
-Log "@info Openbanking flow starting"
+Log "@info Start executing Openbanking flow"
+// Feedback message
+feedback = {}
