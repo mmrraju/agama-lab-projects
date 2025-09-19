@@ -219,7 +219,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
@@ -368,6 +368,44 @@
 				"height": 124
 			},
 			"selected": false
+		},
+		{
+			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+			"type": "callNode",
+			"position": {
+				"x": 2030,
+				"y": 538
+			},
+			"data": {
+				"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+				"type": "callNode",
+				"position": {
+					"x": 2030,
+					"y": 538
+				},
+				"previousNodeId": "logNode-c6513ba7-1ae2-4078-af19-02fa463f7829",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "RFACResponse",
+					"javaVariableName": "agamaConsentService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "RFAC Response in signed JWS",
+					"asssignedVariableName": "rfacResponse"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": true
 		}
 	],
 	"edges": [
@@ -541,11 +579,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-7fc8137e-f61f-4ecd-bad3-fd1f2d98f72d"
+		},
+		{
+			"id": "logNode-c6513ba7-1ae2-4078-af19-02fa463f7829-callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+			"type": "default",
+			"source": "logNode-c6513ba7-1ae2-4078-af19-02fa463f7829",
+			"target": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-c6513ba7-1ae2-4078-af19-02fa463f7829"
 		}
 	],
 	"viewport": {
-		"x": -572,
-		"y": -25,
+		"x": -1516,
+		"y": -247,
 		"zoom": 1
 	}
 }
