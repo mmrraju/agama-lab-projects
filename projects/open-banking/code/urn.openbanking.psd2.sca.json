@@ -481,6 +481,45 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-a9c38a00-4fe5-4dbb-aa9c-aac2c1cca5dc",
+			"type": "callNode",
+			"position": {
+				"x": 2780,
+				"y": 796
+			},
+			"data": {
+				"id": "callNode-a9c38a00-4fe5-4dbb-aa9c-aac2c1cca5dc",
+				"type": "callNode",
+				"position": {
+					"x": 2780,
+					"y": 796
+				},
+				"previousNodeId": "logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "JWSVerify",
+					"javaVariableName": "agamaConsentService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"jwsVeriyData"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Callback with success and jws from app "
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -712,11 +751,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a_success"
+		},
+		{
+			"id": "logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a-callNode-a9c38a00-4fe5-4dbb-aa9c-aac2c1cca5dc",
+			"type": "default",
+			"source": "logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a",
+			"target": "callNode-a9c38a00-4fe5-4dbb-aa9c-aac2c1cca5dc",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a"
 		}
 	],
 	"viewport": {
-		"x": -1918,
-		"y": -433,
+		"x": -2380,
+		"y": -528,
 		"zoom": 1
 	}
 }
