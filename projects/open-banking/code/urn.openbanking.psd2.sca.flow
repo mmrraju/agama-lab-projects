@@ -1,2 +1,3 @@
 Flow urn.openbanking.psd2.sca
      Basepath ""
+     Inputs consent_id
