@@ -9,7 +9,7 @@ feedback = {}
 Repeat 3 times max
      // Create and instance of Agama Consent Service 
      agamaConsentService = Call org.gluu.agama.user.AgamaConsentService#getInstance 
-     // Validate consent with Consent Engine
+     // Validate consent with Consent Engine (8)
      validationResult = Call agamaConsentService validateConsent consent_id redirect_uri
      // If Consent Id is valid
      When validationResult.valid is true
