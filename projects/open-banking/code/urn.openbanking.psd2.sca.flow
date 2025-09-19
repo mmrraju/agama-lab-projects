@@ -23,6 +23,13 @@ Repeat 3 times max
                Log "@info RFAC Response send successfully"
                // Verify JWS and validate consent  (23, 24)
                jwsVerify = Call agamaConsentService JWSVerify jwsVeriyData
+               // Verify JWS and consent status
+               When jwsVerify.valid is true
+                    // JWS and Consent status verified
+                    Log "@info  JWS and Consent status verified"
+               Otherwise
+                    // Error message
+                    feedback.errorMessage = jwsVerify.message
      Otherwise
           // Not valid message
           Log "@info Consent Id is not valid"
