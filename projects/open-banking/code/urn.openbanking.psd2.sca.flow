@@ -19,4 +19,4 @@ Repeat 3 times max
           // Not valid message
           Log "@info Consent Id is not valid"
           // Error message
-          feedback.errorMessage = validResult.message
+          feedback.errorMessage = validationResult.message
