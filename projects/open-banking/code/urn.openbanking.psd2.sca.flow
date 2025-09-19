@@ -15,3 +15,8 @@ Repeat 3 times max
      When validationResult.valid is true
           // Valid message
           Log "@info Consent Id is valid"
+     Otherwise
+          // Not valid message
+          Log "@info Consent Id is not valid"
+          // Error message
+          feedback.errorMessage = validResult.message
