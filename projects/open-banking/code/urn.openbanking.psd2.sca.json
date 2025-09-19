@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "consent_id",
+					"inputs": "consent_id redirect_uri",
 					"configs": "",
 					"flowname": "urn.openbanking.psd2.sca",
 					"displayName": "open-banking",
@@ -32,10 +32,10 @@
 				}
 			},
 			"measured": {
-				"width": 168,
-				"height": 120
+				"width": 170,
+				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
@@ -68,7 +68,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -94,7 +94,7 @@
 	],
 	"viewport": {
 		"x": 0,
-		"y": 19.125,
+		"y": 0,
 		"zoom": 1
 	}
 }
