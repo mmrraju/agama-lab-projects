@@ -15,6 +15,8 @@ Repeat 3 times max
      When validationResult.valid is true
           // Valid message
           Log "@info Consent Id is valid"
+          // RFAC Response in signed JWS
+          rfacResponse = Call agamaConsentService RFACResponse 
      Otherwise
           // Not valid message
           Log "@info Consent Id is not valid"
