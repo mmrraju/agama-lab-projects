@@ -162,6 +162,9 @@
             "jans"
         ],
         "noDirectLaunch": [],
-        "configs": {}
+        "configs": {
+            "urn.openbanking.psd2.sca": {}
+        },
+        "name": "open-banking"
     }
 }
