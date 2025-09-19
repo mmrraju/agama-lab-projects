@@ -178,6 +178,46 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
+			"type": "callNode",
+			"position": {
+				"x": 1280,
+				"y": 280
+			},
+			"data": {
+				"id": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
+				"type": "callNode",
+				"position": {
+					"x": 1280,
+					"y": 280
+				},
+				"previousNodeId": "callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "validateConsent",
+					"javaVariableName": "agamaConsentService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"consent_id"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Validate consent with Consent Engine",
+					"asssignedVariableName": "validationResult"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -257,11 +297,30 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf_repeat"
+		},
+		{
+			"id": "callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345-callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
+			"type": "default",
+			"source": "callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
+			"target": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345"
 		}
 	],
 	"viewport": {
-		"x": -666,
-		"y": 26,
+		"x": -877,
+		"y": -91,
 		"zoom": 1
 	}
 }
