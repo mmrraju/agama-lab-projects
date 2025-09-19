@@ -170,7 +170,8 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Agama Consent Service "
+					"comment": "Create and instance of Agama Consent Service ",
+					"asssignedVariableName": "agamaConsentService"
 				}
 			},
 			"measured": {
