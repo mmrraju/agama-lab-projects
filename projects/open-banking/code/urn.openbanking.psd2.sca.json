@@ -211,7 +211,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Validate consent with Consent Engine",
+					"comment": "Validate consent with Consent Engine (8)",
 					"asssignedVariableName": "validationResult"
 				}
 			},
@@ -219,7 +219,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
@@ -521,7 +521,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -774,8 +774,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2380,
-		"y": -528,
+		"x": -661,
+		"y": -18,
 		"zoom": 1
 	}
 }
