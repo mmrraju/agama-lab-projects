@@ -21,6 +21,8 @@ Repeat 3 times max
           When rfacResponse.success is true
                // RFAC response messsage
                Log "@info RFAC Response send successfully"
+               // Callback with success and jws from app 
+               Call agamaConsentService JWSVerify jwsVeriyData
      Otherwise
           // Not valid message
           Log "@info Consent Id is not valid"
