@@ -178,7 +178,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
@@ -198,12 +198,11 @@
 				"agamaData": {
 					"javaClassName": "",
 					"javaMethodName": "validateConsent",
-					"javaVariableName": "agamaConsentService",
+					"javaVariableName": "openBankingConsentService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
 					"arguments": [
-						"consent_id",
-						"redirect_uri"
+						"reqObject"
 					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
@@ -219,7 +218,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
