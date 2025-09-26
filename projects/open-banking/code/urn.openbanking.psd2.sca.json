@@ -518,7 +518,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-217faae2-8da8-4c08-a154-b9e827ba243c",
@@ -541,7 +541,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "jwsVerify.valid",
+							"variable": "consentStatus.valid",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -553,14 +553,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Verify JWS and consent status"
+					"comment": "Verify  consent status"
 				}
 			},
 			"measured": {
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-50a37001-dbf6-495f-9787-7bb6e5bb9c6f",
