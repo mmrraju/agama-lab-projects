@@ -404,7 +404,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
@@ -427,7 +427,7 @@
 					"conditionInputField": "",
 					"conditions": [
 						{
-							"variable": "rfacResponse.success",
+							"variable": "rfacResponse.succeed",
 							"operator": "is",
 							"dataValue": "true",
 							"combinator": "none"
@@ -446,7 +446,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a",
@@ -998,8 +998,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1415,
-		"y": -263,
+		"x": -1538,
+		"y": -294,
 		"zoom": 1
 	}
 }
