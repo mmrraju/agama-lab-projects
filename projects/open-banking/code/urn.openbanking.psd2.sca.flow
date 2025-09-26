@@ -21,8 +21,8 @@ Repeat 3 times max
           When rfacResponse.succeed is true
                // RFAC response messsage
                Log "@info RFAC Response send successfully"
-               // Verify JWS and validate consent  (23, 24)
-               jwsVerify = Call openBankingConsentService JWSVerify jwsVeriyData
+               // Verify JWS and validate consent status  (23, 24)
+               consentStatus = Call openBankingConsentService verifyConsentStatus 
                // Verify JWS and consent status
                When jwsVerify.valid is true
                     // JWS and Consent status verified
