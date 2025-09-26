@@ -163,7 +163,8 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "urn.openbanking.psd2.sca": {}
+            "urn.openbanking.psd2.sca": {},
+            "": {}
         },
         "name": "open-banking"
     }
