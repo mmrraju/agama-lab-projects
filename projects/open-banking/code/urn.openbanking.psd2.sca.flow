@@ -18,7 +18,7 @@ Repeat 3 times max
           // RFAC: return signed jws (payload consent object) with callback  (11)
           rfacResponse = Call openBankingConsentService RFACResponse 
           // Check Response status
-          When rfacResponse.success is true
+          When rfacResponse.succeed is true
                // RFAC response messsage
                Log "@info RFAC Response send successfully"
                // Verify JWS and validate consent  (23, 24)
