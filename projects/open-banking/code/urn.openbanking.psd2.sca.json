@@ -499,21 +499,19 @@
 				"previousNodeId": "logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "JWSVerify",
+					"javaMethodName": "verifyConsentStatus",
 					"javaVariableName": "openBankingConsentService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
-					"arguments": [
-						"jwsVeriyData"
-					],
+					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Verify JWS and validate consent  (23, 24)",
-					"asssignedVariableName": "jwsVerify"
+					"comment": "Verify JWS and validate consent status  (23, 24)",
+					"asssignedVariableName": "consentStatus"
 				}
 			},
 			"measured": {
@@ -998,8 +996,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2035,
-		"y": -478,
+		"x": -2470,
+		"y": -617,
 		"zoom": 1
 	}
 }
