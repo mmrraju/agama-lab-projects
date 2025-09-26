@@ -7,8 +7,8 @@ Log "@info Start executing Openbanking flow"
 feedback = {}
 // Max repeate
 Repeat 3 times max
-     // Create and instance of Agama Consent Service 
-     agamaConsentService = Call org.gluu.agama.user.AgamaConsentService#getInstance 
+     // Create an instance of OpenBanking Consent Service 
+     openBankingConsentService = Call org.gluu.agama.openbanking.OpenbankingConsentService#getInstance 
      // Validate consent with Consent Engine (8)
      validationResult = Call agamaConsentService validateConsent consent_id redirect_uri
      // If Consent Id is valid
