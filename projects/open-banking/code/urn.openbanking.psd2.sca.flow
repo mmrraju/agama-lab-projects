@@ -23,8 +23,8 @@ Repeat 3 times max
                Log "@info RFAC Response send successfully"
                // Verify JWS and validate consent status  (23, 24)
                consentStatus = Call openBankingConsentService verifyConsentStatus 
-               // Verify JWS and consent status
-               When jwsVerify.valid is true
+               // Verify  consent status
+               When consentStatus.valid is true
                     // JWS and Consent status verified
                     Log "@info  JWS and Consent status verified"
                     // Return consentId, AuthType, Success
