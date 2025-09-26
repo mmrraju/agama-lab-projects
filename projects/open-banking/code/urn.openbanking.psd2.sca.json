@@ -158,7 +158,7 @@
 				"previousNodeId": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
 				"branching": "repeat",
 				"agamaData": {
-					"javaClassName": "org.gluu.agama.user.AgamaConsentService",
+					"javaClassName": "org.gluu.agama.openbanking.OpenbankingConsentService",
 					"javaMethodName": "getInstance",
 					"javaVariableName": "",
 					"exceptionVariableField": "",
@@ -170,15 +170,15 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Create and instance of Agama Consent Service ",
-					"asssignedVariableName": "agamaConsentService"
+					"comment": "Create an instance of OpenBanking Consent Service ",
+					"asssignedVariableName": "openBankingConsentService"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
@@ -670,7 +670,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		}
 	],
 	"edges": [
@@ -999,8 +999,8 @@
 		}
 	],
 	"viewport": {
-		"x": -3079,
-		"y": -829,
+		"x": -706,
+		"y": -121,
 		"zoom": 1
 	}
 }
