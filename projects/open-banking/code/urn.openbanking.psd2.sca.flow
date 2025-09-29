@@ -15,8 +15,8 @@ Repeat 3 times max
      When validationResult.valid is true
           // Valid message
           Log "@info Initial Consent status is valid"
-          // RFAC: return signed jws (payload consent object) with callback  (11)
-          rfacResponse = Call openBankingConsentService RFACResponse 
+          // Send RFAC response (JWS + redirect URL) to app   (11)
+          rfacResponse = Call openBankingConsentService sendRFACResponseToApp 
           // Check Response status
           When rfacResponse.succeed is true
                // RFAC response messsage
