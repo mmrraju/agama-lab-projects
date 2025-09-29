@@ -279,7 +279,7 @@
 				"previousNodeId": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
 				"branching": "success",
 				"agamaData": {
-					"logMessage": "\"Consent Id is valid\"",
+					"logMessage": "\"Initial Consent status is valid\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -294,7 +294,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-7fc8137e-f61f-4ecd-bad3-fd1f2d98f72d",
@@ -560,7 +560,7 @@
 				"width": 110,
 				"height": 60
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-50a37001-dbf6-495f-9787-7bb6e5bb9c6f",
@@ -996,8 +996,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2470,
-		"y": -617,
+		"x": -1331,
+		"y": -199,
 		"zoom": 1
 	}
 }
