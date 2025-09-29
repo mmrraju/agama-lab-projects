@@ -294,7 +294,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-7fc8137e-f61f-4ecd-bad3-fd1f2d98f72d",
@@ -385,7 +385,7 @@
 				"previousNodeId": "logNode-c6513ba7-1ae2-4078-af19-02fa463f7829",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "RFACResponse",
+					"javaMethodName": "sendRFACResponseToApp",
 					"javaVariableName": "openBankingConsentService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
@@ -396,7 +396,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "RFAC: return signed jws (payload consent object) with callback  (11)",
+					"comment": "Send RFAC response (JWS + redirect URL) to app   (11)",
 					"asssignedVariableName": "rfacResponse"
 				}
 			},
@@ -404,7 +404,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
@@ -996,8 +996,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1331,
-		"y": -199,
+		"x": -1124,
+		"y": -174,
 		"zoom": 1
 	}
 }
