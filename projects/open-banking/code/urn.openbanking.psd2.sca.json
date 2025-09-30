@@ -657,7 +657,7 @@
 				"previousNodeId": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": " \"url\": loginUrl,     \"method\": \"POST\",     \"params\": payloadsJson  ",
+					"idpAuthEndpoint": "\"https://external-app.example.com/start\"     + \"?jws=\" + urlEncode(jws)     + \"&status=\" + urlEncode(\"PENDING_VERIFICATION\");",
 					"assignCallbackResult": "result",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1104,8 +1104,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1796,
-		"y": -224,
+		"x": -1737,
+		"y": -312,
 		"zoom": 1
 	}
 }
