@@ -29,6 +29,9 @@ Repeat 3 times max
           When verifyFinalStatus.valid is true
                // Final verification done
                Log "@info Final verification successfully done"
+          Otherwise
+               // Verification failed
+               Log "@info Varification faild reason: %" verifyFinalStatus.message
      Otherwise
           // Not valid message
           Log "@info Consent Id is not valid"
