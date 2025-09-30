@@ -111,7 +111,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
@@ -657,8 +657,8 @@
 				"previousNodeId": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "",
-					"assignCallbackResult": "",
+					"idpAuthEndpoint": "appUrl",
+					"assignCallbackResult": "result",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
@@ -671,7 +671,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "finishNode-825410ae-ee1b-46f6-86ef-5daaa21d566d",
@@ -1053,8 +1053,8 @@
 		}
 	],
 	"viewport": {
-		"x": -307,
-		"y": 76,
+		"x": -1584,
+		"y": -265,
 		"zoom": 1
 	}
 }
