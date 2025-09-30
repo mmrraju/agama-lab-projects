@@ -503,6 +503,47 @@
 				"width": 170,
 				"height": 124
 			},
+			"selected": false
+		},
+		{
+			"id": "callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
+			"type": "callNode",
+			"position": {
+				"x": 3030,
+				"y": 538
+			},
+			"data": {
+				"id": "callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
+				"type": "callNode",
+				"position": {
+					"x": 3030,
+					"y": 538
+				},
+				"previousNodeId": "logNode-46e107aa-7d7a-4948-ae17-ae5be56d93b0",
+				"agamaData": {
+					"javaClassName": "",
+					"javaMethodName": "verifyExternalAppResult",
+					"javaVariableName": "openBankingConsentService",
+					"exceptionVariableField": "",
+					"callType": "Call method on instance",
+					"arguments": [
+						"resultFromApp",
+						"reqObject"
+					],
+					"nodeIcon": "material-symbols:code",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": "Verify final status",
+					"asssignedVariableName": "verifyFinalStatus"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
 			"selected": true
 		}
 	],
@@ -771,11 +812,30 @@
 			},
 			"sourceHandle": "source_logNode-20c72d55-455f-4963-adb9-bf86306d773d",
 			"targetHandle": "target_rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598"
+		},
+		{
+			"id": "logNode-46e107aa-7d7a-4948-ae17-ae5be56d93b0-callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
+			"type": "default",
+			"source": "logNode-46e107aa-7d7a-4948-ae17-ae5be56d93b0",
+			"target": "callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_logNode-46e107aa-7d7a-4948-ae17-ae5be56d93b0"
 		}
 	],
 	"viewport": {
-		"x": -2780.034171722559,
-		"y": -404.97774010957596,
+		"x": -2911.034171722559,
+		"y": -358.97774010957596,
 		"zoom": 1.1809926614295294
 	}
 }
