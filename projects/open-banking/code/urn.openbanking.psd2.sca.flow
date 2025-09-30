@@ -17,6 +17,7 @@ Repeat 3 times max
           Log "@info Initial Consent status is valid"
           // Prepare RFAC response payload   (11)
           rfacResponsePayload = Call openBankingConsentService prepareRfacRespPayload 
+          // RFAC call to external app
           resultFromApp = RFAC "https://external-app.example.com/start?payload=${rfacResponsePayload}"
           // Check Response status
           When rfacResponse.succeed is true
