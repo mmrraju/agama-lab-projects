@@ -23,7 +23,7 @@ Repeat 3 times max
           // Verify apps returned result
           Log "@info Verify external app return result"
           // Verify final status
-          verifyFinalStatus = Call openBankingConsentService verifyExternalAppResult resultFromApp reqObject
+          verifyFinalStatus = Call openBankingConsentService verifyExternalAppResult resultFromApp
           // Checking final staus
           When verifyFinalStatus.valid is true
                // Final verification done
