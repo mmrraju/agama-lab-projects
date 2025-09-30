@@ -415,7 +415,7 @@
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
 			"type": "whenNode",
 			"position": {
-				"x": 2530,
+				"x": 2780,
 				"y": 596
 			},
 			"data": {
@@ -644,7 +644,7 @@
 			"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
 			"type": "rfacNode",
 			"position": {
-				"x": 2280,
+				"x": 2530,
 				"y": 538
 			},
 			"data": {
@@ -654,10 +654,10 @@
 					"x": 2280,
 					"y": 538
 				},
-				"previousNodeId": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+				"previousNodeId": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "appUrl",
+					"idpAuthEndpoint": "{     \"url\": loginUrl,     \"method\": \"POST\",     \"params\": {         \"jws\": jws,         \"status\": \"PENDING_VERIFICATION\"     }",
 					"assignCallbackResult": "result",
 					"nodeColor": "",
 					"titleColor": "",
@@ -672,6 +672,38 @@
 				"height": 124
 			},
 			"selected": true
+		},
+		{
+			"id": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
+			"type": "assignmentNode",
+			"position": {
+				"x": 2280,
+				"y": 538
+			},
+			"data": {
+				"id": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
+				"type": "assignmentNode",
+				"position": {
+					"x": 2280,
+					"y": 538
+				},
+				"previousNodeId": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+				"agamaData": {
+					"assignments": [],
+					"nodeIcon": "material-symbols:equal",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
 		},
 		{
 			"id": "finishNode-825410ae-ee1b-46f6-86ef-5daaa21d566d",
@@ -1014,25 +1046,6 @@
 			"sourceHandle": "source_logNode-50a37001-dbf6-495f-9787-7bb6e5bb9c6f"
 		},
 		{
-			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d-rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
-			"type": "default",
-			"source": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
-			"target": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d"
-		},
-		{
 			"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598-whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
 			"type": "default",
 			"source": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
@@ -1050,11 +1063,49 @@
 			},
 			"sourceHandle": "source_rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
 			"targetHandle": "target_whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a"
+		},
+		{
+			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d-assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
+			"type": "default",
+			"source": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+			"target": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d"
+		},
+		{
+			"id": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0-rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"type": "default",
+			"source": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
+			"target": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
+			"targetHandle": "target_rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598"
 		}
 	],
 	"viewport": {
-		"x": -1584,
-		"y": -265,
+		"x": -1796,
+		"y": -224,
 		"zoom": 1
 	}
 }
