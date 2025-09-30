@@ -657,8 +657,8 @@
 				"previousNodeId": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "\"https://external-app.example.com/start?payload=${payload}\"",
-					"assignCallbackResult": "result",
+					"idpAuthEndpoint": "\"https://external-app.example.com/start?payload=${rfacResponsePayload}\"",
+					"assignCallbackResult": "resultFromApp",
 					"nodeColor": "",
 					"titleColor": "",
 					"descColor": "",
