@@ -91,11 +91,6 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "feedback"
-						},
-						{
-							"variableTypeCheck": true,
-							"assignmentExpression": "{}",
-							"assignedVariableName": "appUrl"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -111,7 +106,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
@@ -409,7 +404,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
@@ -1104,8 +1099,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1522,
-		"y": -261,
+		"x": -330,
+		"y": 63,
 		"zoom": 1
 	}
 }
