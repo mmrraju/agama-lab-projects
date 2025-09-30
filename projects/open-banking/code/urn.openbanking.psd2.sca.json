@@ -106,7 +106,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
@@ -366,7 +366,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
@@ -396,7 +396,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Send RFAC response (JWS + redirect URL) to app   (11)",
+					"comment": "Prepare RFAC response payload   (11)",
 					"asssignedVariableName": "rfacResponsePayload"
 				}
 			},
@@ -1099,8 +1099,8 @@
 		}
 	],
 	"viewport": {
-		"x": -330,
-		"y": 63,
+		"x": -1378,
+		"y": -212,
 		"zoom": 1
 	}
 }
