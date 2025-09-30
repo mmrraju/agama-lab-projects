@@ -23,6 +23,8 @@ Repeat 3 times max
           resultFromApp = RFAC "https://external-app.example.com/start?payload=${rfacResponsePayload}"
           // Verify apps returned result
           Log "@info Verify external app return result"
+          // Verify final status
+          verifyFinalStatus = Call openBankingConsentService verifyExternalAppResult resultFromApp reqObject
      Otherwise
           // Not valid message
           Log "@info Consent Id is not valid"
