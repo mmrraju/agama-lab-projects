@@ -6,8 +6,6 @@ Log "@info Start executing Openbanking flow"
 feedback = {}
 // Max repeate
 Repeat 3 times max
-     // Getting data
-     reqObject = RRF "resource.ftlh" 
      // Getting payload
      reqObject = requst.json
      // Create an instance of OpenBanking Consent Service 
