@@ -15,7 +15,7 @@ Repeat 3 times max
      When validationResult.valid is true
           // Valid message
           Log "@info Initial Consent status is valid"
-          // Send RFAC response (JWS + redirect URL) to app   (11)
+          // Prepare RFAC response payload   (11)
           rfacResponsePayload = Call openBankingConsentService prepareRfacRespPayload 
           resultFromApp = RFAC "https://external-app.example.com/start?payload=${rfacResponsePayload}"
           // Check Response status
