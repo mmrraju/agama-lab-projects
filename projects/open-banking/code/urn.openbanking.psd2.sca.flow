@@ -5,7 +5,6 @@ Flow urn.openbanking.psd2.sca
 Log "@info Start executing Openbanking flow"
 // Feedback message
 feedback = {}
-appUrl = {}
 // Max repeate
 Repeat 3 times max
      // Create an instance of OpenBanking Consent Service 
