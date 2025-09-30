@@ -91,6 +91,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "{}",
 							"assignedVariableName": "feedback"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "{}",
+							"assignedVariableName": "appUrl"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",
@@ -106,7 +111,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
@@ -397,20 +402,20 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Send RFAC response (JWS + redirect URL) to app   (11)",
-					"asssignedVariableName": "rfacResponse"
+					"asssignedVariableName": "rfacResponsePayload"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
 			"type": "whenNode",
 			"position": {
-				"x": 2280,
+				"x": 2530,
 				"y": 596
 			},
 			"data": {
@@ -420,7 +425,7 @@
 					"x": 2280,
 					"y": 596
 				},
-				"previousNodeId": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+				"previousNodeId": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
 				"agamaData": {
 					"variableField": "",
 					"valueField": "",
@@ -627,6 +632,39 @@
 					"displayName": "",
 					"hasComment": true,
 					"comment": "Error message"
+				}
+			},
+			"measured": {
+				"width": 170,
+				"height": 124
+			},
+			"selected": false
+		},
+		{
+			"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"type": "rfacNode",
+			"position": {
+				"x": 2280,
+				"y": 538
+			},
+			"data": {
+				"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+				"type": "rfacNode",
+				"position": {
+					"x": 2280,
+					"y": 538
+				},
+				"previousNodeId": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+				"agamaData": {
+					"nodeIcon": "ic:baseline-insert-link",
+					"idpAuthEndpoint": "",
+					"assignCallbackResult": "",
+					"nodeColor": "",
+					"titleColor": "",
+					"descColor": "",
+					"displayName": "",
+					"hasComment": true,
+					"comment": ""
 				}
 			},
 			"measured": {
@@ -862,25 +900,6 @@
 			"sourceHandle": "source_logNode-c6513ba7-1ae2-4078-af19-02fa463f7829"
 		},
 		{
-			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d-whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
-			"type": "default",
-			"source": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
-			"target": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d"
-		},
-		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a-logNode-e0644ec1-e2b6-45fa-9189-1abf06c63f3a",
 			"type": "default",
 			"source": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
@@ -993,11 +1012,49 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_logNode-50a37001-dbf6-495f-9787-7bb6e5bb9c6f"
+		},
+		{
+			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d-rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"type": "default",
+			"source": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
+			"target": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"label": "",
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"labelShowBg": true,
+			"sourceHandle": "source_callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d"
+		},
+		{
+			"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598-whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
+			"type": "default",
+			"source": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"target": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"sourceHandle": "source_rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
+			"targetHandle": "target_whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a"
 		}
 	],
 	"viewport": {
-		"x": -1124,
-		"y": -174,
+		"x": -307,
+		"y": 76,
 		"zoom": 1
 	}
 }
