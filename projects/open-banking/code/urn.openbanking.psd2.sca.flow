@@ -5,6 +5,7 @@ Flow urn.openbanking.psd2.sca
 Log "@info Start executing Openbanking flow"
 // Feedback message
 feedback = {}
+appUrl = {}
 // Max repeate
 Repeat 3 times max
      // Create an instance of OpenBanking Consent Service 
@@ -16,7 +17,8 @@ Repeat 3 times max
           // Valid message
           Log "@info Initial Consent status is valid"
           // Send RFAC response (JWS + redirect URL) to app   (11)
-          rfacResponse = Call openBankingConsentService sendRFACResponseToApp 
+          rfacResponsePayload = Call openBankingConsentService sendRFACResponseToApp 
+          RFAC __________
           // Check Response status
           When rfacResponse.succeed is true
                // RFAC response messsage
