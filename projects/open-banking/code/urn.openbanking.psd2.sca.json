@@ -390,7 +390,7 @@
 				"previousNodeId": "logNode-c6513ba7-1ae2-4078-af19-02fa463f7829",
 				"agamaData": {
 					"javaClassName": "",
-					"javaMethodName": "sendRFACResponseToApp",
+					"javaMethodName": "prepareRfacRespPayload",
 					"javaVariableName": "openBankingConsentService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
@@ -409,7 +409,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-5827e865-6458-4fea-8473-bf5fbde4d63a",
@@ -671,7 +671,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-be61423d-9bcf-4942-a38b-7e0d90fe62f0",
@@ -1104,8 +1104,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1737,
-		"y": -312,
+		"x": -1522,
+		"y": -261,
 		"zoom": 1
 	}
 }
