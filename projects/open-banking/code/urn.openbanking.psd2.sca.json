@@ -22,7 +22,7 @@
 					"configParams": "{}",
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
-					"inputs": "",
+					"inputs": "reqObject",
 					"configs": "",
 					"flowname": "urn.openbanking.psd2.sca",
 					"displayName": "open-banking",
@@ -145,7 +145,7 @@
 			"id": "callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
 			"type": "callNode",
 			"position": {
-				"x": 1030,
+				"x": 780,
 				"y": 280
 			},
 			"data": {
@@ -155,7 +155,7 @@
 					"x": 1030,
 					"y": 280
 				},
-				"previousNodeId": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
+				"previousNodeId": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
 				"agamaData": {
 					"javaClassName": "org.gluu.agama.openbanking.OpenbankingConsentService",
 					"javaMethodName": "getInstance",
@@ -171,7 +171,8 @@
 					"hasComment": true,
 					"comment": "Create an instance of OpenBanking Consent Service ",
 					"asssignedVariableName": "openBankingConsentService"
-				}
+				},
+				"branching": "repeat"
 			},
 			"measured": {
 				"width": 170,
@@ -183,7 +184,7 @@
 			"id": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
 			"type": "callNode",
 			"position": {
-				"x": 1280,
+				"x": 1030,
 				"y": 280
 			},
 			"data": {
@@ -223,7 +224,7 @@
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
 			"type": "whenNode",
 			"position": {
-				"x": 1530,
+				"x": 1280,
 				"y": 338
 			},
 			"data": {
@@ -265,7 +266,7 @@
 			"id": "logNode-c6513ba7-1ae2-4078-af19-02fa463f7829",
 			"type": "logNode",
 			"position": {
-				"x": 1530,
+				"x": 1280,
 				"y": 538
 			},
 			"data": {
@@ -299,7 +300,7 @@
 			"id": "logNode-7fc8137e-f61f-4ecd-bad3-fd1f2d98f72d",
 			"type": "logNode",
 			"position": {
-				"x": 1530,
+				"x": 1280,
 				"y": 88
 			},
 			"data": {
@@ -333,7 +334,7 @@
 			"id": "assignmentNode-81f6a9de-f2e0-4470-b373-28bedb88037b",
 			"type": "assignmentNode",
 			"position": {
-				"x": 1780,
+				"x": 1530,
 				"y": 88
 			},
 			"data": {
@@ -371,7 +372,7 @@
 			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
 			"type": "callNode",
 			"position": {
-				"x": 1780,
+				"x": 1530,
 				"y": 538
 			},
 			"data": {
@@ -409,7 +410,7 @@
 			"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
 			"type": "rfacNode",
 			"position": {
-				"x": 2280,
+				"x": 2030,
 				"y": 538
 			},
 			"data": {
@@ -442,7 +443,7 @@
 			"id": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
 			"type": "logNode",
 			"position": {
-				"x": 2030,
+				"x": 1780,
 				"y": 538
 			},
 			"data": {
@@ -475,7 +476,7 @@
 			"id": "logNode-46e107aa-7d7a-4948-ae17-ae5be56d93b0",
 			"type": "logNode",
 			"position": {
-				"x": 2530,
+				"x": 2280,
 				"y": 538
 			},
 			"data": {
@@ -508,7 +509,7 @@
 			"id": "callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
 			"type": "callNode",
 			"position": {
-				"x": 2780,
+				"x": 2530,
 				"y": 538
 			},
 			"data": {
@@ -548,7 +549,7 @@
 			"id": "whenNode-397a81ac-f99b-4f0d-8557-7ed3fcd07c0b",
 			"type": "whenNode",
 			"position": {
-				"x": 3030,
+				"x": 2780,
 				"y": 596
 			},
 			"data": {
@@ -590,7 +591,7 @@
 			"id": "logNode-54ca7f41-0dfa-457d-ae0f-445c954dfbc3",
 			"type": "logNode",
 			"position": {
-				"x": 3280,
+				"x": 3030,
 				"y": 796
 			},
 			"data": {
@@ -624,7 +625,7 @@
 			"id": "logNode-f5593202-9ed0-4b43-8b23-99c16eab8a1a",
 			"type": "logNode",
 			"position": {
-				"x": 3280,
+				"x": 3030,
 				"y": 346
 			},
 			"data": {
@@ -658,7 +659,7 @@
 			"id": "finishNode-3006eb1d-30f0-4948-865a-3360fbde4e5e",
 			"type": "finishNode",
 			"position": {
-				"x": 3530,
+				"x": 3280,
 				"y": 796
 			},
 			"data": {
@@ -687,42 +688,6 @@
 				"height": 124
 			},
 			"selected": false
-		},
-		{
-			"id": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
-			"type": "rrfNode",
-			"position": {
-				"x": 779,
-				"y": 281
-			},
-			"data": {
-				"id": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
-				"type": "rrfNode",
-				"position": {
-					"x": 1030,
-					"y": 280
-				},
-				"previousNodeId": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
-				"branching": "repeat",
-				"agamaData": {
-					"assignments": [],
-					"nodeIcon": "ph:globe-simple",
-					"templatePath": "hidden.ftlh",
-					"asssignedVariableName": "reqObject",
-					"nodeColor": "",
-					"titleColor": "",
-					"descColor": "",
-					"displayName": "",
-					"hasComment": true,
-					"comment": "Getting request object"
-				}
-			},
-			"measured": {
-				"width": 170,
-				"height": 124
-			},
-			"selected": true,
-			"dragging": false
 		}
 	],
 	"edges": [
@@ -1068,30 +1033,11 @@
 			"sourceHandle": "source_logNode-54ca7f41-0dfa-457d-ae0f-445c954dfbc3"
 		},
 		{
-			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf-rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
-			"type": "default",
 			"source": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
-			"target": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
-			"labelBgPadding": [
-				8,
-				4
-			],
-			"labelBgBorderRadius": 4,
-			"label": "repeat",
-			"labelBgStyle": {
-				"fill": "#009688",
-				"color": "#ffffff",
-				"fillOpacity": 0.7
-			},
-			"labelShowBg": true,
-			"sourceHandle": "source_repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf_repeat"
-		},
-		{
-			"source": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
-			"sourceHandle": "source_rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
+			"sourceHandle": "source_repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf_repeat",
 			"target": "callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
 			"targetHandle": "target_callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
-			"label": "",
+			"label": "repeat",
 			"labelBgPadding": [
 				8,
 				4
@@ -1102,12 +1048,12 @@
 				"color": "#ffffff",
 				"fillOpacity": 0.7
 			},
-			"id": "xy-edge__rrfNode-c21e8296-6a95-426f-a135-f175520cde3bsource_rrfNode-c21e8296-6a95-426f-a135-f175520cde3b-callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345target_callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345"
+			"id": "xy-edge__repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdfsource_repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf_repeat-callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345target_callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345"
 		}
 	],
 	"viewport": {
-		"x": -130,
-		"y": -107,
+		"x": -374,
+		"y": 43,
 		"zoom": 1
 	}
 }
