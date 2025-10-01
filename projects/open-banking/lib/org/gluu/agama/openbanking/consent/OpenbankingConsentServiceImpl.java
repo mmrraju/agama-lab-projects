@@ -1,7 +1,7 @@
 package org.gluu.agama.openbanking.consent;
 
-import io.jsonwebtoken.*;
-import io.jsonwebtoken.security.Keys;
+// import io.jsonwebtoken.*;
+// import io.jsonwebtoken.security.Keys;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.util.StringHelper;
