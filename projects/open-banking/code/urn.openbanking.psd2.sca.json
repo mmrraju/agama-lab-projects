@@ -155,7 +155,7 @@
 					"x": 1030,
 					"y": 280
 				},
-				"previousNodeId": "assignmentNode-eddff6fe-fc41-415d-a5bc-ab3e95aec4fd",
+				"previousNodeId": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
 				"agamaData": {
 					"javaClassName": "org.gluu.agama.openbanking.OpenbankingConsentService",
 					"javaMethodName": "getInstance",
@@ -692,8 +692,8 @@
 			"id": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
 			"type": "rrfNode",
 			"position": {
-				"x": 1030,
-				"y": 280
+				"x": 739,
+				"y": 284
 			},
 			"data": {
 				"id": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
@@ -721,7 +721,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		}
 	],
 	"edges": [
@@ -1084,11 +1085,29 @@
 			},
 			"labelShowBg": true,
 			"sourceHandle": "source_repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf_repeat"
+		},
+		{
+			"source": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
+			"sourceHandle": "source_rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
+			"target": "callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
+			"targetHandle": "target_callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345",
+			"label": "",
+			"labelBgPadding": [
+				8,
+				4
+			],
+			"labelBgBorderRadius": 4,
+			"labelBgStyle": {
+				"fill": "#009688",
+				"color": "#ffffff",
+				"fillOpacity": 0.7
+			},
+			"id": "xy-edge__rrfNode-c21e8296-6a95-426f-a135-f175520cde3bsource_rrfNode-c21e8296-6a95-426f-a135-f175520cde3b-callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345target_callNode-a7844bbb-b07a-46c3-8b2a-819c9675d345"
 		}
 	],
 	"viewport": {
-		"x": -722,
-		"y": 20,
+		"x": -565,
+		"y": 64,
 		"zoom": 1
 	}
 }
