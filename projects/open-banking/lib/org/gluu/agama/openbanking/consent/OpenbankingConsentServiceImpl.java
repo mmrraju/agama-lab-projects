@@ -1,4 +1,4 @@
-package lib.org.gluu.agama.openbanking.consent;
+package org.gluu.agama.openbanking.consent;
 
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
@@ -32,23 +32,19 @@ import com.nimbusds.jose.crypto.RSASSASigner;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import lib.org.gluu.agama.openbanking.OpenbankingConsentService;
+import org.gluu.agama.openbanking.OpenbankingConsentService;
 
 public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private String transactionalId;
-    private final String AUTH_METHOD = "urn:openbanking:psd2:sca";
+    private static final String AUTH_METHOD = "urn:openbanking:psd2:sca";
     private String CONSENT_ID;
-    private final String APP_END_POINT = "https://abc/...";
-    private final String CONSENT_ENGINE_API_ENDPOINT = "https://consent-engine.example.com/api/consents/";
+    private static final String CONSENT_ENGINE_API_ENDPOINT = "https://consent-engine.example.com/api/consents/";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private final HttpClient httpClient = HttpClient.newHttpClient();
     private final KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256);
     private ObjectMapper mapper = new ObjectMapper(); 
 
     public OpenbankingConsentServiceImpl(){
-        // this.keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256); // ephemeral keypair
-        // this.httpClient = HttpClient.newHttpClient();
-        // this.mapper = new ObjectMapper();
     }
 
     public static synchronized OpenbankingConsentServiceImpl getInstance()
@@ -71,6 +67,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             String intentId = (String) intent.get("value");
             this.CONSENT_ID = intentId;
+            LogUtils.log("Consent id is : %", this.CONSENT_ID);
             // Call Consent Engine REST API
             String apiUrl = this.CONSENT_ENGINE_API_ENDPOINT + intentId;
 
@@ -105,32 +102,6 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         } catch (Exception e) {
             LogUtils.log("Error: %", e);
         }
-    }
-
-    @Override
-    public boolean sendRFACResponseToApp() {
-        this.httpClient = HttpClient.newHttpClient();
-        String consentId = this.CONSENT_ID;
-
-        // Build signed JWS with ConsentID + Auth Type
-        String jws = buildRFACJWS(consentId, this.AUTH_METHOD);
-
-        Map<String, Object> payload = new HashMap<>();
-
-        payload.put("jws", jws);
-        payload.put("status", "PENDING_VERIFICATION");
-
-        String body = mapper.writeValueAsString(payload);
-
-        HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create(this.APP_END_POINT))
-                .header("Content-Type", "application/json")
-                .POST(HttpRequest.BodyPublishers.ofString(body))
-                .build();
-
-        HttpResponse<String> httpResponse = this.httpClient.send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println("Step 11 â Sent RFAC response to App, got: " + httpResponse.body());
-  
     }
 
     @Override
