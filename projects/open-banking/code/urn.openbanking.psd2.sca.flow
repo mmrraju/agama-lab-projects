@@ -7,6 +7,8 @@ Log "@info Start executing Openbanking flow"
 feedback = {}
 // Max repeate
 Repeat 3 times max
+     // Incomming request object
+     Log "@info Incomming request object is: %" reqObject
      // Create an instance of OpenBanking Consent Service 
      openBankingConsentService = Call org.gluu.agama.openbanking.OpenbankingConsentService#getInstance 
      // Validate consent with Consent Engine (8)
