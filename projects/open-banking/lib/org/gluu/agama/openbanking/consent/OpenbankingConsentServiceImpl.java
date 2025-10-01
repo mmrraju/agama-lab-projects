@@ -41,7 +41,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private static final String CONSENT_ENGINE_API_ENDPOINT = "https://consent-engine.example.com/api/consents/";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private final HttpClient httpClient = HttpClient.newHttpClient();
-    private final KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256);
+    // private final KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256);
     private ObjectMapper mapper = new ObjectMapper(); 
 
     public OpenbankingConsentServiceImpl(){
@@ -261,11 +261,11 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         claims.put("issuedAt", Instant.now().toString());
         claims.put("expiresAt", Instant.now().plus(5, ChronoUnit.MINUTES).toString()); // 5-min expiry
 
-        String jws = Jwts.builder()
-                .setClaims(claims)
-                .signWith(keyPair.getPrivate(), SignatureAlgorithm.RS256)
-                .compact();        
-        return jws;
+        // String jws = Jwts.builder()
+        //         .setClaims(claims)
+        //         .signWith(keyPair.getPrivate(), SignatureAlgorithm.RS256)
+        //         .compact();        
+        return "demostringa;dlkfasldfk";
     }  
 
     private String extractConsentId(Map<String, Object> reqObject) {
@@ -274,10 +274,5 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         Map<String, Object> intentObj = (Map<String, Object>) userInfo.get("openbanking_intent_id");
         return (String) intentObj.get("value");
     }    
-
-    // Debug helper
-    public PublicKey getPublicKey() {
-        return keyPair.getPublic();
-    }
 
 }
