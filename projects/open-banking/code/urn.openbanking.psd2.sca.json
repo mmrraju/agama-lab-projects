@@ -692,8 +692,8 @@
 			"id": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
 			"type": "rrfNode",
 			"position": {
-				"x": 739,
-				"y": 284
+				"x": 779,
+				"y": 281
 			},
 			"data": {
 				"id": "rrfNode-c21e8296-6a95-426f-a135-f175520cde3b",
@@ -714,7 +714,7 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Taking request object"
+					"comment": "Getting request object"
 				}
 			},
 			"measured": {
@@ -1106,8 +1106,8 @@
 		}
 	],
 	"viewport": {
-		"x": -565,
-		"y": 64,
+		"x": -130,
+		"y": -107,
 		"zoom": 1
 	}
 }
