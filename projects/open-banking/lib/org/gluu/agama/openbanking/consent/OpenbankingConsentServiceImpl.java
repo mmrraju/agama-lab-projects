@@ -132,13 +132,14 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             String jws = (String) resultFromApp.get("jws");
 
             // Parse JWS using public key
-            Jws<Claims> parsed = Jwts.parserBuilder()
-                    .setSigningKey(keyPair.getPublic())
-                    .build()
-                    .parseClaimsJws(jws);
+            // Jws<Claims> parsed = Jwts.parserBuilder()
+            //         .setSigningKey(keyPair.getPublic())
+            //         .build()
+            //         .parseClaimsJws(jws);
 
-            Claims claims = parsed.getBody();
+            // Claims claims = parsed.getBody();
 
+            Map<String, Object> claims = (Map<String, Object>) resultFromApp.get("claims");
 
             String consentId = claims.get("consentId", String.class);
             String userId = claims.get("userId", String.class);
