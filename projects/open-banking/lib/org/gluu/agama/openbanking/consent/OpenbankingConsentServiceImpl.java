@@ -42,7 +42,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private final HttpClient httpClient = HttpClient.newHttpClient();
     // private final KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256);
-    private ObjectMapper mapper = new ObjectMapper(); 
+    // private ObjectMapper mapper = new ObjectMapper(); 
 
     public OpenbankingConsentServiceImpl(){
     }
@@ -71,28 +71,49 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             // Call Consent Engine REST API
             String apiUrl = this.CONSENT_ENGINE_API_ENDPOINT + intentId;
 
-            HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
-            con.setRequestMethod("GET");
-            con.setRequestProperty("Accept", "application/json");
+            // HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
+            // con.setRequestMethod("GET");
+            // con.setRequestProperty("Accept", "application/json");
 
-            int status = con.getResponseCode();
-            if (status != 200) {
+            // int status = con.getResponseCode();
+            // if (status != 200) {
+            //     validationResult.put("valid", false);
+            //     validationResult.put("message", "Initial Consent status is not valid");
+            //     return validationResult;
+            // }
+
+            // BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            // StringBuilder response = new StringBuilder();
+            // String line;
+            // while ((line = in.readLine()) != null) {
+            //     response.append(line);
+            // }
+            // in.close();
+
+            // String resp = response.toString();
+
+            HttpClient httpClient = HttpClient.newHttpClient();
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(apiUrl))
+                    .header("Accept", "application/json")
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());            
+            if (response.statusCode() != 200) {
+                LogUtils.log("ERROR: Request failed with status: " + response.statusCode());
                 validationResult.put("valid", false);
                 validationResult.put("message", "Initial Consent status is not valid");
                 return validationResult;
             }
+            String jsonResponse = response.body();
+            LogUtils.log("Consent Engine Response: %", jsonResponse);
+            ObjectMapper mapper = new ObjectMapper();
+            Map<String, Object> consentMap = mapper.readValue(jsonResponse, Map.class);
 
-            BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            StringBuilder response = new StringBuilder();
-            String line;
-            while ((line = in.readLine()) != null) {
-                response.append(line);
-            }
-            in.close();
-
-            String resp = response.toString();
-            LogUtils.log("Consent Engine Response: %", resp);
-            if(resp.contains("\"status\":\"AwaitingAuthorise\"") || resp.contains("\"status\":\"Authorised\"")){
+            String status = (String) consentMap.get("Status");
+           
+            if(status.equals("Authorised")){
                 validationResult.put("valid", true);
                 validationResult.put("message", "Initial Consent status validate successfully");
                 return validationResult;
@@ -129,7 +150,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         LogUtils.log("Verify External App Result...");
         Map<String, Object> validationResult = new HashMap<>();
         try {
-            String jws = (String) resultFromApp.get("jws");
+            String jws = (String) resultFromApp.get("requst");
 
             // Parse JWS using public key
             // Jws<Claims> parsed = Jwts.parserBuilder()
