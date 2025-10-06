@@ -5,6 +5,9 @@ package org.gluu.agama.openbanking.consent;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.util.StringHelper;
+import io.jans.as.model.jwt.Jwt;
+import io.jans.as.model.jwt.JwtClaimName;
+import io.jans.as.model.jwt.JwtClaims;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -38,7 +41,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private String transactionalId;
     private static final String AUTH_METHOD = "urn:openbanking:psd2:sca";
     private String CONSENT_ID;
-    private static final String CONSENT_ENGINE_API_ENDPOINT = "https://consent-engine.example.com/api/consents/";
+    private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private final HttpClient httpClient = HttpClient.newHttpClient();
     // private final KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256);
