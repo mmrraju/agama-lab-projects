@@ -1,7 +1,6 @@
 package org.gluu.agama.openbanking.consent;
 
-// import io.jsonwebtoken.*;
-// import io.jsonwebtoken.security.Keys;
+
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.util.StringHelper;
@@ -17,10 +16,6 @@ import java.net.URL;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
-import java.security.KeyPair;
-import java.security.PublicKey;
-// import io.jsonwebtoken.Claims;
-// import io.jsonwebtoken.Jws;
 import java.util.UUID;
 import java.util.Date;
 import java.net.URI;
@@ -38,14 +33,13 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.gluu.agama.openbanking.OpenbankingConsentService;
 
 public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
-    private String transactionalId;
+    // private String transactionalId;
     private static final String AUTH_METHOD = "urn:openbanking:psd2:sca";
     private String CONSENT_ID;
     private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private final HttpClient httpClient = HttpClient.newHttpClient();
-    // private final KeyPair keyPair = Keys.keyPairFor(SignatureAlgorithm.RS256);
-    // private ObjectMapper mapper = new ObjectMapper(); 
+
 
     public OpenbankingConsentServiceImpl(){
     }
@@ -73,28 +67,6 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Consent id is : %", this.CONSENT_ID);
             // Call Consent Engine REST API
             String apiUrl = this.CONSENT_ENGINE_API_ENDPOINT + intentId;
-
-            // HttpURLConnection con = (HttpURLConnection) new URL(apiUrl).openConnection();
-            // con.setRequestMethod("GET");
-            // con.setRequestProperty("Accept", "application/json");
-
-            // int status = con.getResponseCode();
-            // if (status != 200) {
-            //     validationResult.put("valid", false);
-            //     validationResult.put("message", "Initial Consent status is not valid");
-            //     return validationResult;
-            // }
-
-            // BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
-            // StringBuilder response = new StringBuilder();
-            // String line;
-            // while ((line = in.readLine()) != null) {
-            //     response.append(line);
-            // }
-            // in.close();
-
-            // String resp = response.toString();
-
             HttpClient httpClient = HttpClient.newHttpClient();
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(apiUrl))
@@ -136,12 +108,13 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             // Build signed JWS with ConsentID + Auth Type
             String jws = buildRFACJWS(consentId, this.AUTH_METHOD);
-            Map<String, Object> payload = new HashMap<>();
-            payload.put("jws", jws);
-            payload.put("status", "PENDING_VERIFICATION");
+            // Map<String, Object> payload = new HashMap<>();
+            // payload.put("jws", jws);
+            // payload.put("status", "PENDING_VERIFICATION");
             // Convert Map to JSON string
             // ObjectMapper mapper = new ObjectMapper();
-            return mapper.writeValueAsString(payload);             
+            // return mapper.writeValueAsString(payload);
+            return jws;             
         } catch (Exception e) {
             LogUtils.log("Getting error while praparing RFAC payload %",e);
         }
@@ -168,7 +141,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             String consentId = claims.get("consentId", String.class);
             String userId = claims.get("userId", String.class);
             String authMethod  = claims.get("authMethod", String.class);
-            String transactionId = claims.get("transactionId", String.class);
+            // String transactionId = claims.get("transactionId", String.class);
             Long iat = claims.get("issuedAt", Long.class);
             Long exp = claims.get("expiresAt", Long.class);
 
@@ -185,12 +158,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 return validationResult;
             }
             // Validate transactionId
-            if (!this.transactionalId.equals(transactionId)) {
+            // if (!this.transactionalId.equals(transactionId)) {
                 
-                validationResult.put("valid", false);
-                validationResult.put("message", "Transaction ID mismatch");
-                return validationResult;
-            }
+            //     validationResult.put("valid", false);
+            //     validationResult.put("message", "Transaction ID mismatch");
+            //     return validationResult;
+            // }
 
             // Validate consentId
             if (!this.CONSENT_ID.equals(consentId)) {
@@ -207,7 +180,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 validationResult.put("valid", true);
                 validationResult.put("consentId", consentId);
                 validationResult.put("authMethod", authMethod);
-                validationResult.put("transactionId", transactionId);
+                // validationResult.put("transactionId", transactionId);
                 validationResult.put("userId", result.get("userId"));                 
             }
 
@@ -277,19 +250,20 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     private String buildRFACJWS(String consentId, String authMethod) throws Exception {
         // Build claims for app
-        this.transactionalId = UUID.randomUUID().toString();
+        // this.transactionalId = UUID.randomUUID().toString();
         Map<String, Object> claims = new HashMap<>();
         claims.put("consentId", consentId);
         claims.put("authMethod", authMethod);
-        claims.put("transactionalId", this.transactionalId);
+        // claims.put("transactionalId", this.transactionalId);
         claims.put("issuedAt", Instant.now().toString());
         claims.put("expiresAt", Instant.now().plus(5, ChronoUnit.MINUTES).toString()); // 5-min expiry
 
         // String jws = Jwts.builder()
         //         .setClaims(claims)
         //         .signWith(keyPair.getPrivate(), SignatureAlgorithm.RS256)
-        //         .compact();        
-        return "demostringa;dlkfasldfk";
+        //         .compact();   
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(claims);             
     }  
 
     private String extractConsentId(Map<String, Object> reqObject) {
