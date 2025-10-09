@@ -60,19 +60,18 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public Map<String, Object> validateConsent() {
         try {
             LogUtils.log("Retrieve request object from session...");
-            Map<String, String> sessAttrs = getSessionId().getSessionAttributes();
-            LogUtils.log(sessAttrs);
-            LogUtils.log(sessAttrs.get("request"));
-            Map<String, Object> reqObject = getSessionId().get("request");
+            Map<String, Object> sessAttrs = getSessionId().getSessionAttributes();
+            // Map<String, Object> reqObject = getSessionId().get("request");
             LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
             Map<String, Object> validationResult = new HashMap<>();
             // Extract claims
-            Map<String, Object> claims = (Map<String, Object>) reqObject.get("claims");
-            Map<String, Object> idTokenClaims = (Map<String, Object>) claims.get("id_token");
-            Map<String, Object> intent = (Map<String, Object>) idTokenClaims.get("openbanking_intent_id");
+            // Map<String, Object> claims = (Map<String, Object>) reqObject.get("claims");
+            // Map<String, Object> idTokenClaims = (Map<String, Object>) claims.get("id_token");
+            // Map<String, Object> intent = (Map<String, Object>) idTokenClaims.get("openbanking_intent_id");
 
-            String intentId = (String) intent.get("value");
+            // String intentId = (String) intent.get("value");
+            String intentId = "intent-id-12345";
             this.CONSENT_ID = intentId;
             LogUtils.log("Consent id is : %", this.CONSENT_ID);
             // Call Consent Engine REST API
