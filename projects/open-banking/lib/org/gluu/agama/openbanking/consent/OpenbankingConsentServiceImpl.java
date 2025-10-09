@@ -40,7 +40,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     // private String transactionalId;
     private static final String AUTH_METHOD = "urn:openbanking:psd2:sca";
     private String CONSENT_ID;
-    private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents";
+    private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents/";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private final HttpClient httpClient = HttpClient.newHttpClient();
 
@@ -62,7 +62,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Retrieve request object from session...");
             Map<String, Object> sessAttrs = getSessionId().getSessionAttributes();
             // Map<String, Object> reqObject = getSessionId().get("request");
-            LogUtils.log(reqObject);
+            // LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
             Map<String, Object> validationResult = new HashMap<>();
             // Extract claims
