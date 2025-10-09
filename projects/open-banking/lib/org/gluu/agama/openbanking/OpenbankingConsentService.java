@@ -10,7 +10,7 @@ public abstract class OpenbankingConsentService {
 
     public abstract String prepareRfacRespPayload();
 
-    public abstract Map<String, Object> validateConsent(Map<String, Object> reqObject);
+    public abstract Map<String, Object> validateConsent();
 
 
     public static OpenbankingConsentService getInstance(){
