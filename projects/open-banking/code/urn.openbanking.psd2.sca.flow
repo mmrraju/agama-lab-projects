@@ -1,6 +1,5 @@
 Flow urn.openbanking.psd2.sca
      Basepath ""
-     Inputs reqObject
 // Flow starting
 Log "@info Start executing Openbanking flow"
 // Feedback message
