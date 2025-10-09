@@ -96,7 +96,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             Map<String, Object> consentMap = mapper.readValue(jsonResponse, Map.class);
             LogUtils.log(consentMap);
             Map<String, Object> data = (Map<String, Object>) consentMap.get("Data");
-            Map<String, Object> statusObj = (Map<String, Object>) data.get("Status");
+            LogUtils.log(data);            
+            Map<String, String> statusObj = (Map<String, String>) data.get("Status");
+            LogUtils.log(statusObj);            
             String status = (String) statusObj.get("value");
             if(status.equals("Authorised")){
                 validationResult.put("valid", true);
