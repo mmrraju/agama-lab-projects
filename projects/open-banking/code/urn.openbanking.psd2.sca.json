@@ -35,7 +35,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
@@ -200,9 +200,7 @@
 					"javaVariableName": "openBankingConsentService",
 					"exceptionVariableField": "",
 					"callType": "Call method on instance",
-					"arguments": [
-						"reqObject"
-					],
+					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -217,7 +215,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
@@ -1124,8 +1122,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -268,
+		"y": -2,
 		"zoom": 1
 	}
 }
