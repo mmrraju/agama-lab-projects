@@ -301,7 +301,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     }    
 
     private SessionId getSessionId() {
+        LogUtils.log("GET Session ID.")
         SessionIdService sis = CdiUtil.bean(SessionIdService.class); 
+        LogUtils.log(sis);
         return sis.getSessionId(CdiUtil.bean(HttpServletRequest.class));
     }    
 
