@@ -11,7 +11,7 @@ Repeat 3 times max
      // Create an instance of OpenBanking Consent Service 
      openBankingConsentService = Call org.gluu.agama.openbanking.OpenbankingConsentService#getInstance 
      // Validate consent with Consent Engine (8)
-     validationResult = Call openBankingConsentService validateConsent reqObject
+     validationResult = Call openBankingConsentService validateConsent 
      // If Consent Id is valid
      When validationResult.valid is true
           // Valid message
