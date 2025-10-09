@@ -253,12 +253,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private String buildRFACJWS(String consentId, String authMethod) throws Exception {
         // Build claims for app
         // this.transactionalId = UUID.randomUUID().toString();
-        Map<String, Object> claims = new HashMap<>();
-        claims.put("consentId", consentId);
-        claims.put("authMethod", authMethod);
+        // Map<String, Object> claims = new HashMap<>();
+        // claims.put("consentId", consentId);
+        // claims.put("authMethod", authMethod);
         // claims.put("transactionalId", this.transactionalId);
-        claims.put("issuedAt", Instant.now().toString());
-        claims.put("expiresAt", Instant.now().plus(5, ChronoUnit.MINUTES).toString()); // 5-min expiry
+        // claims.put("issuedAt", Instant.now().toString());
+        // claims.put("expiresAt", Instant.now().plus(5, ChronoUnit.MINUTES).toString()); // 5-min expiry
 
         // String jws = Jwts.builder()
         //         .setClaims(claims)
