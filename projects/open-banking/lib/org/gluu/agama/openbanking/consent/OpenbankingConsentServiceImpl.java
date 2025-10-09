@@ -1,12 +1,16 @@
 package org.gluu.agama.openbanking.consent;
 
-
+import io.jans.as.common.model.session.SessionId;
+import io.jans.as.server.service.SessionIdService;
+import jakarta.servlet.http.HttpServletRequest;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.util.StringHelper;
+import io.jans.as.model.crypto.signature.SignatureAlgorithm;
 import io.jans.as.model.jwt.Jwt;
-import io.jans.as.model.jwt.JwtClaimName;
 import io.jans.as.model.jwt.JwtClaims;
+import io.jans.as.model.jwt.JwtHeader;
+import io.jans.as.model.jwt.JwtSigner;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
@@ -53,8 +57,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     }
 
     @Override
-    public Map<String, Object> validateConsent(Map<String, Object> reqObject) {
+    public Map<String, Object> validateConsent(Map<String, Object> demoObject) {
         try {
+            LogUtils.log("Retrieve request object from session...");
+
+            Map<String, Object> reqObject = getSessionId().get("request");
+            LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
             Map<String, Object> validationResult = new HashMap<>();
             // Extract claims
@@ -107,13 +115,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             String consentId = this.CONSENT_ID;
 
             // Build signed JWS with ConsentID + Auth Type
-            String jws = buildRFACJWS(consentId, this.AUTH_METHOD);
-            // Map<String, Object> payload = new HashMap<>();
-            // payload.put("jws", jws);
-            // payload.put("status", "PENDING_VERIFICATION");
-            // Convert Map to JSON string
-            // ObjectMapper mapper = new ObjectMapper();
-            // return mapper.writeValueAsString(payload);
+            String signedJws = buildRFACJWS(consentId, this.AUTH_METHOD);
             return jws;             
         } catch (Exception e) {
             LogUtils.log("Getting error while praparing RFAC payload %",e);
@@ -127,7 +129,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         Map<String, Object> validationResult = new HashMap<>();
         try {
             String jws = (String) resultFromApp.get("requst");
-
+            Jwt jwt = Jwt.parse(jws);
             // Parse JWS using public key
             // Jws<Claims> parsed = Jwts.parserBuilder()
             //         .setSigningKey(keyPair.getPublic())
@@ -262,8 +264,32 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         //         .setClaims(claims)
         //         .signWith(keyPair.getPrivate(), SignatureAlgorithm.RS256)
         //         .compact();   
-        ObjectMapper mapper = new ObjectMapper();
-        return mapper.writeValueAsString(claims);             
+        // ObjectMapper mapper = new ObjectMapper();
+        // return mapper.writeValueAsString(claims);          
+        
+        // Build claims
+        JwtClaims claims = new JwtClaims();
+        claims.setIssuer("https://auth.example.com");
+        claims.setAudience("my-client");
+        claims.setSubject("user123");
+        claims.setJwtId(UUID.randomUUID().toString());
+        claims.setIssuedAt(new Date());
+        claims.setClaim("consent_id", consentId);
+        claims.setClaim("auth_type", authMethod);
+
+        // Header
+        JwtHeader header = new JwtHeader();
+        header.setType("JWT");
+        header.setAlgorithm(SignatureAlgorithm.RS256);
+        header.setKeyId("my-key-id");
+
+        // JWT object
+        Jwt jwt = new Jwt(header, claims);
+
+        // Signer (private key must be loaded from Jans keystore)
+        JwtSigner signer = new JwtSigner(SignatureAlgorithm.RS256, MyKeys.privateKey);
+        signer.setKeyId("my-key-id");
+        String signedJwt = signer.sign(jwt);        
     }  
 
     private String extractConsentId(Map<String, Object> reqObject) {
@@ -271,6 +297,11 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         Map<String, Object> userInfo = (Map<String, Object>) claims.get("userinfo");
         Map<String, Object> intentObj = (Map<String, Object>) userInfo.get("openbanking_intent_id");
         return (String) intentObj.get("value");
+    }    
+
+    private SessionId getSessionId() {
+        SessionIdService sis = CdiUtil.bean(SessionIdService.class); 
+        return sis.getSessionId(CdiUtil.bean(HttpServletRequest.class));
     }    
 
 }
