@@ -287,9 +287,10 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         Jwt jwt = new Jwt(header, claims);
 
         // Signer (private key must be loaded from Jans keystore)
-        JwtSigner signer = new JwtSigner(SignatureAlgorithm.RS256, MyKeys.privateKey);
-        signer.setKeyId("my-key-id");
-        String signedJwt = signer.sign(jwt);        
+        // JwtSigner signer = new JwtSigner(SignatureAlgorithm.RS256, MyKeys.privateKey);
+        // signer.setKeyId("my-key-id");
+        // String signedJwt = signer.sign(jwt);    
+        return "";    
     }  
 
     private String extractConsentId(Map<String, Object> reqObject) {
