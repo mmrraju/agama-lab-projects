@@ -60,7 +60,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public Map<String, Object> validateConsent() {
         try {
             LogUtils.log("Retrieve request object from session...");
-
+            Map<String, String> sessAttrs = getSessionId().getSessionAttributes();
+            LogUtils.log(sessAttrs);
             Map<String, Object> reqObject = getSessionId().get("request");
             LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
