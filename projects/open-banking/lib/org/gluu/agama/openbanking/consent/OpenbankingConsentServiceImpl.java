@@ -62,6 +62,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Retrieve request object from session...");
             Map<String, String> sessAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessAttrs);
+            LogUtils.log(sessAttrs.get("client_id"));
             Map<String, Object> reqObject = getSessionId().get("request");
             LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
