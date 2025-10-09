@@ -215,7 +215,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
@@ -669,7 +669,7 @@
 				"previousNodeId": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
 				"branching": "repeat",
 				"agamaData": {
-					"logMessage": "\"Incomming request object is: %\" reqObject",
+					"logMessage": "\"Invoked validation service\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -677,14 +677,14 @@
 					"descColor": "",
 					"displayName": "",
 					"hasComment": true,
-					"comment": "Incomming request object"
+					"comment": "Invoked validation service"
 				}
 			},
 			"measured": {
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1122,8 +1122,8 @@
 		}
 	],
 	"viewport": {
-		"x": -268,
-		"y": -2,
-		"zoom": 1
+		"x": 16.012270586938143,
+		"y": 99.35408930475177,
+		"zoom": 0.870550563296124
 	}
 }
