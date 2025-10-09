@@ -57,7 +57,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     }
 
     @Override
-    public Map<String, Object> validateConsent(Map<String, Object> demoObject) {
+    public Map<String, Object> validateConsent() {
         try {
             LogUtils.log("Retrieve request object from session...");
 
