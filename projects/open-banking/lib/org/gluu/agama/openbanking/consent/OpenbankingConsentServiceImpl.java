@@ -38,7 +38,7 @@ import org.gluu.agama.openbanking.OpenbankingConsentService;
 
 public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     // private String transactionalId;
-    private static final String AUTH_METHOD = "urn:openbanking:psd2:sca";
+    private String AUTH_METHOD;
     private String CONSENT_ID;
     private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents/";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
@@ -60,7 +60,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public Map<String, Object> validateConsent() {
         try {
             LogUtils.log("Retrieve request object from session...");
-            Map<String, Object> reqObject = getSessionId().getSessionAttributes().get("request");
+            Map<String, Object> sessionAttrs = getSessionId().getSessionAttributes();
+            this.AUTH_METHOD = (String) sessionAttrs.get("acr_values");
+            Map<String, Object> reqObject = (Map<String, Object>)sessionAttrs.get("request");
             // LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
             Map<String, Object> validationResult = new HashMap<>();
