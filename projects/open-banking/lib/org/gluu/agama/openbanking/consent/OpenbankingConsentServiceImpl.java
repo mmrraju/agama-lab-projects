@@ -60,18 +60,17 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public Map<String, Object> validateConsent() {
         try {
             LogUtils.log("Retrieve request object from session...");
-            Map<String, Object> sessAttrs = getSessionId().getSessionAttributes();
-            // Map<String, Object> reqObject = getSessionId().get("request");
+            Map<String, Object> reqObject = getSessionId().getSessionAttributes().get("request");
             // LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
             Map<String, Object> validationResult = new HashMap<>();
             // Extract claims
-            // Map<String, Object> claims = (Map<String, Object>) reqObject.get("claims");
-            // Map<String, Object> idTokenClaims = (Map<String, Object>) claims.get("id_token");
-            // Map<String, Object> intent = (Map<String, Object>) idTokenClaims.get("openbanking_intent_id");
+            Map<String, Object> claims = (Map<String, Object>) reqObject.get("claims");
+            Map<String, Object> idTokenClaims = (Map<String, Object>) claims.get("id_token");
+            Map<String, Object> intent = (Map<String, Object>) idTokenClaims.get("openbanking_intent_id");
 
-            // String intentId = (String) intent.get("value");
-            String intentId = "intent-id-12345";
+            String intentId = (String) intent.get("value");
+            // String intentId = "intent-id-12345";
             this.CONSENT_ID = intentId;
             LogUtils.log("Consent id is : %", this.CONSENT_ID);
             // Call Consent Engine REST API
@@ -94,12 +93,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Consent Engine Response: %", jsonResponse);
             ObjectMapper mapper = new ObjectMapper();
             Map<String, Object> consentMap = mapper.readValue(jsonResponse, Map.class);
-            LogUtils.log(consentMap);
-            Map<String, Object> data = (Map<String, Object>) consentMap.get("Data");
-            LogUtils.log(data);            
-            String statusObj = (String)data.get("Status");
-            LogUtils.log(statusObj);            
-            String status = statusObj;
+            Map<String, Object> data = (Map<String, Object>) consentMap.get("Data");           
+            String status = (String)data.get("Status");           
             if(status.equals("Authorised")){
                 validationResult.put("valid", true);
                 validationResult.put("message", "Initial Consent status validate successfully");
@@ -305,9 +300,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     }    
 
     private SessionId getSessionId() {
-        LogUtils.log("GET Session ID.")
         SessionIdService sis = CdiUtil.bean(SessionIdService.class); 
-        LogUtils.log(sis);
         return sis.getSessionId(CdiUtil.bean(HttpServletRequest.class));
     }    
 
