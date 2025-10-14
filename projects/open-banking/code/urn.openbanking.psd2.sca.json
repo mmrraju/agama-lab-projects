@@ -420,7 +420,7 @@
 				"previousNodeId": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "\"https://external-app.example.com/start?payload=${rfacResponsePayload}\"",
+					"idpAuthEndpoint": "\"https://external-app.example.com/start?request=${rfacResponsePayload}\"",
 					"assignCallbackResult": "resultFromApp",
 					"nodeColor": "",
 					"titleColor": "",
@@ -434,7 +434,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
@@ -684,7 +684,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1122,8 +1122,8 @@
 		}
 	],
 	"viewport": {
-		"x": 16.012270586938143,
-		"y": 99.35408930475177,
-		"zoom": 0.870550563296124
+		"x": -1743,
+		"y": -167,
+		"zoom": 1
 	}
 }
