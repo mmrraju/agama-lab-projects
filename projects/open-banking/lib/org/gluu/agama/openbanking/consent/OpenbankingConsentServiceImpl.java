@@ -63,6 +63,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             Map<String, Object> sessionAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessionAttrs);
             this.AUTH_METHOD = (String) sessionAttrs.get("acr");
+            String reqJwt = (String)sessionAttrs.get("request");
+            LogUtils.log(reqJwt);
             Map<String, Object> reqObject = (Map<String, Object>)sessionAttrs.get("reqObject");
             LogUtils.log(reqObject);
             LogUtils.log("Validate consent status....");
@@ -140,53 +142,53 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             // Claims claims = parsed.getBody();
 
-            Map<String, Object> claims = (Map<String, Object>) resultFromApp.get("claims");
+            // Map<String, Object> claims = (Map<String, Object>) resultFromApp.get("claims");
 
-            String consentId = claims.get("consentId", String.class);
-            String userId = claims.get("userId", String.class);
-            String authMethod  = claims.get("authMethod", String.class);
-            // String transactionId = claims.get("transactionId", String.class);
-            Long iat = claims.get("issuedAt", Long.class);
-            Long exp = claims.get("expiresAt", Long.class);
+            // String consentId = claims.get("consentId", String.class);
+            // String userId = claims.get("userId", String.class);
+            // String authMethod  = claims.get("authMethod", String.class);
+            // // String transactionId = claims.get("transactionId", String.class);
+            // Long iat = claims.get("issuedAt", Long.class);
+            // Long exp = claims.get("expiresAt", Long.class);
 
-            // Validate timestamps
-            long now = System.currentTimeMillis() / 1000; // seconds
-            if (iat == null || iat > now) {
-                validationResult.put("valid", false);
-                validationResult.put("message", "JWS issued-at invalid");
-                return validationResult;
-            }
-            if (exp != null && exp < now) {
-                validationResult.put("valid", false);
-                validationResult.put("message", "JWS expired");
-                return validationResult;
-            }
-            // Validate transactionId
-            // if (!this.transactionalId.equals(transactionId)) {
-                
+            // // Validate timestamps
+            // long now = System.currentTimeMillis() / 1000; // seconds
+            // if (iat == null || iat > now) {
             //     validationResult.put("valid", false);
-            //     validationResult.put("message", "Transaction ID mismatch");
+            //     validationResult.put("message", "JWS issued-at invalid");
             //     return validationResult;
             // }
+            // if (exp != null && exp < now) {
+            //     validationResult.put("valid", false);
+            //     validationResult.put("message", "JWS expired");
+            //     return validationResult;
+            // }
+            // // Validate transactionId
+            // // if (!this.transactionalId.equals(transactionId)) {
+                
+            // //     validationResult.put("valid", false);
+            // //     validationResult.put("message", "Transaction ID mismatch");
+            // //     return validationResult;
+            // // }
 
-            // Validate consentId
-            if (!this.CONSENT_ID.equals(consentId)) {
-                validationResult.put("valid", false);
-                validationResult.put("message", "Consent ID mismatch");
-                return validationResult;
-            }else{
-                Map<String, Object> result = verifyFinalConsentStatus(consentId, userId);
-                if(!Boolean.TRUE.equals(result.get("valid"))){
-                    validationResult.put("valid", false);
-                    validationResult.put("message", result.get("message")); 
-                }
-                // All checks passed
-                validationResult.put("valid", true);
-                validationResult.put("consentId", consentId);
-                validationResult.put("authMethod", authMethod);
-                // validationResult.put("transactionId", transactionId);
-                validationResult.put("userId", result.get("userId"));                 
-            }
+            // // Validate consentId
+            // if (!this.CONSENT_ID.equals(consentId)) {
+            //     validationResult.put("valid", false);
+            //     validationResult.put("message", "Consent ID mismatch");
+            //     return validationResult;
+            // }else{
+            //     Map<String, Object> result = verifyFinalConsentStatus(consentId, userId);
+            //     if(!Boolean.TRUE.equals(result.get("valid"))){
+            //         validationResult.put("valid", false);
+            //         validationResult.put("message", result.get("message")); 
+            //     }
+            //     // All checks passed
+            //     validationResult.put("valid", true);
+            //     validationResult.put("consentId", consentId);
+            //     validationResult.put("authMethod", authMethod);
+            //     // validationResult.put("transactionId", transactionId);
+            //     validationResult.put("userId", result.get("userId"));                 
+            // }
 
 
         } catch (Exception e) {
@@ -253,45 +255,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     }
 
     private String buildRFACJWS(String consentId, String authMethod) throws Exception {
-        // Build claims for app
-        // this.transactionalId = UUID.randomUUID().toString();
-        // Map<String, Object> claims = new HashMap<>();
-        // claims.put("consentId", consentId);
-        // claims.put("authMethod", authMethod);
-        // claims.put("transactionalId", this.transactionalId);
-        // claims.put("issuedAt", Instant.now().toString());
-        // claims.put("expiresAt", Instant.now().plus(5, ChronoUnit.MINUTES).toString()); // 5-min expiry
-
-        // String jws = Jwts.builder()
-        //         .setClaims(claims)
-        //         .signWith(keyPair.getPrivate(), SignatureAlgorithm.RS256)
-        //         .compact();   
-        // ObjectMapper mapper = new ObjectMapper();
-        // return mapper.writeValueAsString(claims);          
-        
-        // Build claims
-        JwtClaims claims = new JwtClaims();
-        claims.setIssuer("https://auth.example.com");
-        claims.setAudience("my-client");
-        claims.setSubject("user123");
-        claims.setJwtId(UUID.randomUUID().toString());
-        claims.setIssuedAt(new Date());
-        claims.setClaim("consent_id", consentId);
-        claims.setClaim("auth_type", authMethod);
-
-        // Header
-        JwtHeader header = new JwtHeader();
-        header.setType("JWT");
-        header.setAlgorithm(SignatureAlgorithm.RS256);
-        header.setKeyId("my-key-id");
-
-        // JWT object
-        Jwt jwt = new Jwt(header, claims);
-
-        // Signer (private key must be loaded from Jans keystore)
-        // JwtSigner signer = new JwtSigner(SignatureAlgorithm.RS256, MyKeys.privateKey);
-        // signer.setKeyId("my-key-id");
-        // String signedJwt = signer.sign(jwt);    
+            //To do
         return "";    
     }  
 
