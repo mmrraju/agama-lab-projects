@@ -6,7 +6,7 @@ import org.gluu.agama.openbanking.consent.OpenbankingConsentServiceImpl;
 
 public abstract class OpenbankingConsentService {
 
-    public abstract Map<String, Object> verifyExternalAppResult(Map<String, Object> resultFromApp);
+    public abstract Map<String, Object> verifyExternalAppResult(Map<String, String> resultFromApp);
 
     public abstract String prepareRfacRespPayload();
 
