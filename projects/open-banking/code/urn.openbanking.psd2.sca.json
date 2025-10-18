@@ -310,7 +310,7 @@
 				"previousNodeId": "whenNode-1ef964a5-b84e-44de-a7c1-f582ccbf2520",
 				"branching": "otherwise",
 				"agamaData": {
-					"logMessage": "\"Consent Id is not valid\"",
+					"logMessage": "\"Validation failed due to %\"  validationResult.message",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -325,7 +325,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-81f6a9de-f2e0-4470-b373-28bedb88037b",
@@ -363,7 +363,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "callNode-a41028ab-15df-4c5c-9f15-45510fa0c93d",
@@ -434,7 +435,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
@@ -1122,8 +1123,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1743,
-		"y": -167,
+		"x": -967,
+		"y": 22,
 		"zoom": 1
 	}
 }
