@@ -37,6 +37,6 @@ Repeat 3 times max
                Log "@info Varification faild reason: %" verifyFinalStatus.message
      Otherwise
           // Not valid message
-          Log "@info Consent Id is not valid"
+          Log "@info Validation failed due to %"  validationResult.message
           // Error message
           feedback.errorMessage = validationResult.message
