@@ -61,7 +61,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public static String OPENBANKING_INTENT_ID;
     public static String CLIENT_ID;
     public static String ACR_VALUE = "acr";
-    public static String CALLBACK_URL= "https://<your-server-name>/jans-auth/fl/callback";
+    public static String CALLBACK_URL= "https://mmrraju-lasting-terrier.gluu.info/jans-auth/fl/callback";
 
     // Signing related
     public static String SIGNING_KEY_ID;          // e.g., set while verifyJwt
@@ -96,7 +96,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log(sessionAttrs);
 
             String rawjwt = (String)sessionAttrs.get("request");
-            if (verifyJwt(rawjwt)) {
+            if ( rawjwt != null && verifyJwt(rawjwt)) {
                 // Retrieve openbanking_intent_id from Jwt payload.
                 String intentId = extractOpenBankingIntentId(rawjwt);
                 if (intentId != null) {
@@ -261,12 +261,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             header.put("kid", SIGNING_KEY_ID);
 
             // Encode header and payload (Base64 URL)
-            // String encodedHeader = Base64.getUrlEncoder().withoutPadding()
-            //                     .encodeToString(header.toString().getBytes(StandardCharsets.UTF_8));
-            // String encodedPayload = Base64.getUrlEncoder().withoutPadding()
-            //                     .encodeToString(payload.toString().getBytes(StandardCharsets.UTF_8));
-            String encodedHeader = Base64Util.base64urlencode(header.toString().getBytes(StandardCharsets.UTF_8));
-            String encodedPayload = Base64Util.base64urlencode(payload.toString().getBytes(StandardCharsets.UTF_8));
+            String encodedHeader = Base64.getUrlEncoder().withoutPadding()
+                                .encodeToString(header.toString().getBytes(StandardCharsets.UTF_8));
+            String encodedPayload = Base64.getUrlEncoder().withoutPadding()
+                                .encodeToString(payload.toString().getBytes(StandardCharsets.UTF_8));
+            // String encodedHeader = Base64Util.base64urlencode(header.toString().getBytes(StandardCharsets.UTF_8));
+            // String encodedPayload = Base64Util.base64urlencode(payload.toString().getBytes(StandardCharsets.UTF_8));
             String signingInput = encodedHeader + "." + encodedPayload;
 
             // Sign using AbstractCryptoProvider
