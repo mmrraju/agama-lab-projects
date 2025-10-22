@@ -263,15 +263,15 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             //Pick a valid signing key ===
             SignatureAlgorithm algorithm = SignatureAlgorithm.RS256; // you can also set dynamically
-            String keyId = null;
+            String keyId = "connect_fa342bf7-601b-466b-bb46-b7a273d09da6_sig_rs256";
 
-            for (JSONWebKey key : webKeysConfig.getKeys()) {
-                if (Use.SIGNATURE.equals(key.getUse()) &&
-                    algorithm.getFamily().getValue().equals(key.getKty())) {
-                    keyId = key.getKid();
-                    break;
-                }
-            }
+            // for (JSONWebKey key : webKeysConfig.getKeys()) {
+            //     if (Use.SIGNATURE.equals(key.getUse()) &&
+            //         algorithm.getFamily().getValue().equals(key.getKty())) {
+            //         keyId = key.getKid();
+            //         break;
+            //     }
+            // }
 
             if (keyId == null) {
                 LogUtils.log("No suitable signing key found in internal JWKS");
