@@ -19,6 +19,8 @@ import io.jans.as.model.crypto.signature.SignatureAlgorithm;
 import io.jans.as.model.exception.CryptoProviderException;
 import io.jans.as.model.exception.InvalidJwtException;
 
+import io.jans.as.model.jwk.JSONWebKey;
+import io.jans.as.model.jwk.Use;
 import io.jans.as.model.jwt.Jwt;
 import io.jans.as.model.jwt.JwtHeader;
 import io.jans.service.cdi.util.CdiUtil;
