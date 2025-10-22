@@ -63,7 +63,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     // ----------------------
     public static String OPENBANKING_INTENT_ID;
     public static String CLIENT_ID;
-    public static String ACR_VALUE = "acr";
+    public static String ACR_VALUE;
     public static String CALLBACK_URL= "https://mmrraju-lasting-terrier.gluu.info/jans-auth/fl/callback";
 
     // Signing related
@@ -97,7 +97,11 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Retrieve request object from session...");
             Map<String, String> sessionAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessionAttrs);
+            this.ACR_VALUE = sessionAttrs.get("acr");
 
+            if (this.ACR_VALUE != null && this.ACR_VALUE.startsWith("agama_")) {
+                this.ACR_VALUE = this.ACR_VALUE.substring("agama_".length());
+            }
             String rawjwt = (String)sessionAttrs.get("request");
             if ( rawjwt != null && verifyJwt(rawjwt)) {
                 // Retrieve openbanking_intent_id from Jwt payload.
