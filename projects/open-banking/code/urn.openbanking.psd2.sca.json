@@ -421,7 +421,7 @@
 				"previousNodeId": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "\"https://mmrraju-probable-snail.gluu.info?request=${rfacResponsePayload}\"",
+					"idpAuthEndpoint": "\"https://external-sca.com/verify?request=${rfacResponsePayload}\"",
 					"assignCallbackResult": "resultFromApp",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1123,8 +1123,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1691,
-		"y": -228,
+		"x": -1788,
+		"y": -348,
 		"zoom": 1
 	}
 }
