@@ -10,6 +10,7 @@ import io.jans.service.cdi.util.CdiUtil;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.util.StringHelper;
 
+import io.jans.as.model.config.WebKeysConfiguration;
 import io.jans.as.model.configuration.AppConfiguration;
 import io.jans.as.model.crypto.CryptoProviderFactory;
 import io.jans.as.model.crypto.AbstractCryptoProvider;
@@ -242,41 +243,66 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         try {
             LogUtils.log("Preparing RFAC Response payload");
 
-            //Build payload JSON using static variables
+            //Build Payload JSON using static variables ===
             JSONObject payload = new JSONObject();
             long now = System.currentTimeMillis() / 1000L; // Unix timestamp in seconds
             payload.put("iss", "https://mmrraju-lasting-terrier.gluu.info");
             payload.put("iat", now);
-            payload.put("exp", now + 300); // expires in 5 min
+            payload.put("exp", now + 300); // expires in 5 minutes
             payload.put("openbanking_intent_id", OPENBANKING_INTENT_ID);
             payload.put("consent_status", "Authorised");
             payload.put("client_id", CLIENT_ID);
             payload.put("acr_values", ACR_VALUE);
             payload.put("callback", CALLBACK_URL);
 
-            // Build JWT header using static signing variables
-            JSONObject header = new JSONObject();
-            header.put("alg", SIGN_ALG.getName());
-            header.put("typ", "JWT");
-            header.put("kid", SIGNING_KEY_ID);
+            //Get internal JWKS configuration ===
+            WebKeysConfiguration webKeysConfig = CdiUtil.bean(WebKeysConfiguration.class);
+            AbstractCryptoProvider cryptoProvider = CdiUtil.bean(AbstractCryptoProvider.class);
 
-            // Encode header and payload (Base64 URL)
+            //Pick a valid signing key ===
+            SignatureAlgorithm algorithm = SignatureAlgorithm.RS256; // you can also set dynamically
+            String keyId = null;
+
+            for (JSONWebKey key : webKeysConfig.getKeys()) {
+                if (Use.SIGNATURE.equals(key.getUse()) &&
+                    algorithm.getFamily().getValue().equals(key.getKty())) {
+                    keyId = key.getKid();
+                    break;
+                }
+            }
+
+            if (keyId == null) {
+                LogUtils.log("No suitable signing key found in internal JWKS");
+                throw new RuntimeException("No suitable signing key found in internal JWKS");
+            }
+
+            //Build JWT header ===
+            JSONObject header = new JSONObject();
+            header.put("alg", algorithm.getName());
+            header.put("typ", "JWT");
+            header.put("kid", keyId);
+
+            //Base64URL encode header & payload ===
             String encodedHeader = Base64.getUrlEncoder().withoutPadding()
                                 .encodeToString(header.toString().getBytes(StandardCharsets.UTF_8));
             String encodedPayload = Base64.getUrlEncoder().withoutPadding()
                                 .encodeToString(payload.toString().getBytes(StandardCharsets.UTF_8));
-            // String encodedHeader = Base64Util.base64urlencode(header.toString().getBytes(StandardCharsets.UTF_8));
-            // String encodedPayload = Base64Util.base64urlencode(payload.toString().getBytes(StandardCharsets.UTF_8));
+
             String signingInput = encodedHeader + "." + encodedPayload;
 
-            // Sign using AbstractCryptoProvider
-            AbstractCryptoProvider cryptoProvider = CdiUtil.bean(AbstractCryptoProvider.class);
-            String signature = cryptoProvider.sign(signingInput, SIGNING_KEY_ID, null, SIGN_ALG);
+            //Sign using Jans internal CryptoProvider ===
+            String signature = cryptoProvider.sign(signingInput, keyId, null, algorithm);
 
-            //  Return complete JWS
-            return signingInput + "." + signature;             
+            //Return complete JWS ===
+            String signedJws = signingInput + "." + signature;
+
+            LogUtils.log("RFAC JWS created successfully with internal key: %", keyId);
+            LogUtils.log("Jws : %", signedJws);
+            return signedJws;
+
         } catch (Exception e) {
-            LogUtils.log("Getting error while praparing RFAC payload %",e);
+            LogUtils.log("Error while preparing RFAC payload : %", e);
+            return null;
         }
  
     }    
