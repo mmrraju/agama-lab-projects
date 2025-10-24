@@ -156,7 +156,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
-            if (response.statusCode() != 200) {
+            if (response.statusCode() != 200 || response.statusCode() != 301) {
                 LogUtils.log("ERROR: Consent API returned status code: %", response.statusCode());
                 return false;
             }
@@ -267,7 +267,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             //Pick a valid signing key ===
             SignatureAlgorithm algorithm = SignatureAlgorithm.RS256; // you can also set dynamically
-            String keyId = "";
+            String keyId = "connect_eb87a171-cf5c-4b96-a21a-c6d6f0fbe50a_sig_rs256";
 
             // for (JSONWebKey key : webKeysConfig.getKeys()) {
             //     if (Use.SIGNATURE.equals(key.getUse()) &&
