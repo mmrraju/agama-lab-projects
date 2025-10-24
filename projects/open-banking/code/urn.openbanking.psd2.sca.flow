@@ -21,7 +21,7 @@ Repeat 3 times max
           // Making RFAC call
           Log "@info Making RFAC call to external app"
           // RFAC call to external app
-          resultFromApp = RFAC "https://external-sca.com/verify?request=${rfacResponsePayload}"
+          resultFromApp = RFAC "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=${rfacResponsePayload}"
           // Verify apps returned result
           Log "@info Verify external app return result"
           // Verify final status
