@@ -76,7 +76,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private String CONSENT_ID;
     private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents/";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
-    private final HttpClient httpClient = HttpClient.newHttpClient();
+    /private final HttpClient httpClient = HttpClient.newHttpClient();
 
 
     public OpenbankingConsentServiceImpl(){
