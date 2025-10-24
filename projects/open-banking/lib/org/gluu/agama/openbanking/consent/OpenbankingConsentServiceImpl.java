@@ -146,11 +146,16 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Validating consent for intentId: %", intentId);
 
             String apiUrl = this.CONSENT_ENGINE_API_ENDPOINT + intentId;
-            HttpClient httpClient = HttpClient.newHttpClient();
+            // HttpClient httpClient = HttpClient.newHttpClient();
+            HttpClient httpClient = HttpClient.newBuilder()
+                    .followRedirects(HttpClient.Redirect.NORMAL)  // <-- follow redirects automatically
+                    .build();
 
             HttpRequest request = HttpRequest.newBuilder()
                     .uri(URI.create(apiUrl))
                     .header("Accept", "application/json")
+                    .header("User-Agent", "Mozilla/5.0")
+                    .header("Cache-Control", "no-cache") 
                     .GET()
                     .build();
 
