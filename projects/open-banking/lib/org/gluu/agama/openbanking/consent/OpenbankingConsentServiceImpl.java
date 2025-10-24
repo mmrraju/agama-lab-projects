@@ -156,7 +156,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
-            if (response.statusCode() != 200 || response.statusCode() != 301) {
+            if (response.statusCode() != 200 && response.statusCode() != 301) {
                 LogUtils.log("ERROR: Consent API returned status code: %", response.statusCode());
                 return false;
             }
