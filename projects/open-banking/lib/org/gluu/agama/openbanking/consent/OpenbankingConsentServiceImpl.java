@@ -76,7 +76,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private String CONSENT_ID;
     private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents/";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
-    /private final HttpClient httpClient = HttpClient.newHttpClient();
+    // private final HttpClient httpClient = HttpClient.newHttpClient();
 
 
     public OpenbankingConsentServiceImpl(){
@@ -148,7 +148,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             String apiUrl = this.CONSENT_ENGINE_API_ENDPOINT + intentId;
             // HttpClient httpClient = HttpClient.newHttpClient();
             HttpClient httpClient = HttpClient.newBuilder()
-                    .followRedirects(HttpClient.Redirect.NORMAL)  // <-- follow redirects automatically
+                    .followRedirects(HttpClient.Redirect.NORMAL) 
                     .build();
 
             HttpRequest request = HttpRequest.newBuilder()
@@ -161,7 +161,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
 
-            if (response.statusCode() != 200 && response.statusCode() != 301) {
+            if (response.statusCode() != 200) {
                 LogUtils.log("ERROR: Consent API returned status code: %", response.statusCode());
                 return false;
             }
