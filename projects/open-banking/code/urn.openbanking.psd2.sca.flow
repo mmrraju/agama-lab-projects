@@ -20,21 +20,6 @@ Repeat 3 times max
           rfacResponsePayload = Call openBankingConsentService prepareRfacRespPayload 
           // Making RFAC call
           Log "@info Making RFAC call to external app"
-          // RFAC call to external app
-          resultFromApp = RFAC rfacUrl
-          // Verify apps returned result
-          Log "@info Verify external app return result"
-          // Verify final status
-          verifyFinalStatus = Call openBankingConsentService verifyExternalAppResult resultFromApp
-          // Checking final staus
-          When verifyFinalStatus.valid is true
-               // Final verification done
-               Log "@info Final verification successfully done"
-               // Return ConsentId, AuthType, Success
-               Finish verifyFinalStatus
-          Otherwise
-               // Verification failed
-               Log "@info Varification faild reason: %" verifyFinalStatus.message
      Otherwise
           // Not valid message
           Log "@info Validation failed due to %"  validationResult.message
