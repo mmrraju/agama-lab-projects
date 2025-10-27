@@ -329,7 +329,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     @Override
     public Map<String, Object> verifyExternalAppResult(Map<String, String> resultFromApp) {
-        LogUtils.log("Verify External App Result...");
+        LogUtils.log("Verify External App Result... %", resultFromApp);
         LogUtils.log("App response: %", resultFromApp);
         Map<String, Object> validationResult = new HashMap<>();
         try {
