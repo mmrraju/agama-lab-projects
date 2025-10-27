@@ -226,6 +226,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             }
             String clientsecret = clientservice.decryptSecret(client.getClientSecret());
             JSONObject jwks = CommonUtils.getJwks(client);
+            LogUtils.log("VERIFY JWT: %", jwks);
             if (jwks == null) {
                 LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
                 return false;
