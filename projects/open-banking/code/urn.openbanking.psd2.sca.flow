@@ -21,7 +21,7 @@ Repeat 3 times max
           // Creating APP  (RFAC) URL
           rfacUrl = Call openBankingConsentService buildRfacUrl rfacResponsePayload
           // Making RFAC call
-          Log "@info Making RFAC call to external app. URL is : %", rfacUrl
+          Log "@info Making RFAC call to external app. URL is : %"  rfacUrl
           // App Response
           resultFromApp = RFAC rfacUrl
           // Verify apps returned result
