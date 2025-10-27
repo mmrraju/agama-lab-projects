@@ -35,6 +35,7 @@ import java.net.HttpURLConnection;
 import java.util.HashMap;
 import java.util.Map;
 import java.net.URL;
+import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
@@ -75,6 +76,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private String AUTH_METHOD;
     private String CONSENT_ID;
     private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents/";
+    private static final String RFAC_DEMO_BASE = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     // private final HttpClient httpClient = HttpClient.newHttpClient();
 
@@ -316,6 +318,13 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             return null;
         }
  
+    }    
+
+    @Override
+    public String buildRfacUrl(String signedJws) {
+        if (signedJws == null) return null;
+        String encoded = URLEncoder.encode(signedJws, StandardCharsets.UTF_8);
+        return RFAC_DEMO_BASE + encoded;
     }    
 
     @Override
