@@ -420,7 +420,7 @@
 				},
 				"previousNodeId": "callNode-e167cbb1-174f-4686-bf39-aa3cd1067d7c",
 				"agamaData": {
-					"logMessage": "\"Making RFAC call to external app. URL is : %\", rfacUrl",
+					"logMessage": "\"Making RFAC call to external app. URL is : %\"  rfacUrl",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -435,7 +435,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -762,7 +762,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		}
 	],
@@ -1166,8 +1166,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1799,
-		"y": -309,
+		"x": -1785,
+		"y": -140,
 		"zoom": 1
 	}
 }
