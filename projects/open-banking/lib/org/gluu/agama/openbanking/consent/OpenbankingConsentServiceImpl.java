@@ -323,7 +323,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         LogUtils.log("Verify External App Result...");
         Map<String, Object> validationResult = new HashMap<>();
         try {
-            String jws = (String) resultFromApp.get("requst");
+            String jws = (String) resultFromApp.get("request");
             if(verifyJwt(jws)){
                 Map<String, Object> extracted = extractAttributesFromAppJws(jws);
 
