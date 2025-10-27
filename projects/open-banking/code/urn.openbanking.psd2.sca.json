@@ -408,8 +408,8 @@
 			"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
 			"type": "rfacNode",
 			"position": {
-				"x": 2280,
-				"y": 538
+				"x": 2135,
+				"y": 391
 			},
 			"data": {
 				"id": "rfacNode-158ff33b-3219-48f0-b1e5-3a808f2c8598",
@@ -418,7 +418,7 @@
 					"x": 2280,
 					"y": 538
 				},
-				"previousNodeId": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
+				"previousNodeId": "callNode-3bfa2087-ca9d-40f9-9930-ea12a0303e3b",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
 					"idpAuthEndpoint": "rfacUrl",
@@ -435,14 +435,15 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
 			"type": "logNode",
 			"position": {
-				"x": 2030,
-				"y": 538
+				"x": 1905,
+				"y": 333.75
 			},
 			"data": {
 				"id": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
@@ -468,13 +469,14 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": false,
+			"dragging": false
 		},
 		{
 			"id": "logNode-46e107aa-7d7a-4948-ae17-ae5be56d93b0",
 			"type": "logNode",
 			"position": {
-				"x": 2530,
+				"x": 2280,
 				"y": 538
 			},
 			"data": {
@@ -507,7 +509,7 @@
 			"id": "callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
 			"type": "callNode",
 			"position": {
-				"x": 2780,
+				"x": 2530,
 				"y": 538
 			},
 			"data": {
@@ -547,7 +549,7 @@
 			"id": "whenNode-397a81ac-f99b-4f0d-8557-7ed3fcd07c0b",
 			"type": "whenNode",
 			"position": {
-				"x": 3030,
+				"x": 2780,
 				"y": 596
 			},
 			"data": {
@@ -589,7 +591,7 @@
 			"id": "logNode-54ca7f41-0dfa-457d-ae0f-445c954dfbc3",
 			"type": "logNode",
 			"position": {
-				"x": 3280,
+				"x": 3030,
 				"y": 796
 			},
 			"data": {
@@ -623,7 +625,7 @@
 			"id": "logNode-f5593202-9ed0-4b43-8b23-99c16eab8a1a",
 			"type": "logNode",
 			"position": {
-				"x": 3280,
+				"x": 3030,
 				"y": 346
 			},
 			"data": {
@@ -692,7 +694,7 @@
 			"id": "finishNode-3006eb1d-30f0-4948-865a-3360fbde4e5e",
 			"type": "finishNode",
 			"position": {
-				"x": 3530,
+				"x": 3280,
 				"y": 796
 			},
 			"data": {
@@ -1123,8 +1125,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1501,
-		"y": -137,
+		"x": -1343,
+		"y": -300.75,
 		"zoom": 1
 	}
 }
