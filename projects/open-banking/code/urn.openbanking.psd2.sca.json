@@ -421,7 +421,7 @@
 				"previousNodeId": "logNode-20c72d55-455f-4963-adb9-bf86306d773d",
 				"agamaData": {
 					"nodeIcon": "ic:baseline-insert-link",
-					"idpAuthEndpoint": "\"https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=\" + rfacResponsePayload",
+					"idpAuthEndpoint": "rfacUrl",
 					"assignCallbackResult": "resultFromApp",
 					"nodeColor": "",
 					"titleColor": "",
@@ -1123,8 +1123,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1764,
-		"y": -283,
+		"x": -1501,
+		"y": -137,
 		"zoom": 1
 	}
 }
