@@ -435,7 +435,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -454,7 +454,7 @@
 				},
 				"previousNodeId": "rfacNode-cbdd51b0-f2db-4e2a-bad8-819173af021b",
 				"agamaData": {
-					"logMessage": "\"Verify external app return result\"",
+					"logMessage": "\"Verify external app return result : %\" resultFromApp",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -469,7 +469,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "callNode-eb61914f-cce6-48f4-b3e2-a3ee0711c60f",
@@ -1166,8 +1166,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1785,
-		"y": -140,
+		"x": -1608,
+		"y": -325,
 		"zoom": 1
 	}
 }
