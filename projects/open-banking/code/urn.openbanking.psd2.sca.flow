@@ -25,7 +25,7 @@ Repeat 3 times max
           // App Response
           resultFromApp = RFAC rfacUrl
           // Verify apps returned result
-          Log "@info Verify external app return result"
+          Log "@info Verify external app return result : %" resultFromApp
           // Verify final status
           verifyFinalStatus = Call openBankingConsentService verifyExternalAppResult resultFromApp
           // Checking final staus
