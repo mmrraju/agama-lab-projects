@@ -12,6 +12,8 @@ public abstract class OpenbankingConsentService {
 
     public abstract Map<String, Object> validateConsent();
 
+    public abstract String buildRfacUrl(String signedJws);
+
 
     public static OpenbankingConsentService getInstance(){
         
