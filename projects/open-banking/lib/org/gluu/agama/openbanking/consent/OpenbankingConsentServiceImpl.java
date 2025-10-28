@@ -226,7 +226,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             }
             String clientsecret = clientservice.decryptSecret(client.getClientSecret());
             JSONObject jwks = CommonUtils.getJwks(client);
-            LogUtils.log("VERIFY JWT: %", jwks);
+            // LogUtils.log("VERIFY JWT: %", jwks);
             if (jwks == null) {
                 LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
                 return false;
@@ -330,7 +330,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     @Override
     public Map<String, Object> verifyExternalAppResult(Map<String, String> resultFromApp) {
-        LogUtils.log("Verify External App Result... %", resultFromApp);
+        LogUtils.log("Verify External App Result... %");
         LogUtils.log("App response: %", resultFromApp);
         Map<String, Object> validationResult = new HashMap<>();
         try {
@@ -338,12 +338,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             if(verifyJwt(jws)){
                 Map<String, Object> extracted = extractAttributesFromAppJws(jws);
 
-                if (extracted.get("consentId") != null){
-                    boolean isValid = validateConsentStatus((String)extracted.get("consentId"));
+                if (extracted.get("openbanking_intent_id") != null){
+                    boolean isValid = validateConsentStatus((String)extracted.get("openbanking_intent_id"));
                     if (isValid) {
                         validationResult.put("valid", true);
-                        validationResult.put("consentId", (String) extracted.get("consentId"));
-                        validationResult.put("authMethod", (String) extracted.get("authMethod"));
+                        validationResult.put("openbanking_intent_id", (String) extracted.get("openbanking_intent_id"));
+                        validationResult.put("acr_values", (String) extracted.get("acr_values"));
                         validationResult.put("transactionId", (String) extracted.get("transactionId"));
                         validationResult.put("message", "External app result verify succssful");
                         return validationResult;
