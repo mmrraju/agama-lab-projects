@@ -5,7 +5,7 @@ Log "@info Start executing Openbanking flow"
 // Feedback message
 feedback = {}
 // Max repeate
-Repeat 3 times max
+Repeat 1 times max
      // Invoked validation service
      Log "@info Invoked validation service"
      // Create an instance of OpenBanking Consent Service 
