@@ -454,7 +454,7 @@
 				},
 				"previousNodeId": "rfacNode-cbdd51b0-f2db-4e2a-bad8-819173af021b",
 				"agamaData": {
-					"logMessage": "\"Verify external app return result \"",
+					"logMessage": "\"Verify external app return result\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -1166,8 +1166,8 @@
 		}
 	],
 	"viewport": {
-		"x": -1579,
-		"y": -219,
+		"x": -1538,
+		"y": -188,
 		"zoom": 1
 	}
 }
