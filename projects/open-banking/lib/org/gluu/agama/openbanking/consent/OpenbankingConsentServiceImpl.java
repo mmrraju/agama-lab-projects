@@ -215,7 +215,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         try {
             if (rawjwt == null) return false;
             rawjwt = rawjwt.trim();
-
+            rawjwt = java.net.URLDecoder.decode(rawjwt, StandardCharsets.UTF_8).trim();
+            rawjwt = rawjwt.replaceAll("[\\s\\uFEFF\\u200B]", "");
             AbstractCryptoProvider cryptoprovider = CdiUtil.bean(AbstractCryptoProvider.class);
             Jwt jwt = Jwt.parse(rawjwt);
 
@@ -243,6 +244,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             this.SIGN_ALG = signatureAlg;
 
             final String[] jwtParts = rawjwt.split("\\.");
+            LogUtils.log("JWT header part: %", jwtParts[0]);
+            LogUtils.log("JWT payload part: %", jwtParts[1]);
+            LogUtils.log("JWT signature part: %", jwtParts[2]);
             if (jwtParts.length != 3) {
                 LogUtils.log("Invalid JWT format. Parts length: %", jwtParts.length);
                 return false;
