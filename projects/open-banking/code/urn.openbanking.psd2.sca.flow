@@ -32,9 +32,13 @@ Repeat 1 times max
           When verifyFinalStatus.valid is true
                // Final verification done
                Log "@info Final verification successfully done"
+               // Declar return parameters 
+               consentId = verifyFinalStatus.openbanking_intent_id
+               acr = verifyFinalStatus.acr_values
+               status = verifyFinalStatus.status
                // Return ConsentId, AuthType, Success
-               it_vtcwl = {success:true, data: { userId: "as9233Qz", openbankingIntentId:  verifyFinalStatus.openbanking_intent_id, acr_values: verifyFinalStatus.acr_values , status: verifyFinalStatus.status,}}
-               Finish it_vtcwl
+               it_aomwu = {success:true, data: {userId: consentId, consentId: consentId, status: status, acr: acr}}
+               Finish it_aomwu
           Otherwise
                // Verification failed
                Log "@info Varification faild reason: %" verifyFinalStatus.message
