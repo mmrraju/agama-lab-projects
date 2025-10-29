@@ -396,7 +396,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         try {
             String jws = (String) resultFromApp.get("jws");
             if(verifyJwtForExternalApp(jws)){
-                Map<String, Object> extracted = extractAttributesFromAppJws(jws);
+                Map<String, String> extracted = extractAttributesFromAppJws(jws);
 
                 if (extracted.get("openbanking_intent_id") != null){
                     boolean isValid = validateConsentStatus((String)extracted.get("openbanking_intent_id"));
@@ -435,17 +435,30 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         return validationResult;
     }
     
-    private Map<String, Object> extractAttributesFromAppJws(String rawJwt) {
-        Map<String, Object> result = new HashMap<>();        
+    private Map<String, String> extractAttributesFromAppJws(String rawJwt) {
+        Map<String, String> result = new HashMap<>();        
         Jwt jwt = Jwt.parse(rawJwt);
         //Extract necessary attributes
-        JSONObject claims = new JSONObject(jwt.getClaims().toJson());
-        result.put("consentId", claims.getString("consentId"));
-        result.put("authMethod", claims.getString("authMethod"));
-        if (claims.has("transactionId")) {
-            result.put("transactionId", claims.getString("transactionId"));
-        }        
+        JSONObject claims = jwt.getClaims().toJsonObject();
+        result.put("openbanking_intent_id", claims.getString("openbanking_intent_id"));
+        result.put("acr_values", claims.getString("acr_values"));
+        result.put("status", claims.getString("status"));
+        result.put("jti", claims.getString("jti"));       
         return result;
+
+
+
+        Jwt jwt = Jwt.parse(rawjwt);
+        // Navigate through nested claims structure
+        JSONObject claims = jwt.getClaims().toJsonObject();
+        // The attribute is nested like: claims -> userinfo -> openbanking_intent_id -> value
+        JSONObject userInfo = claims.getJSONObject("claims")
+                                   .getJSONObject("userinfo");
+
+        JSONObject intentObject = userInfo.getJSONObject("openbanking_intent_id");
+        String intentId = intentObject.getString("value");
+        return intentId;
+
     }
 
     private SessionId getSessionId() {
