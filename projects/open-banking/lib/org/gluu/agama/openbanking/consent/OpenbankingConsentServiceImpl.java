@@ -445,20 +445,6 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         result.put("status", claims.getString("status"));
         result.put("jti", claims.getString("jti"));       
         return result;
-
-
-
-        Jwt jwt = Jwt.parse(rawjwt);
-        // Navigate through nested claims structure
-        JSONObject claims = jwt.getClaims().toJsonObject();
-        // The attribute is nested like: claims -> userinfo -> openbanking_intent_id -> value
-        JSONObject userInfo = claims.getJSONObject("claims")
-                                   .getJSONObject("userinfo");
-
-        JSONObject intentObject = userInfo.getJSONObject("openbanking_intent_id");
-        String intentId = intentObject.getString("value");
-        return intentId;
-
     }
 
     private SessionId getSessionId() {
