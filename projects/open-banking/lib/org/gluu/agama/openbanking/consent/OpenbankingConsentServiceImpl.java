@@ -325,12 +325,13 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public String buildRfacUrl(String signedJws) {
         if (signedJws == null) return null;
         String encoded = URLEncoder.encode(signedJws, StandardCharsets.UTF_8);
+        
         return RFAC_DEMO_BASE + encoded;
     }    
 
     @Override
     public Map<String, Object> verifyExternalAppResult(Map<String, String> resultFromApp) {
-        LogUtils.log("Verify External App Result... %");
+        LogUtils.log("Verify External App Result...");
         LogUtils.log("App response: %", resultFromApp);
         Map<String, Object> validationResult = new HashMap<>();
         try {
