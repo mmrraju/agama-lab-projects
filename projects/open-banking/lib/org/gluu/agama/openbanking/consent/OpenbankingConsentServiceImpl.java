@@ -213,43 +213,97 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     private boolean verifyJwt(String rawjwt) {
         try {
-            //AppConfiguration appconfig = CdiUtil.bean(AppConfiguration.class);
+            if (rawjwt == null) return false;
+            rawjwt = rawjwt.trim();
+
             AbstractCryptoProvider cryptoprovider = CdiUtil.bean(AbstractCryptoProvider.class);
             Jwt jwt = Jwt.parse(rawjwt);
+
             String client_id = jwt.getClaims().getClaimAsString(CLIENT_ID_CLAIM);
             this.CLIENT_ID = client_id;
-            ClientService clientservice  = CdiUtil.bean(ClientService.class);
+
+            ClientService clientservice = CdiUtil.bean(ClientService.class);
             Client client = clientservice.getClient(client_id);
             if(client == null) {
                 LogUtils.log("Jwt verification failed. Client with client_id : % not found",client_id);
                 return false;
             }
-            String clientsecret = clientservice.decryptSecret(client.getClientSecret());
+
             JSONObject jwks = CommonUtils.getJwks(client);
-            LogUtils.log("VERIFY JWT: %", jwks);
+            LogUtils.log("VERIFY JWKS : %", jwks);
             if (jwks == null) {
                 LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
                 return false;
             }
+
             final JwtHeader jwtheader = jwt.getHeader();
             final String keyId = jwtheader.getKeyId();
             this.SIGNING_KEY_ID = keyId;
             final SignatureAlgorithm signatureAlg = jwtheader.getSignatureAlgorithm();
             this.SIGN_ALG = signatureAlg;
-            final String [] jwtParts = rawjwt.split("\\.");
-            final String signingInput = jwtParts[0] + "." + jwtParts[1];
-            final String encodedSignature = jwtParts[2];
-            final boolean result = cryptoprovider.verifySignature(signingInput,encodedSignature,keyId,jwks,clientsecret,signatureAlg);
+
+            final String[] jwtParts = rawjwt.split("\\.");
+            if (jwtParts.length != 3) {
+                LogUtils.log("Invalid JWT format. Parts length: %", jwtParts.length);
+                return false;
+            }
+
+            final String signingInput = jwtParts[0].trim() + "." + jwtParts[1].trim();
+            final String encodedSignature = jwtParts[2].trim();
+
+            boolean result = cryptoprovider.verifySignature(signingInput, encodedSignature, keyId, jwks, null, signatureAlg);
             if(result) {
-                LogUtils.log("Jwt verification successfull");
+                LogUtils.log("Jwt verification successful");
                 return true;
-            }else {
+            } else {
                 LogUtils.log("Jwt verification failed. Cryptographic provider failed to validate the jwt");
                 return false;
-            }            
+            }
+
         } catch (Exception e) {
-            LogUtils.log("Exception : %", e);
+            LogUtils.log("Exception during JWT verification: %", e.getMessage());
+            return false;
         }
+
+
+        // try {
+        //     //AppConfiguration appconfig = CdiUtil.bean(AppConfiguration.class);
+        //     AbstractCryptoProvider cryptoprovider = CdiUtil.bean(AbstractCryptoProvider.class);
+        //     Jwt jwt = Jwt.parse(rawjwt);
+        //     String client_id = jwt.getClaims().getClaimAsString(CLIENT_ID_CLAIM);
+        //     this.CLIENT_ID = client_id;
+        //     ClientService clientservice  = CdiUtil.bean(ClientService.class);
+        //     Client client = clientservice.getClient(client_id);
+        //     if(client == null) {
+        //         LogUtils.log("Jwt verification failed. Client with client_id : % not found",client_id);
+        //         return false;
+        //     }
+        //     String clientsecret = clientservice.decryptSecret(client.getClientSecret());
+        //     JSONObject jwks = CommonUtils.getJwks(client);
+        //     LogUtils.log("VERIFY JWT: %", jwks);
+        //     if (jwks == null) {
+        //         LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
+        //         return false;
+        //     }
+        //     final JwtHeader jwtheader = jwt.getHeader();
+        //     final String keyId = jwtheader.getKeyId();
+        //     this.SIGNING_KEY_ID = keyId;
+        //     final SignatureAlgorithm signatureAlg = jwtheader.getSignatureAlgorithm();
+        //     this.SIGN_ALG = signatureAlg;
+        //     final String [] jwtParts = rawjwt.split("\\.");
+        //     final String signingInput = jwtParts[0] + "." + jwtParts[1];
+        //     final String encodedSignature = jwtParts[2];
+        //     final boolean result = cryptoprovider.verifySignature(signingInput,encodedSignature,keyId,jwks,clientsecret,signatureAlg);
+        //     if(result) {
+        //         LogUtils.log("Jwt verification successfull");
+        //         return true;
+        //     }else {
+        //         LogUtils.log("Jwt verification failed. Cryptographic provider failed to validate the jwt");
+        //         return false;
+        //     }            
+        // } catch (Exception e) {
+        //     LogUtils.log("Exception : %", e);
+        // }        
     }
 
     @Override
