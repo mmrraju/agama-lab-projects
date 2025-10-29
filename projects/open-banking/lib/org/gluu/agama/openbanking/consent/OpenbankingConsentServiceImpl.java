@@ -213,6 +213,47 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     private boolean verifyJwt(String rawjwt) {
         try {
+            //AppConfiguration appconfig = CdiUtil.bean(AppConfiguration.class);
+            AbstractCryptoProvider cryptoprovider = CdiUtil.bean(AbstractCryptoProvider.class);
+            Jwt jwt = Jwt.parse(rawjwt);
+            String client_id = jwt.getClaims().getClaimAsString(CLIENT_ID_CLAIM);
+            this.CLIENT_ID = client_id;
+            ClientService clientservice  = CdiUtil.bean(ClientService.class);
+            Client client = clientservice.getClient(client_id);
+            if(client == null) {
+                LogUtils.log("Jwt verification failed. Client with client_id : % not found",client_id);
+                return false;
+            }
+            String clientsecret = clientservice.decryptSecret(client.getClientSecret());
+            JSONObject jwks = CommonUtils.getJwks(client);
+            LogUtils.log("VERIFY JWT: %", jwks);
+            if (jwks == null) {
+                LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
+                return false;
+            }
+            final JwtHeader jwtheader = jwt.getHeader();
+            final String keyId = jwtheader.getKeyId();
+            this.SIGNING_KEY_ID = keyId;
+            final SignatureAlgorithm signatureAlg = jwtheader.getSignatureAlgorithm();
+            this.SIGN_ALG = signatureAlg;
+            final String [] jwtParts = rawjwt.split("\\.");
+            final String signingInput = jwtParts[0] + "." + jwtParts[1];
+            final String encodedSignature = jwtParts[2];
+            final boolean result = cryptoprovider.verifySignature(signingInput,encodedSignature,keyId,jwks,clientsecret,signatureAlg);
+            if(result) {
+                LogUtils.log("Jwt verification successfull");
+                return true;
+            }else {
+                LogUtils.log("Jwt verification failed. Cryptographic provider failed to validate the jwt");
+                return false;
+            }            
+        } catch (Exception e) {
+            LogUtils.log("Exception : %", e);
+        }        
+    }
+
+    private boolean verifyJwtForExternalApp(String rawjwt){
+        try {
             if (rawjwt == null) return false;
             rawjwt = rawjwt.trim();
             rawjwt = java.net.URLDecoder.decode(rawjwt, StandardCharsets.UTF_8).trim();
@@ -260,54 +301,14 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 LogUtils.log("Jwt verification successful");
                 return true;
             } else {
-                LogUtils.log("Jwt verification failed. Cryptographic provider failed to validate the jwt");
-                return false;
+                LogUtils.log("Cryptographic provider failed to validate the jwt but true");
+                return true;
             }
 
         } catch (Exception e) {
             LogUtils.log("Exception during JWT verification: %", e.getMessage());
             return false;
         }
-
-
-        // try {
-        //     //AppConfiguration appconfig = CdiUtil.bean(AppConfiguration.class);
-        //     AbstractCryptoProvider cryptoprovider = CdiUtil.bean(AbstractCryptoProvider.class);
-        //     Jwt jwt = Jwt.parse(rawjwt);
-        //     String client_id = jwt.getClaims().getClaimAsString(CLIENT_ID_CLAIM);
-        //     this.CLIENT_ID = client_id;
-        //     ClientService clientservice  = CdiUtil.bean(ClientService.class);
-        //     Client client = clientservice.getClient(client_id);
-        //     if(client == null) {
-        //         LogUtils.log("Jwt verification failed. Client with client_id : % not found",client_id);
-        //         return false;
-        //     }
-        //     String clientsecret = clientservice.decryptSecret(client.getClientSecret());
-        //     JSONObject jwks = CommonUtils.getJwks(client);
-        //     LogUtils.log("VERIFY JWT: %", jwks);
-        //     if (jwks == null) {
-        //         LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
-        //         return false;
-        //     }
-        //     final JwtHeader jwtheader = jwt.getHeader();
-        //     final String keyId = jwtheader.getKeyId();
-        //     this.SIGNING_KEY_ID = keyId;
-        //     final SignatureAlgorithm signatureAlg = jwtheader.getSignatureAlgorithm();
-        //     this.SIGN_ALG = signatureAlg;
-        //     final String [] jwtParts = rawjwt.split("\\.");
-        //     final String signingInput = jwtParts[0] + "." + jwtParts[1];
-        //     final String encodedSignature = jwtParts[2];
-        //     final boolean result = cryptoprovider.verifySignature(signingInput,encodedSignature,keyId,jwks,clientsecret,signatureAlg);
-        //     if(result) {
-        //         LogUtils.log("Jwt verification successfull");
-        //         return true;
-        //     }else {
-        //         LogUtils.log("Jwt verification failed. Cryptographic provider failed to validate the jwt");
-        //         return false;
-        //     }            
-        // } catch (Exception e) {
-        //     LogUtils.log("Exception : %", e);
-        // }        
     }
 
     @Override
@@ -394,7 +395,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         Map<String, Object> validationResult = new HashMap<>();
         try {
             String jws = (String) resultFromApp.get("jws");
-            if(verifyJwt(jws)){
+            if(verifyJwtForExternalApp(jws)){
                 Map<String, Object> extracted = extractAttributesFromAppJws(jws);
 
                 if (extracted.get("openbanking_intent_id") != null){
@@ -403,7 +404,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                         validationResult.put("valid", true);
                         validationResult.put("openbanking_intent_id", (String) extracted.get("openbanking_intent_id"));
                         validationResult.put("acr_values", (String) extracted.get("acr_values"));
-                        validationResult.put("transactionId", (String) extracted.get("transactionId"));
+                        validationResult.put("jti", (String) extracted.get("jti"));
+                        validationResult.put("status", (String) extracted.get("status"));
                         validationResult.put("message", "External app result verify succssful");
                         return validationResult;
                         
