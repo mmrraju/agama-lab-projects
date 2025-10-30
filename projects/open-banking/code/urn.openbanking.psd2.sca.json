@@ -721,7 +721,7 @@
 					"comment": "Return ConsentId, AuthType, Success",
 					"flowfilename": "",
 					"returnVariable": "{userId: \"admin\", consentId: consentId, status: status, acr: acr}",
-					"finishMode": "withSuccess",
+					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
 			},
@@ -1233,8 +1233,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2870,
-		"y": -504,
-		"zoom": 1
+		"x": -2556.9999999999995,
+		"y": -517.9999999999999,
+		"zoom": 0.9999999999999997
 	}
 }
