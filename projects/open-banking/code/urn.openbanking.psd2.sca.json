@@ -720,7 +720,7 @@
 					"hasComment": true,
 					"comment": "Return ConsentId, AuthType, Success",
 					"flowfilename": "",
-					"returnVariable": "{userId: \"admin\", consentId: consentId, status: status, acr: acr}",
+					"returnVariable": "verifyFinalStatus",
 					"finishMode": "withVariable",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
