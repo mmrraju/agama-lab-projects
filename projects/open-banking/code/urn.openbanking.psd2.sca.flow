@@ -37,8 +37,7 @@ Repeat 1 times max
                acr = verifyFinalStatus.acr_values
                status = verifyFinalStatus.status
                // Return ConsentId, AuthType, Success
-               it_oxexi = undefined
-               Finish it_oxexi
+               Finish verifyFinalStatus
           Otherwise
                // Verification failed
                Log "@info Varification faild reason: %" verifyFinalStatus.message
