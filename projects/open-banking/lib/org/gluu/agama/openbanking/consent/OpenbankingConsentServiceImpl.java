@@ -301,7 +301,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 LogUtils.log("Jwt verification successful");
                 return true;
             } else {
-                LogUtils.log("Cryptographic provider failed to validate the jwt but true");
+                LogUtils.log("Cryptographic provider not able to verify jwt but true");
                 return true;
             }
 
