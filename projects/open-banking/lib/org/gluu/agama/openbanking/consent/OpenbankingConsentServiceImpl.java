@@ -65,7 +65,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public static String OPENBANKING_INTENT_ID;
     public static String CLIENT_ID;
     public static String ACR_VALUE;
-    public static String CALLBACK_URL= "https://mmrraju-lasting-terrier.gluu.info/jans-auth/fl/callback";
+    public static String CALLBACK_URL= "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback";
 
     // Signing related
     public static String SIGNING_KEY_ID;          // e.g., set while verifyJwt
@@ -75,7 +75,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private static final String KEY_ID_CLAIM = "kid";    
     private String AUTH_METHOD;
     private String CONSENT_ID;
-    private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-trusting-locust.gluu.info/account-access-consents/";
+    private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-comic-pup.gluu.info/account-access-consents/";
     private static final String RFAC_DEMO_BASE = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     // private final HttpClient httpClient = HttpClient.newHttpClient();
@@ -334,7 +334,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
             //Pick a valid signing key ===
             SignatureAlgorithm algorithm = SignatureAlgorithm.RS256; // you can also set dynamically
-            String keyId = "connect_172f97e1-d1e0-4cd7-bc4f-f77ea6f3c014_sig_rs256";
+            String keyId = "connect_5518e94d-eeff-4cca-9fc5-3bfb132d97a5_sig_rs256";
 
             // for (JSONWebKey key : webKeysConfig.getKeys()) {
             //     if (Use.SIGNATURE.equals(key.getUse()) &&
