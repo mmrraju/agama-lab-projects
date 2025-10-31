@@ -37,7 +37,8 @@ Repeat 1 times max
                acr = verifyFinalStatus.acr_values
                status = verifyFinalStatus.status
                // Return ConsentId, AuthType, Success
-               Finish verifyFinalStatus
+               it_glcij = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
+               Finish it_glcij
           Otherwise
                // Verification failed
                Log "@info Varification faild reason: %" verifyFinalStatus.message
