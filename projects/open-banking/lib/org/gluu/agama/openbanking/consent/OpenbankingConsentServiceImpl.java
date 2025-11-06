@@ -340,8 +340,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             for (JSONWebKey key : webKeysConfig.getKeys()) {
                 LogUtils.log("Key: no % is : %", n, key);
                 // LogUtils.log("KeyID: no % is : %", n, key.getKeyId);
-                LogUtils.log("KeyId: no % is : %", n, key.getKid());
-                LogUtils.log("KeyId: no % is : %", n, key.getKty());
+                LogUtils.log("Key USE: no % is : %", n, key.getUse());
+                LogUtils.log("KeyTy: no % is : %", n, key.getKty());
                 // LogUtils.log("USE: % Family: %", Use.SIGNATURE, algorithm.getFamily().getValue());
                 if (Use.SIGNATURE.equals(key.getUse()) && algorithm.getFamily().getValue().equals(key.getKty())) {
                         LogUtils.log("Inside condistion key Id is: %", key.getKid);
