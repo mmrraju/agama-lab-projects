@@ -336,23 +336,39 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             SignatureAlgorithm algorithm = SignatureAlgorithm.RS256; // you can also set dynamically
             // String keyId = "connect_47f443d1-99a5-44c7-b96a-c89eeed9ab2d_sig_rs256";
             String keyId = null;
-            int n=1;
+            String use = Use.SIGNATURE;              // assuming this is already "sig"
+            String family = algorithm.getFamily().getValue(); // "RSA"
+
             for (JSONWebKey key : webKeysConfig.getKeys()) {
-                LogUtils.log("Key: no % is : %", n, key);
-                // LogUtils.log("KeyID: no % is : %", n, key.getKeyId);
-                LogUtils.log("Key USE: no % is : %", n, key.getUse());
-                LogUtils.log("KeyTy: no % is : %", n, key.getKty());
-                // LogUtils.log("USE: % Family: %", Use.SIGNATURE, algorithm.getFamily().getValue());
-                String use = Use.SIGNATURE;
-                String family = algorithm.getFamily().getValue();
-                LogUtils.log("Key USE: % Type : %", use, family);
-                if (use.equals(key.getUse()) && family.equals(key.getKty())) {
-                        LogUtils.log("Inside condistion key Id is: %", key.getKid);
-                        keyId = key.getKid();
-                        break;
+                LogUtils.log("Key USE: % | Key KTY: % | Kid: %", key.getUse(), key.getKty(), key.getKid());
+
+                if (use.equals(key.getUse().trim()) && family.equals(key.getKty().trim())) {
+                    LogUtils.log("✅ Inside condition — Key Id is: %", key.getKid());
+                    keyId = key.getKid();
+                    break;
                 }
-                n++;
             }
+
+            // int n=1;
+            // for (JSONWebKey key : webKeysConfig.getKeys()) {
+            //     LogUtils.log("Key: no % is : %", n, key);
+            //     // LogUtils.log("KeyID: no % is : %", n, key.getKeyId);
+            //     LogUtils.log("Key USE: no % is : %", n, key.getUse());
+            //     LogUtils.log("KeyTy: no % is : %", n, key.getKty());
+            //     // LogUtils.log("USE: % Family: %", Use.SIGNATURE, algorithm.getFamily().getValue());
+            //     String use = Use.SIGNATURE;
+            //     String family = algorithm.getFamily().getValue();
+            //     LogUtils.log("Key USE: % Type : %", use, family);
+            //     if (use.equals(key.getUse()) && family.equals(key.getKty())) {
+            //             LogUtils.log("Inside condistion key Id is: %", key.getKid);
+            //             keyId = key.getKid();
+            //             break;
+            //     }
+            //     n++;
+            // }
+
+
+
             // keyId = "connect_47f443d1-99a5-44c7-b96a-c89eeed9ab2d_sig_rs256";
             if (keyId == null) {
                 LogUtils.log("No suitable signing key found in internal JWKS");
