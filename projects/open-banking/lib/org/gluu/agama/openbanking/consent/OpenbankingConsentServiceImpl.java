@@ -341,15 +341,16 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 LogUtils.log("Key: no % is : %", n, key);
                 // LogUtils.log("KeyID: no % is : %", n, key.getKeyId);
                 LogUtils.log("KeyId: no % is : %", n, key.getKid());
-                LogUtils.log("USE: % Family: %", Use.SIGNATURE, algorithm.getFamily().getValue());
+                // LogUtils.log("USE: % Family: %", Use.SIGNATURE, algorithm.getFamily().getValue());
                 if (Use.SIGNATURE.equals(key.getUse()) &&
                     algorithm.getFamily().getValue().equals(key.getKty())) {
-                    keyId = key.getKid();
-                    break;
+                        LogUtils.log("Inside condistion key Id is: %", key.getKid);
+                        keyId = key.getKid();
+                        break;
                 }
                 n++;
             }
-            keyId = "connect_47f443d1-99a5-44c7-b96a-c89eeed9ab2d_sig_rs256";
+            // keyId = "connect_47f443d1-99a5-44c7-b96a-c89eeed9ab2d_sig_rs256";
             if (keyId == null) {
                 LogUtils.log("No suitable signing key found in internal JWKS");
                 throw new RuntimeException("No suitable signing key found in internal JWKS");
