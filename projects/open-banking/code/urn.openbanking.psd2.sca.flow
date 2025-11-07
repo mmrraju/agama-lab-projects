@@ -1,7 +1,7 @@
 Flow urn.openbanking.psd2.sca
      Basepath ""
 // Flow starting
-Log "@info Start executing Openbanking flow"
+Log "@info Start executing Openbanking flow..."
 // Feedback message
 feedback = {}
 // Max repeate
@@ -37,8 +37,8 @@ Repeat 1 times max
                acr = verifyFinalStatus.acr_values
                status = verifyFinalStatus.status
                // Return ConsentId, AuthType, Success
-               it_glcij = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
-               Finish it_glcij
+               it_teuzs = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
+               Finish it_teuzs
           Otherwise
                // Verification failed
                Log "@info Varification faild reason: %" verifyFinalStatus.message
