@@ -51,9 +51,9 @@ import java.io.*;
 import java.util.Base64;
 
 
-import com.nimbusds.jose.*;
-import com.nimbusds.jose.crypto.RSASSASigner;
-import com.nimbusds.jose.jwk.RSAKey;
+// import com.nimbusds.jose.*;
+// import com.nimbusds.jose.crypto.RSASSASigner;
+// import com.nimbusds.jose.jwk.RSAKey;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.gluu.agama.openbanking.OpenbankingConsentService;
@@ -61,34 +61,39 @@ import org.gluu.agama.openbanking.OpenbankingConsentService;
 public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     // Static variables to set externally before calling the method
-    // ----------------------
     public static String OPENBANKING_INTENT_ID;
     public static String CLIENT_ID;
     public static String ACR_VALUE;
     public static String CALLBACK_URL= "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback";
 
     // Signing related
-    public static String SIGNING_KEY_ID;          // e.g., set while verifyJwt
-    public static SignatureAlgorithm SIGN_ALG;    // e.g., set while verifyJwt    
+    public static String SIGNING_KEY_ID;          
+    public static SignatureAlgorithm SIGN_ALG;      
 
     private static final String CLIENT_ID_CLAIM = "client_id";
     private static final String KEY_ID_CLAIM = "kid";    
     private String AUTH_METHOD;
     private String CONSENT_ID;
-    private static final String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-comic-pup.gluu.info/account-access-consents/";
-    private static final String RFAC_DEMO_BASE = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=";
+    private String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-comic-pup.gluu.info/account-access-consents/";
+    private String RFAC_DEMO_BASE = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
-    // private final HttpClient httpClient = HttpClient.newHttpClient();
+    private HashMap<String, String> flowConfig ;
+    private String server_base_url = "https://mmrraju-lasting-terrier.gluu.info";
 
+    public OpenbankingConsentServiceImpl(HashMap config){
+        LogUtils.log("Flow config provided is : %", config);
+        flowConfig = config;
+        server_base_url = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : server_base_url;
+        CONSENT_ENGINE_API_ENDPOINT = flowConfig.get("consentEngineEndpoint") !=null? flowConfig.get("consentEngineEndpoint") : CONSENT_ENGINE_API_ENDPOINT;
+        RFAC_DEMO_BASE = flowConfig.get("rfacUrl") !=null? flowConfig.get("rfacUrl") : RFAC_DEMO_BASE;
 
-    public OpenbankingConsentServiceImpl(){
     }
 
-    public static synchronized OpenbankingConsentServiceImpl getInstance()
+    public static synchronized OpenbankingConsentServiceImpl getInstance(HashMap config)
     {
         
         if (INSTANCE == null)
-            INSTANCE = new OpenbankingConsentServiceImpl();
+            INSTANCE = new OpenbankingConsentServiceImpl(config);
         return INSTANCE;
     }
 
@@ -226,7 +231,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             }
             String clientsecret = clientservice.decryptSecret(client.getClientSecret());
             JSONObject jwks = CommonUtils.getJwks(client);
-            LogUtils.log("VERIFY JWT: %", jwks);
+            // LogUtils.log("VERIFY JWT: %", jwks);
             if (jwks == null) {
                 LogUtils.log("Jwt verification failed. Client : % has no jwks",client_id);
                 return false;
@@ -319,7 +324,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             //Build Payload JSON using static variables ===
             JSONObject payload = new JSONObject();
             long now = System.currentTimeMillis() / 1000L; // Unix timestamp in seconds
-            payload.put("iss", "https://mmrraju-lasting-terrier.gluu.info");
+            payload.put("iss", this.server_base_url);
             payload.put("iat", now);
             payload.put("exp", now + 300); // expires in 5 minutes
             payload.put("openbanking_intent_id", OPENBANKING_INTENT_ID);
@@ -342,7 +347,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 String keyUse = key.getUse();
                 String keyType = key.getKty();
                 if (use.equals(keyUse) && family.equals(keyType)) {
-                    LogUtils.log("✅ Inside condition — Key Id is: %", key.getKid());
+                    LogUtils.log("Signing Key Id is: %", key.getKid());
                     keyId = key.getKid();
                     break;
                 }
