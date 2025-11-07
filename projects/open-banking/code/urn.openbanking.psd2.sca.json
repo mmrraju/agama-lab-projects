@@ -53,7 +53,7 @@
 				},
 				"previousNodeId": "startNode-ac3d75d9-c75c-4ad9-b9a9-0c37649853d5",
 				"agamaData": {
-					"logMessage": "\"Start executing Openbanking flow\"",
+					"logMessage": "\"Start executing Openbanking flow...\"",
 					"logLevel": "info",
 					"nodeIcon": "octicon:log-16",
 					"nodeColor": "",
@@ -68,7 +68,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "assignmentNode-76e885ba-dd0f-475a-89d2-54989860a059",
@@ -729,7 +729,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-05d2cf7a-974e-4639-8c08-6f462f8f4c9c",
@@ -1233,8 +1233,8 @@
 		}
 	],
 	"viewport": {
-		"x": -2414,
-		"y": -458,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
