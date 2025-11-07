@@ -68,7 +68,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "assignmentNode-76e885ba-dd0f-475a-89d2-54989860a059",
@@ -162,7 +162,9 @@
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
-					"arguments": [],
+					"arguments": [
+						"conf"
+					],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -177,7 +179,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "callNode-f217a7fb-5ba3-48c5-896d-230791dd4c02",
@@ -1233,8 +1236,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -346,
+		"y": -29,
 		"zoom": 1
 	}
 }
