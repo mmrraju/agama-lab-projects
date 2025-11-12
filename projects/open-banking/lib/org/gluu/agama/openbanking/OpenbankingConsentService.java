@@ -16,8 +16,13 @@ public abstract class OpenbankingConsentService {
     public abstract String buildRfacUrl(String signedJws);
 
 
-    public static OpenbankingConsentService getInstance(HashMap config){
+    // public static OpenbankingConsentService getInstance(HashMap config){
+    //     // return new OpenbankingConsentServiceImpl(config);
+    //     return OpenbankingConsentServiceImpl.getInstance(config);
+    // }
+    public static OpenbankingConsentService getInstance(){
         // return new OpenbankingConsentServiceImpl(config);
-        return OpenbankingConsentServiceImpl.getInstance(config);
+        return OpenbankingConsentServiceImpl.getInstance();
     }
+
 }
