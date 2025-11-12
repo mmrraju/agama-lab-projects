@@ -6,6 +6,7 @@ import io.jans.as.common.model.registration.Client;
 import io.jans.as.common.model.session.SessionId;
 import io.jans.as.server.service.SessionIdService;
 import jakarta.servlet.http.HttpServletRequest;
+import io.jans.service.net.NetworkService;
 import io.jans.service.cdi.util.CdiUtil;
 import io.jans.agama.engine.script.LogUtils;
 import io.jans.util.StringHelper;
@@ -104,6 +105,13 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Retrieve request object from session...");
             Map<String, String> sessionAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessionAttrs);
+            LogUlits.log("IP: %", sessionAttrs.get("ip"));
+
+            //
+            HttpServletRequest req = CdiUtil.bean(NetworkService.class).getHttpServletRequest();
+
+            LogUtils.log("req is : %", req);
+            ///
             this.ACR_VALUE = sessionAttrs.get("acr");
 
             if (this.ACR_VALUE != null && this.ACR_VALUE.startsWith("agama_")) {
