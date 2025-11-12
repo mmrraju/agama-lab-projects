@@ -111,7 +111,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
@@ -167,9 +167,7 @@
 					"javaVariableName": "",
 					"exceptionVariableField": "",
 					"callType": "Call static method",
-					"arguments": [
-						"conf"
-					],
+					"arguments": [],
 					"nodeIcon": "material-symbols:code",
 					"nodeColor": "",
 					"titleColor": "",
@@ -184,7 +182,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false,
+			"selected": true,
 			"dragging": false
 		},
 		{
@@ -1241,8 +1239,8 @@
 		}
 	],
 	"viewport": {
-		"x": 0,
-		"y": 0,
+		"x": -664,
+		"y": 108,
 		"zoom": 1
 	}
 }
