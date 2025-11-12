@@ -1,5 +1,6 @@
 package org.gluu.agama.openbanking;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.gluu.agama.openbanking.consent.OpenbankingConsentServiceImpl;
@@ -15,8 +16,8 @@ public abstract class OpenbankingConsentService {
     public abstract String buildRfacUrl(String signedJws);
 
 
-    public static OpenbankingConsentService getInstance(){
-        
-        return OpenbankingConsentServiceImpl.getInstance();
+    public static OpenbankingConsentService getInstance(HashMap config){
+        // return new OpenbankingConsentServiceImpl(config);
+        return OpenbankingConsentServiceImpl.getInstance(config);
     }
 }
