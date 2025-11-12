@@ -81,22 +81,31 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private HashMap<String, String> flowConfig ;
     private String server_base_url = "https://mmrraju-lasting-terrier.gluu.info";
 
-    public OpenbankingConsentServiceImpl(HashMap config){
-        LogUtils.log("Flow config provided is : %", config);
-        flowConfig = config;
-        server_base_url = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : server_base_url;
-        CONSENT_ENGINE_API_ENDPOINT = flowConfig.get("consentEngineEndpoint") !=null? flowConfig.get("consentEngineEndpoint") : CONSENT_ENGINE_API_ENDPOINT;
-        RFAC_DEMO_BASE = flowConfig.get("rfacUrl") !=null? flowConfig.get("rfacUrl") : RFAC_DEMO_BASE;
+    // public OpenbankingConsentServiceImpl(HashMap config){
+    //     LogUtils.log("Flow config provided is : %", config);
+    //     flowConfig = config;
+    //     server_base_url = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : server_base_url;
+    //     CONSENT_ENGINE_API_ENDPOINT = flowConfig.get("consentEngineEndpoint") !=null? flowConfig.get("consentEngineEndpoint") : CONSENT_ENGINE_API_ENDPOINT;
+    //     RFAC_DEMO_BASE = flowConfig.get("rfacUrl") !=null? flowConfig.get("rfacUrl") : RFAC_DEMO_BASE;
 
-    }
+    // }
 
-    public static synchronized OpenbankingConsentServiceImpl getInstance(HashMap config)
+    public OpenbankingConsentServiceImpl(){}
+
+    // public static synchronized OpenbankingConsentServiceImpl getInstance(HashMap config)
+    // {
+        
+    //     if (INSTANCE == null)
+    //         INSTANCE = new OpenbankingConsentServiceImpl(config);
+    //     return INSTANCE;
+    // }
+    public static synchronized OpenbankingConsentServiceImpl getInstance()
     {
         
         if (INSTANCE == null)
-            INSTANCE = new OpenbankingConsentServiceImpl(config);
+            INSTANCE = new OpenbankingConsentServiceImpl();
         return INSTANCE;
-    }
+    }    
 
     @Override
     public Map<String, Object> validateConsent() {
