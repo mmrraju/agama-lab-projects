@@ -114,7 +114,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             LogUtils.log("Retrieve request object from session...");
             Map<String, String> sessionAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessionAttrs);
-            LogUlits.log("IP: %", sessionAttrs.get("ip"));
+            // LogUlits.log("IP: %", sessionAttrs.get("ip"));
 
             //
             HttpServletRequest req = CdiUtil.bean(NetworkService.class).getHttpServletRequest();
