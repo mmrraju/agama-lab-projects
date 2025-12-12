@@ -430,7 +430,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                         validationResult.put("valid", true);
                         validationResult.put("openbanking_intent_id", (String) extracted.get("openbanking_intent_id"));
                         validationResult.put("acr_values", (String) extracted.get("acr_values"));
-                        validationResult.put("jti", (String) extracted.get("jti"));
+                        // validationResult.put("jti", (String) extracted.get("jti"));
                         validationResult.put("status", (String) extracted.get("status"));
                         validationResult.put("message", "External app result verify succssful");
                         return validationResult;
@@ -468,8 +468,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         JSONObject claims = jwt.getClaims().toJsonObject();
         result.put("openbanking_intent_id", claims.getString("openbanking_intent_id"));
         result.put("acr_values", claims.getString("acr_values"));
-        result.put("status", claims.getString("status"));
-        result.put("jti", claims.getString("jti"));       
+        result.put("status", claims.getString("consent_status"));
+        // result.put("jti", claims.getString(""));       
         return result;
     }
 
