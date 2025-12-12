@@ -117,9 +117,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             // LogUlits.log("IP: %", sessionAttrs.get("ip"));
 
             //
-            HttpServletRequest req = CdiUtil.bean(NetworkService.class).getHttpServletRequest();
+            // HttpServletRequest req = CdiUtil.bean(NetworkService.class).getHttpServletRequest();
 
-            LogUtils.log("req is : %", req);
+            // LogUtils.log("req is : %", req);
             ///
             this.ACR_VALUE = sessionAttrs.get("acr");
 
