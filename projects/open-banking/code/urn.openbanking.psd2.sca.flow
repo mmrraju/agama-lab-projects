@@ -11,7 +11,7 @@ Repeat 1 times max
      // Invoked validation service
      Log "@info Invoked validation service"
      // Create an instance of OpenBanking Consent Service 
-     openBankingConsentService = Call org.gluu.agama.openbanking.OpenbankingConsentService#getInstance 
+     openBankingConsentService = Call org.gluu.agama.openbanking.OpenbankingConsentService#getInstance config
      // Validate consent with Consent Engine (8)
      validationResult = Call openBankingConsentService validateConsent 
      // If Consent Id is valid
@@ -39,8 +39,8 @@ Repeat 1 times max
                acr = verifyFinalStatus.acr_values
                status = verifyFinalStatus.status
                // Return ConsentId, AuthType, Success
-               it_rlaqg = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
-               Finish it_rlaqg
+               it_xuafz = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
+               Finish it_xuafz
           Otherwise
                // Verification failed
                Log "@info Varification faild reason: %" verifyFinalStatus.message
