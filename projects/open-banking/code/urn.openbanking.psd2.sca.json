@@ -22,8 +22,7 @@
 					"configParams": {
 						"serverBaseUrl": "https://mmrraju-promoted-macaque.gluu.info",
 						"consentEnginebBaseUrl": "http://mmrraju-comic-pup.gluu.info",
-						"rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html",
-						"agamaCallbackUrl": "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback"
+						"rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html"
 					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
@@ -40,7 +39,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
@@ -111,7 +110,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": false
 		},
 		{
 			"id": "repeatNode-c7203dce-24d6-4237-b936-26bb7fdd8bdf",
@@ -1241,8 +1240,8 @@
 		}
 	],
 	"viewport": {
-		"x": 4,
-		"y": -16,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
