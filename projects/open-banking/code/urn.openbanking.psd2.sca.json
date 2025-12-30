@@ -19,11 +19,16 @@
 				"agamaData": {
 					"isTopLevelFlow": true,
 					"basepath": "",
-					"configParams": "{}",
+					"configParams": {
+						"serverBaseUrl": "https://mmrraju-promoted-macaque.gluu.info",
+						"consentEnginebBaseUrl": "http://mmrraju-comic-pup.gluu.info",
+						"rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html",
+						"agamaCallbackUrl": "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback"
+					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
 					"inputs": "",
-					"configs": "",
+					"configs": "config",
 					"flowname": "urn.openbanking.psd2.sca",
 					"displayName": "open-banking",
 					"creationDate": "19/09/2025",
@@ -35,7 +40,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": false
+			"selected": true
 		},
 		{
 			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
@@ -182,7 +187,7 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true,
+			"selected": false,
 			"dragging": false
 		},
 		{
@@ -1239,8 +1244,8 @@
 		}
 	],
 	"viewport": {
-		"x": -664,
-		"y": 108,
+		"x": 0,
+		"y": 0,
 		"zoom": 1
 	}
 }
