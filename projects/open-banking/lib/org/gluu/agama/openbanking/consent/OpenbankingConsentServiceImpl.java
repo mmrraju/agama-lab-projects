@@ -65,7 +65,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     public static String OPENBANKING_INTENT_ID;
     public static String CLIENT_ID;
     public static String ACR_VALUE;
-    public static String CALLBACK_URL= "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback";
+    // public static String AGAMA_CALLBACK_URL= "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback";
 
     // Signing related
     public static String SIGNING_KEY_ID;          
@@ -75,52 +75,51 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private static final String KEY_ID_CLAIM = "kid";    
     private String AUTH_METHOD;
     private String CONSENT_ID;
-    private String CONSENT_ENGINE_API_ENDPOINT = "http://mmrraju-comic-pup.gluu.info/account-access-consents/";
-    private String RFAC_DEMO_BASE = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html?request=";
+    private String CONSENT_ENGINE_BASE_URL = "http://mmrraju-comic-pup.gluu.info";
+    private String RFAC_APP_URL = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private HashMap<String, String> flowConfig ;
-    private String server_base_url = "https://mmrraju-lasting-terrier.gluu.info";
+    private String SERVER_BASE_URL = "https://mmrraju-lasting-terrier.gluu.info";
 
-    // public OpenbankingConsentServiceImpl(HashMap config){
-    //     LogUtils.log("Flow config provided is : %", config);
-    //     flowConfig = config;
-    //     server_base_url = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : server_base_url;
-    //     CONSENT_ENGINE_API_ENDPOINT = flowConfig.get("consentEngineEndpoint") !=null? flowConfig.get("consentEngineEndpoint") : CONSENT_ENGINE_API_ENDPOINT;
-    //     RFAC_DEMO_BASE = flowConfig.get("rfacUrl") !=null? flowConfig.get("rfacUrl") : RFAC_DEMO_BASE;
+    public OpenbankingConsentServiceImpl(HashMap config){
+        if(config !=null){
+            LogUtils.log("Flow config provided is : %", config);
+            flowConfig = config;
+            SERVER_BASE_URL = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : SERVER_BASE_URL;
+            CONSENT_ENGINE_BASE_URL = flowConfig.get("consentEngineBaseUrl") !=null? flowConfig.get("consentEngineBaseUrl") : CONSENT_ENGINE_BASE_URL;
+            RFAC_APP_URL = flowConfig.get("rfacAppUrl") !=null? flowConfig.get("rfacAppUrl") : RFAC_APP_URL;
+            // AGAMA_CALLBACK_URL = flowConfig.get("agamaCallbackUrl") != null ? flowConfig.get("agamaCallbackUrl") : AGAMA_CALLBACK_URL;
+        }else{
+            LogUtils.log("No configuration provided using default may not work properly");
+        }
 
-    // }
 
-    public OpenbankingConsentServiceImpl(){}
+    }
 
-    // public static synchronized OpenbankingConsentServiceImpl getInstance(HashMap config)
-    // {
-        
-    //     if (INSTANCE == null)
-    //         INSTANCE = new OpenbankingConsentServiceImpl(config);
-    //     return INSTANCE;
-    // }
-    public static synchronized OpenbankingConsentServiceImpl getInstance()
+    // public OpenbankingConsentServiceImpl(){}
+
+    public static synchronized OpenbankingConsentServiceImpl getInstance(HashMap config)
     {
         
         if (INSTANCE == null)
-            INSTANCE = new OpenbankingConsentServiceImpl();
+            INSTANCE = new OpenbankingConsentServiceImpl(config);
         return INSTANCE;
-    }    
+    }
+    // public static synchronized OpenbankingConsentServiceImpl getInstance()
+    // {
+        
+    //     if (INSTANCE == null)
+    //         INSTANCE = new OpenbankingConsentServiceImpl();
+    //     return INSTANCE;
+    // }    
 
     @Override
     public Map<String, Object> validateConsent() {
         try {
             Map<String, Object> validationResult = new HashMap<>();
-            LogUtils.log("Retrieve request object from session...");
+            LogUtils.log("OPEN_BANKING: Retrieve request object from session...");
             Map<String, String> sessionAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessionAttrs);
-            // LogUlits.log("IP: %", sessionAttrs.get("ip"));
-
-            //
-            // HttpServletRequest req = CdiUtil.bean(NetworkService.class).getHttpServletRequest();
-
-            // LogUtils.log("req is : %", req);
-            ///
             this.ACR_VALUE = sessionAttrs.get("acr");
 
             if (this.ACR_VALUE != null && this.ACR_VALUE.startsWith("agama_")) {
@@ -167,9 +166,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     private boolean validateConsentStatus(String intentId) {
         try {
-            LogUtils.log("Validating consent for intentId: %", intentId);
+            LogUtils.log("OPEN_BANKING: Validating consent for intentId: %", intentId);
 
-            String apiUrl = this.CONSENT_ENGINE_API_ENDPOINT + intentId;
+            String apiUrl = this.CONSENT_ENGINE_BASE_URL + "/account-access-consents/" + intentId;
             // HttpClient httpClient = HttpClient.newHttpClient();
             HttpClient httpClient = HttpClient.newBuilder()
                     .followRedirects(HttpClient.Redirect.NORMAL) 
@@ -191,7 +190,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             }
 
             String jsonResponse = response.body();
-            LogUtils.log("Consent Engine Response: %", jsonResponse);
+            LogUtils.log("OPEN_BANKING: Consent Engine Response: %", jsonResponse);
 
             // Parse JSON using your existing ObjectMapper
             ObjectMapper mapper = new ObjectMapper();
@@ -341,14 +340,14 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             //Build Payload JSON using static variables ===
             JSONObject payload = new JSONObject();
             long now = System.currentTimeMillis() / 1000L; // Unix timestamp in seconds
-            payload.put("iss", this.server_base_url);
+            payload.put("iss", this.SERVER_BASE_URL);
             payload.put("iat", now);
             payload.put("exp", now + 300); // expires in 5 minutes
             payload.put("openbanking_intent_id", OPENBANKING_INTENT_ID);
             payload.put("consent_status", "Authorised");
             payload.put("client_id", CLIENT_ID);
             payload.put("acr_values", ACR_VALUE);
-            payload.put("callback", CALLBACK_URL);
+            payload.put("callback", this.SERVER_BASE_URL+ "/jans-auth/fl/callback");
 
             //Get internal JWKS configuration ===
             WebKeysConfiguration webKeysConfig = CdiUtil.bean(WebKeysConfiguration.class);
@@ -411,12 +410,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         if (signedJws == null) return null;
         String encoded = URLEncoder.encode(signedJws, StandardCharsets.UTF_8);
         
-        return RFAC_DEMO_BASE + encoded;
+        return RFAC_APP_URL +"?request=" + encoded;
     }    
 
     @Override
     public Map<String, Object> verifyExternalAppResult(Map<String, String> resultFromApp) {
-        LogUtils.log("Verify External App Result...");
+        LogUtils.log("OPEN_BANKING: Verify External App Result...");
         LogUtils.log("App response: %", resultFromApp);
         Map<String, Object> validationResult = new HashMap<>();
         try {
