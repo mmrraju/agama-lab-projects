@@ -96,7 +96,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     }
 
-    // public OpenbankingConsentServiceImpl(){}
+    public OpenbankingConsentServiceImpl(){}
 
     public static synchronized OpenbankingConsentServiceImpl getInstance(HashMap config)
     {
