@@ -163,7 +163,12 @@
         ],
         "noDirectLaunch": [],
         "configs": {
-            "urn.openbanking.psd2.sca": {},
+            "urn.openbanking.psd2.sca": {
+                "serverBaseUrl": "https://mmrraju-promoted-macaque.gluu.info",
+                "consentEnginebBaseUrl": "http://mmrraju-comic-pup.gluu.info",
+                "rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html",
+                "agamaCallbackUrl": "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback"
+            },
             "": {}
         },
         "name": "open-banking"
