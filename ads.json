@@ -171,5 +171,23 @@
             "": {}
         },
         "name": "open-banking"
+    },
+    "agama-inji-wallet\t": {
+        "projectName": "agama-inji-wallet\t",
+        "description": "Agama Project to Store and validate Verifiable Credentials",
+        "type": "community",
+        "author": "mmrraju",
+        "version": "0.0.1",
+        "authorWebsite": "https://github.com/mmrraju/agama-lab-projects",
+        "githubUri": "https://github.com/mmrraju/agama-lab-projects",
+        "license": "apache-2.0",
+        "lastUpdated": "1770063835087",
+        "tags": [
+            "jans",
+            "authentication",
+            "community"
+        ],
+        "noDirectLaunch": [],
+        "configs": {}
     }
 }
