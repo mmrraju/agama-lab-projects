@@ -51,6 +51,7 @@ import java.util.*;
 import java.io.*;
 import java.util.Base64;
 
+import com.fasterxml.jackson.databind.JsonNode;
 
 // import com.nimbusds.jose.*;
 // import com.nimbusds.jose.crypto.RSASSASigner;
@@ -62,7 +63,7 @@ import org.gluu.agama.openbanking.OpenbankingConsentService;
 public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
     // Static variables to set externally before calling the method
-    public static String OPENBANKING_INTENT_ID;
+    public static String OPENBANKING_CONSENT_ID;
     public static String CLIENT_ID;
     public static String ACR_VALUE;
     // public static String AGAMA_CALLBACK_URL= "https://mmrraju-promoted-macaque.gluu.info/jans-auth/fl/callback";
@@ -75,17 +76,19 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     private static final String KEY_ID_CLAIM = "kid";    
     private String AUTH_METHOD;
     private String CONSENT_ID;
-    private String CONSENT_ENGINE_BASE_URL = "http://mmrraju-comic-pup.gluu.info";
+    private String CONSENT_ENGINE_BASE_URL;
     private String RFAC_APP_URL = "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html";
     private static OpenbankingConsentServiceImpl INSTANCE = null;
     private HashMap<String, String> flowConfig ;
-    private String SERVER_BASE_URL = "https://mmrraju-lasting-terrier.gluu.info";
+    private String SERVER_BASE_URL;
+    private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
     public OpenbankingConsentServiceImpl(HashMap config){
         if(config !=null){
             LogUtils.log("Flow config provided is : %", config);
             flowConfig = config;
-            SERVER_BASE_URL = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : SERVER_BASE_URL;
+            // SERVER_BASE_URL = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : SERVER_BASE_URL;
+            SERVER_BASE_URL = NetworkUtils.urlBeforeContextPath();
             CONSENT_ENGINE_BASE_URL = flowConfig.get("consentEngineBaseUrl") !=null? flowConfig.get("consentEngineBaseUrl") : CONSENT_ENGINE_BASE_URL;
             RFAC_APP_URL = flowConfig.get("rfacAppUrl") !=null? flowConfig.get("rfacAppUrl") : RFAC_APP_URL;
             // AGAMA_CALLBACK_URL = flowConfig.get("agamaCallbackUrl") != null ? flowConfig.get("agamaCallbackUrl") : AGAMA_CALLBACK_URL;
@@ -105,18 +108,31 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             INSTANCE = new OpenbankingConsentServiceImpl(config);
         return INSTANCE;
     }
-    // public static synchronized OpenbankingConsentServiceImpl getInstance()
-    // {
-        
-    //     if (INSTANCE == null)
-    //         INSTANCE = new OpenbankingConsentServiceImpl();
-    //     return INSTANCE;
-    // }    
 
     @Override
     public Map<String, Object> validateConsent() {
         try {
-            Map<String, Object> validationResult = new HashMap<>();
+
+            // Initially avoid request object
+            String consentId = createConsent();
+            this.OPENBANKING_CONSENT_ID = consentId;
+            LogUtils.log("Extracted openbanking_consent_id: %", consentId);
+            boolean isValid = validateConsentStatus(consentId);
+            if (isValid) {
+                LogUtils.log("Consent validation successful for consentId: %", consentId);
+                validationResult.put("valid", true);
+                validationResult.put("message", "Consent validation successful for consentId");  
+                return validationResult;                         
+            } else {
+                LogUtils.log("Consent validation failed for consentId: %", consentId);
+                validationResult.put("valid", false);
+                validationResult.put("message", "Consent validation failed for consentId");  
+                return validationResult;                          
+            }
+
+            //
+
+            /*Map<String, Object> validationResult = new HashMap<>();
             LogUtils.log("OPEN_BANKING: Retrieve request object from session...");
             Map<String, String> sessionAttrs = getSessionId().getSessionAttributes();
             LogUtils.log(sessionAttrs);
@@ -156,7 +172,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 validationResult.put("valid", false);
                 validationResult.put("message", "Jwt verification failed.");  
                 return validationResult;              
-            }
+            }*/
             
 
         } catch (Exception e) {
@@ -164,11 +180,51 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         }
     }
 
-    private boolean validateConsentStatus(String intentId) {
+    private boolean validateConsentStatus(String consentId) {
         try {
-            LogUtils.log("OPEN_BANKING: Validating consent for intentId: %", intentId);
+            LogUtils.log("OPEN_BANKING: Validating consent for consentId: %", consentId);
+            String authenticationToken = "23410913-abewfq.123483";
+            String validationUrl = this.CONSENT_ENGINE_BASE_URL+ "/internal-consent/consent/" + consentId;
+            HttpClient httpClient = HttpClient.newBuilder()
+                                .followRedirects(HttpClient.Redirect.NORMAL) 
+                                .build();
 
-            String apiUrl = this.CONSENT_ENGINE_BASE_URL + "/account-access-consents/" + intentId;
+            HttpRequest request = HttpRequest.newBuilder()
+                    .uri(URI.create(validationUrl))
+                    .header("accept", "application/json")
+                    .header("Authentication", "Bearer " + authenticationToken)
+                    .header("Authorization", "Basic YWRtaW4taW50ZXJuYWw6YWRtaW4AMTIz")
+                    .GET()
+                    .build();
+
+            HttpResponse<String> response =
+                    httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+
+            if (response.statusCode() < 200 || response.statusCode() >= 300) {
+                throw new RuntimeException(
+                        "Consent validation failed. HTTP "
+                                + response.statusCode()
+                                + ": "
+                                + response.body()
+                );
+            }
+
+            JsonNode responseJson = OBJECT_MAPPER.readTree(response.body());
+
+            String status = responseJson
+                    .path("linkedConsent")
+                    .path("Data")
+                    .path("Status")
+                    .asText(null);
+
+            if (status == null) {
+                return false;
+            }
+
+            return "AwaitingAuthorisation".equals(status);;
+
+
+            /*String apiUrl = this.CONSENT_ENGINE_BASE_URL + "/internal-consent/consent/" + consentId;
             // HttpClient httpClient = HttpClient.newHttpClient();
             HttpClient httpClient = HttpClient.newBuilder()
                     .followRedirects(HttpClient.Redirect.NORMAL) 
@@ -178,6 +234,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                     .uri(URI.create(apiUrl))
                     .header("Accept", "application/json")
                     .header("User-Agent", "Mozilla/5.0")
+                    .header("x-api-key", apiKey)
+                    .header("Authorization", "Bearer " + accessToken)
                     .header("Cache-Control", "no-cache") 
                     .GET()
                     .build();
@@ -205,7 +263,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             String status = (String) data.get("Status");
             LogUtils.log("Consent status: %", status);
 
-            return "Authorised".equalsIgnoreCase(status);
+            return "Authorised".equalsIgnoreCase(status);*/
+            
 
         } catch (Exception e) {
             LogUtils.log("Exception while validating consent status: %", e);
@@ -343,7 +402,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             payload.put("iss", this.SERVER_BASE_URL);
             payload.put("iat", now);
             payload.put("exp", now + 300); // expires in 5 minutes
-            payload.put("openbanking_intent_id", OPENBANKING_INTENT_ID);
+            payload.put("openbanking_intent_id", OPENBANKING_CONSENT_ID);
             payload.put("consent_status", "Authorised");
             payload.put("client_id", CLIENT_ID);
             payload.put("acr_values", ACR_VALUE);
@@ -476,5 +535,88 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         SessionIdService sis = CdiUtil.bean(SessionIdService.class); 
         return sis.getSessionId(CdiUtil.bean(HttpServletRequest.class));
     }    
+
+    private  String createConsent() throws Exception {
+        String apiKey = "admin@123" ;
+        String accessToken = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ0cHA6MTIzNDU2IiwiaXNzIjoiZGVtby1pc3N1ZXIiLCJhdWQiOiJkZW1vLWFwaSIsImlhdCI6MTczNTQzMDQwMCwiZXhwIjoxNzM1NDM0MDAwfQ.";
+        String CONSENT_URL = this.CONSENT_ENGINE_BASE_URL + "/account-access/open-banking/v3.1.11/aisp/account-access-consents";
+        // Current UTC time
+        Instant now = Instant.now();
+
+        // Transaction period: last 7 days until now
+        Instant transactionFrom = now.minus(7, ChronoUnit.DAYS);
+        Instant transactionTo = now;
+
+        // Consent expires 24 hours from now
+        Instant expiration = now.plus(1, ChronoUnit.DAYS);
+
+        String requestBody = String.format("""
+                {
+                  "Data": {
+                    "Permissions": [
+                      "ReadAccountsBasic"
+                    ],
+                    "ExpirationDateTime": "%s",
+                    "TransactionFromDateTime": "%s",
+                    "TransactionToDateTime": "%s"
+                  },
+                  "Risk": {}
+                }
+                """,
+                expiration,
+                transactionFrom,
+                transactionTo
+        );
+
+        // Current UTC time for x-fapi-auth-date
+        String fapiAuthDate = java.time.ZonedDateTime.now(java.time.ZoneOffset.UTC)
+                .format(java.time.format.DateTimeFormatter.ofPattern(
+                        "EEE, dd MMM yyyy HH:mm:ss 'GMT'"
+                ));
+        HttpClient httpClient = HttpClient.newBuilder()
+                    .followRedirects(HttpClient.Redirect.NORMAL) 
+                    .build();        
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(CONSENT_URL))
+                .header("accept", "application/json; charset=utf-8")
+                .header("x-fapi-auth-date", fapiAuthDate)
+                .header("x-api-key", apiKey)
+                .header("Authorization", "Bearer " + accessToken)
+                .header("Content-Type", "application/json; charset=utf-8")
+                .POST(HttpRequest.BodyPublishers.ofString(requestBody))
+                .build();
+
+        HttpResponse<String> response = httpClient.send(
+                request,
+                HttpResponse.BodyHandlers.ofString()
+        );
+
+        if (response.statusCode() < 200 || response.statusCode() >= 300) {
+            throw new RuntimeException(
+                    "Consent API failed. HTTP "
+                            + response.statusCode()
+                            + ": "
+                            + response.body()
+            );
+        }
+
+        // Parse response
+        JsonNode responseJson = OBJECT_MAPPER.readTree(response.body());
+        LogUtils.log("CREATE ConsentID api response: %", responseJson);
+        JsonNode consentIdNode = responseJson
+                .path("Data")
+                .path("ConsentId");
+
+        if (consentIdNode.isMissingNode() || consentIdNode.isNull()) {
+            throw new RuntimeException(
+                    "ConsentId not found in API response: "
+                            + response.body()
+            );
+        }
+
+        return consentIdNode.asText();
+    }    
+
 
 }
