@@ -581,7 +581,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(CONSENT_URL))
-                .header("accept", "application/json; charset=utf-8")
+                .header("Accept", "application/json; charset=utf-8")
+                .header("User-Agent", "Mozilla/5.0")
                 .header("x-fapi-auth-date", fapiAuthDate)
                 .header("x-api-key", apiKey)
                 .header("Authorization", "Bearer " + accessToken)
