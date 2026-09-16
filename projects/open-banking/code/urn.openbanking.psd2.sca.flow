@@ -38,8 +38,8 @@ Repeat 1 times max
                acr = verifyFinalStatus.acr_values
                status = verifyFinalStatus.status
                // Return ConsentId, AuthType, Success
-               it_kesna = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
-               Finish it_kesna
+               it_esuxz = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
+               Finish it_esuxz
           Otherwise
                // Verification failed
                Log "@info Varification faild reason: %" verifyFinalStatus.message
