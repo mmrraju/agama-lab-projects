@@ -89,7 +89,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             flowConfig = config;
             // SERVER_BASE_URL = flowConfig.get("serverBaseUrl") != null? flowConfig.get("serverBaseUrl") : SERVER_BASE_URL;
             SERVER_BASE_URL = NetworkUtils.urlBeforeContextPath();
-            CONSENT_ENGINE_BASE_URL = flowConfig.get("consentEngineBaseUrl") !=null? flowConfig.get("consentEngineBaseUrl") : CONSENT_ENGINE_BASE_URL;
+             = flowConfig.get("consentEngineBaseUrl") !=null? flowConfig.get("consentEngineBaseUrl") : CONSENT_ENGINE_BASE_URL;
             RFAC_APP_URL = flowConfig.get("rfacAppUrl") !=null? flowConfig.get("rfacAppUrl") : RFAC_APP_URL;
             // AGAMA_CALLBACK_URL = flowConfig.get("agamaCallbackUrl") != null ? flowConfig.get("agamaCallbackUrl") : AGAMA_CALLBACK_URL;
         }else{
@@ -541,6 +541,8 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         String apiKey = "admin@123" ;
         String accessToken = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ0cHA6MTIzNDU2IiwiaXNzIjoiZGVtby1pc3N1ZXIiLCJhdWQiOiJkZW1vLWFwaSIsImlhdCI6MTczNTQzMDQwMCwiZXhwIjoxNzM1NDM0MDAwfQ.";
         String CONSENT_URL = this.CONSENT_ENGINE_BASE_URL + "/account-access/open-banking/v3.1.11/aisp/account-access-consents";
+        LogUtils.log("CONSENT_ENGINE_BASE_URL: " + this.CONSENT_ENGINE_BASE_URL);
+        LogUtils.log("CONSENT_URL: " + CONSENT_URL);
         // Current UTC time
         Instant now = Instant.now();
 
