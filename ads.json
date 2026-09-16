@@ -164,8 +164,7 @@
         "noDirectLaunch": [],
         "configs": {
             "urn.openbanking.psd2.sca": {
-                "serverBaseUrl": "https://mmrraju-promoted-macaque.gluu.info",
-                "consentEnginebBaseUrl": "http://mmrraju-comic-pup.gluu.info",
+                "consentEnginebBaseUrl": "https://74.162.198.218",
                 "rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html"
             },
             "": {}
