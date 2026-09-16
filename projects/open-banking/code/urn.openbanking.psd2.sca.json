@@ -20,7 +20,7 @@
 					"isTopLevelFlow": true,
 					"basepath": "",
 					"configParams": {
-						"consentEnginebBaseUrl": "https://74.162.198.218",
+						"consentEngineBaseUrl": "https://74.162.198.218",
 						"rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html"
 					},
 					"nodeIcon": "material-symbols:line-start-square",
