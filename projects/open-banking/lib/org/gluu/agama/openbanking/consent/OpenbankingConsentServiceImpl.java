@@ -87,9 +87,9 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         if(config !=null){
             LogUtils.log("Flow config provided is : %", config);
             flowConfig = config;
-            SERVER_BASE_URL = NetworkUtils.urlBeforeContextPath();
-            CONSENT_ENGINE_BASE_URL = flowConfig.get("consentEngineBaseUrl");
-            RFAC_APP_URL = flowConfig.get("rfacAppUrl");
+            this.SERVER_BASE_URL = NetworkUtils.urlBeforeContextPath();
+            this.CONSENT_ENGINE_BASE_URL =(String)flowConfig.get("consentEngineBaseUrl");
+            RFAC_APP_URL =(String)flowConfig.get("rfacAppUrl");
             // AGAMA_CALLBACK_URL = flowConfig.get("agamaCallbackUrl") != null ? flowConfig.get("agamaCallbackUrl") : AGAMA_CALLBACK_URL;
         }else{
             LogUtils.log("No configuration provided using default may not work properly");
