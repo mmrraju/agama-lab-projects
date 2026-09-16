@@ -210,7 +210,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             }
 
             JsonNode responseJson = OBJECT_MAPPER.readTree(response.body());
-
+            LogUtils.log("Validation Api response: %", responseJson);
             String status = responseJson
                     .path("linkedConsent")
                     .path("Data")
@@ -537,6 +537,7 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
     }    
 
     private  String createConsent() throws Exception {
+        LogUtils.log("Creating consent id");
         String apiKey = "admin@123" ;
         String accessToken = "eyJhbGciOiJub25lIiwidHlwIjoiSldUIn0.eyJzdWIiOiJ0cHA6MTIzNDU2IiwiaXNzIjoiZGVtby1pc3N1ZXIiLCJhdWQiOiJkZW1vLWFwaSIsImlhdCI6MTczNTQzMDQwMCwiZXhwIjoxNzM1NDM0MDAwfQ.";
         String CONSENT_URL = this.CONSENT_ENGINE_BASE_URL + "/account-access/open-banking/v3.1.11/aisp/account-access-consents";
