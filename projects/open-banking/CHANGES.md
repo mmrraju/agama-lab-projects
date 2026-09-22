@@ -165,3 +165,34 @@ where that confirmation comes from).
   prior `agama-knowledge` session). First real compile should happen either on the lab box's own toolchain
   or wherever packaging ends up running.
 - Replay (`jti`) persistence — see above, needs a real store, not invented here.
+
+## 2026-09-22 — Fizz: missing Finish instructions in failure branches (real lab reproduction)
+
+Live testing on testobrhel9.gluu.info surfaced a real DSL-level bug distinct from the Java fixes above:
+`urn.openbanking.psd2.sca.flow`'s both `Otherwise` branches (initial-consent-invalid, and
+final-verification-invalid) logged the failure but never called `Finish`. When a flow execution falls
+through the loop's last iteration without reaching `Finish`, the Agama engine terminates it with a
+generic, un-actionable "No Finish instruction was reached during execution of flow" — not a proper
+structured result the Auth Server (or a caller) can branch on, and easy to mistake for an engine bug
+rather than the flow's own incompleteness. (An earlier, different-looking crash — "An unexpected error
+occurred: index -1, length 0" — turned out to be a JDK 17 Kryo/module-access serialization failure
+masking this exact same missing-Finish condition; see `RESEARCH/OPENBANKING_LAB_TESTOBRHEL9_STATE_2026-09-22.md`
+for the JVM-level fix that was required before the real, controlled error above could even be observed.)
+
+Fixed by adding `Finish {success:false, error: <message>}` to both `Otherwise` branches, so any failure —
+missing/malformed input, failed signature verification, rejected/expired consent, mismatched ConsentId —
+now produces a controlled, structured `success:false` result instead of an engine-level crash. This is a
+`.flow`-level fix, not a Java change; `OpenbankingConsentServiceImpl.java` was already correctly returning
+`valid:false` with a message in every failure case (Pollen's fixes above) — the flow just wasn't acting on
+it.
+
+**Designer JSON divergence, deliberately not fixed by hand**: `urn.openbanking.psd2.sca.json` (the visual
+Agama Lab designer graph) is not updated to add the two new `Finish` nodes/edges this needs. The runtime
+engine only reads the `.flow` text file — the designer JSON is consumed solely by Agama Lab's own visual
+editor for re-editing — so this divergence has no runtime effect, but re-opening this project in Agama Lab
+will show two failure branches ending without a Finish node in the graph. Regenerating the JSON correctly
+requires either using the visual designer directly or writing a small script against its node-graph schema;
+hand-editing the graph JSON to splice in two new nodes/edges by hand was judged too easy to get subtly
+wrong (dangling edges, orphaned node ids) for a text-only edit pass. Whoever next opens this in Agama Lab
+should add the two `Finish` nodes visually and re-export, or accept the two-line manual re-sync documented
+here.
