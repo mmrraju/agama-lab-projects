@@ -85,12 +85,13 @@ test results.
    fallback, gated behind `flowConfig.testCreateConsent == "true"`, off by default. See "Two profiles"
    below.
 
-8. **Hardcoded credentials, tokens, and demo URLs.** Confirmed and removed:
-   - `authenticationToken = "23410913-abewfq.123483"` and the literal `Authorization: Basic
-     YWRtaW4taW50ZXJuYWw6YWRtaW4AMTIz` header in the old `validateConsentStatus()` → now
-     `consentApiAuthToken`/`consentApiBasicAuth` from flow config, required (throws if missing — fails
-     closed, doesn't silently fall back to the old literals).
-   - `apiKey = "admin@123"` and a hardcoded demo JWT `accessToken` in `createConsent()` → now
+8. **Hardcoded credentials, tokens, and demo URLs.** Confirmed and removed — literal values are not
+   reproduced here (or anywhere in this diff/report), per the "never include secrets in reports" rule; see
+   the original pre-fix commit (`ae8c7dc4`) on this branch if the exact old literals ever need auditing:
+   - A hardcoded bearer token and a hardcoded `Authorization: Basic` credential in the old
+     `validateConsentStatus()` → now `consentApiAuthToken`/`consentApiBasicAuth` from flow config, required
+     (throws if missing — fails closed, doesn't silently fall back to the old literals).
+   - A hardcoded `x-api-key` and a hardcoded demo JWT bearer token in `createConsent()` → now
      `testConsentApiKey`/`testConsentAccessToken` from config, required only when the TEST-ONLY path runs.
    - `RFAC_APP_URL` default `"https://mmrraju-adapted-crab.gluu.info/rfac-demo.html"` → no default;
      `buildRfacUrl()` now returns `null` (fails closed) if it isn't configured.
