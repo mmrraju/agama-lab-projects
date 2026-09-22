@@ -11,6 +11,20 @@ the lab server; no build/compile was possible locally (no working JDK — same
 architecture-mismatch gap noted in the earlier `agama-knowledge` research
 session; `mvn` also not installed here).
 
+## Update 2026-09-22 13:18 UTC — project.json is now the single canonical config doc
+
+Honey independently built `projects/open-banking/deploy/config.template.json` (separate clone,
+`agama-lab-projects-honey`, branch `honey-openbanking-docs`) in parallel, before this file's code fixes
+landed — it used placeholder key names (`consentApiAuthHeader`, `trustedCallbackSigner`, etc.) that don't
+match what the fixed code actually reads via `flowConfig.get(...)`. Caught before Fizz configured the live
+deploy from it. Per Fizz's request, folded Honey's still-accurate `tlsTrust` and `testProfile` sections into
+`project.json` here (both are documentation-only — not read via `flowConfig`, since TLS trust is a
+JVM/container-level concern and the OIDC test client/user are admin-tooling setup, not flow config). **This
+`project.json` is now the one canonical config template — don't use the older
+`agama-lab-projects-honey/projects/open-banking/deploy/config.template.json` for the real deploy.** Honey's
+`test-plan.md` in that same `deploy/` directory is unaffected by this and still the right place for section-7
+test results.
+
 ## Files changed
 
 - `lib/org/gluu/agama/openbanking/consent/OpenbankingConsentServiceImpl.java` — full rewrite, see below.
