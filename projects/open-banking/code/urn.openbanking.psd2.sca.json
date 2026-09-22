@@ -20,8 +20,8 @@
 					"isTopLevelFlow": true,
 					"basepath": "",
 					"configParams": {
-						"consentEngineBaseUrl": "https://74.162.198.218",
-						"rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html"
+						"consentEngineBaseUrl": "<CONSENT_ENGINE_BASE_URL>",
+						"rfacAppUrl": "<RFAC_APP_URL>"
 					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
@@ -726,7 +726,7 @@
 					"hasComment": true,
 					"comment": "Return ConsentId, AuthType, Success",
 					"flowfilename": "",
-					"returnVariable": "{userId: \"admin\", consentId: consentId, status: status, acr: acr}",
+					"returnVariable": "{userId: userId, consentId: consentId, status: status, acr: acr}",
 					"finishMode": "withSuccess",
 					"nodeIcon": "material-symbols:line-end-square-rounded"
 				}
@@ -768,6 +768,11 @@
 							"variableTypeCheck": true,
 							"assignmentExpression": "verifyFinalStatus.status",
 							"assignedVariableName": "status"
+						},
+						{
+							"variableTypeCheck": true,
+							"assignmentExpression": "verifyFinalStatus.userId",
+							"assignedVariableName": "userId"
 						}
 					],
 					"nodeIcon": "material-symbols:equal",

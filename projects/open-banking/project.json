@@ -1,0 +1,20 @@
+{
+  "projectName": "open-banking",
+  "author": "Gluu Open Banking Team",
+  "type": "project",
+  "description": "PSD2 SCA Open Banking Agama flow (urn.openbanking.psd2.sca)",
+  "version": "1.0.0",
+  "configs": {
+    "urn.openbanking.psd2.sca": {
+      "consentEngineBaseUrl": "<CONSENT_ENGINE_BASE_URL, e.g. https://gfx.eastus2.cloudapp.azure.com>",
+      "rfacAppUrl": "<RFAC_APP_URL - the App/IDP that collects the user's consent decision>",
+      "consentApiAuthToken": "<bearer token for the internal-consent GET, from the supplied ticket>",
+      "consentApiBasicAuth": "<base64 Basic-auth credential for the internal-consent GET, from the supplied ticket>",
+      "trustedCallbackClientId": "<OIDC client_id that is trusted to sign the RFAC callback JWS>",
+      "testCreateConsent": "false",
+      "testConsentApiKey": "<TEST-ONLY: x-api-key for self-creating a consent, only used if testCreateConsent=true>",
+      "testConsentAccessToken": "<TEST-ONLY: bearer token for self-creating a consent, only used if testCreateConsent=true>"
+    }
+  },
+  "noDirectLaunch": []
+}
