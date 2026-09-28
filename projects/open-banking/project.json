@@ -1,0 +1,35 @@
+{
+  "projectName": "open-banking",
+  "author": "Gluu Open Banking Team",
+  "type": "project",
+  "description": "PSD2 SCA Open Banking Agama flow (urn.openbanking.psd2.sca)",
+  "version": "1.0.0",
+  "configs": {
+    "urn.openbanking.psd2.sca": {
+      "consentEngineBaseUrl": "<CONSENT_ENGINE_BASE_URL, e.g. https://gfx.eastus2.cloudapp.azure.com — base URL only, no trailing path; code appends /account-access/open-banking/v3.1.11/aisp/account-access-consents and /internal-consent/consent/{ConsentId} itself>",
+      "rfacAppUrl": "<RFAC_APP_URL - the App/IDP that collects the user's consent decision. Do NOT reuse an old demo host found in source (e.g. gluu.info sample hosts) without mzico's authorization — use the lab's own test App/IDP or an explicitly authorized target>",
+      "consentApiAuthToken": "<bearer token for the internal-consent GET (Authentication: Bearer header), from the supplied ticket>",
+      "consentApiBasicAuth": "<base64 Basic-auth credential for the internal-consent GET (Authorization: Basic header), from the supplied ticket>",
+      "trustedCallbackClientId": "<OIDC client_id that is trusted to sign the RFAC callback JWS — verifyJwtForExternalApp() rejects any callback whose client_id claim doesn't match this (or, if unset, the client_id recorded from the flow's own Request Object verification). REQUIRED for the mock/test-App profile, since there is no Request Object there to bind against>",
+      "testCreateConsent": "false",
+      "testConsentApiKey": "<TEST-ONLY: x-api-key for self-creating a consent via POST .../account-access-consents, only read if testCreateConsent=true>",
+      "testConsentAccessToken": "<TEST-ONLY: bearer token for the same self-created-consent call, only read if testCreateConsent=true>"
+    }
+  },
+  "noDirectLaunch": [],
+
+  "tlsTrust": {
+    "_comment": "Section 3 of the task. Not read via flowConfig — OpenbankingConsentServiceImpl.java's HttpClient instances use no custom SSLContext, so this must be configured at the JVM/container level the Agama engine actually runs in (narrowest supported scope), not in this file. Documented here for traceability only.",
+    "truststorePath": "<REPLACE: e.g. /opt/gluu/jetty/jans-auth/custom-truststore.jks — a dedicated truststore containing only certificate-chain2.pem's chain, not a copy of the system cacerts>",
+    "truststorePasswordRef": "<REPLACE: reference to where the truststore password is stored (e.g. a CN-restricted local secret path) — never the literal password>",
+    "sourceCertificate": "certificate-chain2.pem (supplied by Bhupinder)",
+    "knownIssue": "Certificate reported to lack a SAN entry. If the client's hostname verification rejects it, capture the exact exception/error here rather than disabling verification, and request a hostname-valid replacement. Never disable certificate or hostname verification."
+  },
+
+  "testProfile": {
+    "_comment": "Operational setup for the mock end-to-end profile (section 5/6) — a dedicated test OIDC client and nonprivileged test user, not read via flowConfig by the flow itself.",
+    "oidcClientId": "<REPLACE: dedicated test OIDC client id, not a production/shared client — this is the client whose id should also be set as trustedCallbackClientId above if it's the one signing the mock callback>",
+    "testUserUsername": "<REPLACE: dedicated nonprivileged test user>",
+    "acrValue": "agama_urn.openbanking.psd2.sca"
+  }
+}
