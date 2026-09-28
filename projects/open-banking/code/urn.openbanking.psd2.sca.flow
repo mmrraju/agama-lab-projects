@@ -37,14 +37,19 @@ Repeat 1 times max
                consentId = verifyFinalStatus.openbanking_intent_id
                acr = verifyFinalStatus.acr_values
                status = verifyFinalStatus.status
+               userId = verifyFinalStatus.userId
                // Return ConsentId, AuthType, Success
-               it_esuxz = {success:true, data: {userId: "admin", consentId: consentId, status: status, acr: acr}}
+               it_esuxz = {success:true, data: {userId: userId, consentId: consentId, status: status, acr: acr}}
                Finish it_esuxz
           Otherwise
-               // Verification failed
+               // Verification failed - controlled failure, not an engine crash
                Log "@info Varification faild reason: %" verifyFinalStatus.message
+               it_fverif = {success:false, error: verifyFinalStatus.message}
+               Finish it_fverif
      Otherwise
-          // Not valid message
+          // Not valid message - controlled failure, not an engine crash
           Log "@info Validation failed due to %"  validationResult.message
           // Error message
           feedback.errorMessage = validationResult.message
+          it_finval = {success:false, error: validationResult.message}
+          Finish it_finval
