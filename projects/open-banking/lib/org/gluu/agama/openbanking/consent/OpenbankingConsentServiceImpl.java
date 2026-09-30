@@ -50,7 +50,15 @@ import java.time.temporal.ChronoUnit;
 import java.util.*;
 import java.io.*;
 import java.util.Base64;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.security.KeyStore;
+import java.security.cert.Certificate;
+import java.security.cert.CertificateFactory;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManagerFactory;
 import com.fasterxml.jackson.databind.JsonNode;
 
 // import com.nimbusds.jose.*;
@@ -572,15 +580,17 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 .format(java.time.format.DateTimeFormatter.ofPattern(
                         "EEE, dd MMM yyyy HH:mm:ss 'GMT'"
                 ));
-        HttpClient httpClient = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.NORMAL)
-                .build();
+        // Create HttpClient using the provided certificate
+        HttpClient httpClient = createConsentHttpClient();                
+        // HttpClient httpClient = HttpClient.newBuilder()
+        //         .followRedirects(HttpClient.Redirect.NORMAL)
+        //         .build();
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(CONSENT_URL))
                 .header("Accept", "application/json; charset=utf-8")
                 .header("User-Agent", "Mozilla/5.0")
-                .header("x-fapi-auth-date", fapiAuthDate)
+                .header("x-fapi-auth-date", fapiAuthDate) 
                 .header("x-api-key", apiKey)
                 .header("Authorization", "Bearer " + accessToken)
                 .header("Content-Type", "application/json; charset=utf-8")
@@ -591,7 +601,10 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 request,
                 HttpResponse.BodyHandlers.ofString()
         );
+        LogUtils.log("Consent API HTTP status: " + response.statusCode());
 
+        LogUtils.log("Consent API response: " + response.body());
+        
         if (response.statusCode() < 200 || response.statusCode() >= 300) {
             throw new RuntimeException(
                     "Consent API failed. HTTP "
@@ -616,5 +629,53 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
 
         return consentIdNode.asText();
     }
+
+    private HttpClient createConsentHttpClient() throws Exception {
+        String certPath = requireConfig("consentCertPath");
+
+        LogUtils.log("Loading Consent API certificate from: " + certPath);
+
+        CertificateFactory certificateFactory =
+                CertificateFactory.getInstance("X.509");
+
+        Certificate certificate;
+
+        try (InputStream inputStream =
+                    Files.newInputStream(Path.of(certPath))) {
+
+            certificate = certificateFactory.generateCertificate(inputStream);
+        }
+
+        KeyStore trustStore =
+                KeyStore.getInstance(KeyStore.getDefaultType());
+
+        trustStore.load(null, null);
+
+        trustStore.setCertificateEntry(
+                "consent-engine",
+                certificate
+        );
+
+        TrustManagerFactory trustManagerFactory =
+                TrustManagerFactory.getInstance(
+                        TrustManagerFactory.getDefaultAlgorithm()
+                );
+
+        trustManagerFactory.init(trustStore);
+
+        SSLContext sslContext =
+                SSLContext.getInstance("TLS");
+
+        sslContext.init(
+                null,
+                trustManagerFactory.getTrustManagers(),
+                null
+        );
+
+        return HttpClient.newBuilder()
+                .sslContext(sslContext)
+                .followRedirects(HttpClient.Redirect.NORMAL)
+                .build();
+    }    
 
 }
