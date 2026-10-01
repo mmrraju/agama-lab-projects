@@ -210,9 +210,12 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         String basicAuthHeader = requireConfig("consentApiBasicAuth");
         String validationUrl = this.CONSENT_ENGINE_BASE_URL + "/internal-consent/consent/" + consentId;
 
-        HttpClient httpClient = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.NORMAL)
-                .build();
+        // Create HttpClient using the provided certificate
+        HttpClient httpClient = createConsentHttpClient();
+
+        // HttpClient httpClient = HttpClient.newBuilder()
+        //         .followRedirects(HttpClient.Redirect.NORMAL)
+        //         .build();
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(validationUrl))
