@@ -169,7 +169,9 @@
                 "testCreateConsent": "<true|false>",
                 "testConsentApiKey": "<>",
                 "testConsentAccessToken": "<>",
-                "consentApiBasicAuth": "<>"
+                "consentApiBasicAuth": "<>",
+                "isConsentCertPath": "<true|false>",
+                "consentCertPath": "<>"
             },
             "": {}
         },
