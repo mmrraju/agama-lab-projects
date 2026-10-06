@@ -169,6 +169,10 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         return flowConfig != null && "true".equalsIgnoreCase((String) flowConfig.get("testCreateConsent"));
     }
 
+    private boolean isConsentCertPathProvided() {
+        return flowConfig != null && "true".equalsIgnoreCase((String) flowConfig.get("isConsentCertPath"));
+    }
+
     private String requireConfig(String key) {
         String value = flowConfig != null ? (String) flowConfig.get(key) : null;
         if (value == null || value.isBlank()) {
@@ -210,12 +214,15 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         String basicAuthHeader = requireConfig("consentApiBasicAuth");
         String validationUrl = this.CONSENT_ENGINE_BASE_URL + "/internal-consent/consent/" + consentId;
 
-        // Create HttpClient using the provided certificate
-        HttpClient httpClient = createConsentHttpClient();
-
-        // HttpClient httpClient = HttpClient.newBuilder()
-        //         .followRedirects(HttpClient.Redirect.NORMAL)
-        //         .build();
+        if (isConsentCertPathProvided()) {
+           // Create HttpClient using the provided certificate
+            HttpClient httpClient = createConsentHttpClient(); 
+        }else{
+            HttpClient httpClient = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.NORMAL)
+                .build();
+        }
+        
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(validationUrl))
@@ -585,11 +592,14 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 .format(java.time.format.DateTimeFormatter.ofPattern(
                         "EEE, dd MMM yyyy HH:mm:ss 'GMT'"
                 ));
-        // Create HttpClient using the provided certificate
-        HttpClient httpClient = createConsentHttpClient();                
-        // HttpClient httpClient = HttpClient.newBuilder()
-        //         .followRedirects(HttpClient.Redirect.NORMAL)
-        //         .build();
+        if (isConsentCertPathProvided()) {
+           // Create HttpClient using the provided certificate
+            HttpClient httpClient = createConsentHttpClient(); 
+        }else{
+            HttpClient httpClient = HttpClient.newBuilder()
+                .followRedirects(HttpClient.Redirect.NORMAL)
+                .build();
+        }
 
         HttpRequest request = HttpRequest.newBuilder()
                 .uri(URI.create(CONSENT_URL))
