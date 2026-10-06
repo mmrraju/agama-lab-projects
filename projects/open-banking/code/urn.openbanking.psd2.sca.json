@@ -21,7 +21,11 @@
 					"basepath": "",
 					"configParams": {
 						"consentEngineBaseUrl": "<CONSENT_ENGINE_BASE_URL>",
-						"rfacAppUrl": "<RFAC_APP_URL>"
+						"rfacAppUrl": "<RFAC_APP_URL>",
+						"testCreateConsent": "<true|false>",
+						"testConsentApiKey": "<>",
+						"testConsentAccessToken": "<>",
+						"consentApiBasicAuth": "<>"
 					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
