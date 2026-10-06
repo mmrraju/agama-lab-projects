@@ -25,7 +25,9 @@
 						"testCreateConsent": "<true|false>",
 						"testConsentApiKey": "<>",
 						"testConsentAccessToken": "<>",
-						"consentApiBasicAuth": "<>"
+						"consentApiBasicAuth": "<>",
+						"isConsentCertPath": "<true|false>",
+						"consentCertPath": "<>"
 					},
 					"nodeIcon": "material-symbols:line-start-square",
 					"timeout": "",
@@ -42,7 +44,8 @@
 				"width": 170,
 				"height": 124
 			},
-			"selected": true
+			"selected": true,
+			"dragging": false
 		},
 		{
 			"id": "logNode-876f45c5-2735-4336-9ffb-14582dacd297",
