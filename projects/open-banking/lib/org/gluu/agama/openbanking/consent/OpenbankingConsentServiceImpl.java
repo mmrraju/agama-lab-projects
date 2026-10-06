@@ -214,13 +214,18 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
         String basicAuthHeader = requireConfig("consentApiBasicAuth");
         String validationUrl = this.CONSENT_ENGINE_BASE_URL + "/internal-consent/consent/" + consentId;
 
+        // Create the appropriate HTTP client depending on whether
+        // a custom consent certificate has been configured.
+        HttpClient httpClient;
+
         if (isConsentCertPathProvided()) {
-           // Create HttpClient using the provided certificate
-            HttpClient httpClient = createConsentHttpClient(); 
-        }else{
-            HttpClient httpClient = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.NORMAL)
-                .build();
+            LogUtils.log("Consent certificate is configured. Using custom HttpClient.");
+            httpClient = createConsentHttpClient();
+        } else {
+            LogUtils.log("No consent certificate configured. Using default HttpClient.");
+            httpClient = HttpClient.newBuilder()
+                    .followRedirects(HttpClient.Redirect.NORMAL)
+                    .build();
         }
         
 
@@ -592,13 +597,18 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
                 .format(java.time.format.DateTimeFormatter.ofPattern(
                         "EEE, dd MMM yyyy HH:mm:ss 'GMT'"
                 ));
+        // Create the appropriate HTTP client depending on whether
+        // a custom consent certificate has been configured.
+        HttpClient httpClient;
+
         if (isConsentCertPathProvided()) {
-           // Create HttpClient using the provided certificate
-            HttpClient httpClient = createConsentHttpClient(); 
-        }else{
-            HttpClient httpClient = HttpClient.newBuilder()
-                .followRedirects(HttpClient.Redirect.NORMAL)
-                .build();
+            LogUtils.log("Consent certificate is configured. Using custom HttpClient.");
+            httpClient = createConsentHttpClient();
+        } else {
+            LogUtils.log("No consent certificate configured. Using default HttpClient.");
+            httpClient = HttpClient.newBuilder()
+                    .followRedirects(HttpClient.Redirect.NORMAL)
+                    .build();
         }
 
         HttpRequest request = HttpRequest.newBuilder()
