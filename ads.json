@@ -164,8 +164,12 @@
         "noDirectLaunch": [],
         "configs": {
             "urn.openbanking.psd2.sca": {
-                "consentEngineBaseUrl": "https://74.162.198.218",
-                "rfacAppUrl": "https://mmrraju-adapted-crab.gluu.info/rfac-demo.html"
+                "consentEngineBaseUrl": "<CONSENT_ENGINE_BASE_URL>",
+                "rfacAppUrl": "<RFAC_APP_URL>",
+                "testCreateConsent": "<true|false>",
+                "testConsentApiKey": "<>",
+                "testConsentAccessToken": "<>",
+                "consentApiBasicAuth": "<>"
             },
             "": {}
         },
