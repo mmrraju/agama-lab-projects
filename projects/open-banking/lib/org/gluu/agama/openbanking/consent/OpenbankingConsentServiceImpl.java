@@ -400,9 +400,11 @@ public class OpenbankingConsentServiceImpl extends OpenbankingConsentService {
             payload.put("iat", now);
             payload.put("exp", now + 300); // expires in 5 minutes
             payload.put("openbanking_intent_id", OPENBANKING_CONSENT_ID);
-            payload.put("client_id", CLIENT_ID);
+            payload.put("clientId", CLIENT_ID);
             payload.put("acr_values", ACR_VALUE);
             payload.put("callback", this.SERVER_BASE_URL + "/jans-auth/fl/callback");
+            payload.put("aud", this.RFAC_APP_URL);
+            payload.put("channel", "web|app");
 
             // Get internal JWKS configuration
             WebKeysConfiguration webKeysConfig = CdiUtil.bean(WebKeysConfiguration.class);
